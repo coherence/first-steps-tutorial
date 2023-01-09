@@ -1,0 +1,29 @@
+.check-title {
+    height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.check-status {
+    height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.check-icon {
+    align-items: flex-start;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.fix-button {
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

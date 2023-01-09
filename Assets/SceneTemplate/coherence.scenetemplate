@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: coherence
+  m_EditorClassIdentifier: 
+  templateScene: {fileID: 102900000, guid: 5d176d92d3a534aafa8c515e0130242c, type: 3}
+  templateName: Networked (coherence)
+  description: 'The minimum necessary to create networked gameplay.
+
+
+    Contains
+    a coherence Mono Bridge, a global Live Query, and the sample connection UI.'
+  preview: {fileID: 2800000, guid: 620e9ac274f6742ae8cfd8debd77af17, type: 3}
+  dependencies:
+  - dependency: {fileID: 2800000, guid: d61eb155815f34d11aaceb9ef496fbb2, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 0c5df29c5d08841b5af27bb09d0a76a9, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: b2ea3b3f1765e544b9eb5bd1a93a91ce, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 5395304627752384798, guid: a49eb04dfa33f441799b406f19b22857,
+      type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: f40530fe1bbd54347aaf102ad0313d23, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: dfb97a9307a577a41bcacba34b9a7e32, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: a51a3aebb43ac044989270407476b208, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 5c450416342314920b186c1efe8622ab, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: f95147a9bab9fe649b8070170fa7ebd2, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 30dc370b164eefc43b95744fc796dad0, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 19a9abb883540be48b75b951a927ae03, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: 6932aba86b69d4938a8c50a717d59853, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: a26981c7f2d064006bf8312351060829, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 7410436684582398122, guid: 356df2fdc05054d879bcdd9ae0534951,
+      type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 1062c701058745940ae5dca6219c64c8, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 2a29e27936eb547458f646f71125b264, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: b8759311f3360444fbaca64b4abd1074, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 3750c318f40cab44a97d3a81beaefeb3, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: c839255fc8f6b4b4d90bf8c1af9f9bd1, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: 79d38b044c9d348f281a061f4fbd1259, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: 5e63515167650a541b309ba3bfd4db3d, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: d93c1bc57fdf1ac4dad1bf04fac05464, type: 3}
+    instantiationMode: 1
+  templatePipeline: {fileID: 0}
+  addToDefaults: 1

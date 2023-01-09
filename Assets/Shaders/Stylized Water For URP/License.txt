@@ -1,0 +1,18 @@
+﻿Stylized Water For URP version 1.1.2 License
+
+Copyright (c) 2021 Alexander Ameye
+
+Stylized Water For URP version 1.1.2 is a free asset and can be downloaded from the asset store and as such falls under the Unity Asset Store EULA. You can download it here:
+
+https://assetstore.unity.com/packages/vfx/shaders/stylized-water-for-urp-162025?_ga=2.32098430.1943230066.1626880917-1970009535.1626762747
+
+You can
+    • Use this asset in both commercial and non-commercial projects
+
+You can not
+    • Distribute this package (in its entirety, any of its files or as part of a project) in its original and/or modified form for money
+    • Distribute this package (in its entirety, any of its files or as part of a project) in its original and/or modified form for free unless given explicit permission by me (Alexander Ameye) to do so
+
+When distributing this package (in its entirety, any of its files or as part of a project) be sure to include this file under the top-level folder of this package. 
+
+For questions about licensing and permission for distribution: alexanderameye@gmail.com

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/StylizedWaterToolbar.uss?fileID=7433441132597879392&amp;guid=898df17d493e67b4f95ae2a26428d7a3&amp;type=3#StylizedWaterToolbar" />
+    <ui:VisualElement name="Title" style="justify-content: center; align-items: center; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; flex-direction: row;">
+        <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/StylizedWaterURP.png?fileID=2800000&amp;guid=a70d19752756e9945b82e5c68af7ad93&amp;type=3#StylizedWaterURP&apos;); width: 20px; height: 20px; margin-right: 5px;" />
+        <ui:Label text="Stylized Water For URP" style="-unity-font-style: bold; margin-left: 5px; font-size: 20px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="StylizedWaterToolbar" style="flex-direction: row; align-items: center; flex-grow: 0; flex-shrink: 1; -unity-text-align: upper-left; justify-content: center; margin-top: 0; margin-bottom: 30px; visibility: visible; display: flex;">
+        <ui:Button text="Configure" name="ConfigureButton" tabindex="0" usage-hints="None" style="margin-left: 0; margin-right: 0; padding-left: 8px; padding-right: 8px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 0; border-bottom-right-radius: 0; padding-top: 4px; padding-bottom: 4px; border-right-width: 0;" />
+        <ui:Button text="About" name="AboutButton" tabindex="0" usage-hints="None" style="margin-left: 0; margin-right: 0; padding-left: 8px; padding-right: 8px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; padding-top: 4px; padding-bottom: 4px; border-right-width: 0;" />
+        <ui:Button text="Acknowledgements" name="AcknowledgementsButton" tabindex="0" usage-hints="None" style="margin-left: 0; margin-right: 0; padding-left: 8px; padding-right: 8px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; padding-top: 4px; padding-bottom: 4px; border-right-width: 0;" />
+        <ui:Button text="Support" name="SupportButton" style="padding-left: 8px; margin-left: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; margin-right: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

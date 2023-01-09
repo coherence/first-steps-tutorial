@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b91f942a5214496b0e11eaedb54c36, type: 3}
+  m_Name: RuntimeSettings
+  m_EditorClassIdentifier: 
+  versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
+  runtimeKey: 
+  schemaID: 8b3cb0a37f973eee5af49a30f864b39078f86e0a
+  simulatorSlug: 
+  localHost: 127.0.0.1
+  localWorldUDPPort: 32001
+  localWorldWebPort: 32002
+  remoteWebPort: 443
+  localRoomsUDPPort: 42001
+  localRoomsWebPort: 42002
+  apiPort: 64001
+  localHttpServerHost: localhost
+  localHttpServerPort: 42006
+  localDevelopmentMode: 1
+  useDebugStreams: 0
+  organizationID: 
+  projectID: 
+  projectName: 
+  playApiEndpoint: https://api.prod.coherence.io/v1/play

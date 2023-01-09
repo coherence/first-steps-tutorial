@@ -1,0 +1,5 @@
+.acknowledgement {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -unity-text-align: upper-center;
+}

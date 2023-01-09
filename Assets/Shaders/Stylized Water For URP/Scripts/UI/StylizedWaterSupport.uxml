@@ -1,0 +1,78 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="Toolbar" src="project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/StylizedWaterToolbar.uxml?fileID=9197481963319205126&amp;guid=cdd135d7c7a3ea04eae5cbdddf24d3ba&amp;type=3#StylizedWaterToolbar" />
+    <Style src="project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/StylizedWaterSupport.uss?fileID=7433441132597879392&amp;guid=99f550c2a5fe44997be3775a4157b711&amp;type=3#StylizedWaterSupport" />
+    <ui:Instance template="Toolbar" name="Toolbar" />
+    <ui:VisualElement name="Content" focusable="false" style="opacity: 1; background-color: rgba(75, 75, 75, 0); -unity-background-image-tint-color: rgb(255, 255, 255); flex-direction: column; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 5px; color: rgb(0, 0, 0); align-items: center; flex-grow: 0; flex-shrink: 1; -unity-text-align: upper-left;">
+        <ui:VisualElement name="Support Content" focusable="false" style="opacity: 1; background-color: rgba(75, 75, 75, 0); -unity-background-image-tint-color: rgb(255, 255, 255); flex-direction: row; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 10px; padding-bottom: 5px; color: rgb(0, 0, 0); align-items: flex-start; flex-grow: 0; flex-shrink: 1; -unity-text-align: upper-left;">
+            <ui:VisualElement name="Column 1" style="align-items: stretch; justify-content: flex-start; padding-left: 20px; padding-right: 10px;">
+                <ui:Button name="Manual" class="support-section-button" style="margin-left: 3px; padding-left: 6px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 4px; margin-top: 4px;">
+                    <ui:VisualElement name="Button Content" style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/Manual.png?fileID=2800000&amp;guid=a81da85df92aa4b45a92bad9df8622b2&amp;type=3#Manual&apos;);" />
+                        <ui:VisualElement name="Text">
+                            <ui:Label text="Manual" name="Title" class="button-title" />
+                            <ui:Label text="Learn more" name="Description" class="button-description" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button name="Forum" style="margin-left: 3px; padding-left: 6px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 4px; margin-top: 4px;">
+                    <ui:VisualElement name="Button Content" style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/Forum.png?fileID=2800000&amp;guid=3a013fbf440f65945af849c426c8b5e4&amp;type=3#Forum&apos;);" />
+                        <ui:VisualElement name="Text" class="support-section-button-text">
+                            <ui:Label text="Forum" name="Title" class="button-title" />
+                            <ui:Label text="Request features" name="Description" class="button-description" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button name="Website" class="support-section-button" style="margin-left: 3px; padding-left: 6px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 4px; margin-top: 4px;">
+                    <ui:VisualElement name="Button Content" style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/Website.png?fileID=2800000&amp;guid=4018fd99b3b3e8c43917d6240a41833d&amp;type=3#Website&apos;);" />
+                        <ui:VisualElement name="Text">
+                            <ui:Label text="Website" name="Title" class="button-title" />
+                            <ui:Label text="See my work" name="Description" class="button-description" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement name="Column 1" style="align-items: stretch; justify-content: flex-start; padding-left: 10px; padding-right: 20px;">
+                <ui:Button name="Contact" style="margin-left: 3px; padding-left: 6px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 4px; margin-top: 4px;">
+                    <ui:VisualElement name="Button Content" style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/Discord.png?fileID=2800000&amp;guid=be1ea077bd3d5fe40bfe76eff7e300e9&amp;type=3#Discord&apos;);" />
+                        <ui:VisualElement name="Text">
+                            <ui:Label text="Discord" name="Title" class="button-title" />
+                            <ui:Label text="Contact me " name="Description" class="button-description" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button name="Review" style="margin-left: 3px; padding-left: 6px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 4px; margin-top: 4px;">
+                    <ui:VisualElement name="Button Content" style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/Review.png?fileID=2800000&amp;guid=db9b24f3bfb254c4c8c649c8f001a6d5&amp;type=3#Review&apos;);" />
+                        <ui:VisualElement name="Text">
+                            <ui:Label text="Review" name="Title" class="button-title" />
+                            <ui:Label text="Leave a review" name="Description" class="button-description" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button name="Twitter" style="margin-left: 3px; padding-left: 6px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 4px; margin-top: 4px;">
+                    <ui:VisualElement name="Button Content" style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/Twitter.png?fileID=2800000&amp;guid=ec2d7381c7b698345b136f3f5717505a&amp;type=3#Twitter&apos;);" />
+                        <ui:VisualElement name="Text" class="support-section-button-text">
+                            <ui:Label text="Twitter" name="Title" class="button-title" />
+                            <ui:Label text="See my work" name="Description" class="button-description" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Other" focusable="false" style="opacity: 1; background-color: rgba(75, 75, 75, 0); -unity-background-image-tint-color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 5px; padding-bottom: 5px; color: rgb(0, 0, 0); -unity-text-align: upper-left; width: auto;">
+            <ui:Button name="Caustics" style="margin-left: 4px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 4px; margin-top: 4px; margin-right: 4px; padding-right: 10px;">
+                <ui:VisualElement name="Button Content" style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:VisualElement name="Icon" class="support-section-button-icon button-icon" style="background-image: url(&apos;project://database/Assets/Stylized%20Water%20For%20URP/Scripts/UI/Icons/Caustics.png?fileID=2800000&amp;guid=d49cec1719cda894390301599ba7b88d&amp;type=3#Caustics&apos;);" />
+                    <ui:VisualElement name="Text" class="support-section-button-text">
+                        <ui:Label text="Need better caustics?" name="Title" class="button-title" />
+                        <ui:Label text="Use my caustics asset" name="CausticsAsset" class="button-description" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
