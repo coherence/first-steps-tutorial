@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class SceneSwitcher : MonoBehaviour
 {
     public string[] sceneNames;
+    public Button[] buttons;
     public GraphicRaycaster raycaster;
 
     private int _currentScene;
@@ -21,6 +22,8 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadNewScene_UI(int newSceneIndex)
     {
         raycaster.enabled = false;
+        buttons[_currentScene].interactable = true;
+        
         _sceneToLoad = newSceneIndex;
         _unloadSceneOperation = SceneManager.UnloadSceneAsync(sceneNames[_currentScene]);
         _unloadSceneOperation.completed += OnSceneUnloaded;
@@ -34,6 +37,7 @@ public class SceneSwitcher : MonoBehaviour
 
     private void LoadNewScene()
     {
+        buttons[_sceneToLoad].interactable = false;
         _loadSceneOperation = SceneManager.LoadSceneAsync(sceneNames[_sceneToLoad], LoadSceneMode.Additive);
         _loadSceneOperation.completed += OnSceneLoaded;
     }

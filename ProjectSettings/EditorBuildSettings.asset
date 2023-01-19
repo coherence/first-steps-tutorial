@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneSelector.unity
     guid: e15b64d7526934560a0a8d00c727db0c
   - enabled: 1
-    path: Assets/Scenes/1_Transforms.unity
+    path: Assets/Scenes/1_Basics.unity
     guid: 0a12b974e546c4cbcb834f1f55f83912
   - enabled: 1
     path: Assets/Scenes/4_Physics.unity
