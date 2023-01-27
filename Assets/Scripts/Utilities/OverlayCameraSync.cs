@@ -1,6 +1,10 @@
 using Cinemachine;
 using UnityEngine;
 
+/// <summary>
+/// Utility class used to synchronise Camera properties of the overlay Camera, with the main Camera.
+/// The overlay Camera is in charge of rendering 3D world-space UI.
+/// </summary>
 public class OverlayCameraSync : MonoBehaviour
 {
     public Camera mainCamera;

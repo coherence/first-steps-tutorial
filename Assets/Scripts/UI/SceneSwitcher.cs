@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Loads and unloads scenes at the press of a UI button. Used in the SceneSelector scene.
+/// </summary>
 public class SceneSwitcher : MonoBehaviour
 {
     public string[] sceneNames;

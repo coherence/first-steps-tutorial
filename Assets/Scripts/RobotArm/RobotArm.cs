@@ -1,6 +1,3 @@
-using System;
-using Coherence.Connection;
-using Coherence.Toolkit;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,15 +16,7 @@ public class RobotArm : MonoBehaviour
     public float baseRotationSpeed = 70f;
     public float moveSpeed = 3f;
 
-    private CoherenceSync _sync;
     private float _currentHeadXAngle;
-
-    private void Awake()
-    {
-        _sync = GetComponent<CoherenceSync>();
-        _sync.MonoBridge.onLiveQuerySynced.AddListener(OnFirstSync);
-        _sync.MonoBridge.onDisconnected.AddListener(OnDisconnection);
-    }
 
     private void OnEnable()
     {
@@ -72,27 +61,5 @@ public class RobotArm : MonoBehaviour
         float yPositionRatio = Mathf.InverseLerp(3.3f, 7f, handIKtarget.localPosition.y);
         float resultingXRotation = Mathf.Lerp(90f, -110f, yPositionRatio);
         handIKtarget.localEulerAngles = new Vector3(resultingXRotation, -90f, 0f);
-    }
-
-    private void OnFirstSync(CoherenceMonoBridge obj)
-    {
-        _sync.MonoBridge.onLiveQuerySynced.RemoveListener(OnFirstSync);
-        _sync.OnStateAuthority.AddListener(OnAuthorityGained);
-    }
-
-    private void OnAuthorityGained()
-    {
-        
-    }
-
-    private void OnDisconnection(CoherenceMonoBridge bridge, ConnectionCloseReason connectionCloseReason)
-    {
-        
-    }
-
-    private void OnDestroy()
-    {
-        _sync.OnStateAuthority.RemoveAllListeners();
-        _sync.MonoBridge.onDisconnected.RemoveAllListeners();
     }
 }

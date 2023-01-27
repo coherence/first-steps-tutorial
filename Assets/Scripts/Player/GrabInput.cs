@@ -1,4 +1,3 @@
-using Coherence.Toolkit;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

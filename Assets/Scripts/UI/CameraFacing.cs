@@ -1,20 +1,26 @@
 using UnityEngine;
 
+/// <summary>
+/// Rotates the GameObject so that it's facing the Camera at all times. Used for world-space UI.
+/// </summary>
 public class CameraFacing : MonoBehaviour
 {
     private bool _cameraFound;
     private Transform _camera;
 
+    private void Start()
+    {
+        FindCamera();
+    }
+
     private void LateUpdate()
     {
         if (_cameraFound)
         {
-            transform.LookAt(transform.position + _camera.rotation * Vector3.forward, _camera.rotation * Vector3.up);
+            Quaternion cameraRotation = _camera.rotation;
+            transform.LookAt(transform.position + cameraRotation * Vector3.forward, cameraRotation * Vector3.up);
         }
-        else
-        {
-            FindCamera();
-        }
+        else FindCamera();
     }
 
     private void FindCamera()

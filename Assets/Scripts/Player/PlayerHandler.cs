@@ -1,14 +1,13 @@
-using System;
 using Cinemachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class PlayerHandler : MonoBehaviour
 {
+    public float spawnRadius = 1f;
     public GameObject prefabToSpawn;
     
-    [FormerlySerializedAs("cmVcam")] [Header("Camera")]
+    [Header("Camera")]
     public CinemachineVirtualCamera gameplayVCam;
     public bool lookAtPlayer;
     public bool followPlayer;
@@ -22,7 +21,7 @@ public class PlayerHandler : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        Vector3 initialPosition = transform.position + Random.insideUnitSphere * 3f;
+        Vector3 initialPosition = transform.position + Random.insideUnitSphere * spawnRadius;
         initialPosition.y = transform.position.y;
 
         _player = Instantiate(prefabToSpawn, initialPosition, Quaternion.identity);
@@ -40,5 +39,10 @@ public class PlayerHandler : MonoBehaviour
     {
         Destroy(_player);
         if (gameplayVCam != null) gameplayVCam.gameObject.SetActive(false);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, spawnRadius);
     }
 }

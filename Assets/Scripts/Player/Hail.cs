@@ -8,13 +8,6 @@ public class Hail : MonoBehaviour
     public InputActionReference hailAction;
     public Animator animator;
     public CoherenceSync sync;
-    
-    private bool _hasCoherenceSync;
-
-    private void Awake()
-    {
-        _hasCoherenceSync = sync != null;
-    }
 
     private void OnEnable()
     {
@@ -30,6 +23,6 @@ public class Hail : MonoBehaviour
     private void OnHailPerformed(InputAction.CallbackContext obj)
     {
         animator.SetTrigger("Hail");
-        if (_hasCoherenceSync) sync.SendCommand<Animator>(nameof(Animator.SetTrigger), MessageTarget.Other, "Hail");
+        sync.SendCommand<Animator>(nameof(Animator.SetTrigger), MessageTarget.Other, "Hail");
     }
 }

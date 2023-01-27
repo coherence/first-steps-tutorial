@@ -2732,6 +2732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cf4783796074f179d59d2d716963d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnRadius: 3
   prefabToSpawn: {fileID: 4666490834533792131, guid: cd9bcc1feead9419fac0c5981ce85c23,
     type: 3}
   gameplayVCam: {fileID: 1235677504}
@@ -6651,16 +6652,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1170120255252929796, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 518.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1170120255252929796, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 1170120255252929797, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_Enabled
@@ -6774,12 +6765,12 @@ PrefabInstance:
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 518.01
+      value: 1026.87
       objectReference: {fileID: 0}
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 259.005
+      value: 513.435
       objectReference: {fileID: 0}
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}

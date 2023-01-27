@@ -30,10 +30,6 @@ public class Move : MonoBehaviour
     public float dampenFactor = 20f;
     public LayerMask walkableLayers;
 
-    [Header("Debug")] public bool debug = false;
-
-    private bool _hasAnimator;
-    private bool _hasCoherenceSync;
     private bool _isGrounded;
     private bool _isOnMovingPlatform;
     private FloatingPlatform _movingPlatform;
@@ -52,11 +48,7 @@ public class Move : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-
         _sync = GetComponent<CoherenceSync>();
-        _hasCoherenceSync = _sync != null;
-
-        _hasAnimator = animator != null;
     }
 
     private void Update()
@@ -99,20 +91,13 @@ public class Move : MonoBehaviour
         _rigidbody.velocity = _horizontalVelocity + _verticalVelocity;
         if (!_isGrounded) _verticalVelocity = Vector3.Project(_rigidbody.velocity, Vector3.up);
 
-        if (debug)
-        {
-            Debug.DrawRay(transform.position, _horizontalVelocity, Color.green, Time.deltaTime, false);
-            Debug.DrawRay(transform.position, _verticalVelocity, Color.red, Time.deltaTime, false);
-            Debug.DrawRay(transform.position, Vector3.up * -cruiseHeight, Color.blue, Time.deltaTime, false);
-        }
-
-        if (inputMagnitude != 0f)
+        if (inputMagnitude > 0f)
         {
             Quaternion newRotation = Quaternion.LookRotation(MoveInput);
             transform.rotation = Quaternion.Lerp(_rigidbody.rotation, newRotation, Time.deltaTime * rotationSpeed);
         }
 
-        if (_hasAnimator) UpdateAnimatorParameters();
+        UpdateAnimatorParameters();
     }
 
     private void VerticalMovement(Vector3 velocity)
@@ -139,6 +124,7 @@ public class Move : MonoBehaviour
                 // Just landed on a moving platform?
                 if (!wasGrounded || _movingPlatform == null)
                 {
+                    // The or is included to account when moving onto a moving platform directly from the ground, without jumping
                     if (raycastHit.rigidbody != null)
                     {
                         _isOnMovingPlatform = raycastHit.rigidbody.TryGetComponent(out FloatingPlatform platform);
@@ -158,24 +144,22 @@ public class Move : MonoBehaviour
             }
             else
             {
-                if(wasGrounded) LeaveGround();
                 // Free falling
+                if(wasGrounded) LeaveGround();
                 ApplyGravity();
-                if (_hasAnimator) animator.SetBool("IsFalling", _isFalling);
             }
         }
-
-        if (debug) Debug.DrawRay(transform.position, Vector3.up * -rayLength, Color.cyan, Time.deltaTime, false);
     }
 
     private void UpdateAnimatorParameters()
     {
+        // This is used to blend between the Walk and Run animation clips in the Animator
         float animationSpeed = _horizontalVelocity.magnitude / _currentSpeed;
+        if (IsSprinting) animationSpeed *= runMultiplier;
 
         animator.SetFloat("MoveSpeed", animationSpeed);
         animator.SetBool("Grounded", _isGrounded);
     }
-
 
     private void ApplyGravity()
     {
@@ -206,24 +190,25 @@ public class Move : MonoBehaviour
         _isFalling = !_isGrounded && Vector3.Dot(_rigidbody.velocity, Vector3.up) < 0;
     }
 
+    /// <summary>
+    /// Invoked when a jump happens. This method is not invoked when dropping off high ground without the jump input.
+    /// </summary>
     private void Jump()
     {
-        if (_isGrounded && _hasAnimator)
+        if (_isGrounded)
         {
             animator.SetTrigger("Jump");
-            if (_hasCoherenceSync) _sync.SendCommand<Animator>(nameof(Animator.SetTrigger), MessageTarget.Other, "Jump");
+            _sync.SendCommand<Animator>(nameof(Animator.SetTrigger), MessageTarget.Other, "Jump");
         }
         _jumpTimer = jumpLength;
+        
+        LeaveGround();
 
         _verticalVelocity = Vector3.up * jumpForce;
         Vector3 d = _rigidbody.velocity;
         d -= Vector3.Project(d, Vector3.up);
         d += _verticalVelocity;
         _rigidbody.velocity = d;
-        
-        LeaveGround();
-
-        _isGrounded = false;
     }
 
     private void GetOntoPlatform()
@@ -231,6 +216,9 @@ public class Move : MonoBehaviour
         transform.SetParent(_movingPlatform.transform, true);
     }
 
+    /// <summary>
+    /// Invoked when jumping, but also when dropping off a high ground into the air.
+    /// </summary>
     private void LeaveGround()
     {
         _isGrounded = false;

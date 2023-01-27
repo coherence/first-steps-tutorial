@@ -9071,7 +9071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438728331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 300, y: 1.1, z: 0}
+  m_LocalPosition: {x: 298.7, y: 1.1, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9090,6 +9090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cf4783796074f179d59d2d716963d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnRadius: 1.5
   prefabToSpawn: {fileID: 4666490834533792131, guid: cd9bcc1feead9419fac0c5981ce85c23,
     type: 3}
   gameplayVCam: {fileID: 764438822}
@@ -40691,6 +40692,7 @@ Transform:
   - {fileID: 2119754297}
   - {fileID: 749836921}
   - {fileID: 8886879285831062606}
+  - {fileID: 1993278931}
   - {fileID: 2099805370}
   - {fileID: 168389964}
   - {fileID: 1659697064}
@@ -40771,7 +40773,6 @@ Transform:
   - {fileID: 186902693}
   - {fileID: 1851817385}
   - {fileID: 1900127807}
-  - {fileID: 1993278931}
   - {fileID: 110510234}
   - {fileID: 1808912127}
   - {fileID: 1025786710}
@@ -40787,6 +40788,7 @@ Transform:
   - {fileID: 808606586}
   - {fileID: 372617750}
   - {fileID: 1239138104}
+  - {fileID: 1880840696}
   - {fileID: 849215119}
   - {fileID: 1082824120}
   - {fileID: 1086968800}
@@ -40794,7 +40796,6 @@ Transform:
   - {fileID: 436994552}
   - {fileID: 168579999}
   - {fileID: 11369328}
-  - {fileID: 1880840696}
   - {fileID: 1319517333}
   - {fileID: 1818483667}
   - {fileID: 200289144}
@@ -43413,7 +43414,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1859559658}
-  m_RootOrder: 231
+  m_RootOrder: 224
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 180}
 --- !u!23 &1880840697
 MeshRenderer:
@@ -44444,7 +44445,7 @@ Transform:
   - {fileID: 378818970}
   - {fileID: 1677486306}
   m_Father: {fileID: 1859559658}
-  m_RootOrder: 208
+  m_RootOrder: 128
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2001225055
 PrefabInstance:
@@ -48591,7 +48592,7 @@ PrefabInstance:
     - target: {fileID: 1170120255252929796, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 456.34
+      value: 1026.87
       objectReference: {fileID: 0}
     - target: {fileID: 1170120255252929796, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
@@ -48711,22 +48712,17 @@ PrefabInstance:
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 456.34
+      value: 1026.87
       objectReference: {fileID: 0}
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 228.17
+      value: 513.435
       objectReference: {fileID: 0}
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1170120256406225123, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
-        type: 3}
-      propertyPath: m_text
-      value: '<b>Controls:</b> WASD/Joystick: Move | Space/Joypad button down: Jump'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3899d1d755bc04d48bf3f1dab37a3f3b, type: 3}

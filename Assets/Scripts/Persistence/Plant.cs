@@ -1,4 +1,3 @@
-using System;
 using Coherence;
 using Coherence.Toolkit;
 using UnityEngine;

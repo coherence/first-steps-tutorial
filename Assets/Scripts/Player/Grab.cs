@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Grab : MonoBehaviour
 {
+    public Animator animator;
     public Transform holdSocket;
     public float tossTime = 1f; // maximum "charge time" if holding the toss button down 
 
@@ -9,6 +10,7 @@ public class Grab : MonoBehaviour
     
     private Grabbable _grabbedObject;
     private Rigidbody _grabbedObjectRB;
+    private Collider _grabbedObjectCollider;
 
     private float _tossChargeTimer = 0;
     bool _isChargingToss = false;
@@ -17,9 +19,8 @@ public class Grab : MonoBehaviour
     {
         if(IsCarryingSomething)
         {
-            Transform carryTrans = holdSocket;
-            _grabbedObjectRB.MovePosition( Vector3.Lerp( _grabbedObject.transform.position, carryTrans.position, .45f ) );
-            _grabbedObjectRB.MoveRotation( Quaternion.Lerp( _grabbedObject.transform.rotation, carryTrans.rotation, .45f ) );
+            _grabbedObjectRB.MovePosition( Vector3.Lerp( _grabbedObject.transform.position, holdSocket.position, .85f ) );
+            _grabbedObjectRB.MoveRotation( Quaternion.Lerp( _grabbedObject.transform.rotation, holdSocket.rotation, .85f ) );
             _grabbedObjectRB.velocity = Vector3.zero;
         }
     }
@@ -38,17 +39,23 @@ public class Grab : MonoBehaviour
 
     public void PickUp(Grabbable target)
     {
+        animator.SetBool("CarryingBig", true);
         holdSocket.rotation = Quaternion.identity;
         _grabbedObjectRB = target.gameObject.GetComponent<Rigidbody>();
+        _grabbedObjectCollider = target.GetComponent<Collider>();
+        _grabbedObjectCollider.enabled = false;
         _grabbedObject = target;
         IsCarryingSomething = true;
     }
 
     public void Drop()
     {
+        animator.SetBool("CarryingBig", false);
+        _grabbedObjectCollider.enabled = true;
         _grabbedObjectRB.AddForce( transform.forward * (_tossForce * 12f), ForceMode.VelocityChange );
         _grabbedObjectRB.AddRelativeTorque( -Vector3.right * (_tossForce * 5f), ForceMode.VelocityChange );
         _grabbedObjectRB = null;
+        _grabbedObjectCollider = null;
         IsCarryingSomething = false;
         _isChargingToss = false;
 

@@ -5106,6 +5106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cf4783796074f179d59d2d716963d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnRadius: 3
   prefabToSpawn: {fileID: 4666490834533792131, guid: cd9bcc1feead9419fac0c5981ce85c23,
     type: 3}
   gameplayVCam: {fileID: 764438822}
@@ -28421,7 +28422,7 @@ PrefabInstance:
     - target: {fileID: 1170120255252929796, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 702.57
+      value: 1378.64
       objectReference: {fileID: 0}
     - target: {fileID: 1170120255252929796, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
@@ -28541,12 +28542,12 @@ PrefabInstance:
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 702.57
+      value: 1378.64
       objectReference: {fileID: 0}
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 351.285
+      value: 689.32
       objectReference: {fileID: 0}
     - target: {fileID: 1170120256406225122, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
@@ -28556,8 +28557,9 @@ PrefabInstance:
     - target: {fileID: 1170120256406225123, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_text
-      value: '<b>Controls:</b> WASD/Joystick: Move | Space/Joypad button down: Jump
-        | E/Joypad button left: Grab/throw crate'
+      value: '<b>Controls:</b> WASD/Joystick: Move | Hold Shift/Joypad shoulder button
+        left: Run | Space/Joypad button down: Jump | E/Joypad button left: Grab/throw
+        crate'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3899d1d755bc04d48bf3f1dab37a3f3b, type: 3}
