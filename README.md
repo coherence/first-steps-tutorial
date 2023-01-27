@@ -1,12 +1,11 @@
-# coherence First Steps - Tutorial project
+![](https://imgur.com/Z4grkow.jpg)
 
-![](https://imgur.com/ocYS3LD.jpg)
-
-The First Steps project is a series of small sample scenes, each one demonstrating one or more features of coherence.
-After downloading the code here, we suggest to open up the [documentation](https://docs-coherence.gitbook.io/first-steps/) as the perfect companion to explore the different scenes included in the project.
+The First Steps tutorial project contains a series of small sample scenes, each one demonstrating one or more features of coherence.
+After downloading this Unity project, we suggest to open up the [documentation](https://docs-coherence.gitbook.io/first-steps/) as it's the perfect companion to explore the scenes included in the project.
 
 ### Unity version
-Currently the project is on Unity `2021.3.11f1`,  but opening it with any Unity `2021.3` version is fine.
+Currently the project is on Unity `2021.3.11f1`,  but opening it with any Unity `2021.3` version is fine.  
+Note: At the moment of writing, opening the project with Unity `2022.1` or more recent is discouraged, due to a Unity bug. We are awaiting a fix and will update this.
 
 ## Additional resources
 
