@@ -13,8 +13,7 @@ Note: At the moment of writing, opening the project with Unity `2022.1` or more 
 A .zip download of the project is available [here](https://bit.ly/coherenceFirstStepsPreview). Generally, you can also download it using the Code button on this repo, as this project doesn't require LFS Support.
 
 ### Documentation
-Full documentation for this project is available at https://docs-coherence.gitbook.io/first-steps/  
-Main coherence docs are available at https://docs.coherence.io
+Full documentation for this project is available at https://docs.coherence.io/learning-coherence/first-steps-tutorial
 
 ### Trying a pre-made build
 To quickly try a pre-built version of the game, head to [this link](https://coherence.io/games/coherence/first-steps-tutorial) and either play the WebGL build in the browser, or download one of the available desktop versions.
