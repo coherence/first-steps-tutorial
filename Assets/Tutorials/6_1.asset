@@ -46,25 +46,34 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Parenting entities
+        m_Untranslated: Objects that live on
       Text:
-        m_Untranslated: 'Every now and then it makes sense to parent network entities
-          to each other, for instance when creating vehicles or an elevator. In this
-          sample scene we''ll see what are the implications of that, and how coherence
-          uses this to optimise network traffic.
+        m_Untranslated: 'We have seen a lot of examples with objects belonging to
+          a Client, and when that Client disconnects, they disappear with them. We
+          call these "session-based" entities.
 
 
-          Controls
+          But coherence also has
+          a built-in system to make objects survive the disconnection of a client,
+          and be ready to be adopted by another Client or a Simulator. We call these
+          objects "persistent". Persistent objects stay on the Replication Server
+          even if no client is connected, creating the feeling that the game world
+          is alive beyond an individual player session.
+
+
+          <b>Controls</b>
 
           -
           WASD or Left Stick: Move character
 
-          - Spacebar or Joypad button
-          down: Jump
+          - Hold Space or Joypad shoulder
+          button left: Run
+
+          - P or Right shoulder button: Plant a flower
 
 
-          To learn more about how this scene is setup, go
-          to the <a href="https://docs-coherence.gitbook.io/first-steps/welcome/6.-parenting-entities">documentation</a>.'
+          To
+          learn more about how this scene is setup, go to the <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/6-persistence">documentation</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}
@@ -83,9 +92,9 @@ MonoBehaviour:
     m_CameraMode: 1
     m_FocusMode: 0
     m_Orthographic: 0
-    m_Size: 26.165966
-    m_Pivot: {x: -0.0456772, y: -21.632872, z: 20.852345}
-    m_Rotation: {x: -0.37213275, y: 0.0030436069, z: -0.0012191157, w: -0.9281802}
+    m_Size: 31.212746
+    m_Pivot: {x: -2.6876798, y: -24.680143, z: 16.984867}
+    m_Rotation: {x: -0.42343307, y: 0.061325423, z: -0.028743036, w: -0.903399}
     m_FrameObject:
       m_SceneGuid: 
       m_GameObjectGuid: 

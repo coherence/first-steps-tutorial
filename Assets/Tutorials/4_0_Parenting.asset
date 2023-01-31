@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f107dc6d4c984c45bdafd3bb15f98f0, type: 3}
-  m_Name: 8_0_Persistence
+  m_Name: 4_0_Parenting
   m_EditorClassIdentifier: 
   TutorialTitle:
-    m_Untranslated: Persistence
+    m_Untranslated: Parenting entities
   m_ProgressTrackingEnabled: 0
   m_LessonId: 
   m_Version: 1
   m_SceneManagementBehavior: 1
   m_Scenes:
-  - {fileID: 102900000, guid: 6e266a2975dea4d9fab03452c2cd8ff1, type: 3}
+  - {fileID: 102900000, guid: c45a4163162034dda8ba5af9ca01d3c4, type: 3}
   m_DefaultSceneCameraSettings:
     m_CameraMode: 1
     m_FocusMode: 0
     m_Orthographic: 0
-    m_Size: 10
-    m_Pivot: {x: 502.14084, y: -1.772603, z: -1.9816276}
-    m_Rotation: {x: -0.41618645, y: -0.014748485, z: 0.006752428, w: -0.9091418}
+    m_Size: 24.693027
+    m_Pivot: {x: 295.67606, y: -19.382156, z: 25.38025}
+    m_Rotation: {x: -0.3115332, y: 0.0016897672, z: -0.0005529484, w: -0.950237}
     m_FrameObject:
       m_SceneGuid: 
       m_GameObjectGuid: 
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_WindowLayout: {fileID: 102900000, guid: 70fefc49c05324b45bf890faac4e9f51, type: 3}
   m_Pages:
     m_Items:
-    - {fileID: 11400000, guid: 8eb57fb963c144f0aa6c51ecb0463d44, type: 2}
+    - {fileID: 11400000, guid: 1a2ca6f0c53ca4fd3aea3ea9bb84bf22, type: 2}
   Modified:
     m_PersistentCalls:
       m_Calls: []

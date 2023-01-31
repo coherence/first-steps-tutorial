@@ -32,36 +32,19 @@ MonoBehaviour:
     Text:
       m_Untranslated: All the topics presented in each lesson scene explained in-depth
     Metadata: 
-    Url: https://docs-coherence.gitbook.io/first-steps/
+    Url: https://docs.coherence.io/learning-coherence/first-steps-tutorial
     Image: {fileID: 2800000, guid: e8e8a25fd1b2f46e0aa0591e05d96f00, type: 3}
     Tutorial: {fileID: 0}
   - OrderInView: 1
     Heading:
-      m_Untranslated: Syncing Transforms
+      m_Untranslated: The basics
     Text:
-      m_Untranslated: The basics of networking
+      m_Untranslated: Syncing variables, animation parameters, and invoking network
+        commands
     Metadata: 
     Url: 
     Image: {fileID: 2800000, guid: 9b85175bce69a4335bd125a94bcd0c62, type: 3}
     Tutorial: {fileID: 11400000, guid: 8f3eedcdef1dd4effb737e398472349b, type: 2}
-  - OrderInView: 2
-    Heading:
-      m_Untranslated: Animation parameters
-    Text:
-      m_Untranslated: Controlling Animators
-    Metadata: 
-    Url: 
-    Image: {fileID: 2800000, guid: 80ccf1ea7f90c4122ab47cc1415a81c6, type: 3}
-    Tutorial: {fileID: 11400000, guid: 91822ae267e064bf28dfca4e9bfb1eff, type: 2}
-  - OrderInView: 3
-    Heading:
-      m_Untranslated: Sending commands
-    Text:
-      m_Untranslated: Invoking methods over the network
-    Metadata: 
-    Url: 
-    Image: {fileID: 2800000, guid: f91d95905653c47df917c4df60b12db4, type: 3}
-    Tutorial: {fileID: 11400000, guid: 77a0427222ea74c97842dbc98f2e1f78, type: 2}
   - OrderInView: 4
     Heading:
       m_Untranslated: Physics / Authority transfer

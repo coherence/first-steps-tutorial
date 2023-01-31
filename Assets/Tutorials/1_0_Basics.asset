@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f107dc6d4c984c45bdafd3bb15f98f0, type: 3}
-  m_Name: 5_0_SpatialPartitioning
+  m_Name: 1_0_Basics
   m_EditorClassIdentifier: 
   TutorialTitle:
-    m_Untranslated: Spatial partitioning
+    m_Untranslated: The basics
   m_ProgressTrackingEnabled: 0
   m_LessonId: 
   m_Version: 1
   m_SceneManagementBehavior: 1
   m_Scenes:
-  - {fileID: 102900000, guid: dacfadd59f33045fca1238d6fe545870, type: 3}
+  - {fileID: 102900000, guid: 0a12b974e546c4cbcb834f1f55f83912, type: 3}
   m_DefaultSceneCameraSettings:
     m_CameraMode: 1
     m_FocusMode: 0
     m_Orthographic: 0
     m_Size: 24.693027
-    m_Pivot: {x: 199.91899, y: -10.898037, z: 11.07037}
-    m_Rotation: {x: -0.31007427, y: -0.013994973, z: 0.004566096, w: -0.9506034}
+    m_Pivot: {x: 0.093331665, y: -19.450405, z: 16.010744}
+    m_Rotation: {x: -0.39015368, y: 0.005781249, z: -0.0024486822, w: -0.92073214}
     m_FrameObject:
       m_SceneGuid: 
       m_GameObjectGuid: 
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_WindowLayout: {fileID: 102900000, guid: 70fefc49c05324b45bf890faac4e9f51, type: 3}
   m_Pages:
     m_Items:
-    - {fileID: 11400000, guid: c4797faa92ae246229df91c57739c0f4, type: 2}
+    - {fileID: 11400000, guid: 985cae8a993ae44a1a4885ba76a9456d, type: 2}
   Modified:
     m_PersistentCalls:
       m_Calls: []

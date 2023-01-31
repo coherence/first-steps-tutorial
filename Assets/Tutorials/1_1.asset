@@ -46,11 +46,16 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Welcome!
+        m_Untranslated: The basics
       Text:
         m_Untranslated: 'This scene demonstrates the simplest networking scenario
           possible with coherence. Characters sync their position and rotation, which
           immediately creates a feeling of presence. Someone else is connected!
+
+
+          In
+          this same scene, we can also see how to sync animation parameters, and
+          how to invoke commands (methods) on the network.
 
 
           <b>Controls</b>
@@ -58,12 +63,18 @@ MonoBehaviour:
           -
           WASD or Left Stick: Move character
 
-          - Spacebar or Joypad button
-          down: Jump
+          - Hold Space or Joypad shoulder
+          button left: Run
+
+          - Spacebar or Joypad button down: Jump
 
 
-          To learn more about how this scene is setup, go
-          to the <a href="https://docs-coherence.gitbook.io/first-steps/welcome/1.-syncing-variables">documentation</a>.'
+          To
+          learn more about how this scene is setup, go to the documentation, and
+          explore lessons <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/1-basic-syncing">Basic
+          syncing</a>, <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/1-basic-syncing/1-2-animation-parameters">Animator
+          parameters</a> and <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/1-basic-syncing/1-3-sending-commands">Network
+          commands</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}

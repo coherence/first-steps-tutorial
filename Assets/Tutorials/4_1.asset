@@ -46,10 +46,12 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Physics / Authority transfer
+        m_Untranslated: Parenting entities
       Text:
-        m_Untranslated: 'In this sample we look at how to network simple physics
-          simulated directly on the Clients, and the implications of this setup.
+        m_Untranslated: 'Every now and then it makes sense to parent network entities
+          to each other, for instance when creating vehicles or an elevator. In this
+          sample scene we''ll see what are the implications of that, and how coherence
+          uses this to optimise network traffic.
 
 
           Controls
@@ -57,14 +59,14 @@ MonoBehaviour:
           -
           WASD or Left Stick: Move character
 
-          - Spacebar or Joypad button
-          down: Jump
+          - Hold Space or Joypad shoulder
+          button left: Run
 
-          - E or Joypad button left: Pick up / throw objects
+          - Spacebar or Joypad button down: Jump
 
 
           To
-          learn more about how this scene is setup, go to the <a href="https://docs-coherence.gitbook.io/first-steps/welcome/4.-physics-authority-transfer">documentation</a>.'
+          learn more about how this scene is setup, go to the <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/4-parenting-entities">documentation</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}

@@ -46,23 +46,28 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Welcome!
+        m_Untranslated: Physics / Authority transfer
       Text:
-        m_Untranslated: 'Using the same scene as in the previous lesson, let''s see
-          how to easily sync animation over the network.
+        m_Untranslated: 'In this sample we look at how to network simple physics
+          simulated directly on the Clients, and the implications of this setup.
 
 
-          <b>Controls</b>
+          Controls
 
           -
           WASD or Left Stick: Move character
 
-          - Spacebar or Joypad button
-          down: Jump
+          - Hold Space or Joypad shoulder
+          button left: Run
+
+          - Spacebar or Joypad button down: Jump
+
+          -
+          E or Joypad button left: Pick up / throw objects
 
 
-          To learn more about how this scene is setup, go
-          to the <a href="https://docs-coherence.gitbook.io/first-steps/welcome/2.-animation-parameters">documentation</a>.'
+          To learn more
+          about how this scene is setup, go to the <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/2-physics-authority-transfer">documentation</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}
@@ -81,9 +86,9 @@ MonoBehaviour:
     m_CameraMode: 1
     m_FocusMode: 0
     m_Orthographic: 0
-    m_Size: 24.693027
-    m_Pivot: {x: 0.093331665, y: -19.450405, z: 16.010744}
-    m_Rotation: {x: -0.39015368, y: 0.005781249, z: -0.0024486822, w: -0.92073214}
+    m_Size: 26.165966
+    m_Pivot: {x: -0.0456772, y: -21.632872, z: 20.852345}
+    m_Rotation: {x: -0.37213275, y: 0.0030436069, z: -0.0012191157, w: -0.9281802}
     m_FrameObject:
       m_SceneGuid: 
       m_GameObjectGuid: 

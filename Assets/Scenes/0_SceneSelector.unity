@@ -525,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 458.595
+      value: 437.83002
       objectReference: {fileID: 0}
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
@@ -735,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 661.78503
+      value: 625.1
       objectReference: {fileID: 0}
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
@@ -927,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 298.82
+      value: 289.63
       objectReference: {fileID: 0}
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
@@ -1119,7 +1119,7 @@ PrefabInstance:
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1056.975
+      value: 989.57
       objectReference: {fileID: 0}
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
@@ -1311,7 +1311,7 @@ PrefabInstance:
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 872.42
+      value: 819.07
       objectReference: {fileID: 0}
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
@@ -1511,11 +1511,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNames:
   - 1_Basics
-  - 4_Physics
-  - 5_LiveQuery
-  - 6_MovingPlatforms
-  - 7_ComplexHierarchies
-  - 8_Persistence
+  - 2_Physics
+  - 3_LiveQuery
+  - 4_MovingPlatforms
+  - 5_ComplexHierarchies
+  - 6_Persistence
   buttons:
   - {fileID: 1017660085}
   - {fileID: 1590166597}
@@ -1684,7 +1684,7 @@ PrefabInstance:
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 191.89001
+      value: 188.99
       objectReference: {fileID: 0}
     - target: {fileID: 8772339313966660908, guid: faaa17fc9ca67484398407377d456778,
         type: 3}

@@ -16,19 +16,18 @@ MonoBehaviour:
   editorLogLevel: 1
   logSourceFilterMode: 0
   logSourceFilterCSV: 
-  showHubSectionInfo: 0
-  showHubModuleDescription: 0
+  showHubSectionInfo: 1
+  showHubModuleDescription: 1
   showHubMessageAreas: 1
   portalToken: 
   worldUDPPort: 32001
   worldWebPort: 32002
   roomsUDPPort: 42001
   roomsWebPort: 42002
-  apiPort: 64001
   sendFrequency: 20
   recvFrequency: 60
   bakeMode: 1
-  schemaBakeFolderGuid: 2e85d9e6eafb04ad49945035dee6ea08
+  schemaBakeFolderGuid: 7e61aeb3b86014ec8a1d1092ca85a0c3
   runtimeSettingsGuid: 05f52a426355b49ed9e1062c38c7cec9
   prefabMapperGuid: aea6ceecf3ee44eafaedb905be8c1f90
   schemaBakeGenerateAsmdef: 0

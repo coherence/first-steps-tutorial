@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f107dc6d4c984c45bdafd3bb15f98f0, type: 3}
-  m_Name: 4_0_Physics
+  m_Name: 5_0_ComplexHierarchies
   m_EditorClassIdentifier: 
   TutorialTitle:
-    m_Untranslated: Physics / Authority transfer
+    m_Untranslated: Complex hierarchies
   m_ProgressTrackingEnabled: 0
   m_LessonId: 
   m_Version: 1
   m_SceneManagementBehavior: 1
   m_Scenes:
-  - {fileID: 102900000, guid: 5b0089e2e7ee0432e98682912fd6de2b, type: 3}
+  - {fileID: 102900000, guid: 8f6265575418e48f3bdbdd5bc46dab46, type: 3}
   m_DefaultSceneCameraSettings:
     m_CameraMode: 1
     m_FocusMode: 0
     m_Orthographic: 0
-    m_Size: 26.680561
-    m_Pivot: {x: 100.29421, y: -22.07259, z: 12.951132}
-    m_Rotation: {x: -0.40252793, y: -0.010729138, z: 0.0047197584, w: -0.91533893}
+    m_Size: 8.816552
+    m_Pivot: {x: 401.13654, y: 2.2943337, z: -3.93441}
+    m_Rotation: {x: -0.35816965, y: 0.00025998452, z: -0.000098415534, w: -0.93366057}
     m_FrameObject:
       m_SceneGuid: 
       m_GameObjectGuid: 
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_WindowLayout: {fileID: 102900000, guid: 70fefc49c05324b45bf890faac4e9f51, type: 3}
   m_Pages:
     m_Items:
-    - {fileID: 11400000, guid: 731296f47817342388ebe68e0a2ee999, type: 2}
+    - {fileID: 11400000, guid: 4f9574738b4204ebca18c04eed514b15, type: 2}
   Modified:
     m_PersistentCalls:
       m_Calls: []

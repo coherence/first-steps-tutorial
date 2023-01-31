@@ -12,19 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/1_Basics.unity
     guid: 0a12b974e546c4cbcb834f1f55f83912
   - enabled: 1
-    path: Assets/Scenes/4_Physics.unity
+    path: Assets/Scenes/2_Physics.unity
     guid: 5b0089e2e7ee0432e98682912fd6de2b
   - enabled: 1
-    path: Assets/Scenes/5_LiveQuery.unity
+    path: Assets/Scenes/3_LiveQuery.unity
     guid: dacfadd59f33045fca1238d6fe545870
   - enabled: 1
-    path: Assets/Scenes/6_MovingPlatforms.unity
+    path: Assets/Scenes/4_MovingPlatforms.unity
     guid: c45a4163162034dda8ba5af9ca01d3c4
   - enabled: 1
-    path: Assets/Scenes/7_ComplexHierarchies.unity
+    path: Assets/Scenes/5_ComplexHierarchies.unity
     guid: 8f6265575418e48f3bdbdd5bc46dab46
   - enabled: 1
-    path: Assets/Scenes/8_Persistence.unity
+    path: Assets/Scenes/6_Persistence.unity
     guid: 6e266a2975dea4d9fab03452c2cd8ff1
   m_configObjects:
     io.coherence.simulator.build.options: {fileID: 11400000, guid: b6f2029d8f07e401eb058758f2f7cbd1,

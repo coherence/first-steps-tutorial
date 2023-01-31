@@ -86,6 +86,15 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.learn.iet-framework.authoring": {
+      "version": "1.0.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.learn.iet-framework": "2.2.3"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
@@ -233,7 +242,7 @@
       }
     },
     "io.coherence.sdk": {
-      "version": "0.10.6",
+      "version": "0.10.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {

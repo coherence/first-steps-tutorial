@@ -46,26 +46,27 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: More than just variables
+        m_Untranslated: Spatial partitioning
       Text:
-        m_Untranslated: 'This time we take a look at another way to make Clients
-          communicate: Network Commands. Network Commands are like sending direct
-          messages to objects, instead of syncing the value of a variable.
+        m_Untranslated: 'Getting updates about every entity in the whole scene is
+          unfeasible for big-world games, like MMOs. For this, coherence has a flexible
+          system for partitioning space and getting updates only about the entities
+          that each Client cares about, using something called a Live Query.
 
 
-          <b>Controls</b>
+          Controls
 
           -
           WASD or Left Stick: Move character
 
-          - Spacebar or Joypad button
-          down: Jump
+          - Hold Space or Joypad shoulder
+          button left: Run
 
-          - Q or D-Pad up: Wave
+          - Spacebar or Joypad button down: Jump
 
 
-          To learn more about
-          how this scene is setup, go to the <a href="https://docs-coherence.gitbook.io/first-steps/welcome/3.-sending-commands">documentation</a>.'
+          To
+          learn more about how this scene is setup, go to the <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/3-spatial-partitioning">documentation</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}
@@ -84,9 +85,9 @@ MonoBehaviour:
     m_CameraMode: 1
     m_FocusMode: 0
     m_Orthographic: 0
-    m_Size: 24.693027
-    m_Pivot: {x: 6.576397, y: -18.20491, z: 31.723488}
-    m_Rotation: {x: -0.22776853, y: -0.1104547, z: 0.026015358, w: -0.9670842}
+    m_Size: 26.165966
+    m_Pivot: {x: -0.0456772, y: -21.632872, z: 20.852345}
+    m_Rotation: {x: -0.37213275, y: 0.0030436069, z: -0.0012191157, w: -0.9281802}
     m_FrameObject:
       m_SceneGuid: 
       m_GameObjectGuid: 

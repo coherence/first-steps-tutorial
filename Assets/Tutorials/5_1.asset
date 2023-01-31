@@ -46,25 +46,31 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Spatial partitioning
+        m_Untranslated: Complex hierarchies
       Text:
-        m_Untranslated: 'Getting updates about every entity in the whole scene is
-          unfeasible for big-world games, like MMOs. For this, coherence has a flexible
-          system for partitioning space and getting updates only about the entities
-          that each Client cares about, using something called a Live Query.
+        m_Untranslated: 'Game characters and other networked entities are often made
+          of very deep hierarchies of nested GameObjects, needing to sync specific
+          properties along these chains. In addition, a common use case is to parent
+          a networked object to the tip of a chain of GameObjects.
 
 
           Controls
 
           -
-          WASD or Left Stick: Move character
+          A/D or Left/right joypad triggers: Rotate crane base
 
-          - Spacebar or Joypad button
-          down: Jump
+          - W/S or
+          Left joystick up/down: Raise/lower crane head
+
+          - Q/E or Left
+          joystick left/right: Move crane head forward/back
+
+          - P/Space/Enter
+          or Joypad button left: Pickup and release crate
 
 
-          To learn more about how this scene is setup, go
-          to the <a href="https://docs-coherence.gitbook.io/first-steps/welcome/5.-spatial-partitioning">documentation</a>.'
+          To learn more
+          about how this scene is setup, go to the <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/5-complex-hierarchies">documentation</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}
