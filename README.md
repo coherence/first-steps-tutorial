@@ -1,7 +1,7 @@
 ![](https://imgur.com/Z4grkow.jpg)
 
 The First Steps tutorial project contains a series of small sample scenes, each one demonstrating one or more features of coherence.
-After downloading this Unity project, we suggest to open up the [documentation](https://docs-coherence.gitbook.io/first-steps/) as it's the perfect companion to explore the scenes included in the project.
+After downloading this Unity project, we suggest to open up the [documentation](https://docs.coherence.io/learning-coherence/first-steps-tutorial) as it's the perfect companion to explore the scenes included in the project.
 
 ### Unity version
 Currently the project is on Unity `2021.3.11f1`,  but opening it with any Unity `2021.3` version is fine.  
