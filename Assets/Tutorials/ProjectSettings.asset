@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ProjectSettings
   m_EditorClassIdentifier: 
   m_WelcomePage: {fileID: 11400000, guid: 2ec4155e383534821a67b897fd5946f5, type: 2}
-  m_InitialScene: {fileID: 102900000, guid: 5d176d92d3a534aafa8c515e0130242c, type: 3}
+  m_InitialScene: {fileID: 0}
   m_InitialCameraSettings:
     m_CameraMode: 1
     m_FocusMode: 0
@@ -29,6 +29,6 @@ MonoBehaviour:
       m_ComponentIndex: 0
       m_AssetObject: {fileID: 0}
       m_Prefab: {fileID: 0}
-    m_Enabled: 1
+    m_Enabled: 0
   m_TutorialStyle: {fileID: 11400000, guid: bcaf24dcefa7047b19a2b51c946e64bf, type: 2}
   m_RestoreDefaultAssetsOnTutorialReload: 0
