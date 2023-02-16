@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
-  runtimeKey: f2618e8d1484459db317d1c207413c5b
+  runtimeKey: 
   schemaID: 3e213965a39f73100728eab1ecc4353442de468d
   simulatorSlug: 
   localHost: 127.0.0.1
@@ -28,7 +28,7 @@ MonoBehaviour:
   localHttpServerPort: 42006
   localDevelopmentMode: 1
   useDebugStreams: 0
-  organizationID: c1ho23prn6r43hh5tc40
-  projectID: cetumgdbo1hk1jjq3j00
-  projectName: First Steps tutorial
+  organizationID: 
+  projectID: 
+  projectName: 
   playApiEndpoint: https://api.prod.coherence.io/v1/play

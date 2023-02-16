@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: ProjectSettings
   m_EditorClassIdentifier: 
   m_WelcomePage: {fileID: 11400000, guid: 2ec4155e383534821a67b897fd5946f5, type: 2}
-  m_InitialScene: {fileID: 0}
+  m_InitialScene: {fileID: 102900000, guid: 5d176d92d3a534aafa8c515e0130242c, type: 3}
   m_InitialCameraSettings:
     m_CameraMode: 1
     m_FocusMode: 0
     m_Orthographic: 0
-    m_Size: 467.99323
-    m_Pivot: {x: 685.25, y: 432.5, z: 0}
-    m_Rotation: {x: -2.220446e-16, y: 0, z: 0, w: 1}
+    m_Size: 24.196444
+    m_Pivot: {x: 0.093331665, y: -19.450405, z: 16.010744}
+    m_Rotation: {x: -0.39015368, y: 0.005781249, z: -0.0024486822, w: -0.92073214}
     m_FrameObject:
       m_SceneGuid: 5d176d92d3a534aafa8c515e0130242c
       m_GameObjectGuid: ae387348-1c95-4980-b889-9efca9bc1f4b
@@ -31,4 +31,4 @@ MonoBehaviour:
       m_Prefab: {fileID: 0}
     m_Enabled: 0
   m_TutorialStyle: {fileID: 11400000, guid: bcaf24dcefa7047b19a2b51c946e64bf, type: 2}
-  m_RestoreDefaultAssetsOnTutorialReload: 0
+  m_RestoreAssetsBackupOnTutorialReload: 0

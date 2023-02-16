@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3_0_SpatialPartitioning
   m_EditorClassIdentifier: 
   TutorialTitle:
-    m_Untranslated: Spatial partitioning
+    m_Untranslated: Areas of interest
   m_ProgressTrackingEnabled: 0
   m_LessonId: 
   m_Version: 1
@@ -36,10 +36,11 @@ MonoBehaviour:
       m_AssetObject: {fileID: 0}
       m_Prefab: {fileID: 0}
     m_Enabled: 1
-  m_WindowLayout: {fileID: 102900000, guid: 70fefc49c05324b45bf890faac4e9f51, type: 3}
+  m_WindowLayout: {fileID: 0}
   m_Pages:
     m_Items:
     - {fileID: 11400000, guid: c4797faa92ae246229df91c57739c0f4, type: 2}
+  CompletionDialog: {fileID: 0}
   Modified:
     m_PersistentCalls:
       m_Calls: []

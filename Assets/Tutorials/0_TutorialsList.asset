@@ -56,7 +56,7 @@ MonoBehaviour:
     Tutorial: {fileID: 11400000, guid: 547f1cc0c19aa4e3ca81e9ee9b017c82, type: 2}
   - OrderInView: 5
     Heading:
-      m_Untranslated: Spatial partitioning
+      m_Untranslated: Areas of interest
     Text:
       m_Untranslated: Receive updates only from parts of the world
     Metadata: 

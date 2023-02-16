@@ -46,7 +46,7 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Spatial partitioning
+        m_Untranslated: Areas of interest
       Text:
         m_Untranslated: 'Getting updates about every entity in the whole scene is
           unfeasible for big-world games, like MMOs. For this, coherence has a flexible

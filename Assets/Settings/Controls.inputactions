@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "987b735b-3b24-4ab6-bfda-f10d8501a675",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Sprint",
                     "type": "Button",
                     "id": "26e57e11-ca13-40d4-846b-fc3590b33197",
@@ -33,18 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Grab",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "c3f309bf-7769-4f8f-a302-3573123f273c",
+                    "id": "987b735b-3b24-4ab6-bfda-f10d8501a675",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ShowHideUI",
+                    "name": "Grab",
                     "type": "Button",
-                    "id": "1b4abb1e-c752-4977-a37e-d2559c9ea3a6",
+                    "id": "c3f309bf-7769-4f8f-a302-3573123f273c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -69,18 +60,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ShowHideAuthority",
+                    "name": "Hail",
                     "type": "Button",
-                    "id": "bfd7283d-1428-4272-a524-d004ead203b2",
+                    "id": "ff4e790b-6a84-4048-bded-aeea63527505",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hail",
+                    "name": "ShowHideAuthority",
                     "type": "Button",
-                    "id": "ff4e790b-6a84-4048-bded-aeea63527505",
+                    "id": "bfd7283d-1428-4272-a524-d004ead203b2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -134,8 +125,8 @@
                 },
                 {
                     "name": "",
-                    "id": "899fd57e-3fce-4082-8221-2d23ff8c55c4",
-                    "path": "<Gamepad>/rightTrigger",
+                    "id": "80127344-8678-4663-b85a-99aac06fdc07",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -179,44 +170,11 @@
                 {
                     "name": "",
                     "id": "25596fac-ecdc-43c2-b7f2-f6eff6d5d992",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "PlantFlower",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2193ddef-7cfc-4e93-bbf5-9e3a05491a11",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4e2cbd1e-af9e-4b61-b4ec-62f72b8d9984",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "06c1c52e-e6f1-4d7e-8e27-51bc3f6887b6",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -332,28 +290,6 @@
                 },
                 {
                     "name": "",
-                    "id": "7b0f3c8d-e893-4b87-8b7b-cd6086e6377c",
-                    "path": "<Keyboard>/u",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ShowHideUI",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1040257b-8bbd-4789-9e96-c45a9ba54930",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ShowHideUI",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "9793a32e-2c19-46b3-809c-ecf3e6d49f97",
                     "path": "<Keyboard>/tab",
                     "interactions": "",
@@ -382,6 +318,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ShowHideAuthority",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2193ddef-7cfc-4e93-bbf5-9e3a05491a11",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06c1c52e-e6f1-4d7e-8e27-51bc3f6887b6",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -620,17 +578,6 @@
                     "name": "",
                     "id": "ff43f58f-31ef-4da7-9284-14f03b2ff6d2",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PickupDrop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c9a12ee2-816e-41f7-9bb1-6286cca1088e",
-                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
