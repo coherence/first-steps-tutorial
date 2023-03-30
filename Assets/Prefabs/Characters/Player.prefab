@@ -5498,7 +5498,7 @@ MonoBehaviour:
   uniquenessType: 0
   coherenceUUID: 
   destructionBehavior: 0
-  preserveChildren: 0
+  preserveChildren: 1
   reflectionBindings: []
   customBindings: []
   bindings:
@@ -5516,6 +5516,7 @@ MonoBehaviour:
   - rid: 9164619121020895240
   - rid: 9164619121020895242
   - rid: 9164619131893317722
+  - rid: 2919437089004585011
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -5579,15 +5580,15 @@ MonoBehaviour:
         guid: 11b3179c-3374-4fba-a48c-8c52ce7a5719
         archetypeData:
           type: 1
-          minRange: -2147483648
-          maxRange: 2147483647
-          sampleRate: 20
+          minRange: -2
+          maxRange: 3
+          sampleRate: 10
           floatCompression: 0
           fields:
           - type: 1
-            bits: 32
-            minRange: -2147483648
-            maxRange: 2147483647
+            bits: 3
+            minRange: -2
+            maxRange: 3
             precision: 0
             floatCompression: 0
           sharedBinding: {fileID: 0}
@@ -5605,15 +5606,15 @@ MonoBehaviour:
         guid: 08c9688a-6c1b-43f0-a868-56f171ae2df2
         archetypeData:
           type: 1
-          minRange: -2147483648
-          maxRange: 2147483647
-          sampleRate: 20
+          minRange: -2
+          maxRange: 3
+          sampleRate: 10
           floatCompression: 0
           fields:
           - type: 1
-            bits: 32
-            minRange: -2147483648
-            maxRange: 2147483647
+            bits: 3
+            minRange: -2
+            maxRange: 3
             precision: 0
             floatCompression: 0
           sharedBinding: {fileID: 0}
@@ -5631,15 +5632,15 @@ MonoBehaviour:
         guid: e388fa51-05b3-4f7a-836f-ca12ec0a7030
         archetypeData:
           type: 1
-          minRange: -2147483648
-          maxRange: 2147483647
-          sampleRate: 20
+          minRange: -2
+          maxRange: 3
+          sampleRate: 10
           floatCompression: 0
           fields:
           - type: 1
-            bits: 32
-            minRange: -2147483648
-            maxRange: 2147483647
+            bits: 3
+            minRange: -2
+            maxRange: 3
             precision: 0
             floatCompression: 0
           sharedBinding: {fileID: 0}
@@ -5657,15 +5658,15 @@ MonoBehaviour:
         guid: 35fe21b9-6141-49b4-8553-511c0683c2f9
         archetypeData:
           type: 1
-          minRange: -2147483648
-          maxRange: 2147483647
-          sampleRate: 20
+          minRange: -2
+          maxRange: 3
+          sampleRate: 10
           floatCompression: 0
           fields:
           - type: 1
-            bits: 32
-            minRange: -2147483648
-            maxRange: 2147483647
+            bits: 3
+            minRange: -2
+            maxRange: 3
             precision: 0
             floatCompression: 0
           sharedBinding: {fileID: 0}
@@ -5683,15 +5684,15 @@ MonoBehaviour:
         guid: 9730620f-6eb4-4d01-b04e-80e5fc5e4856
         archetypeData:
           type: 1
-          minRange: -2147483648
-          maxRange: 2147483647
-          sampleRate: 20
+          minRange: -2
+          maxRange: 20
+          sampleRate: 10
           floatCompression: 0
           fields:
           - type: 1
-            bits: 32
-            minRange: -2147483648
-            maxRange: 2147483647
+            bits: 5
+            minRange: -2
+            maxRange: 20
             precision: 0
             floatCompression: 0
           sharedBinding: {fileID: 0}
@@ -5710,17 +5711,17 @@ MonoBehaviour:
         guid: 4d9a6244-2a07-4534-bca0-27258cca3b8c
         archetypeData:
           type: 7
-          minRange: 0
-          maxRange: 0
+          minRange: -100
+          maxRange: 600
           sampleRate: 30
-          floatCompression: 0
+          floatCompression: 2
           fields:
           - type: 7
-            bits: 32
-            minRange: 0
-            maxRange: 0
-            precision: 0.001
-            floatCompression: 0
+            bits: 17
+            minRange: -100
+            maxRange: 600
+            precision: 0.01
+            floatCompression: 2
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 4666490834533792130}
         coherenceSync: {fileID: 0}
@@ -5864,7 +5865,7 @@ MonoBehaviour:
           type: 5
           minRange: 0
           maxRange: 0
-          sampleRate: 20
+          sampleRate: 10
           floatCompression: 0
           fields:
           - type: 5
@@ -5915,10 +5916,10 @@ MonoBehaviour:
           floatCompression: 0
           fields:
           - type: 8
-            bits: 32
+            bits: 12
             minRange: 0
             maxRange: 0
-            precision: 0.00000008381903171539307
+            precision: 0.087890625
             floatCompression: 0
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 4666490834533792130}
@@ -5945,6 +5946,54 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+    - rid: 2919437089004585011
+      type: {class: DeepRotationBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
+        asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 2919437089004585012
+        routing: 0
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 792d6900-fc74-4c2f-9fb4-7b533b2dadd6
+        archetypeData:
+          type: 8
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 8
+            bits: 12
+            minRange: 0
+            maxRange: 0
+            precision: 0.087890625
+            floatCompression: 0
+          sharedBinding: {fileID: 0}
+        unityComponent: {fileID: 4582869309862079177}
+        coherenceSync: {fileID: 0}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+          type: 2}
+    - rid: 2919437089004585012
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: rotation
+        monoAssemblyType: UnityEngine.Quaternion, UnityEngine
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 64
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.DeepRotationBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
     - rid: 5551134440486600705
       type: {class: KinematicRigidbodyComponentAction, ns: Coherence.Toolkit.ComponentActions,
         asm: Coherence.Toolkit}
@@ -5965,16 +6014,16 @@ MonoBehaviour:
         archetypeData:
           type: 4
           minRange: 0
-          maxRange: 0
+          maxRange: 5
           sampleRate: 20
-          floatCompression: 0
+          floatCompression: 2
           fields:
           - type: 4
-            bits: 32
+            bits: 13
             minRange: 0
-            maxRange: 0
+            maxRange: 5
             precision: 0.001
-            floatCompression: 0
+            floatCompression: 2
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 8498588009909292941}
         coherenceSync: {fileID: 0}
@@ -6202,17 +6251,17 @@ MonoBehaviour:
         guid: e1e87976-a62a-499c-9c88-381bbdde8ec3
         archetypeData:
           type: 7
-          minRange: 0
-          maxRange: 0
+          minRange: -100
+          maxRange: 600
           sampleRate: 20
-          floatCompression: 0
+          floatCompression: 2
           fields:
           - type: 7
-            bits: 32
-            minRange: 0
-            maxRange: 0
-            precision: 0.001
-            floatCompression: 0
+            bits: 17
+            minRange: -100
+            maxRange: 600
+            precision: 0.01
+            floatCompression: 2
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 7791709351172572033}
         coherenceSync: {fileID: 0}

@@ -369,7 +369,7 @@ MonoBehaviour:
     archetypeName: ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6
     GeneratesArchetypeDefinition: 1
   InterpolationLocation: 4
-  bakedScriptType: Coherence.Generated.CoherenceSyncElevatorPlatform_id6, Assembly-CSharp
+  bakedScriptType: Coherence.Generated.CoherenceSyncElevatorPlatform_id5, Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
   authorityTransferType: 2
@@ -383,6 +383,7 @@ MonoBehaviour:
   customBindings: []
   bindings:
   - rid: 2368830094440660996
+  - rid: 2919437111453024313
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -416,17 +417,17 @@ MonoBehaviour:
         guid: 782a248a-50a4-4106-96ed-90467b4a4913
         archetypeData:
           type: 7
-          minRange: 0
-          maxRange: 0
+          minRange: -100
+          maxRange: 600
           sampleRate: 20
-          floatCompression: 0
+          floatCompression: 2
           fields:
           - type: 7
-            bits: 32
-            minRange: 0
-            maxRange: 0
-            precision: 0.001
-            floatCompression: 0
+            bits: 17
+            minRange: -100
+            maxRange: 600
+            precision: 0.01
+            floatCompression: 2
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 6146188821451997129}
         coherenceSync: {fileID: 0}
@@ -457,6 +458,53 @@ MonoBehaviour:
         asm: Coherence.Toolkit}
       data:
         component: {fileID: 5459872012036489579}
+    - rid: 2919437111453024313
+      type: {class: FloatBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 2919437111453024314
+        routing: 0
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 4dbdefe9-69ef-421f-b0d0-490d9bbb8bc0
+        archetypeData:
+          type: 4
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 4
+            bits: 32
+            minRange: 0
+            maxRange: 0
+            precision: 0.001
+            floatCompression: 0
+          sharedBinding: {fileID: 0}
+        unityComponent: {fileID: 5459872012036489579}
+        coherenceSync: {fileID: 0}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+          type: 2}
+    - rid: 2919437111453024314
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: timer
+        monoAssemblyType: System.Single, mscorlib
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: FloatingPlatform, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.FloatBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
 --- !u!54 &79910452
 Rigidbody:
   m_ObjectHideFlags: 0

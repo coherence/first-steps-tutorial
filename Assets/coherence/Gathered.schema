@@ -1,0 +1,158 @@
+component Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "11", range-min "-1", range-max "2000"]
+
+component ElevatorPlatform_id5_FloatingPlatform_5459872012036489579
+  timer Float [compression "None"]
+
+component Flower_id2_Flower_6689584802229134021
+  timePlanted UInt [bits "32", range-min "0", range-max "4294967295"]
+
+component FlowersCounter_id3_Counter_5847726189716557621
+  count Int [bits "5", range-min "0", range-max "40"]
+
+component Player_id0_CosmeticsChanger_5911091967807195199
+  currentHat Int [bits "3", range-min "-2", range-max "3"]
+  currentHairStyle Int [bits "3", range-min "-2", range-max "3"]
+  currentFacialHair Int [bits "3", range-min "-2", range-max "3"]
+  currentBackpack Int [bits "3", range-min "-2", range-max "3"]
+  currentSkinTone Int [bits "5", range-min "-2", range-max "20"]
+
+component Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066
+  text String [bits "6"]
+
+component Player_id0_UnityEngine__char_46_Animator_8498588009909292941
+  MoveSpeed Float [bits "13", compression "FixedPoint", precision "0.001", range-min "0", range-max "5"]
+  Grounded Bool [bits "1"]
+  CarryingBig Bool [bits "1"]
+  CarryingSmall Bool [bits "1"]
+
+component Player_id0_UnityEngine__char_46_Transform_4582869309862079177
+  rotation Quaternion [bits "12"]
+
+component Player_id0_UnityEngine__char_46_Transform_7791709351172572033
+  position Vector3 [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+
+component RobotArm_id4_RobotArmHand_4031727028522489341
+  isCarryingObject Bool [bits "1"]
+  grabbableObject Entity [bits "20"]
+
+component RobotArm_id4_UnityEngine__char_46_Animator_9849676
+  ClawsOpen Bool [bits "1"]
+
+component RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710
+  rotation Quaternion [bits "12"]
+
+component RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063
+  rotation Quaternion [bits "12"]
+
+component RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008
+  position Vector3 [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+
+component RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436
+  position Vector3 [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+
+component RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591
+  position Vector3 [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+  rotation Quaternion [bits "12"]
+
+component TrainPlatform_id6_FloatingPlatform_107609493621447933
+  timer Float [compression "None"]
+
+command FlowersCounter_id3_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b [routing "All"]
+
+command FlowersCounter_id3_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8 [routing "All"]
+
+command Player_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8 [routing "All"]
+  name String 
+
+command RobotArm_id4_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7 [routing "All"]
+  name String 
+
+archetype Crate_27f1ac5097d4ee4409fbb87ad14f76c2
+  lod 0
+    WorldPosition 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    WorldOrientation 
+      value [bits "12"]
+    Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410 
+      name [bits "6"]
+      number [bits "11", range-min "-1", range-max "2000"]
+
+archetype ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6
+  lod 0
+    WorldPosition 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    ElevatorPlatform_id5_FloatingPlatform_5459872012036489579 
+      number [compression "None"]
+
+archetype Flower_a167402e36850884aa7ce3d374cd6c77
+  lod 0
+    WorldPosition 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    WorldOrientation 
+      value [bits "12"]
+    Flower_id2_Flower_6689584802229134021 
+      number [bits "32", range-min "0", range-max "4294967295"]
+
+archetype FlowersCounter_20d53524fceab40d5a9ab892525615cb
+  lod 0
+    WorldPosition 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    FlowersCounter_id3_Counter_5847726189716557621 
+      number [bits "5", range-min "0", range-max "40"]
+
+archetype Player_cd9bcc1feead9419fac0c5981ce85c23
+  lod 0
+    WorldPosition 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    WorldOrientation 
+      value [bits "12"]
+    Player_id0_UnityEngine__char_46_Transform_4582869309862079177 
+      value [bits "12"]
+    Player_id0_CosmeticsChanger_5911091967807195199 
+      number [bits "3", range-min "-2", range-max "3"]
+      number [bits "3", range-min "-2", range-max "3"]
+      number [bits "3", range-min "-2", range-max "3"]
+      number [bits "3", range-min "-2", range-max "3"]
+      number [bits "5", range-min "-2", range-max "20"]
+    Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066 
+      name [bits "6"]
+    Player_id0_UnityEngine__char_46_Animator_8498588009909292941 
+      number [bits "13", compression "FixedPoint", precision "0.001", range-min "0", range-max "5"]
+      number [bits "1"]
+      number [bits "1"]
+      number [bits "1"]
+    Player_id0_UnityEngine__char_46_Transform_7791709351172572033 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+
+archetype RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1
+  lod 0
+    WorldPosition 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    RobotArm_id4_UnityEngine__char_46_Animator_9849676 
+      number [bits "1"]
+    RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063 
+      value [bits "12"]
+    RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710 
+      value [bits "12"]
+    RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+      value [bits "12"]
+    RobotArm_id4_RobotArmHand_4031727028522489341 
+      number [bits "1"]
+      value [bits "20"]
+
+archetype TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de
+  lod 0
+    WorldPosition 
+      value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
+    WorldOrientation 
+      value [bits "12"]
+    TrainPlatform_id6_FloatingPlatform_107609493621447933 
+      number [compression "None"]
+

@@ -26,8 +26,8 @@ MonoBehaviour:
   roomsWebPort: 42002
   sendFrequency: 20
   recvFrequency: 60
-  bakeMode: 1
-  schemaBakeFolderGuid: 7e61aeb3b86014ec8a1d1092ca85a0c3
+  bakeMode: 0
+  schemaBakeFolderGuid: bc26c7c9eeed54245baa8a4a69a34127
   runtimeSettingsGuid: 05f52a426355b49ed9e1062c38c7cec9
   prefabMapperGuid: aea6ceecf3ee44eafaedb905be8c1f90
   schemaBakeGenerateAsmdef: 0

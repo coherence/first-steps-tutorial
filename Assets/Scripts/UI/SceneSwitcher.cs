@@ -1,3 +1,4 @@
+using Coherence.Toolkit;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class SceneSwitcher : MonoBehaviour
     private int _sceneToLoad;
     private AsyncOperation _loadSceneOperation;
     private AsyncOperation _unloadSceneOperation;
+    private CoherenceMonoBridge _monoBridge;
 
     private void Start()
     {
@@ -27,6 +29,9 @@ public class SceneSwitcher : MonoBehaviour
         raycaster.enabled = false;
         buttons[_currentScene].interactable = true;
         
+        // Disconnect before unloading, to avoid networking issues
+        _monoBridge.Disconnect();
+
         _sceneToLoad = newSceneIndex;
         _unloadSceneOperation = SceneManager.UnloadSceneAsync(sceneNames[_currentScene]);
         _unloadSceneOperation.completed += OnSceneUnloaded;
@@ -47,6 +52,7 @@ public class SceneSwitcher : MonoBehaviour
     
     private void OnSceneLoaded(AsyncOperation obj)
     {
+        _monoBridge = FindObjectOfType<CoherenceMonoBridge>();
         _loadSceneOperation.completed -= OnSceneLoaded;
         SceneManager.SetActiveScene(SceneManager.GetSceneAt(1));
         _currentScene = _sceneToLoad;

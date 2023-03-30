@@ -23,7 +23,6 @@ public class GrabInput : MonoBehaviour
 
     private void OnDisable()
     {
-        //grabAction.asset.Disable();
         grabAction.action.performed -= OnGrabActionPerformed;
         grabAction.action.canceled -= OnGrabActionCanceled;
     }
@@ -33,7 +32,9 @@ public class GrabInput : MonoBehaviour
         if (_grabScript.IsCarryingSomething)
             return;
 
-        if (other.CompareTag("Grabbable")) _grabbableTarget = other.gameObject.GetComponent<Grabbable>();
+        // Found a grabbable object
+        if (other.CompareTag("Grabbable"))
+            _grabbableTarget = other.gameObject.GetComponent<Grabbable>();
     }
 
     private void OnTriggerExit(Collider other)
@@ -41,9 +42,13 @@ public class GrabInput : MonoBehaviour
         if (_grabScript.IsCarryingSomething)
             return;
 
-        if (other.gameObject.GetComponent<Grabbable>() == _grabbableTarget) _grabbableTarget = null;
+        if (other.gameObject.GetComponent<Grabbable>() == _grabbableTarget)
+            _grabbableTarget = null;
     }
 
+    /// <summary>
+    /// Fires when the button is pressed.
+    /// </summary>
     private void OnGrabActionPerformed(InputAction.CallbackContext obj)
     {
         if (!_grabScript.IsCarryingSomething)
@@ -51,9 +56,10 @@ public class GrabInput : MonoBehaviour
             if (_grabbableTarget == null)
                 return;
             
-            // Pick up Grabbable
+            // Attempt to pick up Grabbable
             _grabbableTarget.PickupValidated += OnPickUpValidated;
-            _grabbableTarget.Pickup(); // This will fire an authority request
+            _grabbableTarget.RequestPickup(); // This will fire an authority request if entity is remote
+            _canToss = false;
         }
         else
         {
@@ -62,6 +68,12 @@ public class GrabInput : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Received a response from the grabbable we're trying to pick up.
+    /// Since the object could be remote, this includes a request of authority,
+    /// which might lead it to fail if the object is set to not concede authority.
+    /// </summary>
+    /// <param name="success">Whether the pickup was authorized or not.</param>
     private void OnPickUpValidated(bool success)
     {
         _grabbableTarget.PickupValidated -= OnPickUpValidated;
@@ -70,19 +82,17 @@ public class GrabInput : MonoBehaviour
         {
             PickUp();
         }
-        else
-        {
-            // TODO: pickup failed. Display some feedback?
-        }
     }
-
+    
     private void PickUp()
     {
         _grabScript.PickUp(_grabbableTarget);
         _grabbableTarget = null;
-        _canToss = false;
     }
 
+    /// <summary>
+    /// Fires when the button is released.
+    /// </summary>
     private void OnGrabActionCanceled(InputAction.CallbackContext obj)
     {
         if (_canToss)

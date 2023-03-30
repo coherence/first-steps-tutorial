@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: befff6656c3efe441b6c1365555733d7, type: 3}
   m_Name: SimulatorBuildOptions
   m_EditorClassIdentifier: 
-  scenesToBuild:
-  - {fileID: 102900000, guid: 6b2caef389e13424e9f0ccef9b308234, type: 3}
-  - {fileID: 102900000, guid: d4ad44ae023034118ae270d6e04942ed, type: 3}
+  scenesToBuild: []
   headlessMode: 1
   scriptingImplementation: 0
   developmentBuild: 0

@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
-    public bool IsBeingCarried { get; private set; }
     public event Action<bool> PickupValidated;
     
     private CoherenceSync _coherenceSync;
+    private Rigidbody _rigidbody;
+    private Collider _collider;
     private bool _isWaitingForConfirmation;
 
     private void Awake()
     {
+        _collider = GetComponent<Collider>();
+        _rigidbody = GetComponent<Rigidbody>();
         _coherenceSync = GetComponent<CoherenceSync>();
     }
         
@@ -31,15 +34,14 @@ public class Grabbable : MonoBehaviour
     }
         
     /// <summary>
-    /// Adds a layer of network validation to base function <see cref="Grabbable.Pickup"/>.
-    /// Scripts need to listen to <see cref="PickupValidated"/> to get the asynchronous result.
+    /// Verifies that the object can be picked up. If the player attempting the action has authority, it succeeds instantly.
+    /// If not, it requests it. Scripts need to listen to <see cref="PickupValidated"/> to get the asynchronous result.
     /// </summary>
-    public void Pickup()
+    public void RequestPickup()
     {
         if (_coherenceSync.HasStateAuthority)
         {
             ConfirmPickup();
-            PickupValidated?.Invoke(true);
         }
         else
         {
@@ -53,25 +55,38 @@ public class Grabbable : MonoBehaviour
         PickupValidated?.Invoke(false);
     }
 
+    /// <summary>
+    /// Object can become authoritative in two ways: when picked up (from the ground, or stolen),
+    /// and when it bumps into a player that doesn't have authority.
+    /// </summary>
     private void OnStateAuthority()
     {
         if(_isWaitingForConfirmation)
         {
+            // Authority change happened as a result of a pick up action
             _isWaitingForConfirmation = false;
             ConfirmPickup();
-            PickupValidated?.Invoke(true);
+        }
+        else
+        {
+            // Authority change happened because of a collision
+            _rigidbody.isKinematic = false;
+            _collider.enabled = true;
         }
     }
 
+    /// <summary>
+    /// Like gaining authority, losing authority can happen because of two reasons: see <see cref="OnStateAuthority"/>.
+    /// </summary>
     private void OnStateRemote()
     {
-        
+        _rigidbody.isKinematic = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         // If this Client already has authority over this object, no check is needed
-        if (IsBeingCarried || _coherenceSync.HasStateAuthority)
+        if (_coherenceSync.HasStateAuthority)
         {
             return;
         }
@@ -80,7 +95,7 @@ public class Grabbable : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent<CoherenceSync>(out CoherenceSync playerCoherenceSync))
             {
-                // If player Prefab is this client's player Prefab, give it authority over this pickup
+                // If player Prefab is this client's player Prefab, give it authority over this grabbable
                 if (playerCoherenceSync.HasStateAuthority)
                 {
                     _coherenceSync.RequestAuthority(AuthorityType.Full);
@@ -89,6 +104,8 @@ public class Grabbable : MonoBehaviour
         }
     }
 
-    private void ConfirmPickup() => IsBeingCarried = true;
-    private void ConfirmLetGo() => IsBeingCarried = false;
+    private void ConfirmPickup()
+    {
+        PickupValidated?.Invoke(true);
+    }
 }

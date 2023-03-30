@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6916203742030657429}
   - component: {fileID: 3793745653331155850}
   - component: {fileID: 6525610836190113121}
+  - component: {fileID: 4939570989761225410}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Grabbable
@@ -126,6 +127,8 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 8241020607719600663}
       lodStepsActive: 1
+    - component: {fileID: 4939570989761225410}
+      lodStepsActive: 1
     lodLevels:
     - distance: 0
     archetypeName: Crate_27f1ac5097d4ee4409fbb87ad14f76c2
@@ -146,6 +149,8 @@ MonoBehaviour:
   bindings:
   - rid: 2368829912872124484
   - rid: 2368829912872124485
+  - rid: 2919437089004584960
+  - rid: 2919437089004584961
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -160,8 +165,7 @@ MonoBehaviour:
   selectedSynchronizedPrefabOption: 2
   usingReflection: 0
   coherenceTag: 
-  componentActions:
-  - rid: 2368830094440661055
+  componentActions: []
   references:
     version: 2
     RefIds:
@@ -179,17 +183,17 @@ MonoBehaviour:
         guid: c8981954-64f3-46df-a426-2f1c647fa024
         archetypeData:
           type: 7
-          minRange: 0
-          maxRange: 0
+          minRange: -100
+          maxRange: 600
           sampleRate: 30
-          floatCompression: 0
+          floatCompression: 2
           fields:
           - type: 7
-            bits: 32
-            minRange: 0
-            maxRange: 0
-            precision: 0.001
-            floatCompression: 0
+            bits: 17
+            minRange: -100
+            maxRange: 600
+            precision: 0.01
+            floatCompression: 2
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 1522740331349769034}
         coherenceSync: {fileID: 0}
@@ -213,10 +217,10 @@ MonoBehaviour:
           floatCompression: 0
           fields:
           - type: 8
-            bits: 32
+            bits: 12
             minRange: 0
             maxRange: 0
-            precision: 0.00000008381903171539307
+            precision: 0.087890625
             floatCompression: 0
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 1522740331349769034}
@@ -263,13 +267,100 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
-    - rid: 2368830094440661055
-      type: {class: KinematicRigidbodyComponentAction, ns: Coherence.Toolkit.ComponentActions,
-        asm: Coherence.Toolkit}
+    - rid: 2919437089004584960
+      type: {class: StringBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
       data:
-        component: {fileID: 3793745653331155850}
-        setOnRemote: 1
-        resetOnAuthority: 1
+        descriptor:
+          rid: 2919437089004584962
+        routing: 0
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 8761ffc7-494f-4fad-a367-41f5669ef1b9
+        archetypeData:
+          type: 5
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 5
+            bits: 6
+            minRange: 0
+            maxRange: 0
+            precision: 0
+            floatCompression: 0
+          sharedBinding: {fileID: 0}
+        unityComponent: {fileID: 4939570989761225410}
+        coherenceSync: {fileID: 0}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+          type: 2}
+    - rid: 2919437089004584961
+      type: {class: IntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 2919437089004584963
+        routing: 0
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 8fb659bf-e821-436e-963e-8810ade5244e
+        archetypeData:
+          type: 1
+          minRange: -1
+          maxRange: 2000
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 1
+            bits: 11
+            minRange: -1
+            maxRange: 2000
+            precision: 0
+            floatCompression: 0
+          sharedBinding: {fileID: 0}
+        unityComponent: {fileID: 4939570989761225410}
+        coherenceSync: {fileID: 0}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+          type: 2}
+    - rid: 2919437089004584962
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: path
+        monoAssemblyType: System.String, mscorlib
+        required: 1
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.Toolkit.CoherenceNode, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.StringBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 2919437089004584963
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: pathDirtyCounter
+        monoAssemblyType: System.Int32, mscorlib
+        required: 1
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.Toolkit.CoherenceNode, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.IntBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
 --- !u!114 &-26253299432273843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +415,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ccdb6d7545417896337d114fcb54ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4939570989761225410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2212572905728603600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac520fda41f43c7b508d780e58180a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: 
+  pathDirtyCounter: 0
 --- !u!1 &8687657005485899766
 GameObject:
   m_ObjectHideFlags: 0

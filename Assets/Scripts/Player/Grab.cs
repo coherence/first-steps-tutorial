@@ -1,3 +1,5 @@
+using System;
+using Coherence.Toolkit;
 using UnityEngine;
 
 public class Grab : MonoBehaviour
@@ -11,19 +13,11 @@ public class Grab : MonoBehaviour
     private Grabbable _grabbedObject;
     private Rigidbody _grabbedObjectRB;
     private Collider _grabbedObjectCollider;
-
-    private float _tossChargeTimer = 0;
-    bool _isChargingToss = false;
-
-    private void FixedUpdate()
-    {
-        if(IsCarryingSomething)
-        {
-            _grabbedObjectRB.MovePosition( Vector3.Lerp( _grabbedObject.transform.position, holdSocket.position, .85f ) );
-            _grabbedObjectRB.MoveRotation( Quaternion.Lerp( _grabbedObject.transform.rotation, holdSocket.rotation, .85f ) );
-            _grabbedObjectRB.velocity = Vector3.zero;
-        }
-    }
+    private CoherenceSync _grabbedObjectSync;
+    private float _tossChargeTimer;
+    private bool _isChargingToss;
+    
+    private float TossForce => Mathf.Clamp(_tossChargeTimer,.2f, 1f);
 
     private void Update()
     {
@@ -35,37 +29,70 @@ public class Grab : MonoBehaviour
         }
     }
 
-    private float _tossForce => Mathf.Clamp(_tossChargeTimer,.2f, 1f);
-
     public void PickUp(Grabbable target)
     {
         animator.SetBool("CarryingBig", true);
         holdSocket.rotation = Quaternion.identity;
         _grabbedObjectRB = target.gameObject.GetComponent<Rigidbody>();
+        _grabbedObjectRB.isKinematic = true;
         _grabbedObjectCollider = target.GetComponent<Collider>();
         _grabbedObjectCollider.enabled = false;
         _grabbedObject = target;
+        _grabbedObject.transform.SetParent(holdSocket, false);
+        _grabbedObject.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        _grabbedObjectSync = _grabbedObject.GetComponent<CoherenceSync>();
+        _grabbedObjectSync.OnStateRemote.AddListener(OnGrabbableStolen);
         IsCarryingSomething = true;
     }
 
+    /// <summary>
+    /// Contains the actions that are performed on the grabbable.
+    /// Only happens when the player
+    /// </summary>
     public void Drop()
     {
-        animator.SetBool("CarryingBig", false);
         _grabbedObjectCollider.enabled = true;
-        _grabbedObjectRB.AddForce( transform.forward * (_tossForce * 12f), ForceMode.VelocityChange );
-        _grabbedObjectRB.AddRelativeTorque( -Vector3.right * (_tossForce * 5f), ForceMode.VelocityChange );
+        _grabbedObject.transform.SetParent(null, true);
+        _grabbedObjectRB.isKinematic = false;
+        _grabbedObjectRB.AddForce( transform.forward * (TossForce * 12f), ForceMode.VelocityChange );
+        _grabbedObjectRB.AddRelativeTorque( -Vector3.right * (TossForce * 5f), ForceMode.VelocityChange );
+
+        LetGo();
+    }
+
+    /// <summary>
+    /// Contains the actions that are performed by the character on itself,
+    /// that is, the ones that happen when the grabbable is let go but not thrown.
+    /// For instance, when stolen.
+    /// </summary>
+    private void LetGo()
+    {
+        animator.SetBool("CarryingBig", false);
+        _grabbedObjectSync.OnStateRemote.RemoveListener(OnGrabbableStolen);
+        
         _grabbedObjectRB = null;
         _grabbedObjectCollider = null;
-        IsCarryingSomething = false;
-        _isChargingToss = false;
-
         _grabbedObject = null;
+        _isChargingToss = false;
+        IsCarryingSomething = false;
+    }
+
+    private void OnGrabbableStolen()
+    {
+        LetGo();
     }
 
     public void StartChargingToss()
     {
         _tossChargeTimer = 0f;
         _isChargingToss = true;
+    }
+
+    private void OnDisable()
+    {
+        // Since the player gets destroyed when exiting Play mode,
+        // make sure to unparent the crate by dropping it
+        if (IsCarryingSomething) Drop();
     }
 }
 

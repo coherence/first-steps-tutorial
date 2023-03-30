@@ -189,15 +189,15 @@ MonoBehaviour:
         guid: 7711bc2e-3be7-4b03-a706-0692d306fce7
         archetypeData:
           type: 1
-          minRange: -2147483648
-          maxRange: 2147483647
-          sampleRate: 20
+          minRange: 0
+          maxRange: 40
+          sampleRate: 10
           floatCompression: 0
           fields:
           - type: 1
-            bits: 32
-            minRange: -2147483648
-            maxRange: 2147483647
+            bits: 5
+            minRange: 0
+            maxRange: 40
             precision: 0
             floatCompression: 0
           sharedBinding: {fileID: 0}
@@ -216,17 +216,17 @@ MonoBehaviour:
         guid: d34657af-8900-466f-81eb-cda7b52c281f
         archetypeData:
           type: 7
-          minRange: 0
-          maxRange: 0
-          sampleRate: 30
-          floatCompression: 0
+          minRange: -100
+          maxRange: 600
+          sampleRate: 1
+          floatCompression: 2
           fields:
           - type: 7
-            bits: 32
-            minRange: 0
-            maxRange: 0
-            precision: 0.001
-            floatCompression: 0
+            bits: 17
+            minRange: -100
+            maxRange: 600
+            precision: 0.01
+            floatCompression: 2
           sharedBinding: {fileID: 0}
         unityComponent: {fileID: 6193622242930807434}
         coherenceSync: {fileID: 0}

@@ -2658,7 +2658,7 @@ PrefabInstance:
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: coherenceUUID
-      value: 5331ca85-6d2a-4648-9c28-4761d307269b
+      value: 6f83e102-7c48-42cd-bde7-89514ff6764c
       objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
@@ -2719,6 +2719,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crate (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
@@ -3369,6 +3374,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1096635723}
     m_Modifications:
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: coherenceUUID
+      value: 89b06067-d343-4fc2-befc-c5542c15ced2
+      objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: m_RootOrder
@@ -4162,7 +4172,7 @@ PrefabInstance:
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: coherenceUUID
-      value: 974856b2-9ad0-45cf-9362-fc0553805322
+      value: 1e6a52de-18d9-4b8e-814d-95c349858b13
       objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
@@ -4223,6 +4233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crate (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
@@ -7546,6 +7561,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Container (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978192294623015035, guid: b3fa5ea5c13caa84881e3d99d6d5d143,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3fa5ea5c13caa84881e3d99d6d5d143, type: 3}
@@ -11265,7 +11285,7 @@ PrefabInstance:
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: coherenceUUID
-      value: 44d467ff-60dc-415a-a784-9d334786a340
+      value: 81e25217-48b3-433f-8c2e-466700aac70a
       objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
@@ -11326,6 +11346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
@@ -11833,7 +11858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1237948009
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11850,7 +11875,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &1243250905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6001905526480874863, guid: f0f504e6237b7c3409b8c65d4f831dd3,
@@ -16528,6 +16553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Container (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978192294623015035, guid: b3fa5ea5c13caa84881e3d99d6d5d143,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3fa5ea5c13caa84881e3d99d6d5d143, type: 3}
@@ -22354,7 +22384,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh238224
+  m_Name: pb_Mesh41114
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23271,7 +23301,7 @@ PrefabInstance:
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: coherenceUUID
-      value: f4e08383-03c6-4160-a300-30bc523eb6ed
+      value: c5a41f62-d2ca-4477-a968-92e765196fbd
       objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
@@ -23332,6 +23362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
@@ -25362,7 +25397,7 @@ PrefabInstance:
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: coherenceUUID
-      value: d81afc90-41f9-48ed-b7a1-85808f83ad20
+      value: 099efb8f-0001-45ea-8fb5-cfc0a83465b3
       objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
@@ -25423,6 +25458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crate (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
@@ -25759,7 +25799,7 @@ PrefabInstance:
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: coherenceUUID
-      value: cda90ba2-48a2-43ec-a89b-c3eab50d7522
+      value: b13e83a2-f486-44e2-b4b6-3b476788d401
       objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
@@ -25820,6 +25860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crate (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
