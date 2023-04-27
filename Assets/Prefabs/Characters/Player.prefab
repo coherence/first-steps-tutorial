@@ -6335,6 +6335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabAction: {fileID: -3259049255946443421, guid: 97210cd740af04df697b1fa71c9c9623,
     type: 3}
+  moveScript: {fileID: 7925058322742570344}
 --- !u!114 &3252893623776146192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6349,7 +6350,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8498588009909292941}
   holdSocket: {fileID: 4582869309862079177}
-  tossTime: 1
 --- !u!136 &3221685422123474936
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8228,7 +8228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2907901201289056077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
   m_Name: 

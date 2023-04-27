@@ -86,17 +86,14 @@ public class Grabbable : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // If this Client already has authority over this object, no check is needed
-        if (_coherenceSync.HasStateAuthority)
-        {
-            return;
-        }
-        
+        if (_coherenceSync.HasStateAuthority) return;
+
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.TryGetComponent<CoherenceSync>(out CoherenceSync playerCoherenceSync))
+            if (collision.gameObject.TryGetComponent<CoherenceSync>(out CoherenceSync collidingPlayersSync))
             {
-                // If player Prefab is this client's player Prefab, give it authority over this grabbable
-                if (playerCoherenceSync.HasStateAuthority)
+                // If player is this client's player Prefab, take authority
+                if (collidingPlayersSync.HasStateAuthority)
                 {
                     _coherenceSync.RequestAuthority(AuthorityType.Full);
                 }

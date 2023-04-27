@@ -37,6 +37,7 @@ public class Move : MonoBehaviour
     private Rigidbody _rigidbody;
     private CoherenceSync _sync;
     private Vector3 _horizontalVelocity;
+    private Vector3 _pushbackVelocity;
     private Vector3 _verticalVelocity;
     private Vector3 _springVector;
     private Vector3 _previousInputVector;
@@ -75,9 +76,12 @@ public class Move : MonoBehaviour
 
         Vector3 lerpedInputVector = Vector3.Lerp(_previousInputVector, MoveInput, Time.deltaTime * inputAcceleration);
         float lerpedMagnitude = lerpedInputVector.magnitude;
+        
+        // Reduce pushback (coming from hits or from crate throws)
+        _pushbackVelocity *= .8f;
 
         _currentSpeed = IsSprinting ? movementSpeed * runMultiplier : movementSpeed;
-        _horizontalVelocity = lerpedInputVector * _currentSpeed;
+        _horizontalVelocity = (lerpedInputVector + _pushbackVelocity) * _currentSpeed;
 
         // Caching for next frame
         _previousInputMagnitude = lerpedMagnitude;
@@ -228,5 +232,26 @@ public class Move : MonoBehaviour
             _movingPlatform = null;
             _isOnMovingPlatform = false;
         }
+    }
+    
+    /// <summary>
+    /// Returns a value to be used as a force when throwing objects. It points in the direction of movement,
+    /// but only if moving forward. If moving backwards, it's zero.
+    /// </summary>
+    public float ThrowSpeed()
+    {
+        float throwSpeed = Vector3.Dot(transform.forward, _horizontalVelocity) * .8f;
+        throwSpeed = Mathf.Clamp(throwSpeed, 0f, Mathf.Infinity);
+        return throwSpeed;
+    }
+
+    /// <summary>
+    /// Applies a pushback force to the player, coming from a throw or from a hit.
+    /// The pushback is added on top of player input,
+    /// and will fade in time over the course of a few frames.
+    /// </summary>
+    public void ApplyThrowPushback(float throwSpeed)
+    {
+        _pushbackVelocity += -transform.forward * throwSpeed * .7f;
     }
 }

@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class GrabInput : MonoBehaviour
 {
     public InputActionReference grabAction;
+    public Move moveScript;
     
     private Grab _grabScript;
     private Grabbable _grabbableTarget;
@@ -18,13 +20,11 @@ public class GrabInput : MonoBehaviour
     {
         grabAction.asset.Enable();
         grabAction.action.performed += OnGrabActionPerformed;
-        grabAction.action.canceled += OnGrabActionCanceled;
     }
 
     private void OnDisable()
     {
         grabAction.action.performed -= OnGrabActionPerformed;
-        grabAction.action.canceled -= OnGrabActionCanceled;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,15 +56,18 @@ public class GrabInput : MonoBehaviour
             if (_grabbableTarget == null)
                 return;
             
+            _canToss = false;
+            
             // Attempt to pick up Grabbable
             _grabbableTarget.PickupValidated += OnPickUpValidated;
             _grabbableTarget.RequestPickup(); // This will fire an authority request if entity is remote
-            _canToss = false;
         }
-        else
+        else if(_canToss)
         {
-            // Grabbable already in hand
-            _grabScript.StartChargingToss();
+            // Release or throw
+            float speed = moveScript.ThrowSpeed();
+            _grabScript.Drop(speed);
+            moveScript.ApplyThrowPushback(speed);
         }
     }
 
@@ -77,6 +80,7 @@ public class GrabInput : MonoBehaviour
     private void OnPickUpValidated(bool success)
     {
         _grabbableTarget.PickupValidated -= OnPickUpValidated;
+        _canToss = true;
             
         if (success)
         {
@@ -88,25 +92,5 @@ public class GrabInput : MonoBehaviour
     {
         _grabScript.PickUp(_grabbableTarget);
         _grabbableTarget = null;
-    }
-
-    /// <summary>
-    /// Fires when the button is released.
-    /// </summary>
-    private void OnGrabActionCanceled(InputAction.CallbackContext obj)
-    {
-        if (_canToss)
-        {
-            if (_grabScript.IsCarryingSomething)
-            {
-                // Release or throw
-                _grabScript.Drop();
-            }
-        }
-        else
-        {
-            // Enables tossing only after the button has been released once
-            _canToss = true;
-        }
     }
 }

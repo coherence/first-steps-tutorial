@@ -35,6 +35,6 @@ MonoBehaviour:
   useToolkit: 1
   useCoherenceSyncSchema: 1
   useCustomSchemas: 0
-  keepConnectionAlive: 0
+  keepConnectionAlive: 1
   compileErrorWatchdog: 1
   activeSchemas: []
