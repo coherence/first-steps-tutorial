@@ -6014,14 +6014,14 @@ MonoBehaviour:
         archetypeData:
           type: 4
           minRange: 0
-          maxRange: 5
+          maxRange: 10
           sampleRate: 20
           floatCompression: 2
           fields:
           - type: 4
-            bits: 13
+            bits: 14
             minRange: 0
-            maxRange: 5
+            maxRange: 10
             precision: 0.001
             floatCompression: 2
           sharedBinding: {fileID: 0}

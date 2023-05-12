@@ -16,7 +16,7 @@ namespace Coherence.Generated
 
 	public class Definition : IDefinition
 	{
-		public const string schemaId = "e3a481451fea1943c46e4fef4411a8062678cd0b";
+		public const string schemaId = "1238fdc709d505187dbfe55b467ef5260cea5da6";
 		public const uint InternalWorldPosition = 0;
 		public const uint InternalWorldOrientation = 1;
 		public const uint InternalLocalUser = 2;
@@ -120,50 +120,52 @@ namespace Coherence.Generated
 		public const uint InternalGenericFieldColor0 = 100;
 		public const uint InternalGenericFieldColor1 = 101;
 		public const uint InternalCrate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410 = 102;
-		public const uint InternalElevatorPlatform_id5_FloatingPlatform_5459872012036489579 = 103;
-		public const uint InternalFlower_id2_Flower_6689584802229134021 = 104;
-		public const uint InternalFlowersCounter_id3_Counter_5847726189716557621 = 105;
-		public const uint InternalPlayer_id0_CosmeticsChanger_5911091967807195199 = 106;
-		public const uint InternalPlayer_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066 = 107;
-		public const uint InternalPlayer_id0_UnityEngine__char_46_Animator_8498588009909292941 = 108;
-		public const uint InternalPlayer_id0_UnityEngine__char_46_Transform_4582869309862079177 = 109;
-		public const uint InternalPlayer_id0_UnityEngine__char_46_Transform_7791709351172572033 = 110;
-		public const uint InternalRobotArm_id4_RobotArmHand_4031727028522489341 = 111;
-		public const uint InternalRobotArm_id4_UnityEngine__char_46_Animator_9849676 = 112;
-		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710 = 113;
-		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063 = 114;
-		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_511851952794508008 = 115;
-		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436 = 116;
-		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591 = 117;
-		public const uint InternalTrainPlatform_id6_FloatingPlatform_107609493621447933 = 118;
-		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0 = 119;
-		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0 = 120;
-		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0 = 121;
-		public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0 = 122;
-		public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_id5_FloatingPlatform_5459872012036489579_LOD0 = 123;
-		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 = 124;
-		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 = 125;
-		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_id2_Flower_6689584802229134021_LOD0 = 126;
-		public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0 = 127;
-		public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_id3_Counter_5847726189716557621_LOD0 = 128;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 = 129;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 = 130;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_4582869309862079177_LOD0 = 131;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_CosmeticsChanger_5911091967807195199_LOD0 = 132;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0 = 133;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Animator_8498588009909292941_LOD0 = 134;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_7791709351172572033_LOD0 = 135;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0 = 136;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Animator_9849676_LOD0 = 137;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063_LOD0 = 138;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710_LOD0 = 139;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008_LOD0 = 140;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436_LOD0 = 141;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591_LOD0 = 142;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_RobotArmHand_4031727028522489341_LOD0 = 143;
-		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0 = 144;
-		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0 = 145;
-		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_id6_FloatingPlatform_107609493621447933_LOD0 = 146;
+		public const uint InternalCrate_id1_Grabbable_6525610836190113121 = 103;
+		public const uint InternalElevatorPlatform_id5_FloatingPlatform_5459872012036489579 = 104;
+		public const uint InternalFlower_id2_Flower_6689584802229134021 = 105;
+		public const uint InternalFlowersCounter_id3_Counter_5847726189716557621 = 106;
+		public const uint InternalPlayer_id0_CosmeticsChanger_5911091967807195199 = 107;
+		public const uint InternalPlayer_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066 = 108;
+		public const uint InternalPlayer_id0_UnityEngine__char_46_Animator_8498588009909292941 = 109;
+		public const uint InternalPlayer_id0_UnityEngine__char_46_Transform_4582869309862079177 = 110;
+		public const uint InternalPlayer_id0_UnityEngine__char_46_Transform_7791709351172572033 = 111;
+		public const uint InternalRobotArm_id4_RobotArmHand_4031727028522489341 = 112;
+		public const uint InternalRobotArm_id4_UnityEngine__char_46_Animator_9849676 = 113;
+		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710 = 114;
+		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063 = 115;
+		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_511851952794508008 = 116;
+		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436 = 117;
+		public const uint InternalRobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591 = 118;
+		public const uint InternalTrainPlatform_id6_FloatingPlatform_107609493621447933 = 119;
+		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0 = 120;
+		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0 = 121;
+		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Grabbable_6525610836190113121_LOD0 = 122;
+		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0 = 123;
+		public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0 = 124;
+		public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_id5_FloatingPlatform_5459872012036489579_LOD0 = 125;
+		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 = 126;
+		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 = 127;
+		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_id2_Flower_6689584802229134021_LOD0 = 128;
+		public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0 = 129;
+		public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_id3_Counter_5847726189716557621_LOD0 = 130;
+		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 = 131;
+		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 = 132;
+		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_4582869309862079177_LOD0 = 133;
+		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_CosmeticsChanger_5911091967807195199_LOD0 = 134;
+		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0 = 135;
+		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Animator_8498588009909292941_LOD0 = 136;
+		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_7791709351172572033_LOD0 = 137;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0 = 138;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Animator_9849676_LOD0 = 139;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063_LOD0 = 140;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710_LOD0 = 141;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008_LOD0 = 142;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436_LOD0 = 143;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591_LOD0 = 144;
+		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_RobotArmHand_4031727028522489341_LOD0 = 145;
+		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0 = 146;
+		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0 = 147;
+		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_id6_FloatingPlatform_107609493621447933_LOD0 = 148;
 		public const uint InternalAuthorityRequest = 0;
 		public const uint InternalAuthorityTransfer = 1;
 		public const uint InternalQuerySynced = 2;
@@ -279,50 +281,52 @@ namespace Coherence.Generated
 			{ 100, "GenericFieldColor0" },
 			{ 101, "GenericFieldColor1" },
 			{ 102, "Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410" },
-			{ 103, "ElevatorPlatform_id5_FloatingPlatform_5459872012036489579" },
-			{ 104, "Flower_id2_Flower_6689584802229134021" },
-			{ 105, "FlowersCounter_id3_Counter_5847726189716557621" },
-			{ 106, "Player_id0_CosmeticsChanger_5911091967807195199" },
-			{ 107, "Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066" },
-			{ 108, "Player_id0_UnityEngine__char_46_Animator_8498588009909292941" },
-			{ 109, "Player_id0_UnityEngine__char_46_Transform_4582869309862079177" },
-			{ 110, "Player_id0_UnityEngine__char_46_Transform_7791709351172572033" },
-			{ 111, "RobotArm_id4_RobotArmHand_4031727028522489341" },
-			{ 112, "RobotArm_id4_UnityEngine__char_46_Animator_9849676" },
-			{ 113, "RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710" },
-			{ 114, "RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063" },
-			{ 115, "RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008" },
-			{ 116, "RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436" },
-			{ 117, "RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591" },
-			{ 118, "TrainPlatform_id6_FloatingPlatform_107609493621447933" },
-			{ 119, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0" },
-			{ 120, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0" },
-			{ 121, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0" },
-			{ 122, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0" },
-			{ 123, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_id5_FloatingPlatform_5459872012036489579_LOD0" },
-			{ 124, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0" },
-			{ 125, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0" },
-			{ 126, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_id2_Flower_6689584802229134021_LOD0" },
-			{ 127, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0" },
-			{ 128, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_id3_Counter_5847726189716557621_LOD0" },
-			{ 129, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0" },
-			{ 130, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0" },
-			{ 131, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_4582869309862079177_LOD0" },
-			{ 132, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_CosmeticsChanger_5911091967807195199_LOD0" },
-			{ 133, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0" },
-			{ 134, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Animator_8498588009909292941_LOD0" },
-			{ 135, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_7791709351172572033_LOD0" },
-			{ 136, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0" },
-			{ 137, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Animator_9849676_LOD0" },
-			{ 138, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063_LOD0" },
-			{ 139, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710_LOD0" },
-			{ 140, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008_LOD0" },
-			{ 141, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436_LOD0" },
-			{ 142, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591_LOD0" },
-			{ 143, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_RobotArmHand_4031727028522489341_LOD0" },
-			{ 144, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0" },
-			{ 145, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0" },
-			{ 146, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_id6_FloatingPlatform_107609493621447933_LOD0" },
+			{ 103, "Crate_id1_Grabbable_6525610836190113121" },
+			{ 104, "ElevatorPlatform_id5_FloatingPlatform_5459872012036489579" },
+			{ 105, "Flower_id2_Flower_6689584802229134021" },
+			{ 106, "FlowersCounter_id3_Counter_5847726189716557621" },
+			{ 107, "Player_id0_CosmeticsChanger_5911091967807195199" },
+			{ 108, "Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066" },
+			{ 109, "Player_id0_UnityEngine__char_46_Animator_8498588009909292941" },
+			{ 110, "Player_id0_UnityEngine__char_46_Transform_4582869309862079177" },
+			{ 111, "Player_id0_UnityEngine__char_46_Transform_7791709351172572033" },
+			{ 112, "RobotArm_id4_RobotArmHand_4031727028522489341" },
+			{ 113, "RobotArm_id4_UnityEngine__char_46_Animator_9849676" },
+			{ 114, "RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710" },
+			{ 115, "RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063" },
+			{ 116, "RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008" },
+			{ 117, "RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436" },
+			{ 118, "RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591" },
+			{ 119, "TrainPlatform_id6_FloatingPlatform_107609493621447933" },
+			{ 120, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0" },
+			{ 121, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0" },
+			{ 122, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Grabbable_6525610836190113121_LOD0" },
+			{ 123, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0" },
+			{ 124, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0" },
+			{ 125, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_id5_FloatingPlatform_5459872012036489579_LOD0" },
+			{ 126, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0" },
+			{ 127, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0" },
+			{ 128, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_id2_Flower_6689584802229134021_LOD0" },
+			{ 129, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0" },
+			{ 130, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_id3_Counter_5847726189716557621_LOD0" },
+			{ 131, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0" },
+			{ 132, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0" },
+			{ 133, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_4582869309862079177_LOD0" },
+			{ 134, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_CosmeticsChanger_5911091967807195199_LOD0" },
+			{ 135, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0" },
+			{ 136, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Animator_8498588009909292941_LOD0" },
+			{ 137, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_id0_UnityEngine__char_46_Transform_7791709351172572033_LOD0" },
+			{ 138, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0" },
+			{ 139, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Animator_9849676_LOD0" },
+			{ 140, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_4231088705669423063_LOD0" },
+			{ 141, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_3110171900669979710_LOD0" },
+			{ 142, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_511851952794508008_LOD0" },
+			{ 143, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_6045207018197627436_LOD0" },
+			{ 144, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_UnityEngine__char_46_Transform_7591837871254792591_LOD0" },
+			{ 145, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_id4_RobotArmHand_4031727028522489341_LOD0" },
+			{ 146, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0" },
+			{ 147, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0" },
+			{ 148, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_id6_FloatingPlatform_107609493621447933_LOD0" },
 		};
 
 		public static string ComponentNameForTypeId(uint typeId)
@@ -550,6 +554,8 @@ namespace Coherence.Generated
 					return GenericFieldColor1.Deserialize(inProtocolStream);
 				case InternalCrate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410:
 					return Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410.Deserialize(inProtocolStream);
+				case InternalCrate_id1_Grabbable_6525610836190113121:
+					return Crate_id1_Grabbable_6525610836190113121.Deserialize(inProtocolStream);
 				case InternalElevatorPlatform_id5_FloatingPlatform_5459872012036489579:
 					return ElevatorPlatform_id5_FloatingPlatform_5459872012036489579.Deserialize(inProtocolStream);
 				case InternalFlower_id2_Flower_6689584802229134021:
@@ -586,6 +592,8 @@ namespace Coherence.Generated
 					return WorldPosition.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(inProtocolStream);
 				case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0:
 					return WorldOrientation.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(inProtocolStream);
+				case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Grabbable_6525610836190113121_LOD0:
+					return Crate_id1_Grabbable_6525610836190113121.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Grabbable_6525610836190113121_LOD0(inProtocolStream);
 				case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0:
 					return Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0(inProtocolStream);
 				case InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0:
@@ -956,6 +964,9 @@ namespace Coherence.Generated
 					break;
 				case InternalCrate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410:
 					Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410.Serialize((Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410)data, mask, protocolStream);
+					break;
+				case InternalCrate_id1_Grabbable_6525610836190113121:
+					Crate_id1_Grabbable_6525610836190113121.Serialize((Crate_id1_Grabbable_6525610836190113121)data, mask, protocolStream);
 					break;
 				case InternalElevatorPlatform_id5_FloatingPlatform_5459872012036489579:
 					ElevatorPlatform_id5_FloatingPlatform_5459872012036489579.Serialize((ElevatorPlatform_id5_FloatingPlatform_5459872012036489579)data, mask, protocolStream);

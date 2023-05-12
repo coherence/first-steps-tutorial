@@ -2,6 +2,9 @@ component Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989
   path String [bits "6"]
   pathDirtyCounter Int [bits "11", range-min "-1", range-max "2000"]
 
+component Crate_id1_Grabbable_6525610836190113121
+  isBeingCarried Bool [bits "1"]
+
 component ElevatorPlatform_id5_FloatingPlatform_5459872012036489579
   timer Float [compression "None"]
 
@@ -22,7 +25,7 @@ component Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066
   text String [bits "6"]
 
 component Player_id0_UnityEngine__char_46_Animator_8498588009909292941
-  MoveSpeed Float [bits "13", compression "FixedPoint", precision "0.001", range-min "0", range-max "5"]
+  MoveSpeed Float [bits "14", compression "FixedPoint", precision "0.001", range-min "0", range-max "10"]
   Grounded Bool [bits "1"]
   CarryingBig Bool [bits "1"]
   CarryingSmall Bool [bits "1"]
@@ -75,6 +78,8 @@ archetype Crate_27f1ac5097d4ee4409fbb87ad14f76c2
       value [bits "17", compression "FixedPoint", precision "0.01", range-min "-100", range-max "600"]
     WorldOrientation 
       value [bits "12"]
+    Crate_id1_Grabbable_6525610836190113121 
+      number [bits "1"]
     Crate_id1_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410 
       name [bits "6"]
       number [bits "11", range-min "-1", range-max "2000"]
@@ -119,7 +124,7 @@ archetype Player_cd9bcc1feead9419fac0c5981ce85c23
     Player_id0_TMPro__char_46_TextMeshProUGUI_2783100773886260066 
       name [bits "6"]
     Player_id0_UnityEngine__char_46_Animator_8498588009909292941 
-      number [bits "13", compression "FixedPoint", precision "0.001", range-min "0", range-max "5"]
+      number [bits "14", compression "FixedPoint", precision "0.001", range-min "0", range-max "10"]
       number [bits "1"]
       number [bits "1"]
       number [bits "1"]

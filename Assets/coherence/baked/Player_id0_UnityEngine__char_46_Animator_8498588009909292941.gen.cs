@@ -36,7 +36,7 @@ namespace Coherence.Generated
 		public AbsoluteSimulationFrame Frame;
 	
 		private static readonly float _MoveSpeed_Min = 0f;
-		private static readonly float _MoveSpeed_Max = 5f;
+		private static readonly float _MoveSpeed_Max = 10f;
 
 		public void SetSimulationFrame(AbsoluteSimulationFrame frame)
 		{
@@ -86,7 +86,7 @@ namespace Coherence.Generated
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
 				Coherence.Utils.Bounds.Check(data.MoveSpeed, _MoveSpeed_Min, _MoveSpeed_Max, "Player_id0_UnityEngine__char_46_Animator_8498588009909292941.MoveSpeed");
-				bitStream.WriteFloat(data.MoveSpeed, FloatMeta.ForFixedPoint(0, 5, 0.001d));
+				bitStream.WriteFloat(data.MoveSpeed, FloatMeta.ForFixedPoint(0, 10, 0.001d));
 			}
 			mask >>= 1;
 			if (bitStream.WriteMask((mask & 0x01) != 0))
@@ -113,7 +113,7 @@ namespace Coherence.Generated
 	
 			if (bitStream.ReadMask())
 			{
-				val.MoveSpeed = bitStream.ReadFloat(FloatMeta.ForFixedPoint(0, 5, 0.001d));
+				val.MoveSpeed = bitStream.ReadFloat(FloatMeta.ForFixedPoint(0, 10, 0.001d));
 				mask |= 0b00000000000000000000000000000001;
 			}
 			if (bitStream.ReadMask())
@@ -139,7 +139,7 @@ namespace Coherence.Generated
 			var val = new Player_id0_UnityEngine__char_46_Animator_8498588009909292941();
 			if (bitStream.ReadMask())
 			{
-				val.MoveSpeed = bitStream.ReadFloat(FloatMeta.ForFixedPoint(0, 5, 0.001d));
+				val.MoveSpeed = bitStream.ReadFloat(FloatMeta.ForFixedPoint(0, 10, 0.001d));
 				mask |= 0b00000000000000000000000000000001;
 			}
 			if (bitStream.ReadMask())

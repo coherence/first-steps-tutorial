@@ -24941,6 +24941,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: coherenceUUID
+      value: 63fdad87-e751-4401-9e5d-1dbb9e93a50a
+      objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: m_RootOrder
@@ -25006,7 +25011,13 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b0106947e8e6caa488768d27ed8ac352, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 6525610836190113121, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6525610836190113121, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
 --- !u!114 &1327512620 stripped
 MonoBehaviour:

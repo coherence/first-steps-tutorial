@@ -158,6 +158,43 @@ namespace Coherence.Generated
 		}
 	}
 
+	public class Binding_27f1ac5097d4ee4409fbb87ad14f76c2_7adfb1f9_df9d_4d92_8091_2a9e293b28d5 : BoolBinding
+	{
+		private Grabbable CastedUnityComponent;		
+
+		protected override void OnBindingCloned()
+		{
+			CastedUnityComponent = (Grabbable)UnityComponent;
+		}
+		public override string CoherenceComponentName => "Crate_id1_Grabbable_6525610836190113121";
+
+		public override uint FieldMask => 0b00000000000000000000000000000001;
+
+		public override bool Value
+		{
+			get => (bool)(System.Boolean)(CastedUnityComponent.isBeingCarried);
+			set => CastedUnityComponent.isBeingCarried = (System.Boolean)(value);
+		}
+
+		protected override bool ReadComponentData(ICoherenceComponentData coherenceComponent)
+		{
+			var update = (Crate_id1_Grabbable_6525610836190113121)coherenceComponent;
+			return update.isBeingCarried;
+		}
+		
+		public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent)
+		{
+			var update = (Crate_id1_Grabbable_6525610836190113121)coherenceComponent;
+			update.isBeingCarried = Value;
+			return update;
+		}
+
+		public override ICoherenceComponentData CreateComponentData()
+		{
+			return new Crate_id1_Grabbable_6525610836190113121();
+		}
+	}
+
 
 	[Preserve]
 	[AddComponentMenu("coherence/Baked/Baked 'Crate' (auto assigned)")]
@@ -217,6 +254,16 @@ namespace Coherence.Generated
 			else
 			{
 				logger.Error("Couldn't find binding (Coherence.Toolkit.CoherenceNode).pathDirtyCounter");
+			}
+			if (coherenceSync.TryGetBindingByGuid("7adfb1f9-df9d-4d92-8091-2a9e293b28d5", "isBeingCarried", out Binding InternalCrate_id1_Grabbable_6525610836190113121_Crate_id1_Grabbable_6525610836190113121_isBeingCarried))
+			{
+				var clone = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_7adfb1f9_df9d_4d92_8091_2a9e293b28d5();
+				InternalCrate_id1_Grabbable_6525610836190113121_Crate_id1_Grabbable_6525610836190113121_isBeingCarried.CloneTo(clone);
+				coherenceSync.Bindings[coherenceSync.Bindings.IndexOf(InternalCrate_id1_Grabbable_6525610836190113121_Crate_id1_Grabbable_6525610836190113121_isBeingCarried)] = clone;
+			}
+			else
+			{
+				logger.Error("Couldn't find binding (Grabbable).isBeingCarried");
 			}
 		}
 

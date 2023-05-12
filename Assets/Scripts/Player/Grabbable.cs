@@ -1,16 +1,26 @@
 using System;
 using Coherence;
+using Coherence.Connection;
 using Coherence.Toolkit;
 using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
+    /// <summary>
+    /// This is a flag used to check if a grabbable can be picked up or not, set to sync.
+    /// However, since syncing over the network takes time, it might still be false when
+    /// a remote player is trying to pick the grabbable up, so we also filter authority
+    /// requests with the <see cref="OnAuthorityRequested"/> callback.
+    /// </summary>
+    [Sync] public bool isBeingCarried;
+    
     public event Action<bool> PickupValidated;
     
     private CoherenceSync _coherenceSync;
     private Rigidbody _rigidbody;
     private Collider _collider;
-    private bool _isWaitingForConfirmation;
+    private bool _pickupRequested;
+    private float _lastAuthorityChangeTime;
 
     private void Awake()
     {
@@ -21,16 +31,27 @@ public class Grabbable : MonoBehaviour
         
     private void OnEnable()
     {
+        _coherenceSync.OnAuthorityRequested += OnAuthorityRequested;
         _coherenceSync.OnStateAuthority.AddListener(OnStateAuthority);
         _coherenceSync.OnStateRemote.AddListener(OnStateRemote);
-        _coherenceSync.OnAuthorityRequestRejected.AddListener(OnAuthorityRequestRejected);
     }
 
     private void OnDisable()
     {
+        _coherenceSync.OnAuthorityRequested -= OnAuthorityRequested;
         _coherenceSync.OnStateAuthority.RemoveListener(OnStateAuthority);
         _coherenceSync.OnStateRemote.RemoveListener(OnStateRemote);
-        _coherenceSync.OnAuthorityRequestRejected.RemoveListener(OnAuthorityRequestRejected);
+    }
+    
+    /// <summary>
+    /// This method is called when another client requests authority. It will reject it if the grabbable
+    /// has just been picked up by the local player. This avoids many race conditions,
+    /// where another player would request authority in the same frame that the local player is picking
+    /// the grabbable up, leading to a the object being in a broken state.
+    /// </summary>
+    private bool OnAuthorityRequested(ClientID requesterid, AuthorityType authoritytype, CoherenceSync sync)
+    {
+        return !isBeingCarried;
     }
         
     /// <summary>
@@ -45,14 +66,9 @@ public class Grabbable : MonoBehaviour
         }
         else
         {
-            _isWaitingForConfirmation = true;
+            _pickupRequested = true;
             _coherenceSync.RequestAuthority(AuthorityType.Full);
         }
-    }
-
-    private void OnAuthorityRequestRejected(AuthorityType authType)
-    {
-        PickupValidated?.Invoke(false);
     }
 
     /// <summary>
@@ -61,10 +77,11 @@ public class Grabbable : MonoBehaviour
     /// </summary>
     private void OnStateAuthority()
     {
-        if(_isWaitingForConfirmation)
+        _lastAuthorityChangeTime = Time.time;
+        if(_pickupRequested)
         {
             // Authority change happened as a result of a pick up action
-            _isWaitingForConfirmation = false;
+            _pickupRequested = false;
             ConfirmPickup();
         }
         else
@@ -72,6 +89,7 @@ public class Grabbable : MonoBehaviour
             // Authority change happened because of a collision
             _rigidbody.isKinematic = false;
             _collider.enabled = true;
+            isBeingCarried = false;
         }
     }
 
@@ -80,17 +98,23 @@ public class Grabbable : MonoBehaviour
     /// </summary>
     private void OnStateRemote()
     {
+        _lastAuthorityChangeTime = Time.time;
         _rigidbody.isKinematic = true;
     }
+    
+    private bool CanChangeAuthority() => Time.time > _lastAuthorityChangeTime + 1f;
 
     private void OnCollisionEnter(Collision collision)
     {
-        // If this Client already has authority over this object, no check is needed
-        if (_coherenceSync.HasStateAuthority) return;
+        if (_coherenceSync.HasStateAuthority
+            || isBeingCarried
+            || !CanChangeAuthority()) return;
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.TryGetComponent<CoherenceSync>(out CoherenceSync collidingPlayersSync))
+            // If the player colliding is local, take authority
+            CoherenceSync collidingPlayersSync = collision.gameObject.GetComponent<CoherenceSync>();
+            if (collidingPlayersSync.HasStateAuthority)
             {
                 // If player is this client's player Prefab, take authority
                 if (collidingPlayersSync.HasStateAuthority)
@@ -103,6 +127,9 @@ public class Grabbable : MonoBehaviour
 
     private void ConfirmPickup()
     {
+        isBeingCarried = true;
         PickupValidated?.Invoke(true);
     }
+
+    public void Release() => isBeingCarried = false;
 }

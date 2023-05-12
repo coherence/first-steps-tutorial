@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class GrabInput : MonoBehaviour
 {
@@ -8,7 +7,8 @@ public class GrabInput : MonoBehaviour
     public Move moveScript;
     
     private Grab _grabScript;
-    private Grabbable _grabbableTarget;
+    private Grabbable _potentialTarget;
+    private Grabbable _grabbable;
     private bool _canToss;
 
     private void Awake()
@@ -34,7 +34,7 @@ public class GrabInput : MonoBehaviour
 
         // Found a grabbable object
         if (other.CompareTag("Grabbable"))
-            _grabbableTarget = other.gameObject.GetComponent<Grabbable>();
+            _potentialTarget = other.gameObject.GetComponent<Grabbable>();
     }
 
     private void OnTriggerExit(Collider other)
@@ -42,8 +42,8 @@ public class GrabInput : MonoBehaviour
         if (_grabScript.IsCarryingSomething)
             return;
 
-        if (other.gameObject.GetComponent<Grabbable>() == _grabbableTarget)
-            _grabbableTarget = null;
+        if (other.gameObject.GetComponent<Grabbable>() == _potentialTarget)
+            _potentialTarget = null;
     }
 
     /// <summary>
@@ -53,14 +53,17 @@ public class GrabInput : MonoBehaviour
     {
         if (!_grabScript.IsCarryingSomething)
         {
-            if (_grabbableTarget == null)
-                return;
+            // Pick up
+            if (_potentialTarget != null
+                && !_potentialTarget.isBeingCarried)
+            {
+                _canToss = false;
             
-            _canToss = false;
-            
-            // Attempt to pick up Grabbable
-            _grabbableTarget.PickupValidated += OnPickUpValidated;
-            _grabbableTarget.RequestPickup(); // This will fire an authority request if entity is remote
+                // Pick up Grabbable
+                _grabbable = _potentialTarget;
+                _grabbable.PickupValidated += OnPickUpValidated;
+                _grabbable.RequestPickup(); // This will fire an authority request if the entity is remote
+            }
         }
         else if(_canToss)
         {
@@ -68,29 +71,34 @@ public class GrabInput : MonoBehaviour
             float speed = moveScript.ThrowSpeed();
             _grabScript.Drop(speed);
             moveScript.ApplyThrowPushback(speed);
+            _grabbable = null;
         }
     }
 
     /// <summary>
     /// Received a response from the grabbable we're trying to pick up.
-    /// Since the object could be remote, this includes a request of authority,
-    /// which might lead it to fail if the object is set to not concede authority.
+    /// Since the object could be remote, this includes a request of authority.
     /// </summary>
     /// <param name="success">Whether the pickup was authorized or not.</param>
     private void OnPickUpValidated(bool success)
     {
-        _grabbableTarget.PickupValidated -= OnPickUpValidated;
+        _grabbable.PickupValidated -= OnPickUpValidated;
         _canToss = true;
             
         if (success)
         {
-            PickUp();
+            // The object was just laying around
+            _grabScript.PickUp(_grabbable);
+            _potentialTarget = null;
         }
-    }
-    
-    private void PickUp()
-    {
-        _grabScript.PickUp(_grabbableTarget);
-        _grabbableTarget = null;
+        else
+        {
+            // Pickup can fail when a grabbable that was free up to a moment ago JUST
+            // got picked up by another player on the network.
+            // Locally this client is not aware yet because the Grabbable.isBeingCarried property
+            // hasn't synced yet, but when requesting authority for the pickup - they get rejected
+            // in the Grabbable.OnAuthorityRequested callback.
+            _grabbable = null;
+        }
     }
 }
