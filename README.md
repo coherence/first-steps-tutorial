@@ -10,7 +10,7 @@ Note: At the moment of writing, opening the project with Unity `2022.1` or more 
 ## Additional resources
 
 ### Direct download
-A .zip download of the project is available [here](https://bit.ly/coherenceFirstStepsPreview). Generally, you can also download it using the Code button on this repo, as this project doesn't require LFS Support.
+You can download the project using the Code button on this repo, as this project doesn't require LFS Support.
 
 ### Documentation
 Full documentation for this project is available at https://docs.coherence.io/learning-coherence/first-steps-tutorial
