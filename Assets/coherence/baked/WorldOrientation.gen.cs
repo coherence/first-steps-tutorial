@@ -28,7 +28,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000001;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -58,16 +61,20 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(WorldOrientation data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(WorldOrientation data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
-				bitStream.WriteQuaternion((data.value.ToCoreQuaternion()), 32);
+				var fieldValue = (data.value.ToCoreQuaternion());
+
+				bitStream.WriteQuaternion(fieldValue, 32);
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (WorldOrientation, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (WorldOrientation, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldOrientation();
@@ -77,9 +84,9 @@ namespace Coherence.Generated
 				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
-		public static (WorldOrientation, uint, uint?) DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		public static (WorldOrientation, uint) DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldOrientation();
@@ -89,9 +96,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldOrientation, uint, uint?) DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		public static (WorldOrientation, uint) DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldOrientation();
@@ -101,9 +108,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldOrientation, uint, uint?) DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		public static (WorldOrientation, uint) DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldOrientation();
@@ -113,9 +120,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldOrientation, uint, uint?) DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		public static (WorldOrientation, uint) DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldOrientation();
@@ -125,7 +132,7 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
 
 		/// <summary>

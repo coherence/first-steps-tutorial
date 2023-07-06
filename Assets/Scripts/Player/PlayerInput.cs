@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Reads input and writes values directly to the <see cref="Move"/> script,
+/// which will use them every frame to drive character's position and rotation.
+/// </summary>
 public class PlayerInput : MonoBehaviour
 {
     [Header("Inputs")]

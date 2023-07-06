@@ -4,6 +4,9 @@ using Coherence.Connection;
 using Coherence.Toolkit;
 using UnityEngine;
 
+/// <summary>
+/// An object that can be grabbed (by activating the <see cref="Grab"/> action).
+/// </summary>
 public class Grabbable : MonoBehaviour
 {
     /// <summary>

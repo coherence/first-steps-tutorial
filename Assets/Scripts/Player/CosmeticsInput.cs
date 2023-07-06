@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Changes cosmetics when a button is pressed. Disabled on remote characters.
+/// Handles player-initiated input to change cosmetics when a button is pressed.
+/// The actual change is done by <see cref="CosmeticsChanger"/>.
+/// Disabled on remote characters.
 /// </summary>
 public class CosmeticsInput : MonoBehaviour
 {

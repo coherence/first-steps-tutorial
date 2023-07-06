@@ -2,6 +2,9 @@ using Coherence.Toolkit;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Handles state of the cosmetics (hair style, skin colour, hats, etc.).
+/// </summary>
 public class CosmeticsChanger : MonoBehaviour
 {
     [Header("Synchronised values")]
@@ -28,15 +31,6 @@ public class CosmeticsChanger : MonoBehaviour
     public int GetRandomFacialHair() => Random.Range(-1, facialHair.Length);
     public int GetRandomHairstyle() => Random.Range(-1, hairstyles.Length);
     public int GetRandomHat() => Random.Range(0, hats.Length);
-
-    private void Awake()
-    {
-        // Reset any item that might have been left on at authoring time
-        foreach (GameObject item in hats) item.SetActive(false);
-        foreach (GameObject item in hairstyles) item.SetActive(false);
-        foreach (GameObject item in backpacks) item.SetActive(false);
-        foreach (GameObject item in facialHair) item.SetActive(false);
-    }
 
     /// <summary>
     /// Changes all cosmetics at once. This is only called on characters that the local Client has authority on, via <see cref="CosmeticsInput"/>.

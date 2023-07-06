@@ -60,7 +60,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hail",
+                    "name": "Wave",
                     "type": "Button",
                     "id": "ff4e790b-6a84-4048-bded-aeea63527505",
                     "expectedControlType": "Button",
@@ -350,7 +350,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hail",
+                    "action": "Wave",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -361,7 +361,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hail",
+                    "action": "Wave",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

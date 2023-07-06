@@ -5,7 +5,7 @@ using UnityEngine.UI;
 #pragma warning disable CS0414
 
 /// <summary>
-/// This class enables and disables mobile controls (based on compilation platform), and responds to the buttons
+/// Enables and disables mobile controls (based on compilation platform), and responds to the buttons
 /// to switch controls on standalone platforms between keyboard and gamepad.
 /// </summary>
 public class ControlsUISwitcher : MonoBehaviour

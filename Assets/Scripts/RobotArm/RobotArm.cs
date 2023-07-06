@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Controls the movement and rotation of the robotic arm. It tweaks the movement so the arm doesn't fold on itself,
+/// trying to avoid "impossible" positions by limiting its reach.
+/// </summary>
 public class RobotArm : MonoBehaviour
 {
     [Header("Input")]
@@ -59,7 +63,7 @@ public class RobotArm : MonoBehaviour
 
         // Auto-rotating the hand based on its height
         float yPositionRatio = Mathf.InverseLerp(3.3f, 7f, handIKtarget.localPosition.y);
-        float resultingXRotation = Mathf.Lerp(90f, -110f, yPositionRatio);
-        handIKtarget.localEulerAngles = new Vector3(resultingXRotation, -90f, 0f);
+        float finalZRotation = Mathf.Lerp(150f, 20f, yPositionRatio);
+        handIKtarget.localEulerAngles = new Vector3(0f, 0f, finalZRotation);
     }
 }

@@ -28,7 +28,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000001;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -60,18 +63,22 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(ArchetypeComponent data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(ArchetypeComponent data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
 				Coherence.Utils.Bounds.Check(data.index, _index_Min, _index_Max, "ArchetypeComponent.index");
 				data.index = Coherence.Utils.Bounds.Clamp(data.index, _index_Min, _index_Max);
-				bitStream.WriteIntegerRange(data.index, 32, -2147483648);
+				var fieldValue = data.index;
+
+				bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (ArchetypeComponent, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (ArchetypeComponent, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new ArchetypeComponent();
@@ -81,7 +88,7 @@ namespace Coherence.Generated
 				val.index = bitStream.ReadIntegerRange(32, -2147483648);
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
 
 		/// <summary>

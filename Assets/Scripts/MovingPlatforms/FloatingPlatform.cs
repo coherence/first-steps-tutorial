@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.Splines;
 
+/// <summary>
+/// A moving platform.
+/// If a GameObject has this script on, the <see cref="Move"/> class will recognise it when landing a jump,
+/// and parent its GameObject to this one.
+/// </summary>
 public class FloatingPlatform : MonoBehaviour
 {
     public SplineContainer spline;

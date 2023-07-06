@@ -28,7 +28,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000001;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -58,16 +61,21 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(WorldPosition data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(WorldPosition data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
-				bitStream.WriteVector3((data.value.ToCoreVector3()), FloatMeta.NoCompression());
+				var fieldValue = (data.value.ToCoreVector3());
+				Coherence.Utils.Bounds.CheckPositionForNanAndInfinity(ref fieldValue);
+
+				bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (WorldPosition, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -77,9 +85,9 @@ namespace Coherence.Generated
 				val.value = (bitStream.ReadVector3(FloatMeta.NoCompression())).ToUnityVector3();
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -89,9 +97,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) DeserializeArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -101,9 +109,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -113,9 +121,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -125,9 +133,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -137,9 +145,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -149,9 +157,9 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint) DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();
@@ -161,7 +169,7 @@ namespace Coherence.Generated
 				mask |= 0b00000000000000000000000000000001;
 			}
 
-			return (val, mask, 0);
+			return (val, mask);
 		}
 
 		/// <summary>

@@ -29,7 +29,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000011;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -69,25 +72,31 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(Connection data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(Connection data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
 				Coherence.Utils.Bounds.Check(data.id, _id_Min, _id_Max, "Connection.id");
 				data.id = Coherence.Utils.Bounds.Clamp(data.id, _id_Min, _id_Max);
-				bitStream.WriteUIntegerRange(data.id, 31, 0);
+				var fieldValue = data.id;
+
+				bitStream.WriteUIntegerRange(fieldValue, 31, 0);
 			}
 			mask >>= 1;
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
 				Coherence.Utils.Bounds.Check(data.type, _type_Min, _type_Max, "Connection.type");
 				data.type = Coherence.Utils.Bounds.Clamp(data.type, _type_Min, _type_Max);
-				bitStream.WriteIntegerRange(data.type, 3, 0);
+				var fieldValue = data.type;
+
+				bitStream.WriteIntegerRange(fieldValue, 3, 0);
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (Connection, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (Connection, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new Connection();
@@ -102,7 +111,7 @@ namespace Coherence.Generated
 				val.type = bitStream.ReadIntegerRange(3, 0);
 				mask |= 0b00000000000000000000000000000010;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
 
 		/// <summary>

@@ -28,7 +28,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000001;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -58,16 +61,20 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(GenericFieldColor1 data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(GenericFieldColor1 data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
-				bitStream.WriteColor((data.value.ToCoreColor()), FloatMeta.ForFixedPoint(0, 1, 2.3283064370807973753052522170037E-10));
+				var fieldValue = (data.value.ToCoreColor());
+
+				bitStream.WriteColor(fieldValue, FloatMeta.ForFixedPoint(0, 1, 2.3283064370807973753052522170037E-10));
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (GenericFieldColor1, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (GenericFieldColor1, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new GenericFieldColor1();
@@ -77,7 +84,7 @@ namespace Coherence.Generated
 				val.value = (bitStream.ReadColor(FloatMeta.ForFixedPoint(0, 1, 2.3283064370807973753052522170037E-10))).ToUnityColor();
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
 
 		/// <summary>

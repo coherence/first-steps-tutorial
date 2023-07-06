@@ -1,9 +1,8 @@
-using Coherence.UI;
 using TMPro;
 using UnityEngine;
 
 /// <summary>
-/// Retrieves the player name from the coherence sample Connect UI.
+/// Retrieves the player name from a static field on the <see cref="UserInterface"/> script.
 /// </summary>
 public class PlayerName : MonoBehaviour
 {
@@ -11,6 +10,6 @@ public class PlayerName : MonoBehaviour
     
     private void Start()
     {
-        textField.text = WorldsConnectDialog.PlayerName;
+        textField.text = UserInterface.PLAYER_NAME;
     }
 }

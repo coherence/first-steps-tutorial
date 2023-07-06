@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1522740331349769034}
   - component: {fileID: 294465140271106047}
-  - component: {fileID: -26253299432273843}
   - component: {fileID: 6916203742030657429}
   - component: {fileID: 3793745653331155850}
   - component: {fileID: 6525610836190113121}
@@ -50,51 +49,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff62c046a053f416a8dc48ad6483a25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnAuthorityGained:
+  OnStateRemote:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInputRemote:
     m_PersistentCalls:
       m_Calls: []
   OnStateAuthority:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 2622a328151be420da9152b3c770c46b,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnInputAuthority:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAuthorityLost:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStateRemote:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7f0d1e27599974468a4686938828dd93,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnInputRemote:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAuthorityTransferRejected:
     m_PersistentCalls:
       m_Calls: []
   OnAuthorityRequestRejected:
@@ -106,9 +70,8 @@ MonoBehaviour:
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  OnInputOwnerAssigned:
-    m_PersistentCalls:
-      m_Calls: []
+  coherenceSyncConfig: {fileID: 8124374254152143763, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+    type: 2}
   archetype:
     boundComponents:
     - component: {fileID: 1522740331349769034}
@@ -134,18 +97,15 @@ MonoBehaviour:
     archetypeName: Crate_27f1ac5097d4ee4409fbb87ad14f76c2
     GeneratesArchetypeDefinition: 1
   InterpolationLocation: 4
-  bakedScriptType: Coherence.Generated.CoherenceSyncCrate_id1, Assembly-CSharp
+  bakedScriptType: Coherence.Generated.CoherenceSyncCrate_27f1ac5097d4ee4409fbb87ad14f76c2,
+    Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
   authorityTransferType: 1
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 1
-  coherenceUUID: b943f488-acbf-49a2-84f9-19cf9c4d934f
-  destructionBehavior: 0
   preserveChildren: 0
-  reflectionBindings: []
-  customBindings: []
   bindings:
   - rid: 2368829912872124484
   - rid: 2368829912872124485
@@ -161,12 +121,13 @@ MonoBehaviour:
   onNetworkedDestruction:
     m_PersistentCalls:
       m_Calls: []
-  remoteVersionPrefabName: Crate
-  PrefabGuid: 27f1ac5097d4ee4409fbb87ad14f76c2
-  selectedSynchronizedPrefabOption: 2
+  scenePrefabInstanceUUID: 
+  coherenceUUID: crate
   usingReflection: 0
   coherenceTag: 
   componentActions: []
+  floatingOriginMode: 0
+  floatingOriginParentedMode: 1
   references:
     version: 2
     RefIds:
@@ -190,11 +151,8 @@ MonoBehaviour:
           fields:
           - type: 3
             bits: 1
-            minRange: 0
-            maxRange: 0
             precision: 0
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 6525610836190113121}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -238,11 +196,8 @@ MonoBehaviour:
           fields:
           - type: 7
             bits: 17
-            minRange: -100
-            maxRange: 600
             precision: 0.01
             floatCompression: 2
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 1522740331349769034}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -266,11 +221,8 @@ MonoBehaviour:
           fields:
           - type: 8
             bits: 12
-            minRange: 0
-            maxRange: 0
             precision: 0.087890625
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 1522740331349769034}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -333,11 +285,8 @@ MonoBehaviour:
           fields:
           - type: 5
             bits: 6
-            minRange: 0
-            maxRange: 0
             precision: 0
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 4939570989761225410}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -360,11 +309,8 @@ MonoBehaviour:
           fields:
           - type: 1
             bits: 11
-            minRange: -1
-            maxRange: 2000
             precision: 0
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 4939570989761225410}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -409,19 +355,6 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
---- !u!114 &-26253299432273843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2212572905728603600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d470e57c013458981031cae99a354f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoAssignOnSceneInstances: 1
 --- !u!65 &6916203742030657429
 BoxCollider:
   m_ObjectHideFlags: 0

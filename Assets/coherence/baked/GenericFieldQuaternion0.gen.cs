@@ -28,7 +28,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000001;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -58,16 +61,20 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(GenericFieldQuaternion0 data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(GenericFieldQuaternion0 data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
-				bitStream.WriteQuaternion((data.value.ToCoreQuaternion()), 32);
+				var fieldValue = (data.value.ToCoreQuaternion());
+
+				bitStream.WriteQuaternion(fieldValue, 32);
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (GenericFieldQuaternion0, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (GenericFieldQuaternion0, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new GenericFieldQuaternion0();
@@ -77,7 +84,7 @@ namespace Coherence.Generated
 				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
 
 		/// <summary>

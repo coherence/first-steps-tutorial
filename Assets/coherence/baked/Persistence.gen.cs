@@ -27,7 +27,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000000;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -51,16 +54,18 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(Persistence data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(Persistence data, uint mask, IOutProtocolBitStream bitStream)
 		{
+
+			return mask;
 		}
 
-		public static (Persistence, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (Persistence, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new Persistence();
 	
-			return (val, mask, null);
+			return (val, mask);
 		}
 
 		/// <summary>

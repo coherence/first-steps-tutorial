@@ -2,6 +2,9 @@ using System;
 using Coherence.Toolkit;
 using UnityEngine;
 
+/// <summary>
+/// A simple implementation of a network-synced counter.
+/// </summary>
 [RequireComponent(typeof(CoherenceSync))]
 public class Counter : MonoBehaviour
 {

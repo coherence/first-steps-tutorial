@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b58ca8e478745dfab801a85671962e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  consoleLogLevel: 2
-  editorLogLevel: 1
-  logSourceFilterMode: 0
-  logSourceFilterCSV: 
   showHubSectionInfo: 1
   showHubModuleDescription: 1
   showHubMessageAreas: 1
@@ -27,14 +23,15 @@ MonoBehaviour:
   sendFrequency: 20
   recvFrequency: 60
   bakeMode: 0
-  schemaBakeFolderGuid: bc26c7c9eeed54245baa8a4a69a34127
   runtimeSettingsGuid: 05f52a426355b49ed9e1062c38c7cec9
-  prefabMapperGuid: aea6ceecf3ee44eafaedb905be8c1f90
   schemaBakeGenerateAsmdef: 0
   reportAnalytics: 1
+  configRegistryMode: 0
   useToolkit: 1
   useCoherenceSyncSchema: 1
   useCustomSchemas: 0
+  RSBundlingEnabledMac: 0
+  RSBundlingEnabledWindows: 0
+  RSBundlingEnabledLinux: 0
   keepConnectionAlive: 1
-  compileErrorWatchdog: 1
   activeSchemas: []

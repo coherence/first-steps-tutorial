@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Handles the player-initiated action of grabbing and releasing crates.
+/// </summary>
 public class Grab : MonoBehaviour
 {
     public Animator animator;
@@ -26,7 +29,7 @@ public class Grab : MonoBehaviour
 
     /// <summary>
     /// Contains the actions that are performed on the grabbable.
-    /// Only happens when the player presses the input to throw/drop the interactable.
+    /// Happens when the player presses the input to throw/drop the interactable.
     /// </summary>
     public void Drop(float throwStrength = 0f)
     {
@@ -36,16 +39,6 @@ public class Grab : MonoBehaviour
         _grabbedObjectRB.AddTorque( -transform.right * throwStrength * 1f, ForceMode.VelocityChange );
         _grabbedObject.Release();
         
-        LetGo();
-    }
-
-    /// <summary>
-    /// Contains the actions that are performed by the character on itself,
-    /// that is, the ones that happen when the grabbable is let go but not intentionally thrown.
-    /// For instance, when stolen.
-    /// </summary>
-    private void LetGo()
-    {
         animator.SetBool("CarryingBig", false);
         _grabbedObjectCollider.enabled = true;
         

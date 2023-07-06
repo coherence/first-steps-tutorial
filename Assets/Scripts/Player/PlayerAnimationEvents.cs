@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Reacts to animation events invoked from within player's Animation Clips, to play particles.
+/// </summary>
 public class PlayerAnimationEvents : MonoBehaviour
 {
     public ParticleSystem runParticles;

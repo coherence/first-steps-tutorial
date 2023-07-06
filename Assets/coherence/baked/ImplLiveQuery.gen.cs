@@ -56,8 +56,8 @@ namespace Coherence.Toolkit
 
 			var masks = new uint[]
 			{
-				0xff,
-				0xff,
+				0b01,
+				0b11,
 			};
 
 			client.UpdateComponents(liveQuery, components, masks);

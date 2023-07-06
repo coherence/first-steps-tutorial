@@ -43,43 +43,24 @@ namespace Coherence.Toolkit
 			return componentName;
 		}
 
-		private static ICoherenceComponentData[] CreateInitialComponents(CoherenceSync self)
+		private static ICoherenceComponentData[] CreateInitialComponents(ICoherenceSync self, string uuid)
 		{
 			var comps = new List<ICoherenceComponentData>();
 			comps.Add(new WorldPosition() { value = self.coherencePosition });
 
-			if (self.SelectedSynchronizedPrefabOption == CoherenceSync.SynchronizedPrefabOptions.UsePrefabMapper)
-			{
-				PrefabId prefabId = PrefabMapper.instance.GetPrefabId(self.PrefabGuid);
-				comps.Add(new GenericPrefabId() { value = (int)prefabId.Value });
-			}
-#if COHERENCE_DISABLE_NAME_BASED_PREFAB_LOADING
-			else
-			{
-				Debug.LogWarning($"{self} is using SelectedSynchronizedPrefabOption '{self.SelectedSynchronizedPrefabOption}', but name-based prefab loading has been disabled in this project. No remote prefab will be instantiated.");
-			}
-#else
-			else if (!string.IsNullOrEmpty(self.remoteVersionPrefabName))
-			{
-				comps.Add(new GenericPrefabReference() { prefab = self.remoteVersionPrefabName });
-			}
-			else
-			{
-				Debug.LogWarning($"{self} is missing remoteVersionPrefabName, SelectedSynchronizedPrefabOption={self.SelectedSynchronizedPrefabOption}");
-			}
-#endif
+			comps.Add(new AssetId() { value = self.CoherenceSyncConfig.ID });
 
-			if (!string.IsNullOrEmpty(self.coherenceUUID))
+			if (!string.IsNullOrEmpty(uuid))
 			{
-				comps.Add(new UniqueID() { uuid = self.coherenceUUID });
+				comps.Add(new UniqueID() { uuid = uuid });
 			}
 
-			if (self.lifetimeType != CoherenceSync.LifetimeType.SessionBased)
+			if (self.LifetimeTypeConfig != CoherenceSync.LifetimeType.SessionBased)
 			{
 				comps.Add(new Persistence());
 			}
 
-			if (self.preserveChildren)
+			if (self.PreserveChildren)
 			{
 				comps.Add(new PreserveChildren());
 			}
@@ -87,9 +68,9 @@ namespace Coherence.Toolkit
 			return comps.ToArray();
 		}
 
-		private static void SendGenericCommand(CoherenceSync self, IClient client, string commandName, MessageTarget messageTarget, byte[] data, SerializeEntityID[] entityIDs, Logger logger)
+		private static void SendGenericCommand(ICoherenceSync self, IClient client, string commandName, MessageTarget messageTarget, byte[] data, SerializeEntityID[] entityIDs, Logger logger)
 		{
-			SerializeEntityID targetEntity = self.EntityID;
+			SerializeEntityID targetEntity = self.EntityState.EntityID;
 
 			if (messageTarget == MessageTarget.AuthorityOnly && client.HasAuthorityOverEntity(targetEntity, AuthorityType.State))
 			{
@@ -131,7 +112,7 @@ namespace Coherence.Toolkit
 			client.SendCommand(command, messageTarget, targetEntity);
 		}
 
-		private static void ReceiveGenericCommand(CoherenceSync self, IEntityCommand command, MessageTarget target, Logger logger)
+		private static void ReceiveGenericCommand(ICoherenceSync self, IEntityCommand command, MessageTarget target, Logger logger)
 		{
 			if (!(command is GenericCommand))
 			{
@@ -156,7 +137,7 @@ namespace Coherence.Toolkit
 		///     True if the commands was handled. False if the command was not an internal command and should be processed
 		///     further.
 		/// </returns>
-		private static bool ReceiveInternalCommand(CoherenceMonoBridge.EventsToken events, IEntityCommand command,
+		private static bool ReceiveInternalCommand(CoherenceBridge.EventsToken events, IEntityCommand command,
 			Logger logger)
 		{
 			switch (command)
@@ -169,22 +150,17 @@ namespace Coherence.Toolkit
 			}
 		}
 
-		private static (ICoherenceComponentData[], uint[]) CreateConnectedEntityUpdateInternal(CoherenceSync sync, SerializeEntityID parentID)
+		private static ICoherenceComponentData CreateConnectedEntityUpdateInternal(SerializeEntityID parentID, Vector3 newPos, Quaternion newRot, Vector3 newScale)
 		{
-			var updates = new ICoherenceComponentData[]
+			var comp = new ConnectedEntity()
 			{
-				new ConnectedEntity()
-				{
-					value = parentID,
-				},
+				value = parentID,
+				pos = newPos,
+				rot = newRot,
+				scale = newScale,
 			};
 
-			var masks = new uint[]
-			{
-				0b1,
-			};
-
-			return (updates, masks);
+			return comp;
 		}
 
 		private static uint GetConnectedEntityComponentIdInternal()
@@ -201,7 +177,7 @@ namespace Coherence.Toolkit
 
 			var masks = new uint[]
 			{
-				0xff,
+				0b01,
 			};
 
 			client.UpdateComponents(liveQuery, components, masks);

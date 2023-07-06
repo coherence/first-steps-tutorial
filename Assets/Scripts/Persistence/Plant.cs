@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Handles the player-initiated action of planting flowers, including raycasting to find ground,
+/// and displaying a preview of the flower when holding the button.
+/// </summary>
 public class Plant : MonoBehaviour
 {
     public InputActionReference plantAction;

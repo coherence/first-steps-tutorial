@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Handles player-initiated input to grab and throw items when a button is pressed.
+/// This is disabled on remote players.
+/// </summary>
 public class GrabInput : MonoBehaviour
 {
     public InputActionReference grabAction;

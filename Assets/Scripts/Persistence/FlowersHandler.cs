@@ -1,8 +1,14 @@
 using Coherence;
+using Coherence.Connection;
 using Coherence.Toolkit;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// A manager object that players have to go through to add or remove flowers.
+/// This class has nothing synced over the network, but it relies on the <see cref="Counter"/>
+/// to have a synced picture of how many flowers are there right now.
+/// </summary>
 public class FlowersHandler : MonoBehaviour
 {
     public int maxFlowers = 30;
@@ -11,15 +17,18 @@ public class FlowersHandler : MonoBehaviour
     private Counter _counter;
     private CoherenceSync _counterSync;
     private Flower[] _allFlowers;
-    private CoherenceMonoBridge _monoBridge;
+    private CoherenceBridge _bridge;
 
     private void Awake()
     {
-        _monoBridge = FindObjectOfType<CoherenceMonoBridge>();
-        _monoBridge.onLiveQuerySynced.AddListener(MonoBridgeOnOnLiveQuerySynced);
+        _bridge = FindObjectOfType<CoherenceBridge>();
+        _bridge.onLiveQuerySynced.AddListener(OnLiveQuerySynced);
+        _bridge.onDisconnected.AddListener(OnDisconnect);
     }
 
-    private void MonoBridgeOnOnLiveQuerySynced(CoherenceMonoBridge obj)
+    private void OnDisconnect(CoherenceBridge bridge, ConnectionCloseReason reason) => RemoveFlowerGameObjects();
+
+    private void OnLiveQuerySynced(CoherenceBridge obj)
     {        
         _counter = FindObjectOfType<Counter>();
         
@@ -32,7 +41,9 @@ public class FlowersHandler : MonoBehaviour
     private void OnDisable()
     {
         if (_counter != null) _counter.CounterChanged -= OnCounterChanged;
-        _monoBridge.onLiveQuerySynced.RemoveListener(MonoBridgeOnOnLiveQuerySynced);
+        
+        _bridge.onLiveQuerySynced.RemoveListener(OnLiveQuerySynced);
+        _bridge.onDisconnected.RemoveListener(OnDisconnect);
     }
 
     private void OnCounterChanged(int newValue)
@@ -93,7 +104,8 @@ public class FlowersHandler : MonoBehaviour
 
     /// <summary>
     /// When pressing the Clear button in the UI, it removes entities from the server.
-    /// When invoked by <see cref="CoherenceMonoBridge"/> on disconnect, it just clears the remaining GameObjects because the player is not online anymore.
+    /// When invoked by <see cref="CoherenceBridge"/> on disconnect,
+    /// it just clears the remaining GameObjects from the scene because the player is not online anymore.
     /// </summary>
     public void RemoveFlowerGameObjects()
     {

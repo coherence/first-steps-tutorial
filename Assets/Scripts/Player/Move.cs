@@ -2,6 +2,10 @@ using Coherence;
 using Coherence.Toolkit;
 using UnityEngine;
 
+/// <summary>
+/// Handles player movement, ground checks, jumping, and related animations.
+/// It writes to the transform position and rotation, and to animation parameters, which are all synced.
+/// </summary>
 public class Move : MonoBehaviour
 {
     public Animator animator;

@@ -132,25 +132,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff62c046a053f416a8dc48ad6483a25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnAuthorityGained:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStateAuthority:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInputAuthority:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAuthorityLost:
-    m_PersistentCalls:
-      m_Calls: []
   OnStateRemote:
     m_PersistentCalls:
       m_Calls: []
   OnInputRemote:
     m_PersistentCalls:
       m_Calls: []
-  OnAuthorityTransferRejected:
+  OnStateAuthority:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInputAuthority:
     m_PersistentCalls:
       m_Calls: []
   OnAuthorityRequestRejected:
@@ -162,9 +153,8 @@ MonoBehaviour:
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  OnInputOwnerAssigned:
-    m_PersistentCalls:
-      m_Calls: []
+  coherenceSyncConfig: {fileID: 3497701467602501475, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+    type: 2}
   archetype:
     boundComponents:
     - component: {fileID: 5019661362766340086}
@@ -188,8 +178,6 @@ MonoBehaviour:
     - component: {fileID: 511851952794508008}
       lodStepsActive: 1
     - component: {fileID: 6045207018197627436}
-      lodStepsActive: 1
-    - component: {fileID: 4764372400706345257}
       lodStepsActive: 1
     - component: {fileID: 7591837871254792591}
       lodStepsActive: 1
@@ -259,19 +247,31 @@ MonoBehaviour:
     - distance: 0
     archetypeName: RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1
     GeneratesArchetypeDefinition: 1
-  InterpolationLocation: 1
-  bakedScriptType: Coherence.Generated.CoherenceSyncRobotArm_id4, Assembly-CSharp
+  interpolationLocation: 1
+  RigidbodyUpdateMode: 0
+  OnRigidbody2DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  bakedScriptType: Coherence.Generated.CoherenceSyncRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1,
+    Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
   authorityTransferType: 2
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 1
-  coherenceUUID: RobotArm
-  destructionBehavior: 0
+  replacementStrategy: 0
+  unsyncedNetworkEntityPriority: 0
   preserveChildren: 0
-  reflectionBindings: []
-  customBindings: []
   bindings:
   - rid: 2368829912872124535
   - rid: 2368829912872124536
@@ -293,14 +293,15 @@ MonoBehaviour:
   onNetworkedDestruction:
     m_PersistentCalls:
       m_Calls: []
-  remoteVersionPrefabName: RobotArm
-  PrefabGuid: aa7ea8e0044f0964eb9c782a689ca1b1
-  selectedSynchronizedPrefabOption: 2
+  scenePrefabInstanceUUID: 
+  coherenceUUID: RobotArm
   usingReflection: 0
   coherenceTag: 
   componentActions:
   - rid: 2368830277159485441
   - rid: 2368830277639733265
+  floatingOriginMode: 0
+  floatingOriginParentedMode: 1
   references:
     version: 2
     RefIds:
@@ -325,11 +326,8 @@ MonoBehaviour:
           fields:
           - type: 7
             bits: 17
-            minRange: -100
-            maxRange: 600
             precision: 0.01
             floatCompression: 2
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 5019661362766340086}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -353,11 +351,8 @@ MonoBehaviour:
           fields:
           - type: 8
             bits: 12
-            minRange: 0
-            maxRange: 0
             precision: 0.087890625
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 4231088705669423063}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -381,11 +376,8 @@ MonoBehaviour:
           fields:
           - type: 8
             bits: 12
-            minRange: 0
-            maxRange: 0
             precision: 0.087890625
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 3110171900669979710}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -409,11 +401,8 @@ MonoBehaviour:
           fields:
           - type: 7
             bits: 17
-            minRange: -100
-            maxRange: 600
             precision: 0.01
             floatCompression: 2
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 6045207018197627436}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -437,11 +426,8 @@ MonoBehaviour:
           fields:
           - type: 7
             bits: 17
-            minRange: -100
-            maxRange: 600
             precision: 0.01
             floatCompression: 2
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 7591837871254792591}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -465,11 +451,8 @@ MonoBehaviour:
           fields:
           - type: 8
             bits: 12
-            minRange: 0
-            maxRange: 0
             precision: 0.087890625
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 7591837871254792591}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -493,11 +476,8 @@ MonoBehaviour:
           fields:
           - type: 7
             bits: 17
-            minRange: -100
-            maxRange: 600
             precision: 0.01
             floatCompression: 2
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 511851952794508008}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -666,11 +646,8 @@ MonoBehaviour:
           fields:
           - type: 3
             bits: 1
-            minRange: 0
-            maxRange: 0
             precision: 0
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 9849676}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -712,7 +689,6 @@ MonoBehaviour:
           sampleRate: 0
           floatCompression: 0
           fields: []
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 9849676}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -761,11 +737,8 @@ MonoBehaviour:
           fields:
           - type: 3
             bits: 1
-            minRange: 0
-            maxRange: 0
             precision: 0
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 4031727028522489341}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -809,11 +782,8 @@ MonoBehaviour:
           fields:
           - type: 9
             bits: 20
-            minRange: 0
-            maxRange: 0
             precision: 0
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 4031727028522489341}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -1192,7 +1162,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6679088521429107751}
-  - {fileID: 4764372400706345257}
   - {fileID: 7591837871254792591}
   m_Father: {fileID: 5019661362766340086}
   m_RootOrder: 0
@@ -1283,14 +1252,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3799658656629770016}
-  m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.7071066}
-  m_LocalPosition: {x: -0.022284985, y: 5.496554, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.022277832, y: 5.49655, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4231088705669423063}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &3965368832143579754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,12 +1310,12 @@ MonoBehaviour:
     m_Mid: {fileID: 6375604647326897321}
     m_Tip: {fileID: 5218745387135740194}
     m_Target: {fileID: 7591837871254792591}
-    m_Hint: {fileID: 4764372400706345257}
+    m_Hint: {fileID: 0}
     m_TargetPositionWeight: 1
     m_TargetRotationWeight: 1
     m_HintWeight: 0
-    m_MaintainTargetPositionOffset: 1
-    m_MaintainTargetRotationOffset: 1
+    m_MaintainTargetPositionOffset: 0
+    m_MaintainTargetRotationOffset: 0
 --- !u!1 &4838948385025127320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,7 +1343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4838948385025127320}
   m_LocalRotation: {x: -0, y: -0, z: 0.41076905, w: 0.91173947}
-  m_LocalPosition: {x: -0, y: 2.437, z: 0}
+  m_LocalPosition: {x: 0, y: 2.4369922, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1785,34 +1754,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.47, y: 2.15, z: 0.49}
   m_Center: {x: 0.014349525, y: 2.7291503, z: 0.92}
---- !u!1 &8675008359154517192
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4764372400706345257}
-  m_Layer: 0
-  m_Name: Two-Bone IK_hint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4764372400706345257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8675008359154517192}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.51, y: 3.6, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4231088705669423063}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

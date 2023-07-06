@@ -28,7 +28,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000001;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -60,18 +63,22 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(GenericFieldInt7 data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(GenericFieldInt7 data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
 				Coherence.Utils.Bounds.Check(data.number, _number_Min, _number_Max, "GenericFieldInt7.number");
 				data.number = Coherence.Utils.Bounds.Clamp(data.number, _number_Min, _number_Max);
-				bitStream.WriteIntegerRange(data.number, 32, -2147483648);
+				var fieldValue = data.number;
+
+				bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (GenericFieldInt7, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (GenericFieldInt7, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new GenericFieldInt7();
@@ -81,7 +88,7 @@ namespace Coherence.Generated
 				val.number = bitStream.ReadIntegerRange(32, -2147483648);
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
 
 		/// <summary>

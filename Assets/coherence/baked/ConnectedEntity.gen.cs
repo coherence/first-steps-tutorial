@@ -18,17 +18,23 @@ namespace Coherence.Generated
 	public struct ConnectedEntity : ICoherenceComponentData
 	{
 		public SerializeEntityID value;
+		public Vector3 pos;
+		public Quaternion rot;
+		public Vector3 scale;
 
 		public override string ToString()
 		{
-			return $"ConnectedEntity(value: {value})";
+			return $"ConnectedEntity(value: {value}, pos: {pos}, rot: {rot}, scale: {scale})";
 		}
 
 		public uint GetComponentType() => Definition.InternalConnectedEntity;
 
 		public const int order = -1;
 
+		public uint FieldsMask => 0b00000000000000000000000000001111;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return true; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -49,6 +55,24 @@ namespace Coherence.Generated
 				value = other.value;
 			}
 			mask >>= 1;
+			if ((mask & 0x01) != 0)
+			{
+				Frame = other.Frame;
+				pos = other.pos;
+			}
+			mask >>= 1;
+			if ((mask & 0x01) != 0)
+			{
+				Frame = other.Frame;
+				rot = other.rot;
+			}
+			mask >>= 1;
+			if ((mask & 0x01) != 0)
+			{
+				Frame = other.Frame;
+				scale = other.scale;
+			}
+			mask >>= 1;
 			return this;
 		}
 
@@ -58,16 +82,41 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(ConnectedEntity data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(ConnectedEntity data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
-				bitStream.WriteEntity(data.value);
+				var fieldValue = data.value;
+
+				bitStream.WriteEntity(fieldValue);
 			}
 			mask >>= 1;
+			if (bitStream.WriteMask((mask & 0x01) != 0))
+			{
+				var fieldValue = (data.pos.ToCoreVector3());
+
+				bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
+			}
+			mask >>= 1;
+			if (bitStream.WriteMask((mask & 0x01) != 0))
+			{
+				var fieldValue = (data.rot.ToCoreQuaternion());
+
+				bitStream.WriteQuaternion(fieldValue, 32);
+			}
+			mask >>= 1;
+			if (bitStream.WriteMask((mask & 0x01) != 0))
+			{
+				var fieldValue = (data.scale.ToCoreVector3());
+
+				bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
+			}
+			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (ConnectedEntity, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (ConnectedEntity, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new ConnectedEntity();
@@ -77,7 +126,22 @@ namespace Coherence.Generated
 				val.value = bitStream.ReadEntity();
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			if (bitStream.ReadMask())
+			{
+				val.pos = (bitStream.ReadVector3(FloatMeta.NoCompression())).ToUnityVector3();
+				mask |= 0b00000000000000000000000000000010;
+			}
+			if (bitStream.ReadMask())
+			{
+				val.rot = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
+				mask |= 0b00000000000000000000000000000100;
+			}
+			if (bitStream.ReadMask())
+			{
+				val.scale = (bitStream.ReadVector3(FloatMeta.NoCompression())).ToUnityVector3();
+				mask |= 0b00000000000000000000000000001000;
+			}
+			return (val, mask);
 		}
 
 		/// <summary>

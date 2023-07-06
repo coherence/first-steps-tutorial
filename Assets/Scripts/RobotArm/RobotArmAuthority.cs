@@ -3,6 +3,10 @@ using Coherence.Toolkit;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Handles switching authority of the robot arm and the crate, whether this is currently held by the arm or not.
+/// The <see cref="RequestAuthority"/> method is invoked directly from the UI button in the scene.
+/// </summary>
 public class RobotArmAuthority : MonoBehaviour
 {
     public CoherenceSync robotArm;
@@ -28,6 +32,9 @@ public class RobotArmAuthority : MonoBehaviour
         crate.OnStateRemote.RemoveListener(OnCrateRemote);
     }
 
+    /// <summary>
+    /// Invoked by the UI button in the scene.
+    /// </summary>
     public void RequestAuthority()
     {
         robotArm.RequestAuthority(AuthorityType.Full);

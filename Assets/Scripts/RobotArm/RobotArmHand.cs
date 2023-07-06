@@ -3,6 +3,9 @@ using Coherence.Toolkit;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Handles player-initiated input to pick up and release the crate, and also its detection.
+/// </summary>
 public class RobotArmHand : MonoBehaviour
 {
     public InputActionReference pickupAction;
@@ -16,8 +19,7 @@ public class RobotArmHand : MonoBehaviour
     [Header("Parent position")]
     public Vector3 localPositionOnAttach = new Vector3(0f, 0.25f, 0f);
     public Vector3 localRotationOnAttach = new Vector3(-180f, 180f, 180f);
-
-
+    
     private void OnEnable()
     {
         pickupAction.action.Enable();

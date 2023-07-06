@@ -16,7 +16,7 @@ public class SceneSwitcher : MonoBehaviour
     private int _sceneToLoad;
     private AsyncOperation _loadSceneOperation;
     private AsyncOperation _unloadSceneOperation;
-    private CoherenceMonoBridge _monoBridge;
+    private CoherenceBridge _bridge;
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class SceneSwitcher : MonoBehaviour
         buttons[_currentScene].interactable = true;
         
         // Disconnect before unloading, to avoid networking issues
-        _monoBridge.Disconnect();
+        _bridge.Disconnect();
 
         _sceneToLoad = newSceneIndex;
         _unloadSceneOperation = SceneManager.UnloadSceneAsync(sceneNames[_currentScene]);
@@ -52,7 +52,7 @@ public class SceneSwitcher : MonoBehaviour
     
     private void OnSceneLoaded(AsyncOperation obj)
     {
-        _monoBridge = FindObjectOfType<CoherenceMonoBridge>();
+        _bridge = FindObjectOfType<CoherenceBridge>();
         _loadSceneOperation.completed -= OnSceneLoaded;
         SceneManager.SetActiveScene(SceneManager.GetSceneAt(1));
         _currentScene = _sceneToLoad;

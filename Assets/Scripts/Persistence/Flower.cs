@@ -4,6 +4,11 @@ using Coherence.Toolkit;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controls the lifetime and visual states of a flower. When planted, the time gets recorded in <see cref="timePlanted"/>,
+/// so that any player that finds the flower as a networked entity later on
+/// is able to calculate the stage <see cref="FlowerState"/> that the flower should be in.
+/// </summary>
 public class Flower : MonoBehaviour
 {
     public FlowerState state = FlowerState.Uninitialised;

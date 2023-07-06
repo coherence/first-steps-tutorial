@@ -28,7 +28,10 @@ namespace Coherence.Generated
 
 		public const int order = 0;
 
+		public uint FieldsMask => 0b00000000000000000000000000000001;
+
 		public int GetComponentOrder() => order;
+		public bool IsSendOrdered() { return false; }
 
 		public AbsoluteSimulationFrame Frame;
 	
@@ -58,16 +61,20 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(TagQuery data, uint mask, IOutProtocolBitStream bitStream)
+		public static uint Serialize(TagQuery data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
-				bitStream.WriteShortString(data.tag);
+				var fieldValue = data.tag;
+
+				bitStream.WriteShortString(fieldValue);
 			}
 			mask >>= 1;
+
+			return mask;
 		}
 
-		public static (TagQuery, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (TagQuery, uint) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new TagQuery();
@@ -77,7 +84,7 @@ namespace Coherence.Generated
 				val.tag = bitStream.ReadShortString();
 				mask |= 0b00000000000000000000000000000001;
 			}
-			return (val, mask, null);
+			return (val, mask);
 		}
 
 		/// <summary>

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: f2618e8d1484459db317d1c207413c5b
-  schemaID: 1238fdc709d505187dbfe55b467ef5260cea5da6
+  schemaID: 2880f79c41d51a04004b9659b0cfb92dbe618d28
+  uploadedSchema: 1
   simulatorSlug: 
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
@@ -31,4 +32,6 @@ MonoBehaviour:
   organizationID: c1ho23prn6r43hh5tc40
   projectID: cetumgdbo1hk1jjq3j00
   projectName: First Steps tutorial
+  defaultTransportMode: 0
+  replicationServerToken: 
   playApiEndpoint: https://api.prod.coherence.io/v1/play

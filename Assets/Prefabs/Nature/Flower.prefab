@@ -10134,25 +10134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff62c046a053f416a8dc48ad6483a25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnAuthorityGained:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStateAuthority:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInputAuthority:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAuthorityLost:
-    m_PersistentCalls:
-      m_Calls: []
   OnStateRemote:
     m_PersistentCalls:
       m_Calls: []
   OnInputRemote:
     m_PersistentCalls:
       m_Calls: []
-  OnAuthorityTransferRejected:
+  OnStateAuthority:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInputAuthority:
     m_PersistentCalls:
       m_Calls: []
   OnAuthorityRequestRejected:
@@ -10164,9 +10155,8 @@ MonoBehaviour:
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  OnInputOwnerAssigned:
-    m_PersistentCalls:
-      m_Calls: []
+  coherenceSyncConfig: {fileID: 8426499991151879198, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+    type: 2}
   archetype:
     boundComponents:
     - component: {fileID: 7769937714867182896}
@@ -10236,18 +10226,15 @@ MonoBehaviour:
     archetypeName: Flower_a167402e36850884aa7ce3d374cd6c77
     GeneratesArchetypeDefinition: 1
   InterpolationLocation: 1
-  bakedScriptType: Coherence.Generated.CoherenceSyncFlower_id2, Assembly-CSharp
+  bakedScriptType: Coherence.Generated.CoherenceSyncFlower_a167402e36850884aa7ce3d374cd6c77,
+    Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
   authorityTransferType: 2
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 0
-  coherenceUUID: c9d0a859-9695-4c8b-ad42-2f2016793d93
-  destructionBehavior: 0
   preserveChildren: 0
-  reflectionBindings: []
-  customBindings: []
   bindings:
   - rid: 2368829912872124516
   - rid: 2368829912872124517
@@ -10261,12 +10248,13 @@ MonoBehaviour:
   onNetworkedDestruction:
     m_PersistentCalls:
       m_Calls: []
-  remoteVersionPrefabName: Flower
-  PrefabGuid: a167402e36850884aa7ce3d374cd6c77
-  selectedSynchronizedPrefabOption: 2
+  scenePrefabInstanceUUID: 
+  coherenceUUID: c9d0a859-9695-4c8b-ad42-2f2016793d93
   usingReflection: 0
   coherenceTag: 
   componentActions: []
+  floatingOriginMode: 0
+  floatingOriginParentedMode: 1
   references:
     version: 2
     RefIds:
@@ -10290,11 +10278,8 @@ MonoBehaviour:
           fields:
           - type: 12
             bits: 32
-            minRange: 0
-            maxRange: 4294967295
             precision: 0
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 6689584802229134021}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 0}
@@ -10317,11 +10302,8 @@ MonoBehaviour:
           fields:
           - type: 7
             bits: 17
-            minRange: -100
-            maxRange: 600
             precision: 0.01
             floatCompression: 2
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 7769937714867182896}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
@@ -10345,11 +10327,8 @@ MonoBehaviour:
           fields:
           - type: 8
             bits: 12
-            minRange: 0
-            maxRange: 0
             precision: 0.087890625
             floatCompression: 0
-          sharedBinding: {fileID: 0}
         unityComponent: {fileID: 7769937714867182896}
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
