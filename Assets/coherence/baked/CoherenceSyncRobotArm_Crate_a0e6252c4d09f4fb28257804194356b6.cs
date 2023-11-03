@@ -22,7 +22,7 @@ namespace Coherence.Generated
 	using Logger = Coherence.Log.Logger;
 	using UnityEngine.Scripting;
 
-	public class Binding_6ba8b7030c4bf544396f864fc9dd99de_0df60e65_2de8_4833_bdba_9ee29938ab19 : PositionBinding
+	public class Binding_a0e6252c4d09f4fb28257804194356b6_c8981954_64f3_46df_a426_2f1c647fa024 : PositionBinding
 	{
 		public override string CoherenceComponentName => "WorldPosition";
 
@@ -64,7 +64,7 @@ namespace Coherence.Generated
 		}
 	}
 
-	public class Binding_6ba8b7030c4bf544396f864fc9dd99de_39f75b76_5b9c_4976_a5a8_f469fcfd1985 : RotationBinding
+	public class Binding_a0e6252c4d09f4fb28257804194356b6_b0541bd4_db94_4c98_aae3_912bfbdb0f6d : RotationBinding
 	{
 		public override string CoherenceComponentName => "WorldOrientation";
 
@@ -102,56 +102,100 @@ namespace Coherence.Generated
 		}
 	}
 
-	public class Binding_6ba8b7030c4bf544396f864fc9dd99de_3be2dd42_ae86_4876_a5ed_af23c384feee : FloatBinding
+	public class Binding_a0e6252c4d09f4fb28257804194356b6_8761ffc7_494f_4fad_a367_41f5669ef1b9 : StringBinding
 	{
-		private global::FloatingPlatform CastedUnityComponent;
+		private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
 
 		protected override void OnBindingCloned()
 		{
-			CastedUnityComponent = (global::FloatingPlatform)UnityComponent;
+			CastedUnityComponent = (global::Coherence.Toolkit.CoherenceNode)UnityComponent;
 		}
-		public override string CoherenceComponentName => "TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933";
+		public override string CoherenceComponentName => "RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470";
 
 		public override uint FieldMask => 0b00000000000000000000000000000001;
 
-		public override float Value
+		public override string Value
 		{
-			get { return (System.Single)(CastedUnityComponent.timer); }
-			set { CastedUnityComponent.timer = (System.Single)(value); }
+			get { return (System.String)(CastedUnityComponent.path); }
+			set { CastedUnityComponent.path = (System.String)(value); }
 		}
 
-		protected override float ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
+		protected override string ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
 		{
-			var value = ((TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933)coherenceComponent).timer;
+			var value = ((RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470)coherenceComponent).path;
 			return value;
 		}
 		
 		public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, double time)
 		{
-			var update = (TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933)coherenceComponent;
+			var update = (RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470)coherenceComponent;
 			if (RuntimeInterpolationSettings.IsInterpolationNone) 
 			{
-				update.timer = Value;
+				update.path = Value;
 			}
 			else 
 			{
-				update.timer = GetInterpolatedAt(time);
+				update.path = GetInterpolatedAt(time);
 			}
 			return update;
 		}
 
 		public override ICoherenceComponentData CreateComponentData()
 		{
-			return new TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933();
+			return new RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470();
+		}
+	}
+
+	public class Binding_a0e6252c4d09f4fb28257804194356b6_8fb659bf_e821_436e_963e_8810ade5244e : IntBinding
+	{
+		private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
+
+		protected override void OnBindingCloned()
+		{
+			CastedUnityComponent = (global::Coherence.Toolkit.CoherenceNode)UnityComponent;
+		}
+		public override string CoherenceComponentName => "RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470";
+
+		public override uint FieldMask => 0b00000000000000000000000000000010;
+
+		public override int Value
+		{
+			get { return (System.Int32)(CastedUnityComponent.pathDirtyCounter); }
+			set { CastedUnityComponent.pathDirtyCounter = (System.Int32)(value); }
+		}
+
+		protected override int ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
+		{
+			var value = ((RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470)coherenceComponent).pathDirtyCounter;
+			return value;
+		}
+		
+		public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, double time)
+		{
+			var update = (RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470)coherenceComponent;
+			if (RuntimeInterpolationSettings.IsInterpolationNone) 
+			{
+				update.pathDirtyCounter = Value;
+			}
+			else 
+			{
+				update.pathDirtyCounter = GetInterpolatedAt(time);
+			}
+			return update;
+		}
+
+		public override ICoherenceComponentData CreateComponentData()
+		{
+			return new RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470();
 		}
 	}
 
 
 	[Preserve]
-	public class CoherenceSyncTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de : CoherenceSyncBaked
+	public class CoherenceSyncRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6 : CoherenceSyncBaked
 	{
 		private SerializeEntityID entityId;
-		private Logger logger = Log.GetLogger<CoherenceSyncTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de>();
+		private Logger logger = Log.GetLogger<CoherenceSyncRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6>();
 
 		// Cached targets for commands
 
@@ -160,15 +204,16 @@ namespace Coherence.Generated
 
 		private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
 		{
-			["0df60e65-2de8-4833-bdba-9ee29938ab19"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_0df60e65_2de8_4833_bdba_9ee29938ab19(),
-			["39f75b76-5b9c-4976-a5a8-f469fcfd1985"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_39f75b76_5b9c_4976_a5a8_f469fcfd1985(),
-			["3be2dd42-ae86-4876-a5ed-af23c384feee"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_3be2dd42_ae86_4876_a5ed_af23c384feee(),
+			["c8981954-64f3-46df-a426-2f1c647fa024"] = new Binding_a0e6252c4d09f4fb28257804194356b6_c8981954_64f3_46df_a426_2f1c647fa024(),
+			["b0541bd4-db94-4c98-aae3-912bfbdb0f6d"] = new Binding_a0e6252c4d09f4fb28257804194356b6_b0541bd4_db94_4c98_aae3_912bfbdb0f6d(),
+			["8761ffc7-494f-4fad-a367-41f5669ef1b9"] = new Binding_a0e6252c4d09f4fb28257804194356b6_8761ffc7_494f_4fad_a367_41f5669ef1b9(),
+			["8fb659bf-e821-436e-963e-8810ade5244e"] = new Binding_a0e6252c4d09f4fb28257804194356b6_8fb659bf_e821_436e_963e_8810ade5244e(),
 		};
 
 		private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings =
 			new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
 
-		public CoherenceSyncTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de()
+		public CoherenceSyncRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6()
 		{
 		}
 
@@ -222,7 +267,7 @@ namespace Coherence.Generated
 
 		public override void Initialize(SerializeEntityID entityId, CoherenceBridge bridge, IClient client, CoherenceInput input, Logger logger)
 		{
-			this.logger = logger.With<CoherenceSyncTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de>();
+			this.logger = logger.With<CoherenceSyncRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6>();
 			this.bridge = bridge;
 			this.entityId = entityId;
 			this.client = client;
@@ -233,7 +278,7 @@ namespace Coherence.Generated
 			switch(command)
 			{
 				default:
-					logger.Warning($"[CoherenceSyncTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de] Unhandled command: {command.GetType()}.");
+					logger.Warning($"[CoherenceSyncRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6] Unhandled command: {command.GetType()}.");
 					break;
 			}
 		}

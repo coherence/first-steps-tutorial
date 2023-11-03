@@ -30,8 +30,8 @@ namespace Coherence.Generated
 
 		public override Vector3 Value
 		{
-			get => (Vector3)(UnityEngine.Vector3)(coherenceSync.coherencePosition);
-			set => coherenceSync.coherencePosition = (UnityEngine.Vector3)(value);
+			get { return (UnityEngine.Vector3)(coherenceSync.coherencePosition); }
+			set { coherenceSync.coherencePosition = (UnityEngine.Vector3)(value); }
 		}
 
 		protected override Vector3 ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -78,8 +78,8 @@ namespace Coherence.Generated
 
 		public override int Value
 		{
-			get => (int)(System.Int32)(CastedUnityComponent.count);
-			set => CastedUnityComponent.count = (System.Int32)(value);
+			get { return (System.Int32)(CastedUnityComponent.count); }
+			set { CastedUnityComponent.count = (System.Int32)(value); }
 		}
 
 		protected override int ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)

@@ -16,7 +16,8 @@ namespace Coherence.Generated
 		public const int FlowersCounter_20d53524fceab40d5a9ab892525615cbIndex = 3;
 		public const int Player_cd9bcc1feead9419fac0c5981ce85c23Index = 4;
 		public const int RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1Index = 5;
-		public const int TrainPlatform_6ba8b7030c4bf544396f864fc9dd99deIndex = 6;
+		public const int RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6Index = 6;
+		public const int TrainPlatform_6ba8b7030c4bf544396f864fc9dd99deIndex = 7;
 
 		public static Dictionary<string, int> IndexForName = new Dictionary<string, int>() {
 			{ "Crate_27f1ac5097d4ee4409fbb87ad14f76c2", 0 },
@@ -31,7 +32,9 @@ namespace Coherence.Generated
 
 			{ "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1", 5 },
 
-			{ "TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de", 6 },
+			{ "RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6", 6 },
+
+			{ "TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de", 7 },
 
 		};
 	}

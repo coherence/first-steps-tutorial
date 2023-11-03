@@ -30,8 +30,8 @@ namespace Coherence.Generated
 
 		public override Vector3 Value
 		{
-			get => (Vector3)(UnityEngine.Vector3)(coherenceSync.coherencePosition);
-			set => coherenceSync.coherencePosition = (UnityEngine.Vector3)(value);
+			get { return (UnityEngine.Vector3)(coherenceSync.coherencePosition); }
+			set { coherenceSync.coherencePosition = (UnityEngine.Vector3)(value); }
 		}
 
 		protected override Vector3 ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -72,8 +72,8 @@ namespace Coherence.Generated
 
 		public override Quaternion Value
 		{
-			get => (Quaternion)(UnityEngine.Quaternion)(coherenceSync.coherenceRotation);
-			set => coherenceSync.coherenceRotation = (UnityEngine.Quaternion)(value);
+			get { return (UnityEngine.Quaternion)(coherenceSync.coherenceRotation); }
+			set { coherenceSync.coherenceRotation = (UnityEngine.Quaternion)(value); }
 		}
 
 		protected override Quaternion ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -116,8 +116,8 @@ namespace Coherence.Generated
 
 		public override string Value
 		{
-			get => (string)(System.String)(CastedUnityComponent.path);
-			set => CastedUnityComponent.path = (System.String)(value);
+			get { return (System.String)(CastedUnityComponent.path); }
+			set { CastedUnityComponent.path = (System.String)(value); }
 		}
 
 		protected override string ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -160,8 +160,8 @@ namespace Coherence.Generated
 
 		public override int Value
 		{
-			get => (int)(System.Int32)(CastedUnityComponent.pathDirtyCounter);
-			set => CastedUnityComponent.pathDirtyCounter = (System.Int32)(value);
+			get { return (System.Int32)(CastedUnityComponent.pathDirtyCounter); }
+			set { CastedUnityComponent.pathDirtyCounter = (System.Int32)(value); }
 		}
 
 		protected override int ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -204,8 +204,8 @@ namespace Coherence.Generated
 
 		public override bool Value
 		{
-			get => (bool)(System.Boolean)(CastedUnityComponent.isBeingCarried);
-			set => CastedUnityComponent.isBeingCarried = (System.Boolean)(value);
+			get { return (System.Boolean)(CastedUnityComponent.isBeingCarried); }
+			set { CastedUnityComponent.isBeingCarried = (System.Boolean)(value); }
 		}
 
 		protected override bool ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)

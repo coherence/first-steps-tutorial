@@ -30,8 +30,8 @@ namespace Coherence.Generated
 
 		public override Vector3 Value
 		{
-			get => (Vector3)(UnityEngine.Vector3)(coherenceSync.coherencePosition);
-			set => coherenceSync.coherencePosition = (UnityEngine.Vector3)(value);
+			get { return (UnityEngine.Vector3)(coherenceSync.coherencePosition); }
+			set { coherenceSync.coherencePosition = (UnityEngine.Vector3)(value); }
 		}
 
 		protected override Vector3 ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -78,8 +78,8 @@ namespace Coherence.Generated
 
 		public override bool Value
 		{
-			get => (bool)(System.Boolean)(CastedUnityComponent.isCarryingObject);
-			set => CastedUnityComponent.isCarryingObject = (System.Boolean)(value);
+			get { return (System.Boolean)(CastedUnityComponent.isCarryingObject); }
+			set { CastedUnityComponent.isCarryingObject = (System.Boolean)(value); }
 		}
 
 		protected override bool ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -122,8 +122,8 @@ namespace Coherence.Generated
 
 		public override SerializeEntityID Value
 		{
-			get => (SerializeEntityID)coherenceSync.CoherenceBridge.UnityObjectToEntityId(CastedUnityComponent.grabbableObject);
-			set => CastedUnityComponent.grabbableObject = coherenceSync.CoherenceBridge.EntityIdToTransform(value);
+			get { return coherenceSync.CoherenceBridge.UnityObjectToEntityId(CastedUnityComponent.grabbableObject); }
+			set { CastedUnityComponent.grabbableObject = coherenceSync.CoherenceBridge.EntityIdToTransform(value); }
 		}
 
 		protected override SerializeEntityID ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -166,8 +166,8 @@ namespace Coherence.Generated
 
 		public override bool Value
 		{
-			get => (bool)(CastedUnityComponent.GetBool(CastedDescriptor.ParameterHash));
-			set => CastedUnityComponent.SetBool(CastedDescriptor.ParameterHash, (value));
+			get { return (CastedUnityComponent.GetBool(CastedDescriptor.ParameterHash)); }
+			set { CastedUnityComponent.SetBool(CastedDescriptor.ParameterHash, (value)); }
 		}
 
 		protected override bool ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -210,8 +210,8 @@ namespace Coherence.Generated
 
 		public override Quaternion Value
 		{
-			get => (Quaternion)(UnityEngine.Quaternion)(CastedUnityComponent.localRotation);
-			set => CastedUnityComponent.localRotation = (UnityEngine.Quaternion)(value);
+			get { return (UnityEngine.Quaternion)(CastedUnityComponent.localRotation); }
+			set { CastedUnityComponent.localRotation = (UnityEngine.Quaternion)(value); }
 		}
 
 		protected override Quaternion ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -254,8 +254,8 @@ namespace Coherence.Generated
 
 		public override Quaternion Value
 		{
-			get => (Quaternion)(UnityEngine.Quaternion)(CastedUnityComponent.localRotation);
-			set => CastedUnityComponent.localRotation = (UnityEngine.Quaternion)(value);
+			get { return (UnityEngine.Quaternion)(CastedUnityComponent.localRotation); }
+			set { CastedUnityComponent.localRotation = (UnityEngine.Quaternion)(value); }
 		}
 
 		protected override Quaternion ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -298,8 +298,8 @@ namespace Coherence.Generated
 
 		public override Vector3 Value
 		{
-			get => (Vector3)(UnityEngine.Vector3)(CastedUnityComponent.localPosition);
-			set => CastedUnityComponent.localPosition = (UnityEngine.Vector3)(value);
+			get { return (UnityEngine.Vector3)(CastedUnityComponent.localPosition); }
+			set { CastedUnityComponent.localPosition = (UnityEngine.Vector3)(value); }
 		}
 
 		protected override Vector3 ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -342,8 +342,8 @@ namespace Coherence.Generated
 
 		public override Vector3 Value
 		{
-			get => (Vector3)(UnityEngine.Vector3)(CastedUnityComponent.localPosition);
-			set => CastedUnityComponent.localPosition = (UnityEngine.Vector3)(value);
+			get { return (UnityEngine.Vector3)(CastedUnityComponent.localPosition); }
+			set { CastedUnityComponent.localPosition = (UnityEngine.Vector3)(value); }
 		}
 
 		protected override Vector3 ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -386,8 +386,8 @@ namespace Coherence.Generated
 
 		public override Vector3 Value
 		{
-			get => (Vector3)(UnityEngine.Vector3)(CastedUnityComponent.localPosition);
-			set => CastedUnityComponent.localPosition = (UnityEngine.Vector3)(value);
+			get { return (UnityEngine.Vector3)(CastedUnityComponent.localPosition); }
+			set { CastedUnityComponent.localPosition = (UnityEngine.Vector3)(value); }
 		}
 
 		protected override Vector3 ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -430,8 +430,8 @@ namespace Coherence.Generated
 
 		public override Quaternion Value
 		{
-			get => (Quaternion)(UnityEngine.Quaternion)(CastedUnityComponent.localRotation);
-			set => CastedUnityComponent.localRotation = (UnityEngine.Quaternion)(value);
+			get { return (UnityEngine.Quaternion)(CastedUnityComponent.localRotation); }
+			set { CastedUnityComponent.localRotation = (UnityEngine.Quaternion)(value); }
 		}
 
 		protected override Quaternion ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)

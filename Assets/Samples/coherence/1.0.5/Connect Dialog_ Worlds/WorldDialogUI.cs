@@ -89,6 +89,14 @@ namespace Coherence.Samples.WorldDialog
             }
         }
 
+        private void Awake()
+        {
+            if (SimulatorUtility.IsSimulator)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+
         void Start()
         {
             initialWorldTitle = worldTitleText.text;

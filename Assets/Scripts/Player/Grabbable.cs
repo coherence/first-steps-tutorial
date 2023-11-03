@@ -19,7 +19,7 @@ public class Grabbable : MonoBehaviour
     
     public event Action<bool> PickupValidated;
     
-    private CoherenceSync _coherenceSync;
+    private CoherenceSync _sync;
     private Rigidbody _rigidbody;
     private Collider _collider;
     private bool _pickupRequested;
@@ -29,21 +29,23 @@ public class Grabbable : MonoBehaviour
     {
         _collider = GetComponent<Collider>();
         _rigidbody = GetComponent<Rigidbody>();
-        _coherenceSync = GetComponent<CoherenceSync>();
+        _sync = GetComponent<CoherenceSync>();
     }
         
     private void OnEnable()
     {
-        _coherenceSync.OnAuthorityRequested += OnAuthorityRequested;
-        _coherenceSync.OnStateAuthority.AddListener(OnStateAuthority);
-        _coherenceSync.OnStateRemote.AddListener(OnStateRemote);
+        _sync.OnAuthorityRequested += OnAuthorityRequested;
+        _sync.OnStateAuthority.AddListener(OnStateAuthority);
+        _sync.OnStateRemote.AddListener(OnStateRemote);
+        _sync.OnAuthorityRequestRejected.AddListener(OnRequestRejected);
     }
 
     private void OnDisable()
     {
-        _coherenceSync.OnAuthorityRequested -= OnAuthorityRequested;
-        _coherenceSync.OnStateAuthority.RemoveListener(OnStateAuthority);
-        _coherenceSync.OnStateRemote.RemoveListener(OnStateRemote);
+        _sync.OnAuthorityRequested -= OnAuthorityRequested;
+        _sync.OnStateAuthority.RemoveListener(OnStateAuthority);
+        _sync.OnStateRemote.RemoveListener(OnStateRemote);
+        _sync.OnAuthorityRequestRejected.RemoveListener(OnRequestRejected);
     }
     
     /// <summary>
@@ -56,6 +58,15 @@ public class Grabbable : MonoBehaviour
     {
         return !isBeingCarried;
     }
+
+    /// <summary>
+    /// Reacts to an authority request that was denied. Invokes the standard event
+    /// so that <see cref="GrabInput"/> can restore player interaction state to defaults.
+    /// </summary>
+    private void OnRequestRejected(AuthorityType _)
+    {
+        PickupValidated?.Invoke(false);
+    }
         
     /// <summary>
     /// Verifies that the object can be picked up. If the player attempting the action has authority, it succeeds instantly.
@@ -63,14 +74,14 @@ public class Grabbable : MonoBehaviour
     /// </summary>
     public void RequestPickup()
     {
-        if (_coherenceSync.HasStateAuthority)
+        if (_sync.HasStateAuthority)
         {
             ConfirmPickup();
         }
         else
         {
             _pickupRequested = true;
-            _coherenceSync.RequestAuthority(AuthorityType.Full);
+            _sync.RequestAuthority(AuthorityType.Full);
         }
     }
 
@@ -109,7 +120,7 @@ public class Grabbable : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (_coherenceSync.HasStateAuthority
+        if (_sync.HasStateAuthority
             || isBeingCarried
             || !CanChangeAuthority()) return;
 
@@ -122,7 +133,7 @@ public class Grabbable : MonoBehaviour
                 // If player is this client's player Prefab, take authority
                 if (collidingPlayersSync.HasStateAuthority)
                 {
-                    _coherenceSync.RequestAuthority(AuthorityType.Full);
+                    _sync.RequestAuthority(AuthorityType.Full);
                 }
             }
         }

@@ -30,8 +30,8 @@ namespace Coherence.Generated
 
 		public override Vector3 Value
 		{
-			get => (Vector3)(UnityEngine.Vector3)(coherenceSync.coherencePosition);
-			set => coherenceSync.coherencePosition = (UnityEngine.Vector3)(value);
+			get { return (UnityEngine.Vector3)(coherenceSync.coherencePosition); }
+			set { coherenceSync.coherencePosition = (UnityEngine.Vector3)(value); }
 		}
 
 		protected override Vector3 ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -72,8 +72,8 @@ namespace Coherence.Generated
 
 		public override Quaternion Value
 		{
-			get => (Quaternion)(UnityEngine.Quaternion)(coherenceSync.coherenceRotation);
-			set => coherenceSync.coherenceRotation = (UnityEngine.Quaternion)(value);
+			get { return (UnityEngine.Quaternion)(coherenceSync.coherenceRotation); }
+			set { coherenceSync.coherenceRotation = (UnityEngine.Quaternion)(value); }
 		}
 
 		protected override Quaternion ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
@@ -116,8 +116,8 @@ namespace Coherence.Generated
 
 		public override uint Value
 		{
-			get => (uint)(System.UInt32)(CastedUnityComponent.timePlanted);
-			set => CastedUnityComponent.timePlanted = (System.UInt32)(value);
+			get { return (System.UInt32)(CastedUnityComponent.timePlanted); }
+			set { CastedUnityComponent.timePlanted = (System.UInt32)(value); }
 		}
 
 		protected override uint ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)

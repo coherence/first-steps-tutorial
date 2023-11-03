@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &216943351981046892
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: coherenceUUID
+      value: special-crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: bakedScriptType
+      value: Coherence.Generated.CoherenceSyncRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6,
+        Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: bindings.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: coherenceSyncConfig
+      value: 
+      objectReference: {fileID: 960217107724943298, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+        type: 2}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: archetype.archetypeName
+      value: RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6
+      objectReference: {fileID: 0}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: scenePrefabInstanceUUID
+      value: -192412
+      objectReference: {fileID: 0}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: archetype.boundComponents.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: archetype.boundComponents.Array.data[6].component
+      value: 
+      objectReference: {fileID: 8169318893550734971}
+    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: archetype.boundComponents.Array.data[7].component
+      value: 
+      objectReference: {fileID: 5156161361901559470}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 404.484
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_Name
+      value: RobotArm_Crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157262914527108723, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0106947e8e6caa488768d27ed8ac352, type: 2}
+    m_RemovedComponents:
+    - {fileID: 6525610836190113121, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
+--- !u!114 &5156161361901559470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4939570989761225410, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 216943351981046892}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac520fda41f43c7b508d780e58180a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8169318893550734971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8241020607719600663, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 216943351981046892}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46bab8fedf1749fa89a587831bb70aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -50,6 +50,7 @@ MonoBehaviour:
   - {fileID: 3497701467602501475}
   - {fileID: 8124374254152143763}
   - {fileID: -1788795369704538435}
+  - {fileID: 960217107724943298}
   loadFromAssetDatabase: 0
 --- !u!114 &45591629001296103
 MonoBehaviour:
@@ -81,6 +82,36 @@ MonoBehaviour:
           type: 3}
     - rid: 7887414979419439111
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &960217107724943298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: RobotArm_Crate
+  m_EditorClassIdentifier: 
+  id: a0e6252c4d09f4fb28257804194356b6
+  editorTarget: {fileID: 2140933313964870076, guid: a0e6252c4d09f4fb28257804194356b6,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 6963476597792833557
+  objectInstantiator:
+    rid: 6963476597792833556
+  references:
+    version: 2
+    RefIds:
+    - rid: 6963476597792833556
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+    - rid: 6963476597792833557
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 2140933313964870076, guid: a0e6252c4d09f4fb28257804194356b6,
+          type: 3}
 --- !u!114 &2567988665293060983
 MonoBehaviour:
   m_ObjectHideFlags: 0

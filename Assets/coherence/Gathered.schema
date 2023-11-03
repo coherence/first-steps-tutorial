@@ -5,28 +5,14 @@ component Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__cha
 component Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121
   isBeingCarried Bool [bits "1"]
 
-component Crate_27f1ac5097d4ee4409fbb87ad14f76c2_UnityEngine__char_46_Transform_1522740331349769034
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-  rotation Quaternion [bits "12"]
-
 component ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579
   timer Float [compression "None"]
-
-component ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_UnityEngine__char_46_Transform_6146188821451997129
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
 
 component Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021
   timePlanted UInt [bits "32", range-min "0", range-max "4294967295"]
 
-component Flower_a167402e36850884aa7ce3d374cd6c77_UnityEngine__char_46_Transform_7769937714867182896
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-  rotation Quaternion [bits "12"]
-
 component FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621
   count Int [bits "5", range-min "0", range-max "40"]
-
-component FlowersCounter_20d53524fceab40d5a9ab892525615cb_UnityEngine__char_46_Transform_6193622242930807434
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
 
 component Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199
   currentHat Int [bits "3", range-min "-2", range-max "3"]
@@ -47,10 +33,6 @@ component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_
 component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177
   rotation Quaternion [bits "12"]
 
-component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4666490834533792130
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-  rotation Quaternion [bits "12"]
-
 component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033
   position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
 
@@ -67,9 +49,6 @@ component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transfo
 component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063
   rotation Quaternion [bits "12"]
 
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_5019661362766340086
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-
 component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008
   position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
 
@@ -80,12 +59,12 @@ component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transfo
   position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
   rotation Quaternion [bits "12"]
 
+component RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "11", range-min "-1", range-max "2000"]
+
 component TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933
   timer Float [compression "None"]
-
-component TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_UnityEngine__char_46_Transform_6535867841057756619
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-  rotation Quaternion [bits "12"]
 
 command FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b [routing "All"]
 
@@ -176,6 +155,16 @@ archetype RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1
     RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 
       number [bits "1"]
       value [bits "20"]
+
+archetype RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6
+  lod 0
+    WorldPosition 
+      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldOrientation 
+      value [bits "12"]
+    RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470 
+      name [bits "6"]
+      number [bits "11", range-min "-1", range-max "2000"]
 
 archetype TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de
   lod 0
