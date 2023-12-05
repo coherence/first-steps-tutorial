@@ -6,117 +6,164 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.SimulationFrame;
-	using Coherence.Entity;
-	using Coherence.Utils;
-	using Coherence.Brook;
-	using Coherence.Toolkit;
-	using UnityEngine;
+    using System.Collections.Generic;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.SimulationFrame;
+    using Coherence.Entities;
+    using Coherence.Utils;
+    using Coherence.Brook;
+    using Logger = Coherence.Log.Logger;
+    using UnityEngine;
+    using Coherence.Toolkit;
+    
+    public struct WorldPositionQuery : ICoherenceComponentData
+    {
+        public static uint positionMask => 0b00000000000000000000000000000001;
+        public Vector3 position;
+        public static uint radiusMask => 0b00000000000000000000000000000010;
+        public System.Single radius;
+        
+        public uint FieldsMask { get; set; }
+        public uint StoppedMask { get; set; }
+        public uint GetComponentType() => 3;
+        public int PriorityLevel() => 100;
+        public const int order = 0;
+        public uint InitialFieldsMask() => 0b00000000000000000000000000000011;
+        public bool HasFields() => true;
+        public bool HasRefFields() => false;
+        
+        public HashSet<Entity> GetEntityRefs()
+        {
+            return default;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;  
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;   
+        }
+        
+        public ICoherenceComponentData Clone() => this;
+        public int GetComponentOrder() => order;
+        public bool IsSendOrdered() => false;
+        public AbsoluteSimulationFrame Frame;
+        
+    
+        public void SetSimulationFrame(AbsoluteSimulationFrame frame)
+        {
+            Frame = frame;
+        }
+        
+        public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        
+        public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
+        {
+            var other = (WorldPositionQuery)data;
 
-	public struct WorldPositionQuery : ICoherenceComponentData
-	{
-		public Vector3 position;
-		public float radius;
+            FieldsMask |= mask;
+            StoppedMask &= ~(mask);
 
-		public override string ToString()
-		{
-			return $"WorldPositionQuery(position: {position}, radius: {radius})";
-		}
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                position = other.position;
+            }
+            
+            mask >>= 1;
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                radius = other.radius;
+            }
+            
+            mask >>= 1;
+            StoppedMask |= other.StoppedMask;
 
-		public uint GetComponentType() => Definition.InternalWorldPositionQuery;
+            return this;
+        }
+        
+        public uint DiffWith(ICoherenceComponentData data)
+        {
+            throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
+        }
+        
+        public static uint Serialize(WorldPositionQuery data, uint mask, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            if (bitStream.WriteMask(data.StoppedMask != 0))
+            {
+                bitStream.WriteMaskBits(data.StoppedMask, 2);
+            }
 
-		public const int order = 0;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+            
+                var fieldValue = (data.position.ToCoreVector3());
+            
 
-		public uint FieldsMask => 0b00000000000000000000000000000011;
+            
+                bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
+            }
+            
+            mask >>= 1;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+            
+                var fieldValue = data.radius;
+            
 
-		public int GetComponentOrder() => order;
-		public bool IsSendOrdered() { return false; }
+            
+                bitStream.WriteFloat(fieldValue, FloatMeta.NoCompression());
+            }
+            
+            mask >>= 1;
+          
+            return mask;
+        }
+        
+        public static (WorldPositionQuery, uint) Deserialize(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(2);
+            }
 
-		public AbsoluteSimulationFrame Frame;
-	
+            var mask = (uint)0;
+            var val = new WorldPositionQuery();
+            if (bitStream.ReadMask())
+            {
+                val.position = bitStream.ReadVector3(FloatMeta.NoCompression()).ToUnityVector3();
+                mask |= positionMask;
+            }
+            if (bitStream.ReadMask())
+            {
+                val.radius = bitStream.ReadFloat(FloatMeta.NoCompression());
+                mask |= radiusMask;
+            }
+                    
+            val.FieldsMask = mask;
+            val.StoppedMask = stoppedMask;
 
-		public void SetSimulationFrame(AbsoluteSimulationFrame frame)
-		{
-			Frame = frame;
-		}
+            return (val, mask);
+        }
+        
+        
+        public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
+        {
+            var last = lastSent as WorldPositionQuery?;
+            
+        }
 
-		public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        public override string ToString()
+        {
+            return $"WorldPositionQuery(position: { position }, radius: { radius }, Mask: {System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0')}), Stopped: {System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0')})";
+        }
+    }
+    
 
-		public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
-		{
-			var other = (WorldPositionQuery)data;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				position = other.position;
-			}
-			mask >>= 1;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				radius = other.radius;
-			}
-			mask >>= 1;
-			return this;
-		}
-
-		public uint DiffWith(ICoherenceComponentData data)
-		{
-			throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
-
-		}
-
-		public static uint Serialize(WorldPositionQuery data, uint mask, IOutProtocolBitStream bitStream)
-		{
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				var fieldValue = (data.position.ToCoreVector3());
-
-				bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
-			}
-			mask >>= 1;
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				var fieldValue = data.radius;
-
-				bitStream.WriteFloat(fieldValue, FloatMeta.NoCompression());
-			}
-			mask >>= 1;
-
-			return mask;
-		}
-
-		public static (WorldPositionQuery, uint) Deserialize(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new WorldPositionQuery();
-	
-			if (bitStream.ReadMask())
-			{
-				val.position = (bitStream.ReadVector3(FloatMeta.NoCompression())).ToUnityVector3();
-				mask |= 0b00000000000000000000000000000001;
-			}
-			if (bitStream.ReadMask())
-			{
-				val.radius = bitStream.ReadFloat(FloatMeta.NoCompression());
-				mask |= 0b00000000000000000000000000000010;
-			}
-			return (val, mask);
-		}
-
-		/// <summary>
-		/// Resets byte array references to the local array instance that is kept in the lastSentData.
-		/// If the array content has changed but remains of same length, the new content is copied into the local array instance.
-		/// If the array length has changed, the array is cloned and overwrites the local instance.
-		/// If the array has not changed, the reference is reset to the local array instance.
-		/// Otherwise, changes to other fields on the component might cause the local array instance reference to become permanently lost.
-		/// </summary>
-		public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
-		{
-			var last = lastSent as WorldPositionQuery?;
-	
-		}
-	}
 }

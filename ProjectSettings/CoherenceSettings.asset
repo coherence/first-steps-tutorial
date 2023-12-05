@@ -22,6 +22,10 @@ MonoBehaviour:
   roomsWebPort: 42002
   sendFrequency: 20
   recvFrequency: 60
+  rsConsoleLogLevel: 2
+  rsLogToFile: 0
+  rsLogFilePath: Logs/rs_logs.txt
+  rsFileLogLevel: 1
   bakeMode: 0
   runtimeSettingsGuid: 05f52a426355b49ed9e1062c38c7cec9
   schemaBakeGenerateAsmdef: 0

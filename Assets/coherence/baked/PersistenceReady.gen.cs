@@ -6,28 +6,72 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.Brook;
-	using UnityEngine;
-	using Coherence.Entity;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.Brook;
+    using Coherence.Entities;
+    using Coherence.Log;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-	public struct PersistenceReady : IEntityCommand
-	{
+    public struct PersistenceReady : IEntityCommand
+    {
+        
+        public Entity Entity { get; set; }
+        public MessageTarget Routing { get; set; }
+        public uint Sender { get; set; }
+        public uint GetComponentType() => 4;
+        
+        public IEntityMessage Clone()
+        {
+            // This is a struct, so we can safely return
+            // a struct copy.
+            return this;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToAbsoluteEntity(Entity, false, out var absoluteEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = absoluteEntity;
+            return IEntityMapper.Error.None;
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToRelativeEntity(Entity, false, out var relativeEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = relativeEntity;
+            return IEntityMapper.Error.None;
+        }
 
-		public MessageTarget Routing => MessageTarget.All;
-		public uint GetComponentType() => Definition.InternalPersistenceReady;
+        public HashSet<Entity> GetEntityRefs() {
+            return default;
+        }
 
-		public static void Serialize(PersistenceReady commandData, IOutProtocolBitStream bitStream)
-		{
-		}
+        public void NullEntityRefs(Entity entity) {
+        }
+        
+        
+        public static void Serialize(PersistenceReady commandData, IOutProtocolBitStream bitStream)
+        {
+        }
+        
+        public static PersistenceReady Deserialize(IInProtocolBitStream bitStream, Entity entity, MessageTarget target)
+        {
+    
+            return new PersistenceReady()
+            {
+                Entity = entity,
+                Routing = target,
+            };   
+        }
+    }
 
-		public static PersistenceReady Deserialize(IInProtocolBitStream bitStream)
-		{
-
-			return new PersistenceReady
-			(
-			){};
-		}
-	}
 }

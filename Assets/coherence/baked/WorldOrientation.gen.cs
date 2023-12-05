@@ -6,158 +6,244 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.SimulationFrame;
-	using Coherence.Entity;
-	using Coherence.Utils;
-	using Coherence.Brook;
-	using Coherence.Toolkit;
-	using UnityEngine;
+    using System.Collections.Generic;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.SimulationFrame;
+    using Coherence.Entities;
+    using Coherence.Utils;
+    using Coherence.Brook;
+    using Logger = Coherence.Log.Logger;
+    using UnityEngine;
+    using Coherence.Toolkit;
+    
+    public struct WorldOrientation : ICoherenceComponentData
+    {
+        public static uint valueMask => 0b00000000000000000000000000000001;
+        public Quaternion value;
+        
+        public uint FieldsMask { get; set; }
+        public uint StoppedMask { get; set; }
+        public uint GetComponentType() => 1;
+        public int PriorityLevel() => 1000;
+        public const int order = 0;
+        public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
+        public bool HasFields() => true;
+        public bool HasRefFields() => false;
+        
+        public HashSet<Entity> GetEntityRefs()
+        {
+            return default;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;  
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;   
+        }
+        
+        public ICoherenceComponentData Clone() => this;
+        public int GetComponentOrder() => order;
+        public bool IsSendOrdered() => false;
+        public AbsoluteSimulationFrame Frame;
+        
+    
+        public void SetSimulationFrame(AbsoluteSimulationFrame frame)
+        {
+            Frame = frame;
+        }
+        
+        public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        
+        public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
+        {
+            var other = (WorldOrientation)data;
 
-	public struct WorldOrientation : ICoherenceComponentData
-	{
-		public Quaternion value;
+            FieldsMask |= mask;
+            StoppedMask &= ~(mask);
 
-		public override string ToString()
-		{
-			return $"WorldOrientation(value: {value})";
-		}
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                value = other.value;
+            }
+            
+            mask >>= 1;
+            StoppedMask |= other.StoppedMask;
 
-		public uint GetComponentType() => Definition.InternalWorldOrientation;
+            return this;
+        }
+        
+        public uint DiffWith(ICoherenceComponentData data)
+        {
+            throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
+        }
+        
+        public static uint Serialize(WorldOrientation data, uint mask, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            if (bitStream.WriteMask(data.StoppedMask != 0))
+            {
+                bitStream.WriteMaskBits(data.StoppedMask, 1);
+            }
 
-		public const int order = 0;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+            
+                var fieldValue = (data.value.ToCoreQuaternion());
+            
 
-		public uint FieldsMask => 0b00000000000000000000000000000001;
+            
+                bitStream.WriteQuaternion(fieldValue, 32);
+            }
+            
+            mask >>= 1;
+          
+            return mask;
+        }
+        
+        public static (WorldOrientation, uint) Deserialize(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public int GetComponentOrder() => order;
-		public bool IsSendOrdered() { return false; }
+            var mask = (uint)0;
+            var val = new WorldOrientation();
+            if (bitStream.ReadMask())
+            {
+                val.value = bitStream.ReadQuaternion(32).ToUnityQuaternion();
+                mask |= valueMask;
+            }
+                    
+            val.FieldsMask = mask;
+            val.StoppedMask = stoppedMask;
 
-		public AbsoluteSimulationFrame Frame;
-	
+            return (val, mask);
+        }
+        
+        public static (WorldOrientation, uint) DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public void SetSimulationFrame(AbsoluteSimulationFrame frame)
-		{
-			Frame = frame;
-		}
+            var mask = (uint)0;
+            var val = new WorldOrientation();
+            if (bitStream.ReadMask())
+            {
+                val.value = bitStream.ReadQuaternion(12).ToUnityQuaternion();
+                mask |= valueMask;
+            }
+                        
+            val.FieldsMask = mask;
+            val.StoppedMask = mask;
+            
+            return (val, mask);
+        }
+        public static (WorldOrientation, uint) DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+            var mask = (uint)0;
+            var val = new WorldOrientation();
+            if (bitStream.ReadMask())
+            {
+                val.value = bitStream.ReadQuaternion(12).ToUnityQuaternion();
+                mask |= valueMask;
+            }
+                        
+            val.FieldsMask = mask;
+            val.StoppedMask = mask;
+            
+            return (val, mask);
+        }
+        public static (WorldOrientation, uint) DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
-		{
-			var other = (WorldOrientation)data;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				value = other.value;
-			}
-			mask >>= 1;
-			return this;
-		}
+            var mask = (uint)0;
+            var val = new WorldOrientation();
+            if (bitStream.ReadMask())
+            {
+                val.value = bitStream.ReadQuaternion(12).ToUnityQuaternion();
+                mask |= valueMask;
+            }
+                        
+            val.FieldsMask = mask;
+            val.StoppedMask = mask;
+            
+            return (val, mask);
+        }
+        public static (WorldOrientation, uint) DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public uint DiffWith(ICoherenceComponentData data)
-		{
-			throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
+            var mask = (uint)0;
+            var val = new WorldOrientation();
+            if (bitStream.ReadMask())
+            {
+                val.value = bitStream.ReadQuaternion(12).ToUnityQuaternion();
+                mask |= valueMask;
+            }
+                        
+            val.FieldsMask = mask;
+            val.StoppedMask = mask;
+            
+            return (val, mask);
+        }
+        public static (WorldOrientation, uint) DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		}
+            var mask = (uint)0;
+            var val = new WorldOrientation();
+            if (bitStream.ReadMask())
+            {
+                val.value = bitStream.ReadQuaternion(12).ToUnityQuaternion();
+                mask |= valueMask;
+            }
+                        
+            val.FieldsMask = mask;
+            val.StoppedMask = mask;
+            
+            return (val, mask);
+        }
+        
+        public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
+        {
+            var last = lastSent as WorldOrientation?;
+            
+        }
 
-		public static uint Serialize(WorldOrientation data, uint mask, IOutProtocolBitStream bitStream)
-		{
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				var fieldValue = (data.value.ToCoreQuaternion());
+        public override string ToString()
+        {
+            return $"WorldOrientation(value: { value }, Mask: {System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0')}), Stopped: {System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0')})";
+        }
+    }
+    
 
-				bitStream.WriteQuaternion(fieldValue, 32);
-			}
-			mask >>= 1;
-
-			return mask;
-		}
-
-		public static (WorldOrientation, uint) Deserialize(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new WorldOrientation();
-	
-			if (bitStream.ReadMask())
-			{
-				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
-				mask |= 0b00000000000000000000000000000001;
-			}
-			return (val, mask);
-		}
-		public static (WorldOrientation, uint) DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new WorldOrientation();
-			if (bitStream.ReadMask())
-			{
-				val.value = (bitStream.ReadQuaternion(12)).ToUnityQuaternion();
-				mask |= 0b00000000000000000000000000000001;
-			}
-
-			return (val, mask);
-		}
-		public static (WorldOrientation, uint) DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new WorldOrientation();
-			if (bitStream.ReadMask())
-			{
-				val.value = (bitStream.ReadQuaternion(12)).ToUnityQuaternion();
-				mask |= 0b00000000000000000000000000000001;
-			}
-
-			return (val, mask);
-		}
-		public static (WorldOrientation, uint) DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new WorldOrientation();
-			if (bitStream.ReadMask())
-			{
-				val.value = (bitStream.ReadQuaternion(12)).ToUnityQuaternion();
-				mask |= 0b00000000000000000000000000000001;
-			}
-
-			return (val, mask);
-		}
-		public static (WorldOrientation, uint) DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new WorldOrientation();
-			if (bitStream.ReadMask())
-			{
-				val.value = (bitStream.ReadQuaternion(12)).ToUnityQuaternion();
-				mask |= 0b00000000000000000000000000000001;
-			}
-
-			return (val, mask);
-		}
-		public static (WorldOrientation, uint) DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new WorldOrientation();
-			if (bitStream.ReadMask())
-			{
-				val.value = (bitStream.ReadQuaternion(12)).ToUnityQuaternion();
-				mask |= 0b00000000000000000000000000000001;
-			}
-
-			return (val, mask);
-		}
-
-		/// <summary>
-		/// Resets byte array references to the local array instance that is kept in the lastSentData.
-		/// If the array content has changed but remains of same length, the new content is copied into the local array instance.
-		/// If the array length has changed, the array is cloned and overwrites the local instance.
-		/// If the array has not changed, the reference is reset to the local array instance.
-		/// Otherwise, changes to other fields on the component might cause the local array instance reference to become permanently lost.
-		/// </summary>
-		public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
-		{
-			var last = lastSent as WorldOrientation?;
-	
-		}
-	}
 }

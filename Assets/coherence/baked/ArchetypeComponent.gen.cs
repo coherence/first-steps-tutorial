@@ -6,102 +6,144 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.SimulationFrame;
-	using Coherence.Entity;
-	using Coherence.Utils;
-	using Coherence.Brook;
-	using Coherence.Toolkit;
-	using UnityEngine;
+    using System.Collections.Generic;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.SimulationFrame;
+    using Coherence.Entities;
+    using Coherence.Utils;
+    using Coherence.Brook;
+    using Logger = Coherence.Log.Logger;
+    using UnityEngine;
+    using Coherence.Toolkit;
+    
+    public struct ArchetypeComponent : ICoherenceComponentData
+    {
+        public static uint indexMask => 0b00000000000000000000000000000001;
+        public System.Int32 index;
+        
+        public uint FieldsMask { get; set; }
+        public uint StoppedMask { get; set; }
+        public uint GetComponentType() => 4;
+        public int PriorityLevel() => 100;
+        public const int order = 0;
+        public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
+        public bool HasFields() => true;
+        public bool HasRefFields() => false;
+        
+        public HashSet<Entity> GetEntityRefs()
+        {
+            return default;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;  
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;   
+        }
+        
+        public ICoherenceComponentData Clone() => this;
+        public int GetComponentOrder() => order;
+        public bool IsSendOrdered() => false;
+        public AbsoluteSimulationFrame Frame;
+        
+        private static readonly System.Int32 _index_Min = -2147483648;
+        private static readonly System.Int32 _index_Max = 2147483647;
+    
+        public void SetSimulationFrame(AbsoluteSimulationFrame frame)
+        {
+            Frame = frame;
+        }
+        
+        public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        
+        public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
+        {
+            var other = (ArchetypeComponent)data;
 
-	public struct ArchetypeComponent : ICoherenceComponentData
-	{
-		public int index;
+            FieldsMask |= mask;
+            StoppedMask &= ~(mask);
 
-		public override string ToString()
-		{
-			return $"ArchetypeComponent(index: {index})";
-		}
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                index = other.index;
+            }
+            
+            mask >>= 1;
+            StoppedMask |= other.StoppedMask;
 
-		public uint GetComponentType() => Definition.InternalArchetypeComponent;
+            return this;
+        }
+        
+        public uint DiffWith(ICoherenceComponentData data)
+        {
+            throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
+        }
+        
+        public static uint Serialize(ArchetypeComponent data, uint mask, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            if (bitStream.WriteMask(data.StoppedMask != 0))
+            {
+                bitStream.WriteMaskBits(data.StoppedMask, 1);
+            }
 
-		public const int order = 0;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+                Coherence.Utils.Bounds.Check(data.index, _index_Min, _index_Max, "ArchetypeComponent.index", logger);
+                
+                data.index = Coherence.Utils.Bounds.Clamp(data.index, _index_Min, _index_Max);
+            
+                var fieldValue = data.index;
+            
 
-		public uint FieldsMask => 0b00000000000000000000000000000001;
+            
+                bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
+            }
+            
+            mask >>= 1;
+          
+            return mask;
+        }
+        
+        public static (ArchetypeComponent, uint) Deserialize(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public int GetComponentOrder() => order;
-		public bool IsSendOrdered() { return false; }
+            var mask = (uint)0;
+            var val = new ArchetypeComponent();
+            if (bitStream.ReadMask())
+            {
+                val.index = bitStream.ReadIntegerRange(32, -2147483648);
+                mask |= indexMask;
+            }
+                    
+            val.FieldsMask = mask;
+            val.StoppedMask = stoppedMask;
 
-		public AbsoluteSimulationFrame Frame;
-	
-		private static readonly int _index_Min = -2147483648;
-		private static readonly int _index_Max = 2147483647;
+            return (val, mask);
+        }
+        
+        
+        public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
+        {
+            var last = lastSent as ArchetypeComponent?;
+            
+        }
 
-		public void SetSimulationFrame(AbsoluteSimulationFrame frame)
-		{
-			Frame = frame;
-		}
+        public override string ToString()
+        {
+            return $"ArchetypeComponent(index: { index }, Mask: {System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0')}), Stopped: {System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0')})";
+        }
+    }
+    
 
-		public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
-
-		public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
-		{
-			var other = (ArchetypeComponent)data;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				index = other.index;
-			}
-			mask >>= 1;
-			return this;
-		}
-
-		public uint DiffWith(ICoherenceComponentData data)
-		{
-			throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
-
-		}
-
-		public static uint Serialize(ArchetypeComponent data, uint mask, IOutProtocolBitStream bitStream)
-		{
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				Coherence.Utils.Bounds.Check(data.index, _index_Min, _index_Max, "ArchetypeComponent.index");
-				data.index = Coherence.Utils.Bounds.Clamp(data.index, _index_Min, _index_Max);
-				var fieldValue = data.index;
-
-				bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
-			}
-			mask >>= 1;
-
-			return mask;
-		}
-
-		public static (ArchetypeComponent, uint) Deserialize(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new ArchetypeComponent();
-	
-			if (bitStream.ReadMask())
-			{
-				val.index = bitStream.ReadIntegerRange(32, -2147483648);
-				mask |= 0b00000000000000000000000000000001;
-			}
-			return (val, mask);
-		}
-
-		/// <summary>
-		/// Resets byte array references to the local array instance that is kept in the lastSentData.
-		/// If the array content has changed but remains of same length, the new content is copied into the local array instance.
-		/// If the array length has changed, the array is cloned and overwrites the local instance.
-		/// If the array has not changed, the reference is reset to the local array instance.
-		/// Otherwise, changes to other fields on the component might cause the local array instance reference to become permanently lost.
-		/// </summary>
-		public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
-		{
-			var last = lastSent as ArchetypeComponent?;
-	
-		}
-	}
 }

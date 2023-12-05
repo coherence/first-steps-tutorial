@@ -6,114 +6,165 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.SimulationFrame;
-	using Coherence.Entity;
-	using Coherence.Utils;
-	using Coherence.Brook;
-	using Coherence.Toolkit;
-	using UnityEngine;
+    using System.Collections.Generic;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.SimulationFrame;
+    using Coherence.Entities;
+    using Coherence.Utils;
+    using Coherence.Brook;
+    using Logger = Coherence.Log.Logger;
+    using UnityEngine;
+    using Coherence.Toolkit;
+    
+    public struct FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 : ICoherenceComponentData
+    {
+        public static uint countMask => 0b00000000000000000000000000000001;
+        public System.Int32 count;
+        
+        public uint FieldsMask { get; set; }
+        public uint StoppedMask { get; set; }
+        public uint GetComponentType() => 157;
+        public int PriorityLevel() => 100;
+        public const int order = 0;
+        public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
+        public bool HasFields() => true;
+        public bool HasRefFields() => false;
+        
+        public HashSet<Entity> GetEntityRefs()
+        {
+            return default;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;  
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;   
+        }
+        
+        public ICoherenceComponentData Clone() => this;
+        public int GetComponentOrder() => order;
+        public bool IsSendOrdered() => false;
+        public AbsoluteSimulationFrame Frame;
+        
+        private static readonly System.Int32 _count_Min = 0;
+        private static readonly System.Int32 _count_Max = 40;
+    
+        public void SetSimulationFrame(AbsoluteSimulationFrame frame)
+        {
+            Frame = frame;
+        }
+        
+        public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        
+        public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
+        {
+            var other = (FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621)data;
 
-	public struct FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 : ICoherenceComponentData
-	{
-		public int count;
+            FieldsMask |= mask;
+            StoppedMask &= ~(mask);
 
-		public override string ToString()
-		{
-			return $"FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621(count: {count})";
-		}
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                count = other.count;
+            }
+            
+            mask >>= 1;
+            StoppedMask |= other.StoppedMask;
 
-		public uint GetComponentType() => Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621;
+            return this;
+        }
+        
+        public uint DiffWith(ICoherenceComponentData data)
+        {
+            throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
+        }
+        
+        public static uint Serialize(FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 data, uint mask, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            if (bitStream.WriteMask(data.StoppedMask != 0))
+            {
+                bitStream.WriteMaskBits(data.StoppedMask, 1);
+            }
 
-		public const int order = 0;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+                Coherence.Utils.Bounds.Check(data.count, _count_Min, _count_Max, "FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.count", logger);
+                
+                data.count = Coherence.Utils.Bounds.Clamp(data.count, _count_Min, _count_Max);
+            
+                var fieldValue = data.count;
+            
 
-		public uint FieldsMask => 0b00000000000000000000000000000001;
+            
+                bitStream.WriteIntegerRange(fieldValue, 5, 0);
+            }
+            
+            mask >>= 1;
+          
+            return mask;
+        }
+        
+        public static (FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621, uint) Deserialize(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public int GetComponentOrder() => order;
-		public bool IsSendOrdered() { return false; }
+            var mask = (uint)0;
+            var val = new FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621();
+            if (bitStream.ReadMask())
+            {
+                val.count = bitStream.ReadIntegerRange(5, 0);
+                mask |= countMask;
+            }
+                    
+            val.FieldsMask = mask;
+            val.StoppedMask = stoppedMask;
 
-		public AbsoluteSimulationFrame Frame;
-	
-		private static readonly int _count_Min = 0;
-		private static readonly int _count_Max = 40;
+            return (val, mask);
+        }
+        
+        public static (FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621, uint) DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
 
-		public void SetSimulationFrame(AbsoluteSimulationFrame frame)
-		{
-			Frame = frame;
-		}
+            var mask = (uint)0;
+            var val = new FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621();
+            if (bitStream.ReadMask())
+            {
+                val.count = bitStream.ReadIntegerRange(5, 0);
+                mask |= countMask;
+            }
+                        
+            val.FieldsMask = mask;
+            val.StoppedMask = mask;
+            
+            return (val, mask);
+        }
+        
+        public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
+        {
+            var last = lastSent as FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621?;
+            
+        }
 
-		public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        public override string ToString()
+        {
+            return $"FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621(count: { count }, Mask: {System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0')}), Stopped: {System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0')})";
+        }
+    }
+    
 
-		public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
-		{
-			var other = (FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621)data;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				count = other.count;
-			}
-			mask >>= 1;
-			return this;
-		}
-
-		public uint DiffWith(ICoherenceComponentData data)
-		{
-			throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
-
-		}
-
-		public static uint Serialize(FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 data, uint mask, IOutProtocolBitStream bitStream)
-		{
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				Coherence.Utils.Bounds.Check(data.count, _count_Min, _count_Max, "FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.count");
-				data.count = Coherence.Utils.Bounds.Clamp(data.count, _count_Min, _count_Max);
-				var fieldValue = data.count;
-
-				bitStream.WriteIntegerRange(fieldValue, 6, 0);
-			}
-			mask >>= 1;
-
-			return mask;
-		}
-
-		public static (FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621, uint) Deserialize(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621();
-	
-			if (bitStream.ReadMask())
-			{
-				val.count = bitStream.ReadIntegerRange(6, 0);
-				mask |= 0b00000000000000000000000000000001;
-			}
-			return (val, mask);
-		}
-		public static (FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621, uint) DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621();
-			if (bitStream.ReadMask())
-			{
-				val.count = bitStream.ReadIntegerRange(6, 0);
-				mask |= 0b00000000000000000000000000000001;
-			}
-
-			return (val, mask);
-		}
-
-		/// <summary>
-		/// Resets byte array references to the local array instance that is kept in the lastSentData.
-		/// If the array content has changed but remains of same length, the new content is copied into the local array instance.
-		/// If the array length has changed, the array is cloned and overwrites the local instance.
-		/// If the array has not changed, the reference is reset to the local array instance.
-		/// Otherwise, changes to other fields on the component might cause the local array instance reference to become permanently lost.
-		/// </summary>
-		public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
-		{
-			var last = lastSent as FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621?;
-	
-		}
-	}
 }

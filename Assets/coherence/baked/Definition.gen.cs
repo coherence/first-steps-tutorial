@@ -6,1162 +6,1480 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Brook;
-	using Coherence.Connection;
-	using Coherence.Entity;
-	using Coherence.Serializer;
-	using Coherence.Log;
-	using System.Collections.Generic;
+    using System.Collections.Generic;
+    using Coherence.ProtocolDef;
+    using Coherence.Brook;
+    using Coherence.Connection;
+    using Coherence.Entities;
+    using Coherence.Serializer;
+    using Coherence.Log;
+    
+    public class Definition : IDefinition
+    {
+        public const string schemaId = "84a56ccc61aa14a12da762ffd9f7362f7ab29f66";
+        public const uint InternalWorldPosition = 0;
+        public const uint InternalWorldOrientation = 1;
+        public const uint InternalLocalUserComponent = 2;
+        public const uint InternalWorldPositionQuery = 3;
+        public const uint InternalArchetypeComponent = 4;
+        public const uint InternalPersistence = 5;
+        public const uint InternalConnectedEntity = 6;
+        public const uint InternalUniqueID = 7;
+        public const uint InternalConnection = 8;
+        public const uint InternalConnectionScene = 9;
+        public const uint InternalGlobal = 10;
+        public const uint InternalGlobalQuery = 11;
+        public const uint InternalTag = 12;
+        public const uint InternalTagQuery = 13;
+        public const uint InternalPreserveChildren = 14;
+        public const uint InternalScene = 15;
+        public const uint InternalAssetId = 16;
+        public const uint InternalGenericScale = 17;
+        public const uint InternalGenericFieldInt0 = 18;
+        public const uint InternalGenericFieldInt1 = 19;
+        public const uint InternalGenericFieldInt2 = 20;
+        public const uint InternalGenericFieldInt3 = 21;
+        public const uint InternalGenericFieldInt4 = 22;
+        public const uint InternalGenericFieldInt5 = 23;
+        public const uint InternalGenericFieldInt6 = 24;
+        public const uint InternalGenericFieldInt7 = 25;
+        public const uint InternalGenericFieldInt8 = 26;
+        public const uint InternalGenericFieldInt9 = 27;
+        public const uint InternalGenericFieldUInt0 = 28;
+        public const uint InternalGenericFieldUInt1 = 29;
+        public const uint InternalGenericFieldUInt2 = 30;
+        public const uint InternalGenericFieldUInt3 = 31;
+        public const uint InternalGenericFieldUInt4 = 32;
+        public const uint InternalGenericFieldUInt5 = 33;
+        public const uint InternalGenericFieldUInt6 = 34;
+        public const uint InternalGenericFieldUInt7 = 35;
+        public const uint InternalGenericFieldUInt8 = 36;
+        public const uint InternalGenericFieldUInt9 = 37;
+        public const uint InternalGenericFieldBool0 = 38;
+        public const uint InternalGenericFieldBool1 = 39;
+        public const uint InternalGenericFieldBool2 = 40;
+        public const uint InternalGenericFieldBool3 = 41;
+        public const uint InternalGenericFieldBool4 = 42;
+        public const uint InternalGenericFieldBool5 = 43;
+        public const uint InternalGenericFieldBool6 = 44;
+        public const uint InternalGenericFieldBool7 = 45;
+        public const uint InternalGenericFieldBool8 = 46;
+        public const uint InternalGenericFieldBool9 = 47;
+        public const uint InternalGenericFieldFloat0 = 48;
+        public const uint InternalGenericFieldFloat1 = 49;
+        public const uint InternalGenericFieldFloat2 = 50;
+        public const uint InternalGenericFieldFloat3 = 51;
+        public const uint InternalGenericFieldFloat4 = 52;
+        public const uint InternalGenericFieldFloat5 = 53;
+        public const uint InternalGenericFieldFloat6 = 54;
+        public const uint InternalGenericFieldFloat7 = 55;
+        public const uint InternalGenericFieldFloat8 = 56;
+        public const uint InternalGenericFieldFloat9 = 57;
+        public const uint InternalGenericFieldDouble0 = 58;
+        public const uint InternalGenericFieldDouble1 = 59;
+        public const uint InternalGenericFieldDouble2 = 60;
+        public const uint InternalGenericFieldDouble3 = 61;
+        public const uint InternalGenericFieldDouble4 = 62;
+        public const uint InternalGenericFieldDouble5 = 63;
+        public const uint InternalGenericFieldDouble6 = 64;
+        public const uint InternalGenericFieldDouble7 = 65;
+        public const uint InternalGenericFieldDouble8 = 66;
+        public const uint InternalGenericFieldDouble9 = 67;
+        public const uint InternalGenericFieldVector0 = 68;
+        public const uint InternalGenericFieldVector1 = 69;
+        public const uint InternalGenericFieldVector2 = 70;
+        public const uint InternalGenericFieldVector3 = 71;
+        public const uint InternalGenericField2dVector0 = 72;
+        public const uint InternalGenericField2dVector1 = 73;
+        public const uint InternalGenericField2dVector2 = 74;
+        public const uint InternalGenericField2dVector3 = 75;
+        public const uint InternalGenericFieldString0 = 76;
+        public const uint InternalGenericFieldString1 = 77;
+        public const uint InternalGenericFieldString2 = 78;
+        public const uint InternalGenericFieldString3 = 79;
+        public const uint InternalGenericFieldString4 = 80;
+        public const uint InternalGenericFieldQuaternion0 = 81;
+        public const uint InternalGenericFieldEntity0 = 82;
+        public const uint InternalGenericFieldEntity1 = 83;
+        public const uint InternalGenericFieldEntity2 = 84;
+        public const uint InternalGenericFieldEntity3 = 85;
+        public const uint InternalGenericFieldEntity4 = 86;
+        public const uint InternalGenericFieldEntity5 = 87;
+        public const uint InternalGenericFieldEntity6 = 88;
+        public const uint InternalGenericFieldEntity7 = 89;
+        public const uint InternalGenericFieldEntity8 = 90;
+        public const uint InternalGenericFieldEntity9 = 91;
+        public const uint InternalGenericFieldBytes0 = 92;
+        public const uint InternalGenericFieldByte0 = 93;
+        public const uint InternalGenericFieldByte1 = 94;
+        public const uint InternalGenericFieldByte2 = 95;
+        public const uint InternalGenericFieldByte3 = 96;
+        public const uint InternalGenericFieldByte4 = 97;
+        public const uint InternalGenericFieldByte5 = 98;
+        public const uint InternalGenericFieldByte6 = 99;
+        public const uint InternalGenericFieldByte7 = 100;
+        public const uint InternalGenericFieldByte8 = 101;
+        public const uint InternalGenericFieldByte9 = 102;
+        public const uint InternalGenericFieldSByte0 = 103;
+        public const uint InternalGenericFieldSByte1 = 104;
+        public const uint InternalGenericFieldSByte2 = 105;
+        public const uint InternalGenericFieldSByte3 = 106;
+        public const uint InternalGenericFieldSByte4 = 107;
+        public const uint InternalGenericFieldSByte5 = 108;
+        public const uint InternalGenericFieldSByte6 = 109;
+        public const uint InternalGenericFieldSByte7 = 110;
+        public const uint InternalGenericFieldSByte8 = 111;
+        public const uint InternalGenericFieldSByte9 = 112;
+        public const uint InternalGenericFieldShort0 = 113;
+        public const uint InternalGenericFieldShort1 = 114;
+        public const uint InternalGenericFieldShort2 = 115;
+        public const uint InternalGenericFieldShort3 = 116;
+        public const uint InternalGenericFieldShort4 = 117;
+        public const uint InternalGenericFieldShort5 = 118;
+        public const uint InternalGenericFieldShort6 = 119;
+        public const uint InternalGenericFieldShort7 = 120;
+        public const uint InternalGenericFieldShort8 = 121;
+        public const uint InternalGenericFieldShort9 = 122;
+        public const uint InternalGenericFieldUShort0 = 123;
+        public const uint InternalGenericFieldUShort1 = 124;
+        public const uint InternalGenericFieldUShort2 = 125;
+        public const uint InternalGenericFieldUShort3 = 126;
+        public const uint InternalGenericFieldUShort4 = 127;
+        public const uint InternalGenericFieldUShort5 = 128;
+        public const uint InternalGenericFieldUShort6 = 129;
+        public const uint InternalGenericFieldUShort7 = 130;
+        public const uint InternalGenericFieldUShort8 = 131;
+        public const uint InternalGenericFieldUShort9 = 132;
+        public const uint InternalGenericFieldChar0 = 133;
+        public const uint InternalGenericFieldChar1 = 134;
+        public const uint InternalGenericFieldChar2 = 135;
+        public const uint InternalGenericFieldChar3 = 136;
+        public const uint InternalGenericFieldChar4 = 137;
+        public const uint InternalGenericFieldChar5 = 138;
+        public const uint InternalGenericFieldChar6 = 139;
+        public const uint InternalGenericFieldChar7 = 140;
+        public const uint InternalGenericFieldChar8 = 141;
+        public const uint InternalGenericFieldChar9 = 142;
+        public const uint InternalGenericFieldLong0 = 143;
+        public const uint InternalGenericFieldLong1 = 144;
+        public const uint InternalGenericFieldLong2 = 145;
+        public const uint InternalGenericFieldLong3 = 146;
+        public const uint InternalGenericFieldULong0 = 147;
+        public const uint InternalGenericFieldULong1 = 148;
+        public const uint InternalGenericFieldULong2 = 149;
+        public const uint InternalGenericFieldULong3 = 150;
+        public const uint InternalGenericFieldColor0 = 151;
+        public const uint InternalGenericFieldColor1 = 152;
+        public const uint InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410 = 153;
+        public const uint InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121 = 154;
+        public const uint InternalElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579 = 155;
+        public const uint InternalFlower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021 = 156;
+        public const uint InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 = 157;
+        public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941 = 158;
+        public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199 = 159;
+        public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066 = 160;
+        public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177 = 161;
+        public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033 = 162;
+        public const uint InternalRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470 = 163;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676 = 164;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 = 165;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710 = 166;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063 = 167;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008 = 168;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436 = 169;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591 = 170;
+        public const uint InternalTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933 = 171;
+        public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0 = 172;
+        public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0 = 173;
+        public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0 = 174;
+        public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410_LOD0 = 175;
+        public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0 = 176;
+        public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0 = 177;
+        public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 = 178;
+        public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 = 179;
+        public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0 = 180;
+        public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0 = 181;
+        public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0 = 182;
+        public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 = 183;
+        public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 = 184;
+        public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177_LOD0 = 185;
+        public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0 = 186;
+        public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066_LOD0 = 187;
+        public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941_LOD0 = 188;
+        public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033_LOD0 = 189;
+        public const uint InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0 = 190;
+        public const uint InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0 = 191;
+        public const uint InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470_LOD0 = 192;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0 = 193;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676_LOD0 = 194;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063_LOD0 = 195;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710_LOD0 = 196;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008_LOD0 = 197;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436_LOD0 = 198;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591_LOD0 = 199;
+        public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0 = 200;
+        public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0 = 201;
+        public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0 = 202;
+        public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0 = 203;
+        public const uint InternalAuthorityRequest = 0;
+        public const uint InternalAuthorityTransfer = 1;
+        public const uint InternalQuerySynced = 2;
+        public const uint InternalAdoptOrphan = 3;
+        public const uint InternalPersistenceReady = 4;
+        public const uint InternalGenericCommand = 5;
+        public const uint InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8 = 6;
+        public const uint InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b = 7;
+        public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8 = 8;
+        public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7 = 9;
+    
+        private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>() 
+        {
+            { 0, "WorldPosition" },
+            { 1, "WorldOrientation" },
+            { 2, "LocalUserComponent" },
+            { 3, "WorldPositionQuery" },
+            { 4, "ArchetypeComponent" },
+            { 5, "Persistence" },
+            { 6, "ConnectedEntity" },
+            { 7, "UniqueID" },
+            { 8, "Connection" },
+            { 9, "ConnectionScene" },
+            { 10, "Global" },
+            { 11, "GlobalQuery" },
+            { 12, "Tag" },
+            { 13, "TagQuery" },
+            { 14, "PreserveChildren" },
+            { 15, "Scene" },
+            { 16, "AssetId" },
+            { 17, "GenericScale" },
+            { 18, "GenericFieldInt0" },
+            { 19, "GenericFieldInt1" },
+            { 20, "GenericFieldInt2" },
+            { 21, "GenericFieldInt3" },
+            { 22, "GenericFieldInt4" },
+            { 23, "GenericFieldInt5" },
+            { 24, "GenericFieldInt6" },
+            { 25, "GenericFieldInt7" },
+            { 26, "GenericFieldInt8" },
+            { 27, "GenericFieldInt9" },
+            { 28, "GenericFieldUInt0" },
+            { 29, "GenericFieldUInt1" },
+            { 30, "GenericFieldUInt2" },
+            { 31, "GenericFieldUInt3" },
+            { 32, "GenericFieldUInt4" },
+            { 33, "GenericFieldUInt5" },
+            { 34, "GenericFieldUInt6" },
+            { 35, "GenericFieldUInt7" },
+            { 36, "GenericFieldUInt8" },
+            { 37, "GenericFieldUInt9" },
+            { 38, "GenericFieldBool0" },
+            { 39, "GenericFieldBool1" },
+            { 40, "GenericFieldBool2" },
+            { 41, "GenericFieldBool3" },
+            { 42, "GenericFieldBool4" },
+            { 43, "GenericFieldBool5" },
+            { 44, "GenericFieldBool6" },
+            { 45, "GenericFieldBool7" },
+            { 46, "GenericFieldBool8" },
+            { 47, "GenericFieldBool9" },
+            { 48, "GenericFieldFloat0" },
+            { 49, "GenericFieldFloat1" },
+            { 50, "GenericFieldFloat2" },
+            { 51, "GenericFieldFloat3" },
+            { 52, "GenericFieldFloat4" },
+            { 53, "GenericFieldFloat5" },
+            { 54, "GenericFieldFloat6" },
+            { 55, "GenericFieldFloat7" },
+            { 56, "GenericFieldFloat8" },
+            { 57, "GenericFieldFloat9" },
+            { 58, "GenericFieldDouble0" },
+            { 59, "GenericFieldDouble1" },
+            { 60, "GenericFieldDouble2" },
+            { 61, "GenericFieldDouble3" },
+            { 62, "GenericFieldDouble4" },
+            { 63, "GenericFieldDouble5" },
+            { 64, "GenericFieldDouble6" },
+            { 65, "GenericFieldDouble7" },
+            { 66, "GenericFieldDouble8" },
+            { 67, "GenericFieldDouble9" },
+            { 68, "GenericFieldVector0" },
+            { 69, "GenericFieldVector1" },
+            { 70, "GenericFieldVector2" },
+            { 71, "GenericFieldVector3" },
+            { 72, "GenericField2dVector0" },
+            { 73, "GenericField2dVector1" },
+            { 74, "GenericField2dVector2" },
+            { 75, "GenericField2dVector3" },
+            { 76, "GenericFieldString0" },
+            { 77, "GenericFieldString1" },
+            { 78, "GenericFieldString2" },
+            { 79, "GenericFieldString3" },
+            { 80, "GenericFieldString4" },
+            { 81, "GenericFieldQuaternion0" },
+            { 82, "GenericFieldEntity0" },
+            { 83, "GenericFieldEntity1" },
+            { 84, "GenericFieldEntity2" },
+            { 85, "GenericFieldEntity3" },
+            { 86, "GenericFieldEntity4" },
+            { 87, "GenericFieldEntity5" },
+            { 88, "GenericFieldEntity6" },
+            { 89, "GenericFieldEntity7" },
+            { 90, "GenericFieldEntity8" },
+            { 91, "GenericFieldEntity9" },
+            { 92, "GenericFieldBytes0" },
+            { 93, "GenericFieldByte0" },
+            { 94, "GenericFieldByte1" },
+            { 95, "GenericFieldByte2" },
+            { 96, "GenericFieldByte3" },
+            { 97, "GenericFieldByte4" },
+            { 98, "GenericFieldByte5" },
+            { 99, "GenericFieldByte6" },
+            { 100, "GenericFieldByte7" },
+            { 101, "GenericFieldByte8" },
+            { 102, "GenericFieldByte9" },
+            { 103, "GenericFieldSByte0" },
+            { 104, "GenericFieldSByte1" },
+            { 105, "GenericFieldSByte2" },
+            { 106, "GenericFieldSByte3" },
+            { 107, "GenericFieldSByte4" },
+            { 108, "GenericFieldSByte5" },
+            { 109, "GenericFieldSByte6" },
+            { 110, "GenericFieldSByte7" },
+            { 111, "GenericFieldSByte8" },
+            { 112, "GenericFieldSByte9" },
+            { 113, "GenericFieldShort0" },
+            { 114, "GenericFieldShort1" },
+            { 115, "GenericFieldShort2" },
+            { 116, "GenericFieldShort3" },
+            { 117, "GenericFieldShort4" },
+            { 118, "GenericFieldShort5" },
+            { 119, "GenericFieldShort6" },
+            { 120, "GenericFieldShort7" },
+            { 121, "GenericFieldShort8" },
+            { 122, "GenericFieldShort9" },
+            { 123, "GenericFieldUShort0" },
+            { 124, "GenericFieldUShort1" },
+            { 125, "GenericFieldUShort2" },
+            { 126, "GenericFieldUShort3" },
+            { 127, "GenericFieldUShort4" },
+            { 128, "GenericFieldUShort5" },
+            { 129, "GenericFieldUShort6" },
+            { 130, "GenericFieldUShort7" },
+            { 131, "GenericFieldUShort8" },
+            { 132, "GenericFieldUShort9" },
+            { 133, "GenericFieldChar0" },
+            { 134, "GenericFieldChar1" },
+            { 135, "GenericFieldChar2" },
+            { 136, "GenericFieldChar3" },
+            { 137, "GenericFieldChar4" },
+            { 138, "GenericFieldChar5" },
+            { 139, "GenericFieldChar6" },
+            { 140, "GenericFieldChar7" },
+            { 141, "GenericFieldChar8" },
+            { 142, "GenericFieldChar9" },
+            { 143, "GenericFieldLong0" },
+            { 144, "GenericFieldLong1" },
+            { 145, "GenericFieldLong2" },
+            { 146, "GenericFieldLong3" },
+            { 147, "GenericFieldULong0" },
+            { 148, "GenericFieldULong1" },
+            { 149, "GenericFieldULong2" },
+            { 150, "GenericFieldULong3" },
+            { 151, "GenericFieldColor0" },
+            { 152, "GenericFieldColor1" },
+            { 153, "Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410" },
+            { 154, "Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121" },
+            { 155, "ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579" },
+            { 156, "Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021" },
+            { 157, "FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621" },
+            { 158, "Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941" },
+            { 159, "Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199" },
+            { 160, "Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066" },
+            { 161, "Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177" },
+            { 162, "Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033" },
+            { 163, "RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470" },
+            { 164, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676" },
+            { 165, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341" },
+            { 166, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710" },
+            { 167, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063" },
+            { 168, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008" },
+            { 169, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436" },
+            { 170, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591" },
+            { 171, "TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933" },
+            { 172, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0" },
+            { 173, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0" },
+            { 174, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0" },
+            { 175, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410_LOD0" },
+            { 176, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0" },
+            { 177, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0" },
+            { 178, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0" },
+            { 179, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0" },
+            { 180, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0" },
+            { 181, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0" },
+            { 182, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0" },
+            { 183, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0" },
+            { 184, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0" },
+            { 185, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177_LOD0" },
+            { 186, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0" },
+            { 187, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066_LOD0" },
+            { 188, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941_LOD0" },
+            { 189, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033_LOD0" },
+            { 190, "ArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0" },
+            { 191, "ArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0" },
+            { 192, "ArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470_LOD0" },
+            { 193, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0" },
+            { 194, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676_LOD0" },
+            { 195, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063_LOD0" },
+            { 196, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710_LOD0" },
+            { 197, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008_LOD0" },
+            { 198, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436_LOD0" },
+            { 199, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591_LOD0" },
+            { 200, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0" },
+            { 201, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0" },
+            { 202, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0" },
+            { 203, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0" },
+        };
 
-	public class Definition : IDefinition
-	{
-		public const string schemaId = "3a4c6d186e409b74672c1e41dd52e96f74ad7f4c";
-		public const uint InternalWorldPosition = 0;
-		public const uint InternalWorldOrientation = 1;
-		public const uint InternalLocalUser = 2;
-		public const uint InternalWorldPositionQuery = 3;
-		public const uint InternalArchetypeComponent = 4;
-		public const uint InternalPersistence = 5;
-		public const uint InternalConnectedEntity = 6;
-		public const uint InternalUniqueID = 7;
-		public const uint InternalConnection = 8;
-		public const uint InternalConnectionScene = 9;
-		public const uint InternalGlobal = 10;
-		public const uint InternalGlobalQuery = 11;
-		public const uint InternalTag = 12;
-		public const uint InternalTagQuery = 13;
-		public const uint InternalPreserveChildren = 14;
-		public const uint InternalScene = 15;
-		public const uint InternalAssetId = 16;
-		public const uint InternalGenericScale = 17;
-		public const uint InternalGenericFieldInt0 = 18;
-		public const uint InternalGenericFieldInt1 = 19;
-		public const uint InternalGenericFieldInt2 = 20;
-		public const uint InternalGenericFieldInt3 = 21;
-		public const uint InternalGenericFieldInt4 = 22;
-		public const uint InternalGenericFieldInt5 = 23;
-		public const uint InternalGenericFieldInt6 = 24;
-		public const uint InternalGenericFieldInt7 = 25;
-		public const uint InternalGenericFieldInt8 = 26;
-		public const uint InternalGenericFieldInt9 = 27;
-		public const uint InternalGenericFieldUInt0 = 28;
-		public const uint InternalGenericFieldUInt1 = 29;
-		public const uint InternalGenericFieldUInt2 = 30;
-		public const uint InternalGenericFieldUInt3 = 31;
-		public const uint InternalGenericFieldUInt4 = 32;
-		public const uint InternalGenericFieldUInt5 = 33;
-		public const uint InternalGenericFieldUInt6 = 34;
-		public const uint InternalGenericFieldUInt7 = 35;
-		public const uint InternalGenericFieldUInt8 = 36;
-		public const uint InternalGenericFieldUInt9 = 37;
-		public const uint InternalGenericFieldBool0 = 38;
-		public const uint InternalGenericFieldBool1 = 39;
-		public const uint InternalGenericFieldBool2 = 40;
-		public const uint InternalGenericFieldBool3 = 41;
-		public const uint InternalGenericFieldBool4 = 42;
-		public const uint InternalGenericFieldBool5 = 43;
-		public const uint InternalGenericFieldBool6 = 44;
-		public const uint InternalGenericFieldBool7 = 45;
-		public const uint InternalGenericFieldBool8 = 46;
-		public const uint InternalGenericFieldBool9 = 47;
-		public const uint InternalGenericFieldFloat0 = 48;
-		public const uint InternalGenericFieldFloat1 = 49;
-		public const uint InternalGenericFieldFloat2 = 50;
-		public const uint InternalGenericFieldFloat3 = 51;
-		public const uint InternalGenericFieldFloat4 = 52;
-		public const uint InternalGenericFieldFloat5 = 53;
-		public const uint InternalGenericFieldFloat6 = 54;
-		public const uint InternalGenericFieldFloat7 = 55;
-		public const uint InternalGenericFieldFloat8 = 56;
-		public const uint InternalGenericFieldFloat9 = 57;
-		public const uint InternalGenericFieldDouble0 = 58;
-		public const uint InternalGenericFieldDouble1 = 59;
-		public const uint InternalGenericFieldDouble2 = 60;
-		public const uint InternalGenericFieldDouble3 = 61;
-		public const uint InternalGenericFieldDouble4 = 62;
-		public const uint InternalGenericFieldDouble5 = 63;
-		public const uint InternalGenericFieldDouble6 = 64;
-		public const uint InternalGenericFieldDouble7 = 65;
-		public const uint InternalGenericFieldDouble8 = 66;
-		public const uint InternalGenericFieldDouble9 = 67;
-		public const uint InternalGenericFieldVector0 = 68;
-		public const uint InternalGenericFieldVector1 = 69;
-		public const uint InternalGenericFieldVector2 = 70;
-		public const uint InternalGenericFieldVector3 = 71;
-		public const uint InternalGenericField2dVector0 = 72;
-		public const uint InternalGenericField2dVector1 = 73;
-		public const uint InternalGenericField2dVector2 = 74;
-		public const uint InternalGenericField2dVector3 = 75;
-		public const uint InternalGenericFieldString0 = 76;
-		public const uint InternalGenericFieldString1 = 77;
-		public const uint InternalGenericFieldString2 = 78;
-		public const uint InternalGenericFieldString3 = 79;
-		public const uint InternalGenericFieldString4 = 80;
-		public const uint InternalGenericFieldQuaternion0 = 81;
-		public const uint InternalGenericFieldEntity0 = 82;
-		public const uint InternalGenericFieldEntity1 = 83;
-		public const uint InternalGenericFieldEntity2 = 84;
-		public const uint InternalGenericFieldEntity3 = 85;
-		public const uint InternalGenericFieldEntity4 = 86;
-		public const uint InternalGenericFieldEntity5 = 87;
-		public const uint InternalGenericFieldEntity6 = 88;
-		public const uint InternalGenericFieldEntity7 = 89;
-		public const uint InternalGenericFieldEntity8 = 90;
-		public const uint InternalGenericFieldEntity9 = 91;
-		public const uint InternalGenericFieldBytes0 = 92;
-		public const uint InternalGenericFieldLong0 = 93;
-		public const uint InternalGenericFieldLong1 = 94;
-		public const uint InternalGenericFieldLong2 = 95;
-		public const uint InternalGenericFieldLong3 = 96;
-		public const uint InternalGenericFieldULong0 = 97;
-		public const uint InternalGenericFieldULong1 = 98;
-		public const uint InternalGenericFieldULong2 = 99;
-		public const uint InternalGenericFieldULong3 = 100;
-		public const uint InternalGenericFieldColor0 = 101;
-		public const uint InternalGenericFieldColor1 = 102;
-		public const uint InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410 = 103;
-		public const uint InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121 = 104;
-		public const uint InternalElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579 = 105;
-		public const uint InternalFlower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021 = 106;
-		public const uint InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 = 107;
-		public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199 = 108;
-		public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066 = 109;
-		public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941 = 110;
-		public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177 = 111;
-		public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033 = 112;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 = 113;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676 = 114;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710 = 115;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063 = 116;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008 = 117;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436 = 118;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591 = 119;
-		public const uint InternalRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470 = 120;
-		public const uint InternalTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933 = 121;
-		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0 = 122;
-		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0 = 123;
-		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0 = 124;
-		public const uint InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0 = 125;
-		public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0 = 126;
-		public const uint InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0 = 127;
-		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 = 128;
-		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 = 129;
-		public const uint InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0 = 130;
-		public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0 = 131;
-		public const uint InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0 = 132;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 = 133;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 = 134;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177_LOD0 = 135;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0 = 136;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0 = 137;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941_LOD0 = 138;
-		public const uint InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033_LOD0 = 139;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0 = 140;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676_LOD0 = 141;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063_LOD0 = 142;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710_LOD0 = 143;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008_LOD0 = 144;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436_LOD0 = 145;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591_LOD0 = 146;
-		public const uint InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0 = 147;
-		public const uint InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0 = 148;
-		public const uint InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0 = 149;
-		public const uint InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470_LOD0 = 150;
-		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0 = 151;
-		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0 = 152;
-		public const uint InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0 = 153;
-		public const uint InternalAuthorityRequest = 0;
-		public const uint InternalAuthorityTransfer = 1;
-		public const uint InternalQuerySynced = 2;
-		public const uint InternalAdoptOrphan = 3;
-		public const uint InternalPersistenceReady = 4;
-		public const uint InternalGenericCommand = 5;
-		public const uint InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b = 6;
-		public const uint InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8 = 7;
-		public const uint InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8 = 8;
-		public const uint InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7 = 9;
+        public static string ComponentNameForTypeId(uint typeId)
+        {
+            if (componentNamesForTypeIds.TryGetValue(typeId, out string componentName))
+            {
+                return componentName;
+            }
+            else
+            {
+                return "";
+            }
+        }
+        
+        public static readonly Dictionary<uint, MessageTarget> CommandRoutingByType = new Dictionary<uint, MessageTarget>() 
+        {
+            { Definition.InternalAuthorityRequest , MessageTarget.All },
+            { Definition.InternalAuthorityTransfer , MessageTarget.All },
+            { Definition.InternalQuerySynced , MessageTarget.All },
+            { Definition.InternalAdoptOrphan , MessageTarget.All },
+            { Definition.InternalPersistenceReady , MessageTarget.All },
+            { Definition.InternalGenericCommand , MessageTarget.All },
+            { Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8 , MessageTarget.All },
+            { Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b , MessageTarget.All },
+            { Definition.InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8 , MessageTarget.All },
+            { Definition.InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7 , MessageTarget.All },
+        };
+        
+        public (ICoherenceComponentData, uint) ReadComponentUpdate(uint componentType, 
+        			IInBitStream bitStream, Logger logger)
+        {
+            var inProtocolStream = new InProtocolBitStream(bitStream);
 
-		private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>() {
-			{ 0, "WorldPosition" },
-			{ 1, "WorldOrientation" },
-			{ 2, "LocalUser" },
-			{ 3, "WorldPositionQuery" },
-			{ 4, "ArchetypeComponent" },
-			{ 5, "Persistence" },
-			{ 6, "ConnectedEntity" },
-			{ 7, "UniqueID" },
-			{ 8, "Connection" },
-			{ 9, "ConnectionScene" },
-			{ 10, "Global" },
-			{ 11, "GlobalQuery" },
-			{ 12, "Tag" },
-			{ 13, "TagQuery" },
-			{ 14, "PreserveChildren" },
-			{ 15, "Scene" },
-			{ 16, "AssetId" },
-			{ 17, "GenericScale" },
-			{ 18, "GenericFieldInt0" },
-			{ 19, "GenericFieldInt1" },
-			{ 20, "GenericFieldInt2" },
-			{ 21, "GenericFieldInt3" },
-			{ 22, "GenericFieldInt4" },
-			{ 23, "GenericFieldInt5" },
-			{ 24, "GenericFieldInt6" },
-			{ 25, "GenericFieldInt7" },
-			{ 26, "GenericFieldInt8" },
-			{ 27, "GenericFieldInt9" },
-			{ 28, "GenericFieldUInt0" },
-			{ 29, "GenericFieldUInt1" },
-			{ 30, "GenericFieldUInt2" },
-			{ 31, "GenericFieldUInt3" },
-			{ 32, "GenericFieldUInt4" },
-			{ 33, "GenericFieldUInt5" },
-			{ 34, "GenericFieldUInt6" },
-			{ 35, "GenericFieldUInt7" },
-			{ 36, "GenericFieldUInt8" },
-			{ 37, "GenericFieldUInt9" },
-			{ 38, "GenericFieldBool0" },
-			{ 39, "GenericFieldBool1" },
-			{ 40, "GenericFieldBool2" },
-			{ 41, "GenericFieldBool3" },
-			{ 42, "GenericFieldBool4" },
-			{ 43, "GenericFieldBool5" },
-			{ 44, "GenericFieldBool6" },
-			{ 45, "GenericFieldBool7" },
-			{ 46, "GenericFieldBool8" },
-			{ 47, "GenericFieldBool9" },
-			{ 48, "GenericFieldFloat0" },
-			{ 49, "GenericFieldFloat1" },
-			{ 50, "GenericFieldFloat2" },
-			{ 51, "GenericFieldFloat3" },
-			{ 52, "GenericFieldFloat4" },
-			{ 53, "GenericFieldFloat5" },
-			{ 54, "GenericFieldFloat6" },
-			{ 55, "GenericFieldFloat7" },
-			{ 56, "GenericFieldFloat8" },
-			{ 57, "GenericFieldFloat9" },
-			{ 58, "GenericFieldDouble0" },
-			{ 59, "GenericFieldDouble1" },
-			{ 60, "GenericFieldDouble2" },
-			{ 61, "GenericFieldDouble3" },
-			{ 62, "GenericFieldDouble4" },
-			{ 63, "GenericFieldDouble5" },
-			{ 64, "GenericFieldDouble6" },
-			{ 65, "GenericFieldDouble7" },
-			{ 66, "GenericFieldDouble8" },
-			{ 67, "GenericFieldDouble9" },
-			{ 68, "GenericFieldVector0" },
-			{ 69, "GenericFieldVector1" },
-			{ 70, "GenericFieldVector2" },
-			{ 71, "GenericFieldVector3" },
-			{ 72, "GenericField2dVector0" },
-			{ 73, "GenericField2dVector1" },
-			{ 74, "GenericField2dVector2" },
-			{ 75, "GenericField2dVector3" },
-			{ 76, "GenericFieldString0" },
-			{ 77, "GenericFieldString1" },
-			{ 78, "GenericFieldString2" },
-			{ 79, "GenericFieldString3" },
-			{ 80, "GenericFieldString4" },
-			{ 81, "GenericFieldQuaternion0" },
-			{ 82, "GenericFieldEntity0" },
-			{ 83, "GenericFieldEntity1" },
-			{ 84, "GenericFieldEntity2" },
-			{ 85, "GenericFieldEntity3" },
-			{ 86, "GenericFieldEntity4" },
-			{ 87, "GenericFieldEntity5" },
-			{ 88, "GenericFieldEntity6" },
-			{ 89, "GenericFieldEntity7" },
-			{ 90, "GenericFieldEntity8" },
-			{ 91, "GenericFieldEntity9" },
-			{ 92, "GenericFieldBytes0" },
-			{ 93, "GenericFieldLong0" },
-			{ 94, "GenericFieldLong1" },
-			{ 95, "GenericFieldLong2" },
-			{ 96, "GenericFieldLong3" },
-			{ 97, "GenericFieldULong0" },
-			{ 98, "GenericFieldULong1" },
-			{ 99, "GenericFieldULong2" },
-			{ 100, "GenericFieldULong3" },
-			{ 101, "GenericFieldColor0" },
-			{ 102, "GenericFieldColor1" },
-			{ 103, "Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410" },
-			{ 104, "Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121" },
-			{ 105, "ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579" },
-			{ 106, "Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021" },
-			{ 107, "FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621" },
-			{ 108, "Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199" },
-			{ 109, "Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066" },
-			{ 110, "Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941" },
-			{ 111, "Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177" },
-			{ 112, "Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033" },
-			{ 113, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341" },
-			{ 114, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676" },
-			{ 115, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710" },
-			{ 116, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063" },
-			{ 117, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008" },
-			{ 118, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436" },
-			{ 119, "RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591" },
-			{ 120, "RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470" },
-			{ 121, "TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933" },
-			{ 122, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0" },
-			{ 123, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0" },
-			{ 124, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0" },
-			{ 125, "ArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0" },
-			{ 126, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0" },
-			{ 127, "ArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0" },
-			{ 128, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0" },
-			{ 129, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0" },
-			{ 130, "ArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0" },
-			{ 131, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0" },
-			{ 132, "ArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0" },
-			{ 133, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0" },
-			{ 134, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0" },
-			{ 135, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177_LOD0" },
-			{ 136, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0" },
-			{ 137, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0" },
-			{ 138, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941_LOD0" },
-			{ 139, "ArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033_LOD0" },
-			{ 140, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0" },
-			{ 141, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676_LOD0" },
-			{ 142, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063_LOD0" },
-			{ 143, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710_LOD0" },
-			{ 144, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008_LOD0" },
-			{ 145, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436_LOD0" },
-			{ 146, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591_LOD0" },
-			{ 147, "ArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0" },
-			{ 148, "ArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0" },
-			{ 149, "ArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0" },
-			{ 150, "ArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470_LOD0" },
-			{ 151, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0" },
-			{ 152, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0" },
-			{ 153, "ArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0" },
-		};
+            switch (componentType)
+            {
+                case InternalWorldPosition:
+                    return WorldPosition.Deserialize(inProtocolStream);
+                case InternalWorldOrientation:
+                    return WorldOrientation.Deserialize(inProtocolStream);
+                case InternalLocalUserComponent:
+                    return LocalUserComponent.Deserialize(inProtocolStream);
+                case InternalWorldPositionQuery:
+                    return WorldPositionQuery.Deserialize(inProtocolStream);
+                case InternalArchetypeComponent:
+                    return ArchetypeComponent.Deserialize(inProtocolStream);
+                case InternalPersistence:
+                    return Persistence.Deserialize(inProtocolStream);
+                case InternalConnectedEntity:
+                    return ConnectedEntity.Deserialize(inProtocolStream);
+                case InternalUniqueID:
+                    return UniqueID.Deserialize(inProtocolStream);
+                case InternalConnection:
+                    return Connection.Deserialize(inProtocolStream);
+                case InternalConnectionScene:
+                    return ConnectionScene.Deserialize(inProtocolStream);
+                case InternalGlobal:
+                    return Global.Deserialize(inProtocolStream);
+                case InternalGlobalQuery:
+                    return GlobalQuery.Deserialize(inProtocolStream);
+                case InternalTag:
+                    return Tag.Deserialize(inProtocolStream);
+                case InternalTagQuery:
+                    return TagQuery.Deserialize(inProtocolStream);
+                case InternalPreserveChildren:
+                    return PreserveChildren.Deserialize(inProtocolStream);
+                case InternalScene:
+                    return Scene.Deserialize(inProtocolStream);
+                case InternalAssetId:
+                    return AssetId.Deserialize(inProtocolStream);
+                case InternalGenericScale:
+                    return GenericScale.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt0:
+                    return GenericFieldInt0.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt1:
+                    return GenericFieldInt1.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt2:
+                    return GenericFieldInt2.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt3:
+                    return GenericFieldInt3.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt4:
+                    return GenericFieldInt4.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt5:
+                    return GenericFieldInt5.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt6:
+                    return GenericFieldInt6.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt7:
+                    return GenericFieldInt7.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt8:
+                    return GenericFieldInt8.Deserialize(inProtocolStream);
+                case InternalGenericFieldInt9:
+                    return GenericFieldInt9.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt0:
+                    return GenericFieldUInt0.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt1:
+                    return GenericFieldUInt1.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt2:
+                    return GenericFieldUInt2.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt3:
+                    return GenericFieldUInt3.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt4:
+                    return GenericFieldUInt4.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt5:
+                    return GenericFieldUInt5.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt6:
+                    return GenericFieldUInt6.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt7:
+                    return GenericFieldUInt7.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt8:
+                    return GenericFieldUInt8.Deserialize(inProtocolStream);
+                case InternalGenericFieldUInt9:
+                    return GenericFieldUInt9.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool0:
+                    return GenericFieldBool0.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool1:
+                    return GenericFieldBool1.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool2:
+                    return GenericFieldBool2.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool3:
+                    return GenericFieldBool3.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool4:
+                    return GenericFieldBool4.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool5:
+                    return GenericFieldBool5.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool6:
+                    return GenericFieldBool6.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool7:
+                    return GenericFieldBool7.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool8:
+                    return GenericFieldBool8.Deserialize(inProtocolStream);
+                case InternalGenericFieldBool9:
+                    return GenericFieldBool9.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat0:
+                    return GenericFieldFloat0.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat1:
+                    return GenericFieldFloat1.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat2:
+                    return GenericFieldFloat2.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat3:
+                    return GenericFieldFloat3.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat4:
+                    return GenericFieldFloat4.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat5:
+                    return GenericFieldFloat5.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat6:
+                    return GenericFieldFloat6.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat7:
+                    return GenericFieldFloat7.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat8:
+                    return GenericFieldFloat8.Deserialize(inProtocolStream);
+                case InternalGenericFieldFloat9:
+                    return GenericFieldFloat9.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble0:
+                    return GenericFieldDouble0.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble1:
+                    return GenericFieldDouble1.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble2:
+                    return GenericFieldDouble2.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble3:
+                    return GenericFieldDouble3.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble4:
+                    return GenericFieldDouble4.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble5:
+                    return GenericFieldDouble5.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble6:
+                    return GenericFieldDouble6.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble7:
+                    return GenericFieldDouble7.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble8:
+                    return GenericFieldDouble8.Deserialize(inProtocolStream);
+                case InternalGenericFieldDouble9:
+                    return GenericFieldDouble9.Deserialize(inProtocolStream);
+                case InternalGenericFieldVector0:
+                    return GenericFieldVector0.Deserialize(inProtocolStream);
+                case InternalGenericFieldVector1:
+                    return GenericFieldVector1.Deserialize(inProtocolStream);
+                case InternalGenericFieldVector2:
+                    return GenericFieldVector2.Deserialize(inProtocolStream);
+                case InternalGenericFieldVector3:
+                    return GenericFieldVector3.Deserialize(inProtocolStream);
+                case InternalGenericField2dVector0:
+                    return GenericField2dVector0.Deserialize(inProtocolStream);
+                case InternalGenericField2dVector1:
+                    return GenericField2dVector1.Deserialize(inProtocolStream);
+                case InternalGenericField2dVector2:
+                    return GenericField2dVector2.Deserialize(inProtocolStream);
+                case InternalGenericField2dVector3:
+                    return GenericField2dVector3.Deserialize(inProtocolStream);
+                case InternalGenericFieldString0:
+                    return GenericFieldString0.Deserialize(inProtocolStream);
+                case InternalGenericFieldString1:
+                    return GenericFieldString1.Deserialize(inProtocolStream);
+                case InternalGenericFieldString2:
+                    return GenericFieldString2.Deserialize(inProtocolStream);
+                case InternalGenericFieldString3:
+                    return GenericFieldString3.Deserialize(inProtocolStream);
+                case InternalGenericFieldString4:
+                    return GenericFieldString4.Deserialize(inProtocolStream);
+                case InternalGenericFieldQuaternion0:
+                    return GenericFieldQuaternion0.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity0:
+                    return GenericFieldEntity0.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity1:
+                    return GenericFieldEntity1.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity2:
+                    return GenericFieldEntity2.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity3:
+                    return GenericFieldEntity3.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity4:
+                    return GenericFieldEntity4.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity5:
+                    return GenericFieldEntity5.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity6:
+                    return GenericFieldEntity6.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity7:
+                    return GenericFieldEntity7.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity8:
+                    return GenericFieldEntity8.Deserialize(inProtocolStream);
+                case InternalGenericFieldEntity9:
+                    return GenericFieldEntity9.Deserialize(inProtocolStream);
+                case InternalGenericFieldBytes0:
+                    return GenericFieldBytes0.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte0:
+                    return GenericFieldByte0.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte1:
+                    return GenericFieldByte1.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte2:
+                    return GenericFieldByte2.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte3:
+                    return GenericFieldByte3.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte4:
+                    return GenericFieldByte4.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte5:
+                    return GenericFieldByte5.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte6:
+                    return GenericFieldByte6.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte7:
+                    return GenericFieldByte7.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte8:
+                    return GenericFieldByte8.Deserialize(inProtocolStream);
+                case InternalGenericFieldByte9:
+                    return GenericFieldByte9.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte0:
+                    return GenericFieldSByte0.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte1:
+                    return GenericFieldSByte1.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte2:
+                    return GenericFieldSByte2.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte3:
+                    return GenericFieldSByte3.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte4:
+                    return GenericFieldSByte4.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte5:
+                    return GenericFieldSByte5.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte6:
+                    return GenericFieldSByte6.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte7:
+                    return GenericFieldSByte7.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte8:
+                    return GenericFieldSByte8.Deserialize(inProtocolStream);
+                case InternalGenericFieldSByte9:
+                    return GenericFieldSByte9.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort0:
+                    return GenericFieldShort0.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort1:
+                    return GenericFieldShort1.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort2:
+                    return GenericFieldShort2.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort3:
+                    return GenericFieldShort3.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort4:
+                    return GenericFieldShort4.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort5:
+                    return GenericFieldShort5.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort6:
+                    return GenericFieldShort6.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort7:
+                    return GenericFieldShort7.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort8:
+                    return GenericFieldShort8.Deserialize(inProtocolStream);
+                case InternalGenericFieldShort9:
+                    return GenericFieldShort9.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort0:
+                    return GenericFieldUShort0.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort1:
+                    return GenericFieldUShort1.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort2:
+                    return GenericFieldUShort2.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort3:
+                    return GenericFieldUShort3.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort4:
+                    return GenericFieldUShort4.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort5:
+                    return GenericFieldUShort5.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort6:
+                    return GenericFieldUShort6.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort7:
+                    return GenericFieldUShort7.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort8:
+                    return GenericFieldUShort8.Deserialize(inProtocolStream);
+                case InternalGenericFieldUShort9:
+                    return GenericFieldUShort9.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar0:
+                    return GenericFieldChar0.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar1:
+                    return GenericFieldChar1.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar2:
+                    return GenericFieldChar2.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar3:
+                    return GenericFieldChar3.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar4:
+                    return GenericFieldChar4.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar5:
+                    return GenericFieldChar5.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar6:
+                    return GenericFieldChar6.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar7:
+                    return GenericFieldChar7.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar8:
+                    return GenericFieldChar8.Deserialize(inProtocolStream);
+                case InternalGenericFieldChar9:
+                    return GenericFieldChar9.Deserialize(inProtocolStream);
+                case InternalGenericFieldLong0:
+                    return GenericFieldLong0.Deserialize(inProtocolStream);
+                case InternalGenericFieldLong1:
+                    return GenericFieldLong1.Deserialize(inProtocolStream);
+                case InternalGenericFieldLong2:
+                    return GenericFieldLong2.Deserialize(inProtocolStream);
+                case InternalGenericFieldLong3:
+                    return GenericFieldLong3.Deserialize(inProtocolStream);
+                case InternalGenericFieldULong0:
+                    return GenericFieldULong0.Deserialize(inProtocolStream);
+                case InternalGenericFieldULong1:
+                    return GenericFieldULong1.Deserialize(inProtocolStream);
+                case InternalGenericFieldULong2:
+                    return GenericFieldULong2.Deserialize(inProtocolStream);
+                case InternalGenericFieldULong3:
+                    return GenericFieldULong3.Deserialize(inProtocolStream);
+                case InternalGenericFieldColor0:
+                    return GenericFieldColor0.Deserialize(inProtocolStream);
+                case InternalGenericFieldColor1:
+                    return GenericFieldColor1.Deserialize(inProtocolStream);
+                case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410:
+                    return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410.Deserialize(inProtocolStream);
+                case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121:
+                    return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121.Deserialize(inProtocolStream);
+                case InternalElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579:
+                    return ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579.Deserialize(inProtocolStream);
+                case InternalFlower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021:
+                    return Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021.Deserialize(inProtocolStream);
+                case InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621:
+                    return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.Deserialize(inProtocolStream);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941.Deserialize(inProtocolStream);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199.Deserialize(inProtocolStream);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066.Deserialize(inProtocolStream);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177.Deserialize(inProtocolStream);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033.Deserialize(inProtocolStream);
+                case InternalRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470:
+                    return RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470.Deserialize(inProtocolStream);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676.Deserialize(inProtocolStream);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341.Deserialize(inProtocolStream);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710.Deserialize(inProtocolStream);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063.Deserialize(inProtocolStream);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008.Deserialize(inProtocolStream);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436.Deserialize(inProtocolStream);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591.Deserialize(inProtocolStream);
+                case InternalTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933:
+                    return TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933.Deserialize(inProtocolStream);
+                case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0:
+                    return WorldOrientation.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(inProtocolStream);
+                case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0:
+                    return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0(inProtocolStream);
+                case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410_LOD0:
+                    return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410_LOD0(inProtocolStream);
+                case InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0:
+                    return ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579.DeserializeArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0(inProtocolStream);
+                case InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0:
+                    return WorldOrientation.DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(inProtocolStream);
+                case InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0:
+                    return Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021.DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0(inProtocolStream);
+                case InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0:
+                    return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0(inProtocolStream);
+                case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0:
+                    return WorldOrientation.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(inProtocolStream);
+                case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177_LOD0:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177_LOD0(inProtocolStream);
+                case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0(inProtocolStream);
+                case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066_LOD0:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066_LOD0(inProtocolStream);
+                case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941_LOD0:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941_LOD0(inProtocolStream);
+                case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033_LOD0:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0:
+                    return WorldOrientation.DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470_LOD0:
+                    return RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470.DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676_LOD0:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063_LOD0:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710_LOD0:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008_LOD0:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436_LOD0:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591_LOD0:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591_LOD0(inProtocolStream);
+                case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0(inProtocolStream);
+                case InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0:
+                    return WorldPosition.DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0(inProtocolStream);
+                case InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0:
+                    return WorldOrientation.DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(inProtocolStream);
+                case InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0:
+                    return TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933.DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0(inProtocolStream);
+                default:
+                    return (null, 0);
+            }
+        }
 
-		public static string ComponentNameForTypeId(uint typeId)
-		{
-			if(componentNamesForTypeIds.TryGetValue(typeId, out string componentName))
-			{
-				return componentName;
-			}
-			else
-			{
-				return "";
-			}
-		}
+        public uint WriteComponentUpdate(ICoherenceComponentData data, uint serializeAs, uint mask, 
+            IOutProtocolBitStream protocolStream, Logger logger)
+        {
+            switch (serializeAs)
+            {
+                case InternalWorldPosition:
+                    return WorldPosition.Serialize((WorldPosition)data, mask, protocolStream, logger);
+                case InternalWorldOrientation:
+                    return WorldOrientation.Serialize((WorldOrientation)data, mask, protocolStream, logger);
+                case InternalLocalUserComponent:
+                    return LocalUserComponent.Serialize((LocalUserComponent)data, mask, protocolStream, logger);
+                case InternalWorldPositionQuery:
+                    return WorldPositionQuery.Serialize((WorldPositionQuery)data, mask, protocolStream, logger);
+                case InternalArchetypeComponent:
+                    return ArchetypeComponent.Serialize((ArchetypeComponent)data, mask, protocolStream, logger);
+                case InternalPersistence:
+                    return Persistence.Serialize((Persistence)data, mask, protocolStream, logger);
+                case InternalConnectedEntity:
+                    return ConnectedEntity.Serialize((ConnectedEntity)data, mask, protocolStream, logger);
+                case InternalUniqueID:
+                    return UniqueID.Serialize((UniqueID)data, mask, protocolStream, logger);
+                case InternalConnection:
+                    return Connection.Serialize((Connection)data, mask, protocolStream, logger);
+                case InternalConnectionScene:
+                    return ConnectionScene.Serialize((ConnectionScene)data, mask, protocolStream, logger);
+                case InternalGlobal:
+                    return Global.Serialize((Global)data, mask, protocolStream, logger);
+                case InternalGlobalQuery:
+                    return GlobalQuery.Serialize((GlobalQuery)data, mask, protocolStream, logger);
+                case InternalTag:
+                    return Tag.Serialize((Tag)data, mask, protocolStream, logger);
+                case InternalTagQuery:
+                    return TagQuery.Serialize((TagQuery)data, mask, protocolStream, logger);
+                case InternalPreserveChildren:
+                    return PreserveChildren.Serialize((PreserveChildren)data, mask, protocolStream, logger);
+                case InternalScene:
+                    return Scene.Serialize((Scene)data, mask, protocolStream, logger);
+                case InternalAssetId:
+                    return AssetId.Serialize((AssetId)data, mask, protocolStream, logger);
+                case InternalGenericScale:
+                    return GenericScale.Serialize((GenericScale)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt0:
+                    return GenericFieldInt0.Serialize((GenericFieldInt0)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt1:
+                    return GenericFieldInt1.Serialize((GenericFieldInt1)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt2:
+                    return GenericFieldInt2.Serialize((GenericFieldInt2)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt3:
+                    return GenericFieldInt3.Serialize((GenericFieldInt3)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt4:
+                    return GenericFieldInt4.Serialize((GenericFieldInt4)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt5:
+                    return GenericFieldInt5.Serialize((GenericFieldInt5)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt6:
+                    return GenericFieldInt6.Serialize((GenericFieldInt6)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt7:
+                    return GenericFieldInt7.Serialize((GenericFieldInt7)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt8:
+                    return GenericFieldInt8.Serialize((GenericFieldInt8)data, mask, protocolStream, logger);
+                case InternalGenericFieldInt9:
+                    return GenericFieldInt9.Serialize((GenericFieldInt9)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt0:
+                    return GenericFieldUInt0.Serialize((GenericFieldUInt0)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt1:
+                    return GenericFieldUInt1.Serialize((GenericFieldUInt1)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt2:
+                    return GenericFieldUInt2.Serialize((GenericFieldUInt2)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt3:
+                    return GenericFieldUInt3.Serialize((GenericFieldUInt3)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt4:
+                    return GenericFieldUInt4.Serialize((GenericFieldUInt4)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt5:
+                    return GenericFieldUInt5.Serialize((GenericFieldUInt5)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt6:
+                    return GenericFieldUInt6.Serialize((GenericFieldUInt6)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt7:
+                    return GenericFieldUInt7.Serialize((GenericFieldUInt7)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt8:
+                    return GenericFieldUInt8.Serialize((GenericFieldUInt8)data, mask, protocolStream, logger);
+                case InternalGenericFieldUInt9:
+                    return GenericFieldUInt9.Serialize((GenericFieldUInt9)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool0:
+                    return GenericFieldBool0.Serialize((GenericFieldBool0)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool1:
+                    return GenericFieldBool1.Serialize((GenericFieldBool1)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool2:
+                    return GenericFieldBool2.Serialize((GenericFieldBool2)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool3:
+                    return GenericFieldBool3.Serialize((GenericFieldBool3)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool4:
+                    return GenericFieldBool4.Serialize((GenericFieldBool4)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool5:
+                    return GenericFieldBool5.Serialize((GenericFieldBool5)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool6:
+                    return GenericFieldBool6.Serialize((GenericFieldBool6)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool7:
+                    return GenericFieldBool7.Serialize((GenericFieldBool7)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool8:
+                    return GenericFieldBool8.Serialize((GenericFieldBool8)data, mask, protocolStream, logger);
+                case InternalGenericFieldBool9:
+                    return GenericFieldBool9.Serialize((GenericFieldBool9)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat0:
+                    return GenericFieldFloat0.Serialize((GenericFieldFloat0)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat1:
+                    return GenericFieldFloat1.Serialize((GenericFieldFloat1)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat2:
+                    return GenericFieldFloat2.Serialize((GenericFieldFloat2)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat3:
+                    return GenericFieldFloat3.Serialize((GenericFieldFloat3)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat4:
+                    return GenericFieldFloat4.Serialize((GenericFieldFloat4)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat5:
+                    return GenericFieldFloat5.Serialize((GenericFieldFloat5)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat6:
+                    return GenericFieldFloat6.Serialize((GenericFieldFloat6)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat7:
+                    return GenericFieldFloat7.Serialize((GenericFieldFloat7)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat8:
+                    return GenericFieldFloat8.Serialize((GenericFieldFloat8)data, mask, protocolStream, logger);
+                case InternalGenericFieldFloat9:
+                    return GenericFieldFloat9.Serialize((GenericFieldFloat9)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble0:
+                    return GenericFieldDouble0.Serialize((GenericFieldDouble0)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble1:
+                    return GenericFieldDouble1.Serialize((GenericFieldDouble1)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble2:
+                    return GenericFieldDouble2.Serialize((GenericFieldDouble2)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble3:
+                    return GenericFieldDouble3.Serialize((GenericFieldDouble3)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble4:
+                    return GenericFieldDouble4.Serialize((GenericFieldDouble4)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble5:
+                    return GenericFieldDouble5.Serialize((GenericFieldDouble5)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble6:
+                    return GenericFieldDouble6.Serialize((GenericFieldDouble6)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble7:
+                    return GenericFieldDouble7.Serialize((GenericFieldDouble7)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble8:
+                    return GenericFieldDouble8.Serialize((GenericFieldDouble8)data, mask, protocolStream, logger);
+                case InternalGenericFieldDouble9:
+                    return GenericFieldDouble9.Serialize((GenericFieldDouble9)data, mask, protocolStream, logger);
+                case InternalGenericFieldVector0:
+                    return GenericFieldVector0.Serialize((GenericFieldVector0)data, mask, protocolStream, logger);
+                case InternalGenericFieldVector1:
+                    return GenericFieldVector1.Serialize((GenericFieldVector1)data, mask, protocolStream, logger);
+                case InternalGenericFieldVector2:
+                    return GenericFieldVector2.Serialize((GenericFieldVector2)data, mask, protocolStream, logger);
+                case InternalGenericFieldVector3:
+                    return GenericFieldVector3.Serialize((GenericFieldVector3)data, mask, protocolStream, logger);
+                case InternalGenericField2dVector0:
+                    return GenericField2dVector0.Serialize((GenericField2dVector0)data, mask, protocolStream, logger);
+                case InternalGenericField2dVector1:
+                    return GenericField2dVector1.Serialize((GenericField2dVector1)data, mask, protocolStream, logger);
+                case InternalGenericField2dVector2:
+                    return GenericField2dVector2.Serialize((GenericField2dVector2)data, mask, protocolStream, logger);
+                case InternalGenericField2dVector3:
+                    return GenericField2dVector3.Serialize((GenericField2dVector3)data, mask, protocolStream, logger);
+                case InternalGenericFieldString0:
+                    return GenericFieldString0.Serialize((GenericFieldString0)data, mask, protocolStream, logger);
+                case InternalGenericFieldString1:
+                    return GenericFieldString1.Serialize((GenericFieldString1)data, mask, protocolStream, logger);
+                case InternalGenericFieldString2:
+                    return GenericFieldString2.Serialize((GenericFieldString2)data, mask, protocolStream, logger);
+                case InternalGenericFieldString3:
+                    return GenericFieldString3.Serialize((GenericFieldString3)data, mask, protocolStream, logger);
+                case InternalGenericFieldString4:
+                    return GenericFieldString4.Serialize((GenericFieldString4)data, mask, protocolStream, logger);
+                case InternalGenericFieldQuaternion0:
+                    return GenericFieldQuaternion0.Serialize((GenericFieldQuaternion0)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity0:
+                    return GenericFieldEntity0.Serialize((GenericFieldEntity0)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity1:
+                    return GenericFieldEntity1.Serialize((GenericFieldEntity1)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity2:
+                    return GenericFieldEntity2.Serialize((GenericFieldEntity2)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity3:
+                    return GenericFieldEntity3.Serialize((GenericFieldEntity3)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity4:
+                    return GenericFieldEntity4.Serialize((GenericFieldEntity4)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity5:
+                    return GenericFieldEntity5.Serialize((GenericFieldEntity5)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity6:
+                    return GenericFieldEntity6.Serialize((GenericFieldEntity6)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity7:
+                    return GenericFieldEntity7.Serialize((GenericFieldEntity7)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity8:
+                    return GenericFieldEntity8.Serialize((GenericFieldEntity8)data, mask, protocolStream, logger);
+                case InternalGenericFieldEntity9:
+                    return GenericFieldEntity9.Serialize((GenericFieldEntity9)data, mask, protocolStream, logger);
+                case InternalGenericFieldBytes0:
+                    return GenericFieldBytes0.Serialize((GenericFieldBytes0)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte0:
+                    return GenericFieldByte0.Serialize((GenericFieldByte0)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte1:
+                    return GenericFieldByte1.Serialize((GenericFieldByte1)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte2:
+                    return GenericFieldByte2.Serialize((GenericFieldByte2)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte3:
+                    return GenericFieldByte3.Serialize((GenericFieldByte3)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte4:
+                    return GenericFieldByte4.Serialize((GenericFieldByte4)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte5:
+                    return GenericFieldByte5.Serialize((GenericFieldByte5)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte6:
+                    return GenericFieldByte6.Serialize((GenericFieldByte6)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte7:
+                    return GenericFieldByte7.Serialize((GenericFieldByte7)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte8:
+                    return GenericFieldByte8.Serialize((GenericFieldByte8)data, mask, protocolStream, logger);
+                case InternalGenericFieldByte9:
+                    return GenericFieldByte9.Serialize((GenericFieldByte9)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte0:
+                    return GenericFieldSByte0.Serialize((GenericFieldSByte0)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte1:
+                    return GenericFieldSByte1.Serialize((GenericFieldSByte1)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte2:
+                    return GenericFieldSByte2.Serialize((GenericFieldSByte2)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte3:
+                    return GenericFieldSByte3.Serialize((GenericFieldSByte3)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte4:
+                    return GenericFieldSByte4.Serialize((GenericFieldSByte4)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte5:
+                    return GenericFieldSByte5.Serialize((GenericFieldSByte5)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte6:
+                    return GenericFieldSByte6.Serialize((GenericFieldSByte6)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte7:
+                    return GenericFieldSByte7.Serialize((GenericFieldSByte7)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte8:
+                    return GenericFieldSByte8.Serialize((GenericFieldSByte8)data, mask, protocolStream, logger);
+                case InternalGenericFieldSByte9:
+                    return GenericFieldSByte9.Serialize((GenericFieldSByte9)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort0:
+                    return GenericFieldShort0.Serialize((GenericFieldShort0)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort1:
+                    return GenericFieldShort1.Serialize((GenericFieldShort1)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort2:
+                    return GenericFieldShort2.Serialize((GenericFieldShort2)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort3:
+                    return GenericFieldShort3.Serialize((GenericFieldShort3)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort4:
+                    return GenericFieldShort4.Serialize((GenericFieldShort4)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort5:
+                    return GenericFieldShort5.Serialize((GenericFieldShort5)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort6:
+                    return GenericFieldShort6.Serialize((GenericFieldShort6)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort7:
+                    return GenericFieldShort7.Serialize((GenericFieldShort7)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort8:
+                    return GenericFieldShort8.Serialize((GenericFieldShort8)data, mask, protocolStream, logger);
+                case InternalGenericFieldShort9:
+                    return GenericFieldShort9.Serialize((GenericFieldShort9)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort0:
+                    return GenericFieldUShort0.Serialize((GenericFieldUShort0)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort1:
+                    return GenericFieldUShort1.Serialize((GenericFieldUShort1)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort2:
+                    return GenericFieldUShort2.Serialize((GenericFieldUShort2)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort3:
+                    return GenericFieldUShort3.Serialize((GenericFieldUShort3)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort4:
+                    return GenericFieldUShort4.Serialize((GenericFieldUShort4)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort5:
+                    return GenericFieldUShort5.Serialize((GenericFieldUShort5)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort6:
+                    return GenericFieldUShort6.Serialize((GenericFieldUShort6)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort7:
+                    return GenericFieldUShort7.Serialize((GenericFieldUShort7)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort8:
+                    return GenericFieldUShort8.Serialize((GenericFieldUShort8)data, mask, protocolStream, logger);
+                case InternalGenericFieldUShort9:
+                    return GenericFieldUShort9.Serialize((GenericFieldUShort9)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar0:
+                    return GenericFieldChar0.Serialize((GenericFieldChar0)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar1:
+                    return GenericFieldChar1.Serialize((GenericFieldChar1)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar2:
+                    return GenericFieldChar2.Serialize((GenericFieldChar2)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar3:
+                    return GenericFieldChar3.Serialize((GenericFieldChar3)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar4:
+                    return GenericFieldChar4.Serialize((GenericFieldChar4)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar5:
+                    return GenericFieldChar5.Serialize((GenericFieldChar5)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar6:
+                    return GenericFieldChar6.Serialize((GenericFieldChar6)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar7:
+                    return GenericFieldChar7.Serialize((GenericFieldChar7)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar8:
+                    return GenericFieldChar8.Serialize((GenericFieldChar8)data, mask, protocolStream, logger);
+                case InternalGenericFieldChar9:
+                    return GenericFieldChar9.Serialize((GenericFieldChar9)data, mask, protocolStream, logger);
+                case InternalGenericFieldLong0:
+                    return GenericFieldLong0.Serialize((GenericFieldLong0)data, mask, protocolStream, logger);
+                case InternalGenericFieldLong1:
+                    return GenericFieldLong1.Serialize((GenericFieldLong1)data, mask, protocolStream, logger);
+                case InternalGenericFieldLong2:
+                    return GenericFieldLong2.Serialize((GenericFieldLong2)data, mask, protocolStream, logger);
+                case InternalGenericFieldLong3:
+                    return GenericFieldLong3.Serialize((GenericFieldLong3)data, mask, protocolStream, logger);
+                case InternalGenericFieldULong0:
+                    return GenericFieldULong0.Serialize((GenericFieldULong0)data, mask, protocolStream, logger);
+                case InternalGenericFieldULong1:
+                    return GenericFieldULong1.Serialize((GenericFieldULong1)data, mask, protocolStream, logger);
+                case InternalGenericFieldULong2:
+                    return GenericFieldULong2.Serialize((GenericFieldULong2)data, mask, protocolStream, logger);
+                case InternalGenericFieldULong3:
+                    return GenericFieldULong3.Serialize((GenericFieldULong3)data, mask, protocolStream, logger);
+                case InternalGenericFieldColor0:
+                    return GenericFieldColor0.Serialize((GenericFieldColor0)data, mask, protocolStream, logger);
+                case InternalGenericFieldColor1:
+                    return GenericFieldColor1.Serialize((GenericFieldColor1)data, mask, protocolStream, logger);
+                case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410:
+                    return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410.Serialize((Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410)data, mask, protocolStream, logger);
+                case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121:
+                    return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121.Serialize((Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121)data, mask, protocolStream, logger);
+                case InternalElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579:
+                    return ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579.Serialize((ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579)data, mask, protocolStream, logger);
+                case InternalFlower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021:
+                    return Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021.Serialize((Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021)data, mask, protocolStream, logger);
+                case InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621:
+                    return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.Serialize((FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621)data, mask, protocolStream, logger);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941)data, mask, protocolStream, logger);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199)data, mask, protocolStream, logger);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066)data, mask, protocolStream, logger);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177)data, mask, protocolStream, logger);
+                case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033)data, mask, protocolStream, logger);
+                case InternalRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470:
+                    return RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470.Serialize((RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470)data, mask, protocolStream, logger);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676)data, mask, protocolStream, logger);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341)data, mask, protocolStream, logger);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710)data, mask, protocolStream, logger);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063)data, mask, protocolStream, logger);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008)data, mask, protocolStream, logger);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436)data, mask, protocolStream, logger);
+                case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591)data, mask, protocolStream, logger);
+                case InternalTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933:
+                    return TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933.Serialize((TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933)data, mask, protocolStream, logger);
+                default:
+                    logger.Error("Missing serialization implementation for a component.", ("component", data.GetComponentType()));
+                    return 0;
+            }
+        }
 
-		public (ICoherenceComponentData, uint) ReadComponentUpdate(uint componentType, 
-			IInBitStream bitStream, Logger logger)
-		{
-			var inProtocolStream = new InProtocolBitStream(bitStream);
+        private IEntityCommand ReadCommand(uint commandType, Entity entity, MessageTarget target, IInProtocolBitStream bitStream, Logger logger)
+        {
+            switch (commandType)
+            {
+                case Definition.InternalAuthorityRequest:
+                    return AuthorityRequest.Deserialize(bitStream, entity, target);
+                case Definition.InternalAuthorityTransfer:
+                    return AuthorityTransfer.Deserialize(bitStream, entity, target);
+                case Definition.InternalQuerySynced:
+                    return QuerySynced.Deserialize(bitStream, entity, target);
+                case Definition.InternalAdoptOrphan:
+                    return AdoptOrphan.Deserialize(bitStream, entity, target);
+                case Definition.InternalPersistenceReady:
+                    return PersistenceReady.Deserialize(bitStream, entity, target);
+                case Definition.InternalGenericCommand:
+                    return GenericCommand.Deserialize(bitStream, entity, target);
+                case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8:
+                    return FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8.Deserialize(bitStream, entity, target);
+                case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b:
+                    return FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b.Deserialize(bitStream, entity, target);
+                case Definition.InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8:
+                    return Player_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8.Deserialize(bitStream, entity, target);
+                case Definition.InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7:
+                    return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7.Deserialize(bitStream, entity, target);
+                default:
+                    break;
+            }
 
-			switch (componentType)
-			{
-				case InternalWorldPosition:
-					return WorldPosition.Deserialize(inProtocolStream);
-				case InternalWorldOrientation:
-					return WorldOrientation.Deserialize(inProtocolStream);
-				case InternalLocalUser:
-					return LocalUser.Deserialize(inProtocolStream);
-				case InternalWorldPositionQuery:
-					return WorldPositionQuery.Deserialize(inProtocolStream);
-				case InternalArchetypeComponent:
-					return ArchetypeComponent.Deserialize(inProtocolStream);
-				case InternalPersistence:
-					return Persistence.Deserialize(inProtocolStream);
-				case InternalConnectedEntity:
-					return ConnectedEntity.Deserialize(inProtocolStream);
-				case InternalUniqueID:
-					return UniqueID.Deserialize(inProtocolStream);
-				case InternalConnection:
-					return Connection.Deserialize(inProtocolStream);
-				case InternalConnectionScene:
-					return ConnectionScene.Deserialize(inProtocolStream);
-				case InternalGlobal:
-					return Global.Deserialize(inProtocolStream);
-				case InternalGlobalQuery:
-					return GlobalQuery.Deserialize(inProtocolStream);
-				case InternalTag:
-					return Tag.Deserialize(inProtocolStream);
-				case InternalTagQuery:
-					return TagQuery.Deserialize(inProtocolStream);
-				case InternalPreserveChildren:
-					return PreserveChildren.Deserialize(inProtocolStream);
-				case InternalScene:
-					return Scene.Deserialize(inProtocolStream);
-				case InternalAssetId:
-					return AssetId.Deserialize(inProtocolStream);
-				case InternalGenericScale:
-					return GenericScale.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt0:
-					return GenericFieldInt0.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt1:
-					return GenericFieldInt1.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt2:
-					return GenericFieldInt2.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt3:
-					return GenericFieldInt3.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt4:
-					return GenericFieldInt4.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt5:
-					return GenericFieldInt5.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt6:
-					return GenericFieldInt6.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt7:
-					return GenericFieldInt7.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt8:
-					return GenericFieldInt8.Deserialize(inProtocolStream);
-				case InternalGenericFieldInt9:
-					return GenericFieldInt9.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt0:
-					return GenericFieldUInt0.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt1:
-					return GenericFieldUInt1.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt2:
-					return GenericFieldUInt2.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt3:
-					return GenericFieldUInt3.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt4:
-					return GenericFieldUInt4.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt5:
-					return GenericFieldUInt5.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt6:
-					return GenericFieldUInt6.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt7:
-					return GenericFieldUInt7.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt8:
-					return GenericFieldUInt8.Deserialize(inProtocolStream);
-				case InternalGenericFieldUInt9:
-					return GenericFieldUInt9.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool0:
-					return GenericFieldBool0.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool1:
-					return GenericFieldBool1.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool2:
-					return GenericFieldBool2.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool3:
-					return GenericFieldBool3.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool4:
-					return GenericFieldBool4.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool5:
-					return GenericFieldBool5.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool6:
-					return GenericFieldBool6.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool7:
-					return GenericFieldBool7.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool8:
-					return GenericFieldBool8.Deserialize(inProtocolStream);
-				case InternalGenericFieldBool9:
-					return GenericFieldBool9.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat0:
-					return GenericFieldFloat0.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat1:
-					return GenericFieldFloat1.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat2:
-					return GenericFieldFloat2.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat3:
-					return GenericFieldFloat3.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat4:
-					return GenericFieldFloat4.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat5:
-					return GenericFieldFloat5.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat6:
-					return GenericFieldFloat6.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat7:
-					return GenericFieldFloat7.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat8:
-					return GenericFieldFloat8.Deserialize(inProtocolStream);
-				case InternalGenericFieldFloat9:
-					return GenericFieldFloat9.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble0:
-					return GenericFieldDouble0.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble1:
-					return GenericFieldDouble1.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble2:
-					return GenericFieldDouble2.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble3:
-					return GenericFieldDouble3.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble4:
-					return GenericFieldDouble4.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble5:
-					return GenericFieldDouble5.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble6:
-					return GenericFieldDouble6.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble7:
-					return GenericFieldDouble7.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble8:
-					return GenericFieldDouble8.Deserialize(inProtocolStream);
-				case InternalGenericFieldDouble9:
-					return GenericFieldDouble9.Deserialize(inProtocolStream);
-				case InternalGenericFieldVector0:
-					return GenericFieldVector0.Deserialize(inProtocolStream);
-				case InternalGenericFieldVector1:
-					return GenericFieldVector1.Deserialize(inProtocolStream);
-				case InternalGenericFieldVector2:
-					return GenericFieldVector2.Deserialize(inProtocolStream);
-				case InternalGenericFieldVector3:
-					return GenericFieldVector3.Deserialize(inProtocolStream);
-				case InternalGenericField2dVector0:
-					return GenericField2dVector0.Deserialize(inProtocolStream);
-				case InternalGenericField2dVector1:
-					return GenericField2dVector1.Deserialize(inProtocolStream);
-				case InternalGenericField2dVector2:
-					return GenericField2dVector2.Deserialize(inProtocolStream);
-				case InternalGenericField2dVector3:
-					return GenericField2dVector3.Deserialize(inProtocolStream);
-				case InternalGenericFieldString0:
-					return GenericFieldString0.Deserialize(inProtocolStream);
-				case InternalGenericFieldString1:
-					return GenericFieldString1.Deserialize(inProtocolStream);
-				case InternalGenericFieldString2:
-					return GenericFieldString2.Deserialize(inProtocolStream);
-				case InternalGenericFieldString3:
-					return GenericFieldString3.Deserialize(inProtocolStream);
-				case InternalGenericFieldString4:
-					return GenericFieldString4.Deserialize(inProtocolStream);
-				case InternalGenericFieldQuaternion0:
-					return GenericFieldQuaternion0.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity0:
-					return GenericFieldEntity0.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity1:
-					return GenericFieldEntity1.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity2:
-					return GenericFieldEntity2.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity3:
-					return GenericFieldEntity3.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity4:
-					return GenericFieldEntity4.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity5:
-					return GenericFieldEntity5.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity6:
-					return GenericFieldEntity6.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity7:
-					return GenericFieldEntity7.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity8:
-					return GenericFieldEntity8.Deserialize(inProtocolStream);
-				case InternalGenericFieldEntity9:
-					return GenericFieldEntity9.Deserialize(inProtocolStream);
-				case InternalGenericFieldBytes0:
-					return GenericFieldBytes0.Deserialize(inProtocolStream);
-				case InternalGenericFieldLong0:
-					return GenericFieldLong0.Deserialize(inProtocolStream);
-				case InternalGenericFieldLong1:
-					return GenericFieldLong1.Deserialize(inProtocolStream);
-				case InternalGenericFieldLong2:
-					return GenericFieldLong2.Deserialize(inProtocolStream);
-				case InternalGenericFieldLong3:
-					return GenericFieldLong3.Deserialize(inProtocolStream);
-				case InternalGenericFieldULong0:
-					return GenericFieldULong0.Deserialize(inProtocolStream);
-				case InternalGenericFieldULong1:
-					return GenericFieldULong1.Deserialize(inProtocolStream);
-				case InternalGenericFieldULong2:
-					return GenericFieldULong2.Deserialize(inProtocolStream);
-				case InternalGenericFieldULong3:
-					return GenericFieldULong3.Deserialize(inProtocolStream);
-				case InternalGenericFieldColor0:
-					return GenericFieldColor0.Deserialize(inProtocolStream);
-				case InternalGenericFieldColor1:
-					return GenericFieldColor1.Deserialize(inProtocolStream);
-				case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410:
-					return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410.Deserialize(inProtocolStream);
-				case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121:
-					return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121.Deserialize(inProtocolStream);
-				case InternalElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579:
-					return ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579.Deserialize(inProtocolStream);
-				case InternalFlower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021:
-					return Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021.Deserialize(inProtocolStream);
-				case InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621:
-					return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.Deserialize(inProtocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199.Deserialize(inProtocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066.Deserialize(inProtocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941.Deserialize(inProtocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177.Deserialize(inProtocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033.Deserialize(inProtocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341.Deserialize(inProtocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676.Deserialize(inProtocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710.Deserialize(inProtocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063.Deserialize(inProtocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008.Deserialize(inProtocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436.Deserialize(inProtocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591.Deserialize(inProtocolStream);
-				case InternalRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470:
-					return RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470.Deserialize(inProtocolStream);
-				case InternalTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933:
-					return TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933.Deserialize(inProtocolStream);
-				case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0:
-					return WorldOrientation.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(inProtocolStream);
-				case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0:
-					return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121_LOD0(inProtocolStream);
-				case InternalArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0:
-					return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410.DeserializeArchetypeCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410_LOD0(inProtocolStream);
-				case InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0:
-					return ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579.DeserializeArchetypeElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579_LOD0(inProtocolStream);
-				case InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0:
-					return WorldOrientation.DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(inProtocolStream);
-				case InternalArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0:
-					return Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021.DeserializeArchetypeFlower_a167402e36850884aa7ce3d374cd6c77_Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021_LOD0(inProtocolStream);
-				case InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0:
-					return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.DeserializeArchetypeFlowersCounter_20d53524fceab40d5a9ab892525615cb_FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621_LOD0(inProtocolStream);
-				case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0:
-					return WorldOrientation.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(inProtocolStream);
-				case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177_LOD0:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177_LOD0(inProtocolStream);
-				case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199_LOD0(inProtocolStream);
-				case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066_LOD0(inProtocolStream);
-				case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941_LOD0:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941_LOD0(inProtocolStream);
-				case InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033_LOD0:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033.DeserializeArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676_LOD0:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063_LOD0:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710_LOD0:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008_LOD0:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436_LOD0:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591_LOD0:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341.DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0:
-					return WorldOrientation.DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0(inProtocolStream);
-				case InternalArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470_LOD0:
-					return RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470.DeserializeArchetypeRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470_LOD0(inProtocolStream);
-				case InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0(inProtocolStream);
-				case InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0:
-					return WorldOrientation.DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(inProtocolStream);
-				case InternalArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0:
-					return TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933.DeserializeArchetypeTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933_LOD0(inProtocolStream);
-				default:
-					return (null, 0);
-			}
-		}
+            return default;
+        }
 
-		public uint WriteComponentUpdate(ICoherenceComponentData data, uint mask, 
-			IOutProtocolBitStream protocolStream, Logger logger)
-		{
-			switch (data.GetComponentType())
-			{
-				case InternalWorldPosition:
-					return WorldPosition.Serialize((WorldPosition)data, mask, protocolStream);
-				case InternalWorldOrientation:
-					return WorldOrientation.Serialize((WorldOrientation)data, mask, protocolStream);
-				case InternalLocalUser:
-					return LocalUser.Serialize((LocalUser)data, mask, protocolStream);
-				case InternalWorldPositionQuery:
-					return WorldPositionQuery.Serialize((WorldPositionQuery)data, mask, protocolStream);
-				case InternalArchetypeComponent:
-					return ArchetypeComponent.Serialize((ArchetypeComponent)data, mask, protocolStream);
-				case InternalPersistence:
-					return Persistence.Serialize((Persistence)data, mask, protocolStream);
-				case InternalConnectedEntity:
-					return ConnectedEntity.Serialize((ConnectedEntity)data, mask, protocolStream);
-				case InternalUniqueID:
-					return UniqueID.Serialize((UniqueID)data, mask, protocolStream);
-				case InternalConnection:
-					return Connection.Serialize((Connection)data, mask, protocolStream);
-				case InternalConnectionScene:
-					return ConnectionScene.Serialize((ConnectionScene)data, mask, protocolStream);
-				case InternalGlobal:
-					return Global.Serialize((Global)data, mask, protocolStream);
-				case InternalGlobalQuery:
-					return GlobalQuery.Serialize((GlobalQuery)data, mask, protocolStream);
-				case InternalTag:
-					return Tag.Serialize((Tag)data, mask, protocolStream);
-				case InternalTagQuery:
-					return TagQuery.Serialize((TagQuery)data, mask, protocolStream);
-				case InternalPreserveChildren:
-					return PreserveChildren.Serialize((PreserveChildren)data, mask, protocolStream);
-				case InternalScene:
-					return Scene.Serialize((Scene)data, mask, protocolStream);
-				case InternalAssetId:
-					return AssetId.Serialize((AssetId)data, mask, protocolStream);
-				case InternalGenericScale:
-					return GenericScale.Serialize((GenericScale)data, mask, protocolStream);
-				case InternalGenericFieldInt0:
-					return GenericFieldInt0.Serialize((GenericFieldInt0)data, mask, protocolStream);
-				case InternalGenericFieldInt1:
-					return GenericFieldInt1.Serialize((GenericFieldInt1)data, mask, protocolStream);
-				case InternalGenericFieldInt2:
-					return GenericFieldInt2.Serialize((GenericFieldInt2)data, mask, protocolStream);
-				case InternalGenericFieldInt3:
-					return GenericFieldInt3.Serialize((GenericFieldInt3)data, mask, protocolStream);
-				case InternalGenericFieldInt4:
-					return GenericFieldInt4.Serialize((GenericFieldInt4)data, mask, protocolStream);
-				case InternalGenericFieldInt5:
-					return GenericFieldInt5.Serialize((GenericFieldInt5)data, mask, protocolStream);
-				case InternalGenericFieldInt6:
-					return GenericFieldInt6.Serialize((GenericFieldInt6)data, mask, protocolStream);
-				case InternalGenericFieldInt7:
-					return GenericFieldInt7.Serialize((GenericFieldInt7)data, mask, protocolStream);
-				case InternalGenericFieldInt8:
-					return GenericFieldInt8.Serialize((GenericFieldInt8)data, mask, protocolStream);
-				case InternalGenericFieldInt9:
-					return GenericFieldInt9.Serialize((GenericFieldInt9)data, mask, protocolStream);
-				case InternalGenericFieldUInt0:
-					return GenericFieldUInt0.Serialize((GenericFieldUInt0)data, mask, protocolStream);
-				case InternalGenericFieldUInt1:
-					return GenericFieldUInt1.Serialize((GenericFieldUInt1)data, mask, protocolStream);
-				case InternalGenericFieldUInt2:
-					return GenericFieldUInt2.Serialize((GenericFieldUInt2)data, mask, protocolStream);
-				case InternalGenericFieldUInt3:
-					return GenericFieldUInt3.Serialize((GenericFieldUInt3)data, mask, protocolStream);
-				case InternalGenericFieldUInt4:
-					return GenericFieldUInt4.Serialize((GenericFieldUInt4)data, mask, protocolStream);
-				case InternalGenericFieldUInt5:
-					return GenericFieldUInt5.Serialize((GenericFieldUInt5)data, mask, protocolStream);
-				case InternalGenericFieldUInt6:
-					return GenericFieldUInt6.Serialize((GenericFieldUInt6)data, mask, protocolStream);
-				case InternalGenericFieldUInt7:
-					return GenericFieldUInt7.Serialize((GenericFieldUInt7)data, mask, protocolStream);
-				case InternalGenericFieldUInt8:
-					return GenericFieldUInt8.Serialize((GenericFieldUInt8)data, mask, protocolStream);
-				case InternalGenericFieldUInt9:
-					return GenericFieldUInt9.Serialize((GenericFieldUInt9)data, mask, protocolStream);
-				case InternalGenericFieldBool0:
-					return GenericFieldBool0.Serialize((GenericFieldBool0)data, mask, protocolStream);
-				case InternalGenericFieldBool1:
-					return GenericFieldBool1.Serialize((GenericFieldBool1)data, mask, protocolStream);
-				case InternalGenericFieldBool2:
-					return GenericFieldBool2.Serialize((GenericFieldBool2)data, mask, protocolStream);
-				case InternalGenericFieldBool3:
-					return GenericFieldBool3.Serialize((GenericFieldBool3)data, mask, protocolStream);
-				case InternalGenericFieldBool4:
-					return GenericFieldBool4.Serialize((GenericFieldBool4)data, mask, protocolStream);
-				case InternalGenericFieldBool5:
-					return GenericFieldBool5.Serialize((GenericFieldBool5)data, mask, protocolStream);
-				case InternalGenericFieldBool6:
-					return GenericFieldBool6.Serialize((GenericFieldBool6)data, mask, protocolStream);
-				case InternalGenericFieldBool7:
-					return GenericFieldBool7.Serialize((GenericFieldBool7)data, mask, protocolStream);
-				case InternalGenericFieldBool8:
-					return GenericFieldBool8.Serialize((GenericFieldBool8)data, mask, protocolStream);
-				case InternalGenericFieldBool9:
-					return GenericFieldBool9.Serialize((GenericFieldBool9)data, mask, protocolStream);
-				case InternalGenericFieldFloat0:
-					return GenericFieldFloat0.Serialize((GenericFieldFloat0)data, mask, protocolStream);
-				case InternalGenericFieldFloat1:
-					return GenericFieldFloat1.Serialize((GenericFieldFloat1)data, mask, protocolStream);
-				case InternalGenericFieldFloat2:
-					return GenericFieldFloat2.Serialize((GenericFieldFloat2)data, mask, protocolStream);
-				case InternalGenericFieldFloat3:
-					return GenericFieldFloat3.Serialize((GenericFieldFloat3)data, mask, protocolStream);
-				case InternalGenericFieldFloat4:
-					return GenericFieldFloat4.Serialize((GenericFieldFloat4)data, mask, protocolStream);
-				case InternalGenericFieldFloat5:
-					return GenericFieldFloat5.Serialize((GenericFieldFloat5)data, mask, protocolStream);
-				case InternalGenericFieldFloat6:
-					return GenericFieldFloat6.Serialize((GenericFieldFloat6)data, mask, protocolStream);
-				case InternalGenericFieldFloat7:
-					return GenericFieldFloat7.Serialize((GenericFieldFloat7)data, mask, protocolStream);
-				case InternalGenericFieldFloat8:
-					return GenericFieldFloat8.Serialize((GenericFieldFloat8)data, mask, protocolStream);
-				case InternalGenericFieldFloat9:
-					return GenericFieldFloat9.Serialize((GenericFieldFloat9)data, mask, protocolStream);
-				case InternalGenericFieldDouble0:
-					return GenericFieldDouble0.Serialize((GenericFieldDouble0)data, mask, protocolStream);
-				case InternalGenericFieldDouble1:
-					return GenericFieldDouble1.Serialize((GenericFieldDouble1)data, mask, protocolStream);
-				case InternalGenericFieldDouble2:
-					return GenericFieldDouble2.Serialize((GenericFieldDouble2)data, mask, protocolStream);
-				case InternalGenericFieldDouble3:
-					return GenericFieldDouble3.Serialize((GenericFieldDouble3)data, mask, protocolStream);
-				case InternalGenericFieldDouble4:
-					return GenericFieldDouble4.Serialize((GenericFieldDouble4)data, mask, protocolStream);
-				case InternalGenericFieldDouble5:
-					return GenericFieldDouble5.Serialize((GenericFieldDouble5)data, mask, protocolStream);
-				case InternalGenericFieldDouble6:
-					return GenericFieldDouble6.Serialize((GenericFieldDouble6)data, mask, protocolStream);
-				case InternalGenericFieldDouble7:
-					return GenericFieldDouble7.Serialize((GenericFieldDouble7)data, mask, protocolStream);
-				case InternalGenericFieldDouble8:
-					return GenericFieldDouble8.Serialize((GenericFieldDouble8)data, mask, protocolStream);
-				case InternalGenericFieldDouble9:
-					return GenericFieldDouble9.Serialize((GenericFieldDouble9)data, mask, protocolStream);
-				case InternalGenericFieldVector0:
-					return GenericFieldVector0.Serialize((GenericFieldVector0)data, mask, protocolStream);
-				case InternalGenericFieldVector1:
-					return GenericFieldVector1.Serialize((GenericFieldVector1)data, mask, protocolStream);
-				case InternalGenericFieldVector2:
-					return GenericFieldVector2.Serialize((GenericFieldVector2)data, mask, protocolStream);
-				case InternalGenericFieldVector3:
-					return GenericFieldVector3.Serialize((GenericFieldVector3)data, mask, protocolStream);
-				case InternalGenericField2dVector0:
-					return GenericField2dVector0.Serialize((GenericField2dVector0)data, mask, protocolStream);
-				case InternalGenericField2dVector1:
-					return GenericField2dVector1.Serialize((GenericField2dVector1)data, mask, protocolStream);
-				case InternalGenericField2dVector2:
-					return GenericField2dVector2.Serialize((GenericField2dVector2)data, mask, protocolStream);
-				case InternalGenericField2dVector3:
-					return GenericField2dVector3.Serialize((GenericField2dVector3)data, mask, protocolStream);
-				case InternalGenericFieldString0:
-					return GenericFieldString0.Serialize((GenericFieldString0)data, mask, protocolStream);
-				case InternalGenericFieldString1:
-					return GenericFieldString1.Serialize((GenericFieldString1)data, mask, protocolStream);
-				case InternalGenericFieldString2:
-					return GenericFieldString2.Serialize((GenericFieldString2)data, mask, protocolStream);
-				case InternalGenericFieldString3:
-					return GenericFieldString3.Serialize((GenericFieldString3)data, mask, protocolStream);
-				case InternalGenericFieldString4:
-					return GenericFieldString4.Serialize((GenericFieldString4)data, mask, protocolStream);
-				case InternalGenericFieldQuaternion0:
-					return GenericFieldQuaternion0.Serialize((GenericFieldQuaternion0)data, mask, protocolStream);
-				case InternalGenericFieldEntity0:
-					return GenericFieldEntity0.Serialize((GenericFieldEntity0)data, mask, protocolStream);
-				case InternalGenericFieldEntity1:
-					return GenericFieldEntity1.Serialize((GenericFieldEntity1)data, mask, protocolStream);
-				case InternalGenericFieldEntity2:
-					return GenericFieldEntity2.Serialize((GenericFieldEntity2)data, mask, protocolStream);
-				case InternalGenericFieldEntity3:
-					return GenericFieldEntity3.Serialize((GenericFieldEntity3)data, mask, protocolStream);
-				case InternalGenericFieldEntity4:
-					return GenericFieldEntity4.Serialize((GenericFieldEntity4)data, mask, protocolStream);
-				case InternalGenericFieldEntity5:
-					return GenericFieldEntity5.Serialize((GenericFieldEntity5)data, mask, protocolStream);
-				case InternalGenericFieldEntity6:
-					return GenericFieldEntity6.Serialize((GenericFieldEntity6)data, mask, protocolStream);
-				case InternalGenericFieldEntity7:
-					return GenericFieldEntity7.Serialize((GenericFieldEntity7)data, mask, protocolStream);
-				case InternalGenericFieldEntity8:
-					return GenericFieldEntity8.Serialize((GenericFieldEntity8)data, mask, protocolStream);
-				case InternalGenericFieldEntity9:
-					return GenericFieldEntity9.Serialize((GenericFieldEntity9)data, mask, protocolStream);
-				case InternalGenericFieldBytes0:
-					return GenericFieldBytes0.Serialize((GenericFieldBytes0)data, mask, protocolStream);
-				case InternalGenericFieldLong0:
-					return GenericFieldLong0.Serialize((GenericFieldLong0)data, mask, protocolStream);
-				case InternalGenericFieldLong1:
-					return GenericFieldLong1.Serialize((GenericFieldLong1)data, mask, protocolStream);
-				case InternalGenericFieldLong2:
-					return GenericFieldLong2.Serialize((GenericFieldLong2)data, mask, protocolStream);
-				case InternalGenericFieldLong3:
-					return GenericFieldLong3.Serialize((GenericFieldLong3)data, mask, protocolStream);
-				case InternalGenericFieldULong0:
-					return GenericFieldULong0.Serialize((GenericFieldULong0)data, mask, protocolStream);
-				case InternalGenericFieldULong1:
-					return GenericFieldULong1.Serialize((GenericFieldULong1)data, mask, protocolStream);
-				case InternalGenericFieldULong2:
-					return GenericFieldULong2.Serialize((GenericFieldULong2)data, mask, protocolStream);
-				case InternalGenericFieldULong3:
-					return GenericFieldULong3.Serialize((GenericFieldULong3)data, mask, protocolStream);
-				case InternalGenericFieldColor0:
-					return GenericFieldColor0.Serialize((GenericFieldColor0)data, mask, protocolStream);
-				case InternalGenericFieldColor1:
-					return GenericFieldColor1.Serialize((GenericFieldColor1)data, mask, protocolStream);
-				case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410:
-					return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410.Serialize((Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410)data, mask, protocolStream);
-				case InternalCrate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121:
-					return Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121.Serialize((Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121)data, mask, protocolStream);
-				case InternalElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579:
-					return ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579.Serialize((ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579)data, mask, protocolStream);
-				case InternalFlower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021:
-					return Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021.Serialize((Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021)data, mask, protocolStream);
-				case InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621:
-					return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621.Serialize((FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621)data, mask, protocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199)data, mask, protocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066)data, mask, protocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941)data, mask, protocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177)data, mask, protocolStream);
-				case InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033)data, mask, protocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341)data, mask, protocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676)data, mask, protocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710)data, mask, protocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063)data, mask, protocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008)data, mask, protocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436)data, mask, protocolStream);
-				case InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591)data, mask, protocolStream);
-				case InternalRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470:
-					return RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470.Serialize((RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470)data, mask, protocolStream);
-				case InternalTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933:
-					return TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933.Serialize((TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933)data, mask, protocolStream);
-				default:
-					logger.Error("Missing serialization implementation for a component.", ("component", data.GetComponentType()));
-					return 0;
-			}
-		}
+        private IEntityInput ReadInput(uint inputType, Entity entity, long frame, IInProtocolBitStream bitStream, Logger logger)
+        {
+            switch (inputType)
+            {
+                default:
+                    break;
+            }
 
-		private IEntityCommand ReadCommand(uint commandType, IInProtocolBitStream bitStream, Logger logger)
-		{
-			switch (commandType)
-			{
-				case Definition.InternalAuthorityRequest:
-					return AuthorityRequest.Deserialize(bitStream);
-				case Definition.InternalAuthorityTransfer:
-					return AuthorityTransfer.Deserialize(bitStream);
-				case Definition.InternalQuerySynced:
-					return QuerySynced.Deserialize(bitStream);
-				case Definition.InternalAdoptOrphan:
-					return AdoptOrphan.Deserialize(bitStream);
-				case Definition.InternalPersistenceReady:
-					return PersistenceReady.Deserialize(bitStream);
-				case Definition.InternalGenericCommand:
-					return GenericCommand.Deserialize(bitStream);
-				case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b:
-					return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b.Deserialize(bitStream);
-				case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8:
-					return FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8.Deserialize(bitStream);
-				case Definition.InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8:
-					return Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8.Deserialize(bitStream);
-				case Definition.InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7:
-					return RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7.Deserialize(bitStream);
-				default:
-					break;
-			}
+            return default;
+        }
 
-			return default;
-		}
+        public IEntityCommand[]	ReadCommands(IInBitStream bitStream, Logger logger)
+        {
+            var numMessages = bitStream.ReadUint8();
 
-		private IEntityInput ReadInput(uint inputType, IInProtocolBitStream bitStream, Logger logger)
-		{
-			switch (inputType)
-			{
-				default:
-					break;
-			}
+            var commandData = new IEntityCommand[numMessages];
 
-			return default;
-		}
+            for (var i = 0; i < numMessages; i++)
+            {
+                var entityID = DeserializerTools.DeserializeEntity(bitStream);
+                var messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
+                var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
+                var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
+                commandData[i] = ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+            }
 
-		public (IEntityCommand command, SerializeEntityID entityId, MessageTarget messageTarget)[]
-			ReadCommands(IInBitStream bitStream, Logger logger)
-		{
-			var numMessages = bitStream.ReadUint8();
+            return commandData;
+        }
 
-			var commandData = new (IEntityCommand command, SerializeEntityID entityId, MessageTarget messageTarget)[numMessages];
+        public IEntityInput[] ReadInputs(IInBitStream bitStream, Logger logger)
+        {
+            var numMessages = bitStream.ReadUint8();
 
-			for (var i = 0; i < numMessages; i++)
-			{
-				commandData[i].entityId = DeserializerTools.DeserializeEntityID(bitStream);
-				commandData[i].messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
-				var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
-				var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
-				commandData[i].command = ReadCommand(componentType, inBitStream, logger);
-			}
+            var inputData = new IEntityInput[numMessages];
 
-			return commandData;
-		}
+            for (var i = 0; i < numMessages; i++)
+            {
+                var entityID = DeserializerTools.DeserializeEntity(bitStream);
+                var routing = DeserializerTools.DeserializeMessageTarget(bitStream);
+                var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
+                var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
+                var frame = (long)bitStream.ReadUint64();
+                var input = ReadInput(componentType, entityID, frame, inBitStream, logger);
+                input.Routing = routing;
+                inputData[i] = input;
+            }
 
-		public (IEntityInput input, long frame, SerializeEntityID entityId)[] 
-			ReadInputs(IInBitStream bitStream, Logger logger)
-		{
-			var numMessages = bitStream.ReadUint8();
+            return inputData;
+        }
 
-			var inputData = new (IEntityInput input, long frame, SerializeEntityID entityId)[numMessages];
+        public void WriteCommand(IEntityCommand data, uint commandType, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            switch (commandType)
+            {
+                case Definition.InternalAuthorityRequest:
+                    AuthorityRequest.Serialize((AuthorityRequest)data, bitStream);
+                    break;
+                case Definition.InternalAuthorityTransfer:
+                    AuthorityTransfer.Serialize((AuthorityTransfer)data, bitStream);
+                    break;
+                case Definition.InternalQuerySynced:
+                    QuerySynced.Serialize((QuerySynced)data, bitStream);
+                    break;
+                case Definition.InternalAdoptOrphan:
+                    AdoptOrphan.Serialize((AdoptOrphan)data, bitStream);
+                    break;
+                case Definition.InternalPersistenceReady:
+                    PersistenceReady.Serialize((PersistenceReady)data, bitStream);
+                    break;
+                case Definition.InternalGenericCommand:
+                    GenericCommand.Serialize((GenericCommand)data, bitStream);
+                    break;
+                case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8:
+                    FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8.Serialize((FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8)data, bitStream);
+                    break;
+                case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b:
+                    FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b.Serialize((FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b)data, bitStream);
+                    break;
+                case Definition.InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8:
+                    Player_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8)data, bitStream);
+                    break;
+                case Definition.InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7:
+                    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7)data, bitStream);
+                    break;
+                default:
+                    break;
+            }
+        }
 
-			for (var i = 0; i < numMessages; i++)
-			{
-				inputData[i].entityId = DeserializerTools.DeserializeEntityID(bitStream);
-				_ = DeserializerTools.DeserializeMessageTarget(bitStream);
-				var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
-				var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
-				inputData[i].frame = (long)bitStream.ReadUint64();
-				inputData[i].input = ReadInput(componentType, inBitStream, logger);
-			}
+        public void WriteInput(IEntityInput data, uint inputType, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            var inputData = (InputData)data;
+            bitStream.WriteLong(inputData.Frame);
 
-			return inputData;
-		}
+            switch (inputType)
+            {
+                default:
+                    break;
+            }
+        }
 
-		public void WriteCommand(IEntityCommand data, uint commandType, IOutProtocolBitStream bitStream, Logger logger)
-		{
-			switch (commandType)
-			{
-				case Definition.InternalAuthorityRequest:
-					AuthorityRequest.Serialize((AuthorityRequest)data, bitStream);
-					break;
-				case Definition.InternalAuthorityTransfer:
-					AuthorityTransfer.Serialize((AuthorityTransfer)data, bitStream);
-					break;
-				case Definition.InternalQuerySynced:
-					QuerySynced.Serialize((QuerySynced)data, bitStream);
-					break;
-				case Definition.InternalAdoptOrphan:
-					AdoptOrphan.Serialize((AdoptOrphan)data, bitStream);
-					break;
-				case Definition.InternalPersistenceReady:
-					PersistenceReady.Serialize((PersistenceReady)data, bitStream);
-					break;
-				case Definition.InternalGenericCommand:
-					GenericCommand.Serialize((GenericCommand)data, bitStream);
-					break;
-				case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b:
-					FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b.Serialize((FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b)data, bitStream);
-					break;
-				case Definition.InternalFlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8:
-					FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8.Serialize((FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8)data, bitStream);
-					break;
-				case Definition.InternalPlayer_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8:
-					Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8.Serialize((Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8)data, bitStream);
-					break;
-				case Definition.InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7:
-					RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7.Serialize((RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7)data, bitStream);
-					break;
-				default:
-					break;
-			}
-		}
+        public IEntityCommand CreateAuthorityRequest(Entity entity, ClientID requester, AuthorityType authType)
+        {
+            return new AuthorityRequest(entity, (uint)requester, (int)authType);
+        }
 
-		public void WriteInput(IEntityInput data, uint inputType, IOutProtocolBitStream bitStream, Logger logger)
-		{
-			var inputData = (InputData)data;
-			bitStream.WriteLong(inputData.Frame);
+        public IEntityCommand CreateAdoptOrphanCommand()
+        {
+            return new AdoptOrphan();
+        }
 
-			switch (inputType)
-			{
-				default:
-					break;
-			}
-		}
+        public bool TryGetAuthorityRequestCommand(IEntityCommand entityCommand, 
+            out ClientID requester, out AuthorityType authType)
+        {
+            if (entityCommand is AuthorityRequest request) 
+            {
+                requester = (ClientID)request.requester;
+                authType = (AuthorityType)request.authorityType;
 
-		public IEntityCommand CreateAuthorityRequest(ClientID requester, AuthorityType authType)
-		{
-			return new AuthorityRequest((uint)requester, (int)authType);
-		}
+                return true;
+            }
 
-		public IEntityCommand CreateAdoptOrphanCommand()
-		{
-			return new AdoptOrphan();
-		}
+            requester = default;
+            authType = default;
 
-		public bool TryGetAuthorityRequestCommand(IEntityCommand entityCommand, 
-			out ClientID requester, out AuthorityType authType)
-		{
-			if (entityCommand is AuthorityRequest request) 
-			{
-				requester = (ClientID)request.requester;
-				authType = (AuthorityType)request.authorityType;
+            return false;
+        }
 
-				return true;
-			}
+        public IEntityCommand CreateAuthorityTransfer(Entity entity, ClientID newAuthority, bool accepted, AuthorityType authType)
+        {
+            return new AuthorityTransfer(entity, (uint)newAuthority, accepted, (int)authType);
+        }
 
-			requester = default;
-			authType = default;
+        public bool TryGetAuthorityTransferCommand(IEntityCommand entityCommand, out ClientID newAuthority,
+            out bool transferAccepted, out AuthorityType authType) 
+        {
+            if (entityCommand is AuthorityTransfer transfer) 
+            {
+                newAuthority = (ClientID)transfer.newAuthority;
+                transferAccepted = transfer.accepted;
+                authType = (AuthorityType)transfer.authorityType;
 
-			return false;
-		}
+                return true;
+            }
 
-		public IEntityCommand CreateAuthorityTransfer(ClientID newAuthority, bool accepted, AuthorityType authType)
-		{
-			return new AuthorityTransfer((uint)newAuthority, accepted, (int)authType);
-		}
+            newAuthority = default;
+            transferAccepted = default;
+            authType = default;
 
-		public bool TryGetAuthorityTransferCommand(IEntityCommand entityCommand, out ClientID newAuthority,
-			out bool transferAccepted, out AuthorityType authType) 
-		{
-			if (entityCommand is AuthorityTransfer transfer) 
-			{
-				newAuthority = (ClientID)transfer.newAuthority;
-				transferAccepted = transfer.accepted;
-				authType = (AuthorityType)transfer.authorityType;
+            return false;
+        }
 
-				return true;
-			}
+        public ICoherenceComponentData GeneratePersistenceData()
+        {
+            var persistence = new Persistence();
 
-			newAuthority = default;
-			transferAccepted = default;
-			authType = default;
+            return persistence;
+        }
 
-			return false;
-		}
+        public ICoherenceComponentData GenerateCoherenceUUIDData(string uuid)
+        {
+            var uniqueID = new UniqueID();
+            uniqueID.uuid = uuid;
+            uniqueID.FieldsMask = 0b1;
 
-		public ICoherenceComponentData GeneratePersistenceData()
-		{
-			var persistence = new Persistence();
+            return uniqueID;
+        }
 
-			return persistence;
-		}
+        public ICoherenceComponentData GenerateGlobalQueryComponent()
+        {
+            return new GlobalQuery();
+        }
 
-		public ICoherenceComponentData GenerateCoherenceUUIDData(string uuid)
-		{
-			var uniqueID = new UniqueID();
-			uniqueID.uuid = uuid;
+        public string ExtractCoherenceUUID(ICoherenceComponentData data)
+        {
+            var uniqueID = (UniqueID)data;
+            return uniqueID.uuid;
+        }
 
-			return uniqueID;
-		}
+        public bool IsConnectedEntity(ICoherenceComponentData data)
+        {
+            return data.GetComponentType() == Definition.InternalConnectedEntity;
+        }
 
-		public ICoherenceComponentData GenerateGlobalQueryComponent()
-		{
-			return new GlobalQuery();
-		}
+        public Entity ExtractConnectedEntityID(ICoherenceComponentData data)
+        {
+            var connectedEntity = (ConnectedEntity)data;
 
-		public string ExtractCoherenceUUID(ICoherenceComponentData data)
-		{
-			var uniqueID = (UniqueID)data;
-			return uniqueID.uuid;
-		}
+            return connectedEntity.value;
+        }
 
-		public bool IsConnectedEntity(ICoherenceComponentData data)
-		{
-			return data.GetComponentType() == Definition.InternalConnectedEntity;
-		}
+        public string ExtractCoherenceTag(ICoherenceComponentData data)
+        {
+            var tag = (Tag)data;
+            return tag.tag;
+        }
 
-		public SerializeEntityID ExtractConnectedEntityID(ICoherenceComponentData data)
-		{
-			var connectedEntity = (ConnectedEntity)data;
+        public bool IsSendOrderedComponent(uint componentID)
+        {
+            switch(componentID)
+            {
+                case 6:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+}
+    
 
-			return connectedEntity.value;
-		}
-
-		public string ExtractCoherenceTag(ICoherenceComponentData data)
-		{
-			var tag = (Tag)data;
-			return tag.tag;
-		}
-
-		public bool IsSendOrderedComponent(uint componentID)
-		{
-			switch(componentID)
-			{
-			case 6:
-				return true;
-			default:
-				return false;
-			}
-		}
-	}
 }

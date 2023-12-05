@@ -6,46 +6,93 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.Brook;
-	using UnityEngine;
-	using Coherence.Entity;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.Brook;
+    using Coherence.Entities;
+    using Coherence.Log;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-	public struct QuerySynced : IEntityCommand
-	{
-		public bool liveQuerySynced;
-		public bool globalQuerySynced;
+    public struct QuerySynced : IEntityCommand
+    {
+        public System.Boolean liveQuerySynced;
+        public System.Boolean globalQuerySynced;
+        
+        public Entity Entity { get; set; }
+        public MessageTarget Routing { get; set; }
+        public uint Sender { get; set; }
+        public uint GetComponentType() => 2;
+        
+        public IEntityMessage Clone()
+        {
+            // This is a struct, so we can safely return
+            // a struct copy.
+            return this;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToAbsoluteEntity(Entity, false, out var absoluteEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = absoluteEntity;
+            return IEntityMapper.Error.None;
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToRelativeEntity(Entity, false, out var relativeEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = relativeEntity;
+            return IEntityMapper.Error.None;
+        }
 
-		public MessageTarget Routing => MessageTarget.All;
-		public uint GetComponentType() => Definition.InternalQuerySynced;
+        public HashSet<Entity> GetEntityRefs() {
+            return default;
+        }
 
-		public QuerySynced
-		(
-			bool dataliveQuerySynced,
-			bool dataglobalQuerySynced
-		)
-		{
-			liveQuerySynced = dataliveQuerySynced;
-			globalQuerySynced = dataglobalQuerySynced;
-		}
+        public void NullEntityRefs(Entity entity) {
+        }
+        
+        public QuerySynced(
+        Entity entity,
+        System.Boolean liveQuerySynced,
+        System.Boolean globalQuerySynced
+)
+        {
+            Entity = entity;
+            Routing = MessageTarget.All;
+            Sender = 0;
+            
+            this.liveQuerySynced = liveQuerySynced; 
+            this.globalQuerySynced = globalQuerySynced; 
+        }
+        
+        public static void Serialize(QuerySynced commandData, IOutProtocolBitStream bitStream)
+        {
+            bitStream.WriteBool(commandData.liveQuerySynced);
+            bitStream.WriteBool(commandData.globalQuerySynced);
+        }
+        
+        public static QuerySynced Deserialize(IInProtocolBitStream bitStream, Entity entity, MessageTarget target)
+        {
+            var dataliveQuerySynced = bitStream.ReadBool();
+            var dataglobalQuerySynced = bitStream.ReadBool();
+    
+            return new QuerySynced()
+            {
+                Entity = entity,
+                Routing = target,
+                liveQuerySynced = dataliveQuerySynced,
+                globalQuerySynced = dataglobalQuerySynced
+            };   
+        }
+    }
 
-		public static void Serialize(QuerySynced commandData, IOutProtocolBitStream bitStream)
-		{
-			bitStream.WriteBool(commandData.liveQuerySynced);
-			bitStream.WriteBool(commandData.globalQuerySynced);
-		}
-
-		public static QuerySynced Deserialize(IInProtocolBitStream bitStream)
-		{
-			var dataliveQuerySynced = bitStream.ReadBool();
-			var dataglobalQuerySynced = bitStream.ReadBool();
-
-			return new QuerySynced
-			(
-				dataliveQuerySynced,
-				dataglobalQuerySynced
-			){};
-		}
-	}
 }

@@ -6,52 +6,99 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.Brook;
-	using UnityEngine;
-	using Coherence.Entity;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.Brook;
+    using Coherence.Entities;
+    using Coherence.Log;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-	public struct AuthorityTransfer : IEntityCommand
-	{
-		public uint newAuthority;
-		public bool accepted;
-		public int authorityType;
+    public struct AuthorityTransfer : IEntityCommand
+    {
+        public System.UInt32 newAuthority;
+        public System.Boolean accepted;
+        public System.Int32 authorityType;
+        
+        public Entity Entity { get; set; }
+        public MessageTarget Routing { get; set; }
+        public uint Sender { get; set; }
+        public uint GetComponentType() => 1;
+        
+        public IEntityMessage Clone()
+        {
+            // This is a struct, so we can safely return
+            // a struct copy.
+            return this;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToAbsoluteEntity(Entity, false, out var absoluteEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = absoluteEntity;
+            return IEntityMapper.Error.None;
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToRelativeEntity(Entity, false, out var relativeEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = relativeEntity;
+            return IEntityMapper.Error.None;
+        }
 
-		public MessageTarget Routing => MessageTarget.All;
-		public uint GetComponentType() => Definition.InternalAuthorityTransfer;
+        public HashSet<Entity> GetEntityRefs() {
+            return default;
+        }
 
-		public AuthorityTransfer
-		(
-			uint datanewAuthority,
-			bool dataaccepted,
-			int dataauthorityType
-		)
-		{
-			newAuthority = datanewAuthority;
-			accepted = dataaccepted;
-			authorityType = dataauthorityType;
-		}
+        public void NullEntityRefs(Entity entity) {
+        }
+        
+        public AuthorityTransfer(
+        Entity entity,
+        System.UInt32 newAuthority,
+        System.Boolean accepted,
+        System.Int32 authorityType
+)
+        {
+            Entity = entity;
+            Routing = MessageTarget.All;
+            Sender = 0;
+            
+            this.newAuthority = newAuthority; 
+            this.accepted = accepted; 
+            this.authorityType = authorityType; 
+        }
+        
+        public static void Serialize(AuthorityTransfer commandData, IOutProtocolBitStream bitStream)
+        {
+            bitStream.WriteUIntegerRange(commandData.newAuthority, 32, 0);
+            bitStream.WriteBool(commandData.accepted);
+            bitStream.WriteIntegerRange(commandData.authorityType, 2, 0);
+        }
+        
+        public static AuthorityTransfer Deserialize(IInProtocolBitStream bitStream, Entity entity, MessageTarget target)
+        {
+            var datanewAuthority = bitStream.ReadUIntegerRange(32, 0);
+            var dataaccepted = bitStream.ReadBool();
+            var dataauthorityType = bitStream.ReadIntegerRange(2, 0);
+    
+            return new AuthorityTransfer()
+            {
+                Entity = entity,
+                Routing = target,
+                newAuthority = datanewAuthority,
+                accepted = dataaccepted,
+                authorityType = dataauthorityType
+            };   
+        }
+    }
 
-		public static void Serialize(AuthorityTransfer commandData, IOutProtocolBitStream bitStream)
-		{
-			bitStream.WriteUIntegerRange(commandData.newAuthority, 32, 0);
-			bitStream.WriteBool(commandData.accepted);
-			bitStream.WriteIntegerRange(commandData.authorityType, 2, 0);
-		}
-
-		public static AuthorityTransfer Deserialize(IInProtocolBitStream bitStream)
-		{
-			var datanewAuthority = bitStream.ReadUIntegerRange(32, 0);
-			var dataaccepted = bitStream.ReadBool();
-			var dataauthorityType = bitStream.ReadIntegerRange(2, 0);
-
-			return new AuthorityTransfer
-			(
-				datanewAuthority,
-				dataaccepted,
-				dataauthorityType
-			){};
-		}
-	}
 }

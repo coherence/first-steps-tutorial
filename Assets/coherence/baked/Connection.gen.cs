@@ -6,125 +6,174 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.SimulationFrame;
-	using Coherence.Entity;
-	using Coherence.Utils;
-	using Coherence.Brook;
-	using Coherence.Toolkit;
-	using UnityEngine;
+    using System.Collections.Generic;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.SimulationFrame;
+    using Coherence.Entities;
+    using Coherence.Utils;
+    using Coherence.Brook;
+    using Logger = Coherence.Log.Logger;
+    using UnityEngine;
+    using Coherence.Toolkit;
+    
+    public struct Connection : ICoherenceComponentData
+    {
+        public static uint idMask => 0b00000000000000000000000000000001;
+        public System.UInt32 id;
+        public static uint typeMask => 0b00000000000000000000000000000010;
+        public System.Int32 type;
+        
+        public uint FieldsMask { get; set; }
+        public uint StoppedMask { get; set; }
+        public uint GetComponentType() => 8;
+        public int PriorityLevel() => 100;
+        public const int order = 0;
+        public uint InitialFieldsMask() => 0b00000000000000000000000000000011;
+        public bool HasFields() => true;
+        public bool HasRefFields() => false;
+        
+        public HashSet<Entity> GetEntityRefs()
+        {
+            return default;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;  
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper)
+        {
+            return IEntityMapper.Error.None;   
+        }
+        
+        public ICoherenceComponentData Clone() => this;
+        public int GetComponentOrder() => order;
+        public bool IsSendOrdered() => false;
+        public AbsoluteSimulationFrame Frame;
+        
+        private static readonly System.UInt32 _id_Min = 0;
+        private static readonly System.UInt32 _id_Max = 2147483647;
+        private static readonly System.Int32 _type_Min = 0;
+        private static readonly System.Int32 _type_Max = 8;
+    
+        public void SetSimulationFrame(AbsoluteSimulationFrame frame)
+        {
+            Frame = frame;
+        }
+        
+        public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        
+        public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
+        {
+            var other = (Connection)data;
 
-	public struct Connection : ICoherenceComponentData
-	{
-		public uint id;
-		public int type;
+            FieldsMask |= mask;
+            StoppedMask &= ~(mask);
 
-		public override string ToString()
-		{
-			return $"Connection(id: {id}, type: {type})";
-		}
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                id = other.id;
+            }
+            
+            mask >>= 1;
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                type = other.type;
+            }
+            
+            mask >>= 1;
+            StoppedMask |= other.StoppedMask;
 
-		public uint GetComponentType() => Definition.InternalConnection;
+            return this;
+        }
+        
+        public uint DiffWith(ICoherenceComponentData data)
+        {
+            throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
+        }
+        
+        public static uint Serialize(Connection data, uint mask, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            if (bitStream.WriteMask(data.StoppedMask != 0))
+            {
+                bitStream.WriteMaskBits(data.StoppedMask, 2);
+            }
 
-		public const int order = 0;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+                Coherence.Utils.Bounds.Check(data.id, _id_Min, _id_Max, "Connection.id", logger);
+                
+                data.id = Coherence.Utils.Bounds.Clamp(data.id, _id_Min, _id_Max);
+            
+                var fieldValue = data.id;
+            
 
-		public uint FieldsMask => 0b00000000000000000000000000000011;
+            
+                bitStream.WriteUIntegerRange(fieldValue, 31, 0);
+            }
+            
+            mask >>= 1;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+                Coherence.Utils.Bounds.Check(data.type, _type_Min, _type_Max, "Connection.type", logger);
+                
+                data.type = Coherence.Utils.Bounds.Clamp(data.type, _type_Min, _type_Max);
+            
+                var fieldValue = data.type;
+            
 
-		public int GetComponentOrder() => order;
-		public bool IsSendOrdered() { return false; }
+            
+                bitStream.WriteIntegerRange(fieldValue, 3, 0);
+            }
+            
+            mask >>= 1;
+          
+            return mask;
+        }
+        
+        public static (Connection, uint) Deserialize(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(2);
+            }
 
-		public AbsoluteSimulationFrame Frame;
-	
-		private static readonly uint _id_Min = 0;
-		private static readonly uint _id_Max = 2147483647;
-		private static readonly int _type_Min = 0;
-		private static readonly int _type_Max = 8;
+            var mask = (uint)0;
+            var val = new Connection();
+            if (bitStream.ReadMask())
+            {
+                val.id = bitStream.ReadUIntegerRange(31, 0);
+                mask |= idMask;
+            }
+            if (bitStream.ReadMask())
+            {
+                val.type = bitStream.ReadIntegerRange(3, 0);
+                mask |= typeMask;
+            }
+                    
+            val.FieldsMask = mask;
+            val.StoppedMask = stoppedMask;
 
-		public void SetSimulationFrame(AbsoluteSimulationFrame frame)
-		{
-			Frame = frame;
-		}
+            return (val, mask);
+        }
+        
+        
+        public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
+        {
+            var last = lastSent as Connection?;
+            
+        }
 
-		public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        public override string ToString()
+        {
+            return $"Connection(id: { id }, type: { type }, Mask: {System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0')}), Stopped: {System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0')})";
+        }
+    }
+    
 
-		public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
-		{
-			var other = (Connection)data;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				id = other.id;
-			}
-			mask >>= 1;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				type = other.type;
-			}
-			mask >>= 1;
-			return this;
-		}
-
-		public uint DiffWith(ICoherenceComponentData data)
-		{
-			throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
-
-		}
-
-		public static uint Serialize(Connection data, uint mask, IOutProtocolBitStream bitStream)
-		{
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				Coherence.Utils.Bounds.Check(data.id, _id_Min, _id_Max, "Connection.id");
-				data.id = Coherence.Utils.Bounds.Clamp(data.id, _id_Min, _id_Max);
-				var fieldValue = data.id;
-
-				bitStream.WriteUIntegerRange(fieldValue, 31, 0);
-			}
-			mask >>= 1;
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				Coherence.Utils.Bounds.Check(data.type, _type_Min, _type_Max, "Connection.type");
-				data.type = Coherence.Utils.Bounds.Clamp(data.type, _type_Min, _type_Max);
-				var fieldValue = data.type;
-
-				bitStream.WriteIntegerRange(fieldValue, 3, 0);
-			}
-			mask >>= 1;
-
-			return mask;
-		}
-
-		public static (Connection, uint) Deserialize(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new Connection();
-	
-			if (bitStream.ReadMask())
-			{
-				val.id = bitStream.ReadUIntegerRange(31, 0);
-				mask |= 0b00000000000000000000000000000001;
-			}
-			if (bitStream.ReadMask())
-			{
-				val.type = bitStream.ReadIntegerRange(3, 0);
-				mask |= 0b00000000000000000000000000000010;
-			}
-			return (val, mask);
-		}
-
-		/// <summary>
-		/// Resets byte array references to the local array instance that is kept in the lastSentData.
-		/// If the array content has changed but remains of same length, the new content is copied into the local array instance.
-		/// If the array length has changed, the array is cloned and overwrites the local instance.
-		/// If the array has not changed, the reference is reset to the local array instance.
-		/// Otherwise, changes to other fields on the component might cause the local array instance reference to become permanently lost.
-		/// </summary>
-		public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
-		{
-			var last = lastSent as Connection?;
-	
-		}
-	}
 }

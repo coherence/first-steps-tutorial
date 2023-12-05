@@ -6,134 +6,219 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.SimulationFrame;
-	using Coherence.Entity;
-	using Coherence.Utils;
-	using Coherence.Brook;
-	using Coherence.Toolkit;
-	using UnityEngine;
+    using System.Collections.Generic;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.SimulationFrame;
+    using Coherence.Entities;
+    using Coherence.Utils;
+    using Coherence.Brook;
+    using Logger = Coherence.Log.Logger;
+    using UnityEngine;
+    using Coherence.Toolkit;
+    
+    public struct RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 : ICoherenceComponentData
+    {
+        public static uint isCarryingObjectMask => 0b00000000000000000000000000000001;
+        public System.Boolean isCarryingObject;
+        public static uint grabbableObjectMask => 0b00000000000000000000000000000010;
+        public Entity grabbableObject;
+        
+        public uint FieldsMask { get; set; }
+        public uint StoppedMask { get; set; }
+        public uint GetComponentType() => 165;
+        public int PriorityLevel() => 100;
+        public const int order = 0;
+        public uint InitialFieldsMask() => 0b00000000000000000000000000000011;
+        public bool HasFields() => true;
+        public bool HasRefFields() => true;
+        
+        public HashSet<Entity> GetEntityRefs()
+        {
+            return new HashSet<Entity>()
+            {
+                grabbableObject,
+            };
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper)
+        {
+            Entity absoluteEntity;
+            IEntityMapper.Error err;
+            err = mapper.MapToAbsoluteEntity(grabbableObject, false, out absoluteEntity);
+            
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            
+            grabbableObject = absoluteEntity;
+            return IEntityMapper.Error.None;  
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper)
+        {
+            Entity relativeEntity;
+            IEntityMapper.Error err;
+            // We assume that the inConnection held changes with unresolved references, so the 'createMapping=true' is
+            // there only because there's a chance that the parent creation change will be processed after this one
+            // meaning there's no mapping for the parent yet. This wouldn't be necessary if mapping creation would happen
+            // in the clientWorld via create/destroy requests while here we would only check whether mapping exists or not.		
+            var createParentMapping_grabbableObject = true;
+            err = mapper.MapToRelativeEntity(grabbableObject, createParentMapping_grabbableObject,
+             out relativeEntity);
+            
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+          
+            grabbableObject = relativeEntity;
+            return IEntityMapper.Error.None;   
+        }
+        
+        public ICoherenceComponentData Clone() => this;
+        public int GetComponentOrder() => order;
+        public bool IsSendOrdered() => false;
+        public AbsoluteSimulationFrame Frame;
+        
+    
+        public void SetSimulationFrame(AbsoluteSimulationFrame frame)
+        {
+            Frame = frame;
+        }
+        
+        public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+        
+        public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
+        {
+            var other = (RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341)data;
 
-	public struct RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 : ICoherenceComponentData
-	{
-		public bool isCarryingObject;
-		public SerializeEntityID grabbableObject;
+            FieldsMask |= mask;
+            StoppedMask &= ~(mask);
 
-		public override string ToString()
-		{
-			return $"RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341(isCarryingObject: {isCarryingObject}, grabbableObject: {grabbableObject})";
-		}
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                isCarryingObject = other.isCarryingObject;
+            }
+            
+            mask >>= 1;
+            if ((mask & 0x01) != 0)
+            {
+                Frame = other.Frame;
+                grabbableObject = other.grabbableObject;
+            }
+            
+            mask >>= 1;
+            StoppedMask |= other.StoppedMask;
 
-		public uint GetComponentType() => Definition.InternalRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341;
+            return this;
+        }
+        
+        public uint DiffWith(ICoherenceComponentData data)
+        {
+            throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
+        }
+        
+        public static uint Serialize(RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 data, uint mask, IOutProtocolBitStream bitStream, Logger logger)
+        {
+            if (bitStream.WriteMask(data.StoppedMask != 0))
+            {
+                bitStream.WriteMaskBits(data.StoppedMask, 2);
+            }
 
-		public const int order = 0;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+            
+                var fieldValue = data.isCarryingObject;
+            
 
-		public uint FieldsMask => 0b00000000000000000000000000000011;
+            
+                bitStream.WriteBool(fieldValue);
+            }
+            
+            mask >>= 1;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+            
+                var fieldValue = data.grabbableObject;
+            
 
-		public int GetComponentOrder() => order;
-		public bool IsSendOrdered() { return false; }
+            
+                bitStream.WriteEntity(fieldValue);
+            }
+            
+            mask >>= 1;
+          
+            return mask;
+        }
+        
+        public static (RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341, uint) Deserialize(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(2);
+            }
 
-		public AbsoluteSimulationFrame Frame;
-	
+            var mask = (uint)0;
+            var val = new RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341();
+            if (bitStream.ReadMask())
+            {
+                val.isCarryingObject = bitStream.ReadBool();
+                mask |= isCarryingObjectMask;
+            }
+            if (bitStream.ReadMask())
+            {
+                val.grabbableObject = bitStream.ReadEntity();
+                mask |= grabbableObjectMask;
+            }
+                    
+            val.FieldsMask = mask;
+            val.StoppedMask = stoppedMask;
 
-		public void SetSimulationFrame(AbsoluteSimulationFrame frame)
-		{
-			Frame = frame;
-		}
+            return (val, mask);
+        }
+        
+        public static (RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341, uint) DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0(InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(2);
+            }
 
-		public AbsoluteSimulationFrame GetSimulationFrame() => Frame;
+            var mask = (uint)0;
+            var val = new RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341();
+            if (bitStream.ReadMask())
+            {
+                val.isCarryingObject = bitStream.ReadBool();
+                mask |= isCarryingObjectMask;
+            }
+            if (bitStream.ReadMask())
+            {
+                val.grabbableObject = bitStream.ReadEntity();
+                mask |= grabbableObjectMask;
+            }
+                        
+            val.FieldsMask = mask;
+            val.StoppedMask = mask;
+            
+            return (val, mask);
+        }
+        
+        public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
+        {
+            var last = lastSent as RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341?;
+            
+        }
 
-		public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
-		{
-			var other = (RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341)data;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				isCarryingObject = other.isCarryingObject;
-			}
-			mask >>= 1;
-			if ((mask & 0x01) != 0)
-			{
-				Frame = other.Frame;
-				grabbableObject = other.grabbableObject;
-			}
-			mask >>= 1;
-			return this;
-		}
+        public override string ToString()
+        {
+            return $"RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341(isCarryingObject: { isCarryingObject }, grabbableObject: { grabbableObject }, Mask: {System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0')}), Stopped: {System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0')})";
+        }
+    }
+    
 
-		public uint DiffWith(ICoherenceComponentData data)
-		{
-			throw new System.NotSupportedException($"{nameof(DiffWith)} is not supported in Unity");
-
-		}
-
-		public static uint Serialize(RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 data, uint mask, IOutProtocolBitStream bitStream)
-		{
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				var fieldValue = data.isCarryingObject;
-
-				bitStream.WriteBool(fieldValue);
-			}
-			mask >>= 1;
-			if (bitStream.WriteMask((mask & 0x01) != 0))
-			{
-				var fieldValue = data.grabbableObject;
-
-				bitStream.WriteEntity(fieldValue);
-			}
-			mask >>= 1;
-
-			return mask;
-		}
-
-		public static (RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341, uint) Deserialize(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341();
-	
-			if (bitStream.ReadMask())
-			{
-				val.isCarryingObject = bitStream.ReadBool();
-				mask |= 0b00000000000000000000000000000001;
-			}
-			if (bitStream.ReadMask())
-			{
-				val.grabbableObject = bitStream.ReadEntity();
-				mask |= 0b00000000000000000000000000000010;
-			}
-			return (val, mask);
-		}
-		public static (RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341, uint) DeserializeArchetypeRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341_LOD0(InProtocolBitStream bitStream)
-		{
-			var mask = (uint)0;
-			var val = new RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341();
-			if (bitStream.ReadMask())
-			{
-				val.isCarryingObject = bitStream.ReadBool();
-				mask |= 0b00000000000000000000000000000001;
-			}
-			if (bitStream.ReadMask())
-			{
-				val.grabbableObject = bitStream.ReadEntity();
-				mask |= 0b00000000000000000000000000000010;
-			}
-
-			return (val, mask);
-		}
-
-		/// <summary>
-		/// Resets byte array references to the local array instance that is kept in the lastSentData.
-		/// If the array content has changed but remains of same length, the new content is copied into the local array instance.
-		/// If the array length has changed, the array is cloned and overwrites the local instance.
-		/// If the array has not changed, the reference is reset to the local array instance.
-		/// Otherwise, changes to other fields on the component might cause the local array instance reference to become permanently lost.
-		/// </summary>
-		public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
-		{
-			var last = lastSent as RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341?;
-	
-		}
-	}
 }

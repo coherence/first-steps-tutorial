@@ -1,177 +1,177 @@
-component Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410
+component Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410 [id "153"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "11", range-min "-1", range-max "2000"]
 
-component Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121
+component Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121 [id "154"]
   isBeingCarried Bool [bits "1"]
 
-component ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579
+component ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579 [id "155"]
   timer Float [compression "None"]
 
-component Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021
+component Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021 [id "156"]
   timePlanted UInt [bits "32", range-min "0", range-max "4294967295"]
 
-component FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621
+component FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 [id "157"]
   count Int [bits "5", range-min "0", range-max "40"]
 
-component Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199
+component Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941 [id "158"]
+  MoveSpeed Float [bits "14", range-min "0", range-max "10", compression "FixedPoint", precision "0.001"]
+  Grounded Bool [bits "1"]
+  CarryingBig Bool [bits "1"]
+  CarryingSmall Bool [bits "1"]
+
+component Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199 [id "159"]
   currentHat Int [bits "3", range-min "-2", range-max "3"]
   currentHairStyle Int [bits "3", range-min "-2", range-max "3"]
   currentFacialHair Int [bits "3", range-min "-2", range-max "3"]
   currentBackpack Int [bits "3", range-min "-2", range-max "3"]
   currentSkinTone Int [bits "5", range-min "-2", range-max "20"]
 
-component Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066
+component Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066 [id "160"]
   text String [bits "6"]
 
-component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941
-  MoveSpeed Float [bits "14", range-min "0", range-max "10", compression "FixedPoint", precision "0.001"]
-  Grounded Bool [bits "1"]
-  CarryingBig Bool [bits "1"]
-  CarryingSmall Bool [bits "1"]
-
-component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177
+component Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177 [id "161"]
   rotation Quaternion [bits "12"]
 
-component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033
+component Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033 [id "162"]
   position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
 
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341
-  isCarryingObject Bool [bits "1"]
-  grabbableObject Entity [bits "20"]
-
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676
-  ClawsOpen Bool [bits "1"]
-
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710
-  rotation Quaternion [bits "12"]
-
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063
-  rotation Quaternion [bits "12"]
-
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-
-component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591
-  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-  rotation Quaternion [bits "12"]
-
-component RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470
+component RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470 [id "163"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "11", range-min "-1", range-max "2000"]
 
-component TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933
+component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676 [id "164"]
+  ClawsOpen Bool [bits "1"]
+
+component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 [id "165"]
+  isCarryingObject Bool [bits "1"]
+  grabbableObject Entity [bits "20", client-type "Transform"]
+
+component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710 [id "166"]
+  rotation Quaternion [bits "12"]
+
+component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063 [id "167"]
+  rotation Quaternion [bits "12"]
+
+component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008 [id "168"]
+  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+
+component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436 [id "169"]
+  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+
+component RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591 [id "170"]
+  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+  rotation Quaternion [bits "12"]
+
+component TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933 [id "171"]
   timer Float [compression "None"]
 
-command FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_AddOne_7ce8b858_d007_4d86_8da4_5a67d2d9a68b [routing "All"]
+command FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_2f75e994_88a8_4da2_aebe_765c3648d9d8 [id "6", routing "All"]
 
-command FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter__char_46_ResetToZero_2f75e994_88a8_4da2_aebe_765c3648d9d8 [routing "All"]
+command FlowersCounter_20d53524fceab40d5a9ab892525615cb_20d53524fceab40d5a9ab892525615cb_7ce8b858_d007_4d86_8da4_5a67d2d9a68b [id "7", routing "All"]
 
-command Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_d210a4b9_ddf7_480f_9743_18bf1cd06aa8 [routing "All"]
+command Player_cd9bcc1feead9419fac0c5981ce85c23_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9_ddf7_480f_9743_18bf1cd06aa8 [id "8", routing "All"]
   name String 
 
-command RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator__char_46_SetTrigger_d935ef02_354c_46c2_bdb5_dc4086cefeb7 [routing "All"]
+command RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02_354c_46c2_bdb5_dc4086cefeb7 [id "9", routing "All"]
   name String 
 
-archetype Crate_27f1ac5097d4ee4409fbb87ad14f76c2
+archetype Crate_27f1ac5097d4ee4409fbb87ad14f76c2 [id "0"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    WorldOrientation 
-      value [bits "12"]
-    Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121 
-      number [bits "1"]
-    Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Coherence__char_46_Toolkit__char_46_CoherenceNode_4939570989761225410 
-      name [bits "6"]
-      number [bits "11", range-min "-1", range-max "2000"]
+    WorldPosition [id "172", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldOrientation [id "173", base-id "1"]
+      archetype_field value [bits "12"]
+    Crate_27f1ac5097d4ee4409fbb87ad14f76c2_Grabbable_6525610836190113121 [id "174", base-id "154"]
+      archetype_field isBeingCarried [bits "1"]
+    Crate_27f1ac5097d4ee4409fbb87ad14f76c2_CoherenceNode_4939570989761225410 [id "175", base-id "153"]
+      archetype_field path [bits "6"]
+      archetype_field pathDirtyCounter [bits "11", range-min "-1", range-max "2000"]
 
-archetype ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6
+archetype ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6 [id "1"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579 
-      number [compression "None"]
+    WorldPosition [id "176", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    ElevatorPlatform_ba50eecfd968a47c38959f27b05771b6_FloatingPlatform_5459872012036489579 [id "177", base-id "155"]
+      archetype_field timer [compression "None"]
 
-archetype Flower_a167402e36850884aa7ce3d374cd6c77
+archetype Flower_a167402e36850884aa7ce3d374cd6c77 [id "2"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    WorldOrientation 
-      value [bits "12"]
-    Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021 
-      number [bits "32", range-min "0", range-max "4294967295"]
+    WorldPosition [id "178", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldOrientation [id "179", base-id "1"]
+      archetype_field value [bits "12"]
+    Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021 [id "180", base-id "156"]
+      archetype_field timePlanted [bits "32", range-min "0", range-max "4294967295"]
 
-archetype FlowersCounter_20d53524fceab40d5a9ab892525615cb
+archetype FlowersCounter_20d53524fceab40d5a9ab892525615cb [id "3"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 
-      number [bits "5", range-min "0", range-max "40"]
+    WorldPosition [id "181", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 [id "182", base-id "157"]
+      archetype_field count [bits "5", range-min "0", range-max "40"]
 
-archetype Player_cd9bcc1feead9419fac0c5981ce85c23
+archetype Player_cd9bcc1feead9419fac0c5981ce85c23 [id "4"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    WorldOrientation 
-      value [bits "12"]
-    Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4582869309862079177 
-      value [bits "12"]
-    Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199 
-      number [bits "3", range-min "-2", range-max "3"]
-      number [bits "3", range-min "-2", range-max "3"]
-      number [bits "3", range-min "-2", range-max "3"]
-      number [bits "3", range-min "-2", range-max "3"]
-      number [bits "5", range-min "-2", range-max "20"]
-    Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_2783100773886260066 
-      name [bits "6"]
-    Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_8498588009909292941 
-      number [bits "14", range-min "0", range-max "10", compression "FixedPoint", precision "0.001"]
-      number [bits "1"]
-      number [bits "1"]
-      number [bits "1"]
-    Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_7791709351172572033 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldPosition [id "183", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldOrientation [id "184", base-id "1"]
+      archetype_field value [bits "12"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4582869309862079177 [id "185", base-id "161"]
+      archetype_field rotation [bits "12"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_5911091967807195199 [id "186", base-id "159"]
+      archetype_field currentHat [bits "3", range-min "-2", range-max "3"]
+      archetype_field currentHairStyle [bits "3", range-min "-2", range-max "3"]
+      archetype_field currentFacialHair [bits "3", range-min "-2", range-max "3"]
+      archetype_field currentBackpack [bits "3", range-min "-2", range-max "3"]
+      archetype_field currentSkinTone [bits "5", range-min "-2", range-max "20"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_2783100773886260066 [id "187", base-id "160"]
+      archetype_field text [bits "6"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941 [id "188", base-id "158"]
+      archetype_field MoveSpeed [bits "14", range-min "0", range-max "10", compression "FixedPoint", precision "0.001"]
+      archetype_field Grounded [bits "1"]
+      archetype_field CarryingBig [bits "1"]
+      archetype_field CarryingSmall [bits "1"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_7791709351172572033 [id "189", base-id "162"]
+      archetype_field position [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
 
-archetype RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1
+archetype RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6 [id "5"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Animator_9849676 
-      number [bits "1"]
-    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_4231088705669423063 
-      value [bits "12"]
-    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_3110171900669979710 
-      value [bits "12"]
-    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_511851952794508008 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_6045207018197627436 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_UnityEngine__char_46_Transform_7591837871254792591 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-      value [bits "12"]
-    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 
-      number [bits "1"]
-      value [bits "20"]
+    WorldPosition [id "190", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldOrientation [id "191", base-id "1"]
+      archetype_field value [bits "12"]
+    RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_CoherenceNode_5156161361901559470 [id "192", base-id "163"]
+      archetype_field path [bits "6"]
+      archetype_field pathDirtyCounter [bits "11", range-min "-1", range-max "2000"]
 
-archetype RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6
+archetype RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1 [id "6"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    WorldOrientation 
-      value [bits "12"]
-    RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6_Coherence__char_46_Toolkit__char_46_CoherenceNode_5156161361901559470 
-      name [bits "6"]
-      number [bits "11", range-min "-1", range-max "2000"]
+    WorldPosition [id "193", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Animator_9849676 [id "194", base-id "164"]
+      archetype_field ClawsOpen [bits "1"]
+    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_4231088705669423063 [id "195", base-id "167"]
+      archetype_field rotation [bits "12"]
+    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_3110171900669979710 [id "196", base-id "166"]
+      archetype_field rotation [bits "12"]
+    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_511851952794508008 [id "197", base-id "168"]
+      archetype_field position [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_6045207018197627436 [id "198", base-id "169"]
+      archetype_field position [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_Transform_7591837871254792591 [id "199", base-id "170"]
+      archetype_field position [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+      archetype_field rotation [bits "12"]
+    RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1_RobotArmHand_4031727028522489341 [id "200", base-id "165"]
+      archetype_field isCarryingObject [bits "1"]
+      archetype_field grabbableObject [bits "20"]
 
-archetype TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de
+archetype TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de [id "7"]
   lod 0
-    WorldPosition 
-      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
-    WorldOrientation 
-      value [bits "12"]
-    TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933 
-      number [compression "None"]
+    WorldPosition [id "201", base-id "0"]
+      archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldOrientation [id "202", base-id "1"]
+      archetype_field value [bits "12"]
+    TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de_FloatingPlatform_107609493621447933 [id "203", base-id "171"]
+      archetype_field timer [compression "None"]
 

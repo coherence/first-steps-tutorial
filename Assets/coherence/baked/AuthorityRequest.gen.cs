@@ -6,46 +6,93 @@
 // </auto-generated>
 namespace Coherence.Generated
 {
-	using Coherence.ProtocolDef;
-	using Coherence.Serializer;
-	using Coherence.Brook;
-	using UnityEngine;
-	using Coherence.Entity;
+    using Coherence.ProtocolDef;
+    using Coherence.Serializer;
+    using Coherence.Brook;
+    using Coherence.Entities;
+    using Coherence.Log;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-	public struct AuthorityRequest : IEntityCommand
-	{
-		public uint requester;
-		public int authorityType;
+    public struct AuthorityRequest : IEntityCommand
+    {
+        public System.UInt32 requester;
+        public System.Int32 authorityType;
+        
+        public Entity Entity { get; set; }
+        public MessageTarget Routing { get; set; }
+        public uint Sender { get; set; }
+        public uint GetComponentType() => 0;
+        
+        public IEntityMessage Clone()
+        {
+            // This is a struct, so we can safely return
+            // a struct copy.
+            return this;
+        }
+        
+        public IEntityMapper.Error MapToAbsolute(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToAbsoluteEntity(Entity, false, out var absoluteEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = absoluteEntity;
+            return IEntityMapper.Error.None;
+        }
+        
+        public IEntityMapper.Error MapToRelative(IEntityMapper mapper, Coherence.Log.Logger logger)
+        {
+            var err = mapper.MapToRelativeEntity(Entity, false, out var relativeEntity);
+            if (err != IEntityMapper.Error.None)
+            {
+                return err;
+            }
+            Entity = relativeEntity;
+            return IEntityMapper.Error.None;
+        }
 
-		public MessageTarget Routing => MessageTarget.All;
-		public uint GetComponentType() => Definition.InternalAuthorityRequest;
+        public HashSet<Entity> GetEntityRefs() {
+            return default;
+        }
 
-		public AuthorityRequest
-		(
-			uint datarequester,
-			int dataauthorityType
-		)
-		{
-			requester = datarequester;
-			authorityType = dataauthorityType;
-		}
+        public void NullEntityRefs(Entity entity) {
+        }
+        
+        public AuthorityRequest(
+        Entity entity,
+        System.UInt32 requester,
+        System.Int32 authorityType
+)
+        {
+            Entity = entity;
+            Routing = MessageTarget.All;
+            Sender = 0;
+            
+            this.requester = requester; 
+            this.authorityType = authorityType; 
+        }
+        
+        public static void Serialize(AuthorityRequest commandData, IOutProtocolBitStream bitStream)
+        {
+            bitStream.WriteUIntegerRange(commandData.requester, 32, 0);
+            bitStream.WriteIntegerRange(commandData.authorityType, 2, 0);
+        }
+        
+        public static AuthorityRequest Deserialize(IInProtocolBitStream bitStream, Entity entity, MessageTarget target)
+        {
+            var datarequester = bitStream.ReadUIntegerRange(32, 0);
+            var dataauthorityType = bitStream.ReadIntegerRange(2, 0);
+    
+            return new AuthorityRequest()
+            {
+                Entity = entity,
+                Routing = target,
+                requester = datarequester,
+                authorityType = dataauthorityType
+            };   
+        }
+    }
 
-		public static void Serialize(AuthorityRequest commandData, IOutProtocolBitStream bitStream)
-		{
-			bitStream.WriteUIntegerRange(commandData.requester, 32, 0);
-			bitStream.WriteIntegerRange(commandData.authorityType, 2, 0);
-		}
-
-		public static AuthorityRequest Deserialize(IInProtocolBitStream bitStream)
-		{
-			var datarequester = bitStream.ReadUIntegerRange(32, 0);
-			var dataauthorityType = bitStream.ReadIntegerRange(2, 0);
-
-			return new AuthorityRequest
-			(
-				datarequester,
-				dataauthorityType
-			){};
-		}
-	}
 }
