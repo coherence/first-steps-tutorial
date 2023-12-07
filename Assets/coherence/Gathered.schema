@@ -12,7 +12,7 @@ component Flower_a167402e36850884aa7ce3d374cd6c77_Flower_6689584802229134021 [id
   timePlanted UInt [bits "32", range-min "0", range-max "4294967295"]
 
 component FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 [id "157"]
-  count Int [bits "5", range-min "0", range-max "40"]
+  count Int [bits "6", range-min "0", range-max "40"]
 
 component Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_8498588009909292941 [id "158"]
   MoveSpeed Float [bits "14", range-min "0", range-max "10", compression "FixedPoint", precision "0.001"]
@@ -109,7 +109,7 @@ archetype FlowersCounter_20d53524fceab40d5a9ab892525615cb [id "3"]
     WorldPosition [id "181", base-id "0"]
       archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
     FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621 [id "182", base-id "157"]
-      archetype_field count [bits "5", range-min "0", range-max "40"]
+      archetype_field count [bits "6", range-min "0", range-max "40"]
 
 archetype Player_cd9bcc1feead9419fac0c5981ce85c23 [id "4"]
   lod 0

@@ -1,3 +1,4 @@
+using System;
 using Coherence;
 using Coherence.Connection;
 using Coherence.Toolkit;
@@ -22,26 +23,24 @@ public class FlowersHandler : MonoBehaviour
     private void Awake()
     {
         _bridge = FindObjectOfType<CoherenceBridge>();
+        _counter = FindObjectOfType<Counter>();
+        _counterSync = _counter.GetComponent<CoherenceSync>();
+    }
+
+    private void OnEnable()
+    {
+        _counter.CounterChanged += OnCounterChanged;
         _bridge.onLiveQuerySynced.AddListener(OnLiveQuerySynced);
         _bridge.onDisconnected.AddListener(OnDisconnect);
     }
 
     private void OnDisconnect(CoherenceBridge bridge, ConnectionCloseReason reason) => RemoveFlowerGameObjects();
 
-    private void OnLiveQuerySynced(CoherenceBridge obj)
-    {        
-        _counter = FindObjectOfType<Counter>();
-        
-        _counterSync = _counter.GetComponent<CoherenceSync>();
-        _counter.CounterChanged += OnCounterChanged;
-
-        UpdateText();
-    }
+    private void OnLiveQuerySynced(CoherenceBridge obj) => UpdateText();
 
     private void OnDisable()
     {
-        if (_counter != null) _counter.CounterChanged -= OnCounterChanged;
-        
+        _counter.CounterChanged -= OnCounterChanged;
         _bridge.onLiveQuerySynced.RemoveListener(OnLiveQuerySynced);
         _bridge.onDisconnected.RemoveListener(OnDisconnect);
     }

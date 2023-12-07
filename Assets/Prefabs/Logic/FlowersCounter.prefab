@@ -78,7 +78,20 @@ MonoBehaviour:
     - distance: 0
     archetypeName: FlowersCounter_20d53524fceab40d5a9ab892525615cb
     GeneratesArchetypeDefinition: 1
-  InterpolationLocation: 1
+  interpolationLocation: 1
+  RigidbodyUpdateMode: 0
+  OnRigidbody2DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
   bakedScriptType: Coherence.Generated.CoherenceSyncFlowersCounter_20d53524fceab40d5a9ab892525615cb,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
@@ -87,6 +100,8 @@ MonoBehaviour:
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 1
+  replacementStrategy: 0
+  unsyncedNetworkEntityPriority: 0
   preserveChildren: 0
   bindings:
   - rid: 2368829912872124468
@@ -104,6 +119,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: FlowersCounter
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions: []
@@ -177,7 +193,7 @@ MonoBehaviour:
           floatCompression: 0
           fields:
           - type: 1
-            bits: 5
+            bits: 6
             precision: 0
             floatCompression: 0
         unityComponent: {fileID: 5847726189716557621}

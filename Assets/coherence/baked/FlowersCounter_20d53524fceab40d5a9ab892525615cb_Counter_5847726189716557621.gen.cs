@@ -102,7 +102,7 @@ namespace Coherence.Generated
             
 
             
-                bitStream.WriteIntegerRange(fieldValue, 5, 0);
+                bitStream.WriteIntegerRange(fieldValue, 6, 0);
             }
             
             mask >>= 1;
@@ -122,7 +122,7 @@ namespace Coherence.Generated
             var val = new FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621();
             if (bitStream.ReadMask())
             {
-                val.count = bitStream.ReadIntegerRange(5, 0);
+                val.count = bitStream.ReadIntegerRange(6, 0);
                 mask |= countMask;
             }
                     
@@ -144,7 +144,7 @@ namespace Coherence.Generated
             var val = new FlowersCounter_20d53524fceab40d5a9ab892525615cb_Counter_5847726189716557621();
             if (bitStream.ReadMask())
             {
-                val.count = bitStream.ReadIntegerRange(5, 0);
+                val.count = bitStream.ReadIntegerRange(6, 0);
                 mask |= countMask;
             }
                         
