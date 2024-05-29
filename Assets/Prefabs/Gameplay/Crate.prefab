@@ -64,15 +64,20 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: 8124374254152143763, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+  coherenceSyncConfig: {fileID: 11400000, guid: 3b855c160d84340acb2156ea9e60c7b1,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 1522740331349769034}
       lodStepsActive: 1
@@ -92,12 +97,22 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 4939570989761225410}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: Crate_27f1ac5097d4ee4409fbb87ad14f76c2
     GeneratesArchetypeDefinition: 1
-  InterpolationLocation: 4
-  bakedScriptType: Coherence.Generated.CoherenceSyncCrate_27f1ac5097d4ee4409fbb87ad14f76c2,
+  interpolationLocation: 4
+  RigidbodyUpdateMode: 0
+  OnRigidbody2DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  bakedScriptType: Coherence.Generated.CoherenceSync_27f1ac5097d4ee4409fbb87ad14f76c2,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
@@ -105,6 +120,8 @@ MonoBehaviour:
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 1
+  replacementStrategy: 0
+  unsyncedNetworkEntityPriority: 0
   preserveChildren: 0
   bindings:
   - rid: 2368829912872124484
@@ -112,6 +129,7 @@ MonoBehaviour:
   - rid: 2919437089004584960
   - rid: 2919437089004584961
   - rid: 134368298502455379
+  - rid: 8933473075191349274
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -123,6 +141,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: crate
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions: []
@@ -140,8 +159,9 @@ MonoBehaviour:
           rid: 134368298502455380
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 7adfb1f9-df9d-4d92-8091-2a9e293b28d5
+        guid: 7adfb1f9df9d4d9280912a9e293b28d5
         archetypeData:
           type: 3
           minRange: 0
@@ -185,8 +205,9 @@ MonoBehaviour:
           rid: 2368829912872124486
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: c8981954-64f3-46df-a426-2f1c647fa024
+        guid: c898195464f346dfa4262f1c647fa024
         archetypeData:
           type: 7
           minRange: -100
@@ -210,8 +231,9 @@ MonoBehaviour:
           rid: 2368829912872124487
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: b0541bd4-db94-4c98-aae3-912bfbdb0f6d
+        guid: b0541bd4db944c98aae3912bfbdb0f6d
         archetypeData:
           type: 8
           minRange: 0
@@ -274,8 +296,9 @@ MonoBehaviour:
           rid: 2919437089004584962
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 8761ffc7-494f-4fad-a367-41f5669ef1b9
+        guid: 8761ffc7494f4fada36741f5669ef1b9
         archetypeData:
           type: 5
           minRange: 0
@@ -297,8 +320,9 @@ MonoBehaviour:
           rid: 2919437089004584963
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 8fb659bf-e821-436e-963e-8810ade5244e
+        guid: 8fb659bfe821436e963e8810ade5244e
         archetypeData:
           type: 1
           minRange: -1
@@ -350,6 +374,52 @@ MonoBehaviour:
           rid: -2
         bindingType:
           assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.IntBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 8933473075191349274
+      type: {class: ScaleBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
+        asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 8933473075191349275
+        routing: 0
+        isPredicted: 0
+        predictionMode: 0
+        defaultInterpolationPath: 
+        guid: 30faf71a3eca4390a9b05111a455ec05
+        archetypeData:
+          type: 7
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 7
+            bits: 32
+            precision: 0.001
+            floatCompression: 0
+        unityComponent: {fileID: 1522740331349769034}
+        coherenceSync: {fileID: 294465140271106047}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+          type: 2}
+    - rid: 8933473075191349275
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: localScale
+        monoAssemblyType: UnityEngine.Vector3, UnityEngine
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 64
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.ScaleBinding,
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []

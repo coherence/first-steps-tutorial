@@ -81,6 +81,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6759313994100119788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,15 +148,20 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: 3497701467602501475, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+  coherenceSyncConfig: {fileID: 11400000, guid: fc4e57916a9a64176a0df04c97f0d9af,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 5019661362766340086}
       lodStepsActive: 1
@@ -243,9 +249,6 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 212237405689840945}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: RobotArm_aa7ea8e0044f0964eb9c782a689ca1b1
     GeneratesArchetypeDefinition: 1
   interpolationLocation: 1
   RigidbodyUpdateMode: 0
@@ -261,7 +264,7 @@ MonoBehaviour:
   OnRigidbody3DRotationUpdate:
     m_PersistentCalls:
       m_Calls: []
-  bakedScriptType: Coherence.Generated.CoherenceSyncRobotArm_aa7ea8e0044f0964eb9c782a689ca1b1,
+  bakedScriptType: Coherence.Generated.CoherenceSync_aa7ea8e0044f0964eb9c782a689ca1b1,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
@@ -295,6 +298,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: RobotArm
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions:
@@ -315,8 +319,9 @@ MonoBehaviour:
           rid: 2368829912872124543
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: f4bf5576-38d7-4d17-a530-79005e962dd7
+        guid: f4bf557638d74d17a53079005e962dd7
         archetypeData:
           type: 7
           minRange: -100
@@ -340,8 +345,9 @@ MonoBehaviour:
           rid: 2368829912872124544
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 86c46aa1-94cd-456f-9435-accfc3ee162c
+        guid: 86c46aa194cd456f9435accfc3ee162c
         archetypeData:
           type: 8
           minRange: 0
@@ -365,8 +371,9 @@ MonoBehaviour:
           rid: 2368829912872124545
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: cbae6206-d8ac-4196-92ba-095a4f325af1
+        guid: cbae6206d8ac419692ba095a4f325af1
         archetypeData:
           type: 8
           minRange: 0
@@ -390,8 +397,9 @@ MonoBehaviour:
           rid: 2368829912872124546
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 8db61da3-fdb5-42de-86d0-92dcf4f2a02c
+        guid: 8db61da3fdb542de86d092dcf4f2a02c
         archetypeData:
           type: 7
           minRange: -100
@@ -415,8 +423,9 @@ MonoBehaviour:
           rid: 2368829912872124547
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: c72045cb-3d2b-4ab9-a318-a1fd2ddd90e1
+        guid: c72045cb3d2b4ab9a318a1fd2ddd90e1
         archetypeData:
           type: 7
           minRange: -100
@@ -440,8 +449,9 @@ MonoBehaviour:
           rid: 2368829912872124548
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 18a95da2-aa05-41df-bca2-3d72c86e037a
+        guid: 18a95da2aa0541dfbca23d72c86e037a
         archetypeData:
           type: 8
           minRange: 0
@@ -465,8 +475,9 @@ MonoBehaviour:
           rid: 2368829912872124549
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 436cd823-fcf0-4e0b-bb18-06a6fcf85de1
+        guid: 436cd823fcf04e0bbb1806a6fcf85de1
         archetypeData:
           type: 7
           minRange: -100
@@ -635,8 +646,9 @@ MonoBehaviour:
           rid: 2368830277639733249
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 426f5b2e-aeaa-4fc9-8611-e6235ad861a0
+        guid: 426f5b2eaeaa4fc98611e6235ad861a0
         archetypeData:
           type: 3
           minRange: 0
@@ -680,8 +692,9 @@ MonoBehaviour:
           rid: 2368830277639733251
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: d935ef02-354c-46c2-bdb5-dc4086cefeb7
+        guid: d935ef02354c46c2bdb5dc4086cefeb7
         archetypeData:
           type: 0
           minRange: 0
@@ -726,8 +739,9 @@ MonoBehaviour:
           rid: 2368830277639733288
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: f0b6f7a4-f60f-4261-8fcd-91306e2a080c
+        guid: f0b6f7a4f60f42618fcd91306e2a080c
         archetypeData:
           type: 3
           minRange: 0
@@ -771,8 +785,9 @@ MonoBehaviour:
           rid: 2368830277639733290
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: e1f85bdb-19f9-4e5b-b4ab-e734f041458e
+        guid: e1f85bdb19f94e5bb4abe734f041458e
         archetypeData:
           type: 9
           minRange: 0

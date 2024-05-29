@@ -10122,6 +10122,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5346888412588970518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10149,15 +10150,20 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: 8426499991151879198, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+  coherenceSyncConfig: {fileID: 11400000, guid: f78a1fb45649743a18185f40f532f34d,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 7769937714867182896}
       lodStepsActive: 1
@@ -10221,12 +10227,22 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 3285176319162462279}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: Flower_a167402e36850884aa7ce3d374cd6c77
     GeneratesArchetypeDefinition: 1
-  InterpolationLocation: 1
-  bakedScriptType: Coherence.Generated.CoherenceSyncFlower_a167402e36850884aa7ce3d374cd6c77,
+  interpolationLocation: 1
+  RigidbodyUpdateMode: 0
+  OnRigidbody2DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  bakedScriptType: Coherence.Generated.CoherenceSync_a167402e36850884aa7ce3d374cd6c77,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
@@ -10234,6 +10250,8 @@ MonoBehaviour:
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 0
+  replacementStrategy: 0
+  unsyncedNetworkEntityPriority: 0
   preserveChildren: 0
   bindings:
   - rid: 2368829912872124516
@@ -10250,6 +10268,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: c9d0a859-9695-4c8b-ad42-2f2016793d93
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions: []
@@ -10267,8 +10286,9 @@ MonoBehaviour:
           rid: 2368829912872124519
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 880aae33-d8da-49c2-b9d4-e0c68eb7a369
+        guid: 880aae33d8da49c2b9d4e0c68eb7a369
         archetypeData:
           type: 12
           minRange: 0
@@ -10291,8 +10311,9 @@ MonoBehaviour:
           rid: 2368829912872124520
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: ccfa2ea5-f634-431f-bc33-62f7da4de3ac
+        guid: ccfa2ea5f634431fbc3362f7da4de3ac
         archetypeData:
           type: 7
           minRange: -100
@@ -10316,8 +10337,9 @@ MonoBehaviour:
           rid: 2368829912872124521
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: fad1d0ce-4867-4d6c-a75d-33d243736b45
+        guid: fad1d0ce48674d6ca75d33d243736b45
         archetypeData:
           type: 8
           minRange: 0

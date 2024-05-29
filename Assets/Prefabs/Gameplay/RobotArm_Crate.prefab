@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: bakedScriptType
-      value: Coherence.Generated.CoherenceSyncRobotArm_Crate_a0e6252c4d09f4fb28257804194356b6,
+      value: Coherence.Generated.CoherenceSync_a0e6252c4d09f4fb28257804194356b6,
         Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
@@ -27,7 +27,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coherenceSyncConfig
       value: 
-      objectReference: {fileID: 960217107724943298, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+      objectReference: {fileID: 11400000, guid: 290dc4cf7830a428c82cfbe0b963742e,
         type: 2}
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
