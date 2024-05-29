@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: TrainPlatform
+  m_EditorClassIdentifier: 
+  id: 6ba8b7030c4bf544396f864fc9dd99de
+  selfId: 83d08e1b0efd745cb81b0e4677f2ddda
+  editorTarget: {fileID: 5908653995384491889, guid: 6ba8b7030c4bf544396f864fc9dd99de,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 7887414979419439114
+  objectInstantiator:
+    rid: 7887414979419439115
+  references:
+    version: 2
+    RefIds:
+    - rid: 7887414979419439114
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 5908653995384491889, guid: 6ba8b7030c4bf544396f864fc9dd99de,
+          type: 3}
+    - rid: 7887414979419439115
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}

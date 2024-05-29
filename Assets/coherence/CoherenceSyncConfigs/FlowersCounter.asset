@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: FlowersCounter
+  m_EditorClassIdentifier: 
+  id: 20d53524fceab40d5a9ab892525615cb
+  selfId: 776d16ef0265241d88f5dfee7416d27a
+  editorTarget: {fileID: 8392026974597475620, guid: 20d53524fceab40d5a9ab892525615cb,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 7887414979419439110
+  objectInstantiator:
+    rid: 7887414979419439111
+  references:
+    version: 2
+    RefIds:
+    - rid: 7887414979419439110
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 8392026974597475620, guid: 20d53524fceab40d5a9ab892525615cb,
+          type: 3}
+    - rid: 7887414979419439111
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}

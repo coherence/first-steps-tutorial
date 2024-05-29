@@ -351,15 +351,20 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: 7418618784931044245, guid: 6d5bbaf3b191f417bb0570a2692c44e5,
+  coherenceSyncConfig: {fileID: 11400000, guid: 83d08e1b0efd745cb81b0e4677f2ddda,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 6535867841057756619}
       lodStepsActive: 1
@@ -395,12 +400,22 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 3397297842687052447}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: TrainPlatform_6ba8b7030c4bf544396f864fc9dd99de
     GeneratesArchetypeDefinition: 1
-  InterpolationLocation: 4
-  bakedScriptType: Coherence.Generated.CoherenceSyncTrainPlatform_6ba8b7030c4bf544396f864fc9dd99de,
+  interpolationLocation: 4
+  RigidbodyUpdateMode: 0
+  OnRigidbody2DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  bakedScriptType: Coherence.Generated.CoherenceSync_6ba8b7030c4bf544396f864fc9dd99de,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
@@ -408,6 +423,8 @@ MonoBehaviour:
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 1
+  replacementStrategy: 0
+  unsyncedNetworkEntityPriority: 0
   preserveChildren: 0
   bindings:
   - rid: 2368830094440661033
@@ -424,6 +441,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: LittleTrain
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions:
@@ -443,8 +461,9 @@ MonoBehaviour:
           rid: 2368830094440661034
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 0df60e65-2de8-4833-bdba-9ee29938ab19
+        guid: 0df60e652de84833bdba9ee29938ab19
         archetypeData:
           type: 7
           minRange: -100
@@ -488,8 +507,9 @@ MonoBehaviour:
           rid: 2368830094440661036
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 39f75b76-5b9c-4976-a5a8-f469fcfd1985
+        guid: 39f75b765b9c4976a5a8f469fcfd1985
         archetypeData:
           type: 8
           minRange: 0
@@ -537,8 +557,9 @@ MonoBehaviour:
           rid: 2919437111453024312
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 3be2dd42-ae86-4876-a5ed-af23c384feee
+        guid: 3be2dd42ae864876a5edaf23c384feee
         archetypeData:
           type: 4
           minRange: 0

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Crate
+  m_EditorClassIdentifier: 
+  id: 27f1ac5097d4ee4409fbb87ad14f76c2
+  selfId: 3b855c160d84340acb2156ea9e60c7b1
+  editorTarget: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 7887414979419439120
+  objectInstantiator:
+    rid: 7887414979419439121
+  references:
+    version: 2
+    RefIds:
+    - rid: 7887414979419439120
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 2212572905728603600, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
+          type: 3}
+    - rid: 7887414979419439121
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
