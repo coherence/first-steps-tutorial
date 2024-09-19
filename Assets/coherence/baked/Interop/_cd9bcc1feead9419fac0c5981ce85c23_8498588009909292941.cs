@@ -165,21 +165,21 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & MoveSpeedMask) != 0 && (min == null || MoveSpeedSimulationFrame < min))
+            if ((FieldsMask & _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.MoveSpeedMask) != 0 && (min == null || this.MoveSpeedSimulationFrame < min))
             {
-                min = MoveSpeedSimulationFrame;
+                min = this.MoveSpeedSimulationFrame;
             }
-            if ((FieldsMask & GroundedMask) != 0 && (min == null || GroundedSimulationFrame < min))
+            if ((FieldsMask & _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.GroundedMask) != 0 && (min == null || this.GroundedSimulationFrame < min))
             {
-                min = GroundedSimulationFrame;
+                min = this.GroundedSimulationFrame;
             }
-            if ((FieldsMask & CarryingBigMask) != 0 && (min == null || CarryingBigSimulationFrame < min))
+            if ((FieldsMask & _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.CarryingBigMask) != 0 && (min == null || this.CarryingBigSimulationFrame < min))
             {
-                min = CarryingBigSimulationFrame;
+                min = this.CarryingBigSimulationFrame;
             }
-            if ((FieldsMask & CarryingSmallMask) != 0 && (min == null || CarryingSmallSimulationFrame < min))
+            if ((FieldsMask & _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.CarryingSmallMask) != 0 && (min == null || this.CarryingSmallSimulationFrame < min))
             {
-                min = CarryingSmallSimulationFrame;
+                min = this.CarryingSmallSimulationFrame;
             }
 
             return min;
@@ -195,29 +195,29 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                MoveSpeedSimulationFrame = other.MoveSpeedSimulationFrame;
-                MoveSpeed = other.MoveSpeed;
+                this.MoveSpeedSimulationFrame = other.MoveSpeedSimulationFrame;
+                this.MoveSpeed = other.MoveSpeed;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                GroundedSimulationFrame = other.GroundedSimulationFrame;
-                Grounded = other.Grounded;
+                this.GroundedSimulationFrame = other.GroundedSimulationFrame;
+                this.Grounded = other.Grounded;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                CarryingBigSimulationFrame = other.CarryingBigSimulationFrame;
-                CarryingBig = other.CarryingBig;
+                this.CarryingBigSimulationFrame = other.CarryingBigSimulationFrame;
+                this.CarryingBig = other.CarryingBig;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                CarryingSmallSimulationFrame = other.CarryingSmallSimulationFrame;
-                CarryingSmall = other.CarryingSmall;
+                this.CarryingSmallSimulationFrame = other.CarryingSmallSimulationFrame;
+                this.CarryingSmall = other.CarryingSmall;
             }
 
             otherMask >>= 1;
@@ -348,28 +348,28 @@ namespace Coherence.Generated
                 val.MoveSpeedSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.MoveSpeed = bitStream.ReadFloat(FloatMeta.ForFixedPoint(0, 10, 0.001d));
-                val.FieldsMask |= MoveSpeedMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.MoveSpeedMask;
             }
             if (bitStream.ReadMask())
             {
                 val.GroundedSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.Grounded = bitStream.ReadBool();
-                val.FieldsMask |= GroundedMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.GroundedMask;
             }
             if (bitStream.ReadMask())
             {
                 val.CarryingBigSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.CarryingBig = bitStream.ReadBool();
-                val.FieldsMask |= CarryingBigMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.CarryingBigMask;
             }
             if (bitStream.ReadMask())
             {
                 val.CarryingSmallSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.CarryingSmall = bitStream.ReadBool();
-                val.FieldsMask |= CarryingSmallMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.CarryingSmallMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -423,14 +423,14 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941(" +
-                $" MoveSpeed: { MoveSpeed }" +
-                $", MoveSpeedSimFrame: { MoveSpeedSimulationFrame }" +
-                $" Grounded: { Grounded }" +
-                $", GroundedSimFrame: { GroundedSimulationFrame }" +
-                $" CarryingBig: { CarryingBig }" +
-                $", CarryingBigSimFrame: { CarryingBigSimulationFrame }" +
-                $" CarryingSmall: { CarryingSmall }" +
-                $", CarryingSmallSimFrame: { CarryingSmallSimulationFrame }" +
+                $" MoveSpeed: { this.MoveSpeed }" +
+                $", MoveSpeedSimFrame: { this.MoveSpeedSimulationFrame }" +
+                $" Grounded: { this.Grounded }" +
+                $", GroundedSimFrame: { this.GroundedSimulationFrame }" +
+                $" CarryingBig: { this.CarryingBig }" +
+                $", CarryingBigSimFrame: { this.CarryingBigSimulationFrame }" +
+                $" CarryingSmall: { this.CarryingSmall }" +
+                $", CarryingSmallSimFrame: { this.CarryingSmallSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(4, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(4, '0') })";
         }

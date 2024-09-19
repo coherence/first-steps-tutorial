@@ -47,7 +47,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.path = comp->path.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->path.Data, comp->path.Length) : null;
+            orig.path = comp->path.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->path.Data, (int)comp->path.Length) : null;
             orig.pathDirtyCounter = comp->pathDirtyCounter;
 
             return orig;
@@ -70,7 +70,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.path = comp->path.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->path.Data, comp->path.Length) : null;
+            orig.path = comp->path.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->path.Data, (int)comp->path.Length) : null;
             orig.pathDirtyCounter = comp->pathDirtyCounter;
 
             return orig;
@@ -146,15 +146,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                pathSimulationFrame = other.pathSimulationFrame;
-                path = other.path;
+                this.pathSimulationFrame = other.pathSimulationFrame;
+                this.path = other.path;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                pathDirtyCounterSimulationFrame = other.pathDirtyCounterSimulationFrame;
-                pathDirtyCounter = other.pathDirtyCounter;
+                this.pathDirtyCounterSimulationFrame = other.pathDirtyCounterSimulationFrame;
+                this.pathDirtyCounter = other.pathDirtyCounter;
             }
 
             otherMask >>= 1;
@@ -221,13 +221,13 @@ namespace Coherence.Generated
             {
 
                 val.path = bitStream.ReadShortString();
-                val.FieldsMask |= pathMask;
+                val.FieldsMask |= _a0e6252c4d09f4fb28257804194356b6_5156161361901559470.pathMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.pathDirtyCounter = bitStream.ReadIntegerRange(11, -1);
-                val.FieldsMask |= pathDirtyCounterMask;
+                val.FieldsMask |= _a0e6252c4d09f4fb28257804194356b6_5156161361901559470.pathDirtyCounterMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -265,8 +265,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_a0e6252c4d09f4fb28257804194356b6_5156161361901559470(" +
-                $" path: { path }" +
-                $" pathDirtyCounter: { pathDirtyCounter }" +
+                $" path: { this.path }" +
+                $" pathDirtyCounter: { this.pathDirtyCounter }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

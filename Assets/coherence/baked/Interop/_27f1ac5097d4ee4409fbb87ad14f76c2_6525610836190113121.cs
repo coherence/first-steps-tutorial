@@ -133,9 +133,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & isBeingCarriedMask) != 0 && (min == null || isBeingCarriedSimulationFrame < min))
+            if ((FieldsMask & _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.isBeingCarriedMask) != 0 && (min == null || this.isBeingCarriedSimulationFrame < min))
             {
-                min = isBeingCarriedSimulationFrame;
+                min = this.isBeingCarriedSimulationFrame;
             }
 
             return min;
@@ -151,8 +151,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                isBeingCarriedSimulationFrame = other.isBeingCarriedSimulationFrame;
-                isBeingCarried = other.isBeingCarried;
+                this.isBeingCarriedSimulationFrame = other.isBeingCarriedSimulationFrame;
+                this.isBeingCarried = other.isBeingCarried;
             }
 
             otherMask >>= 1;
@@ -215,7 +215,7 @@ namespace Coherence.Generated
                 val.isBeingCarriedSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.isBeingCarried = bitStream.ReadBool();
-                val.FieldsMask |= isBeingCarriedMask;
+                val.FieldsMask |= _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.isBeingCarriedMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -248,8 +248,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121(" +
-                $" isBeingCarried: { isBeingCarried }" +
-                $", isBeingCarriedSimFrame: { isBeingCarriedSimulationFrame }" +
+                $" isBeingCarried: { this.isBeingCarried }" +
+                $", isBeingCarriedSimFrame: { this.isBeingCarriedSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

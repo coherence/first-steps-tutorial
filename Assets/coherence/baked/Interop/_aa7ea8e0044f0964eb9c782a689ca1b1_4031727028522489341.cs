@@ -118,7 +118,7 @@ namespace Coherence.Generated
         {
             return new HashSet<Entity>()
             {
-                grabbableObject,
+                this.grabbableObject,
             };
         }
 
@@ -126,9 +126,9 @@ namespace Coherence.Generated
         {
             uint refsMask = 0;
 
-            if (grabbableObject == fromEntity)
+            if (this.grabbableObject == fromEntity)
             {
-                grabbableObject = toEntity;
+                this.grabbableObject = toEntity;
                 refsMask |= 1 << 1;
             }
 
@@ -141,14 +141,14 @@ namespace Coherence.Generated
         {
             Entity absoluteEntity;
             IEntityMapper.Error err;
-            err = mapper.MapToAbsoluteEntity(grabbableObject, false, out absoluteEntity);
+            err = mapper.MapToAbsoluteEntity(this.grabbableObject, false, out absoluteEntity);
 
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
 
-            grabbableObject = absoluteEntity;
+            this.grabbableObject = absoluteEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -161,7 +161,7 @@ namespace Coherence.Generated
             // meaning there's no mapping for the parent yet. This wouldn't be necessary if mapping creation would happen
             // in the clientWorld via create/destroy requests while here we would only check whether mapping exists or not.
             var createParentMapping_grabbableObject = true;
-            err = mapper.MapToRelativeEntity(grabbableObject, createParentMapping_grabbableObject,
+            err = mapper.MapToRelativeEntity(this.grabbableObject, createParentMapping_grabbableObject,
              out relativeEntity);
 
             if (err != IEntityMapper.Error.None)
@@ -169,7 +169,7 @@ namespace Coherence.Generated
                 return err;
             }
 
-            grabbableObject = relativeEntity;
+            this.grabbableObject = relativeEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -182,13 +182,13 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & isCarryingObjectMask) != 0 && (min == null || isCarryingObjectSimulationFrame < min))
+            if ((FieldsMask & _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341.isCarryingObjectMask) != 0 && (min == null || this.isCarryingObjectSimulationFrame < min))
             {
-                min = isCarryingObjectSimulationFrame;
+                min = this.isCarryingObjectSimulationFrame;
             }
-            if ((FieldsMask & grabbableObjectMask) != 0 && (min == null || grabbableObjectSimulationFrame < min))
+            if ((FieldsMask & _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341.grabbableObjectMask) != 0 && (min == null || this.grabbableObjectSimulationFrame < min))
             {
-                min = grabbableObjectSimulationFrame;
+                min = this.grabbableObjectSimulationFrame;
             }
 
             return min;
@@ -204,15 +204,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                isCarryingObjectSimulationFrame = other.isCarryingObjectSimulationFrame;
-                isCarryingObject = other.isCarryingObject;
+                this.isCarryingObjectSimulationFrame = other.isCarryingObjectSimulationFrame;
+                this.isCarryingObject = other.isCarryingObject;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                grabbableObjectSimulationFrame = other.grabbableObjectSimulationFrame;
-                grabbableObject = other.grabbableObject;
+                this.grabbableObjectSimulationFrame = other.grabbableObjectSimulationFrame;
+                this.grabbableObject = other.grabbableObject;
             }
 
             otherMask >>= 1;
@@ -297,14 +297,14 @@ namespace Coherence.Generated
                 val.isCarryingObjectSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.isCarryingObject = bitStream.ReadBool();
-                val.FieldsMask |= isCarryingObjectMask;
+                val.FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341.isCarryingObjectMask;
             }
             if (bitStream.ReadMask())
             {
                 val.grabbableObjectSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.grabbableObject = bitStream.ReadEntity();
-                val.FieldsMask |= grabbableObjectMask;
+                val.FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341.grabbableObjectMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -344,10 +344,10 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341(" +
-                $" isCarryingObject: { isCarryingObject }" +
-                $", isCarryingObjectSimFrame: { isCarryingObjectSimulationFrame }" +
-                $" grabbableObject: { grabbableObject }" +
-                $", grabbableObjectSimFrame: { grabbableObjectSimulationFrame }" +
+                $" isCarryingObject: { this.isCarryingObject }" +
+                $", isCarryingObjectSimFrame: { this.isCarryingObjectSimulationFrame }" +
+                $" grabbableObject: { this.grabbableObject }" +
+                $", grabbableObjectSimFrame: { this.grabbableObjectSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

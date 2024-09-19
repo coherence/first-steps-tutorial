@@ -133,9 +133,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & ClawsOpenMask) != 0 && (min == null || ClawsOpenSimulationFrame < min))
+            if ((FieldsMask & _aa7ea8e0044f0964eb9c782a689ca1b1_9849676.ClawsOpenMask) != 0 && (min == null || this.ClawsOpenSimulationFrame < min))
             {
-                min = ClawsOpenSimulationFrame;
+                min = this.ClawsOpenSimulationFrame;
             }
 
             return min;
@@ -151,8 +151,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                ClawsOpenSimulationFrame = other.ClawsOpenSimulationFrame;
-                ClawsOpen = other.ClawsOpen;
+                this.ClawsOpenSimulationFrame = other.ClawsOpenSimulationFrame;
+                this.ClawsOpen = other.ClawsOpen;
             }
 
             otherMask >>= 1;
@@ -215,7 +215,7 @@ namespace Coherence.Generated
                 val.ClawsOpenSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.ClawsOpen = bitStream.ReadBool();
-                val.FieldsMask |= ClawsOpenMask;
+                val.FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_9849676.ClawsOpenMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -248,8 +248,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_aa7ea8e0044f0964eb9c782a689ca1b1_9849676(" +
-                $" ClawsOpen: { ClawsOpen }" +
-                $", ClawsOpenSimFrame: { ClawsOpenSimulationFrame }" +
+                $" ClawsOpen: { this.ClawsOpen }" +
+                $", ClawsOpenSimFrame: { this.ClawsOpenSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

@@ -139,8 +139,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                timePlantedSimulationFrame = other.timePlantedSimulationFrame;
-                timePlanted = other.timePlanted;
+                this.timePlantedSimulationFrame = other.timePlantedSimulationFrame;
+                this.timePlanted = other.timePlanted;
             }
 
             otherMask >>= 1;
@@ -195,7 +195,7 @@ namespace Coherence.Generated
             {
 
                 val.timePlanted = bitStream.ReadUIntegerRange(32, 0);
-                val.FieldsMask |= timePlantedMask;
+                val.FieldsMask |= _a167402e36850884aa7ce3d374cd6c77_6689584802229134021.timePlantedMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -227,7 +227,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_a167402e36850884aa7ce3d374cd6c77_6689584802229134021(" +
-                $" timePlanted: { timePlanted }" +
+                $" timePlanted: { this.timePlanted }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

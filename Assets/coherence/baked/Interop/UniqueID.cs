@@ -45,7 +45,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.uuid = comp->uuid.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->uuid.Data, comp->uuid.Length) : null;
+            orig.uuid = comp->uuid.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->uuid.Data, (int)comp->uuid.Length) : null;
 
             return orig;
         }
@@ -116,8 +116,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                uuidSimulationFrame = other.uuidSimulationFrame;
-                uuid = other.uuid;
+                this.uuidSimulationFrame = other.uuidSimulationFrame;
+                this.uuid = other.uuid;
             }
 
             otherMask >>= 1;
@@ -169,7 +169,7 @@ namespace Coherence.Generated
             {
 
                 val.uuid = bitStream.ReadShortString();
-                val.FieldsMask |= uuidMask;
+                val.FieldsMask |= UniqueID.uuidMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -181,7 +181,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"UniqueID(" +
-                $" uuid: { uuid }" +
+                $" uuid: { this.uuid }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

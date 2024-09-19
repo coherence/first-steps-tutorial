@@ -139,8 +139,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                countSimulationFrame = other.countSimulationFrame;
-                count = other.count;
+                this.countSimulationFrame = other.countSimulationFrame;
+                this.count = other.count;
             }
 
             otherMask >>= 1;
@@ -195,7 +195,7 @@ namespace Coherence.Generated
             {
 
                 val.count = bitStream.ReadIntegerRange(6, 0);
-                val.FieldsMask |= countMask;
+                val.FieldsMask |= _20d53524fceab40d5a9ab892525615cb_5847726189716557621.countMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -227,7 +227,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_20d53524fceab40d5a9ab892525615cb_5847726189716557621(" +
-                $" count: { count }" +
+                $" count: { this.count }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

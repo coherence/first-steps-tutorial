@@ -118,8 +118,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                valueSimulationFrame = other.valueSimulationFrame;
-                value = other.value;
+                this.valueSimulationFrame = other.valueSimulationFrame;
+                this.value = other.value;
             }
 
             otherMask >>= 1;
@@ -174,7 +174,7 @@ namespace Coherence.Generated
             {
 
                 val.value = bitStream.ReadUIntegerRange(32, 0);
-                val.FieldsMask |= valueMask;
+                val.FieldsMask |= Scene.valueMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -186,7 +186,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"Scene(" +
-                $" value: { value }" +
+                $" value: { this.value }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

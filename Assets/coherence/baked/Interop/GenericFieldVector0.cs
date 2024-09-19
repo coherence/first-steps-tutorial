@@ -111,9 +111,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & valueMask) != 0 && (min == null || valueSimulationFrame < min))
+            if ((FieldsMask & GenericFieldVector0.valueMask) != 0 && (min == null || this.valueSimulationFrame < min))
             {
-                min = valueSimulationFrame;
+                min = this.valueSimulationFrame;
             }
 
             return min;
@@ -129,8 +129,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                valueSimulationFrame = other.valueSimulationFrame;
-                value = other.value;
+                this.valueSimulationFrame = other.valueSimulationFrame;
+                this.value = other.value;
             }
 
             otherMask >>= 1;
@@ -193,7 +193,7 @@ namespace Coherence.Generated
                 val.valueSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.value = bitStream.ReadVector3(FloatMeta.NoCompression()).ToUnityVector3();
-                val.FieldsMask |= valueMask;
+                val.FieldsMask |= GenericFieldVector0.valueMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -205,8 +205,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"GenericFieldVector0(" +
-                $" value: { value }" +
-                $", valueSimFrame: { valueSimulationFrame }" +
+                $" value: { this.value }" +
+                $", valueSimFrame: { this.valueSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

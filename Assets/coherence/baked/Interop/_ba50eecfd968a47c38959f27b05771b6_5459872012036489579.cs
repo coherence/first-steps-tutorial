@@ -133,9 +133,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & timerMask) != 0 && (min == null || timerSimulationFrame < min))
+            if ((FieldsMask & _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.timerMask) != 0 && (min == null || this.timerSimulationFrame < min))
             {
-                min = timerSimulationFrame;
+                min = this.timerSimulationFrame;
             }
 
             return min;
@@ -151,8 +151,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                timerSimulationFrame = other.timerSimulationFrame;
-                timer = other.timer;
+                this.timerSimulationFrame = other.timerSimulationFrame;
+                this.timer = other.timer;
             }
 
             otherMask >>= 1;
@@ -215,7 +215,7 @@ namespace Coherence.Generated
                 val.timerSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.timer = bitStream.ReadFloat(FloatMeta.NoCompression());
-                val.FieldsMask |= timerMask;
+                val.FieldsMask |= _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.timerMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -248,8 +248,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_ba50eecfd968a47c38959f27b05771b6_5459872012036489579(" +
-                $" timer: { timer }" +
-                $", timerSimFrame: { timerSimulationFrame }" +
+                $" timer: { this.timer }" +
+                $", timerSimFrame: { this.timerSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

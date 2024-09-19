@@ -45,7 +45,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.tag = comp->tag.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->tag.Data, comp->tag.Length) : null;
+            orig.tag = comp->tag.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->tag.Data, (int)comp->tag.Length) : null;
 
             return orig;
         }
@@ -116,8 +116,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                tagSimulationFrame = other.tagSimulationFrame;
-                tag = other.tag;
+                this.tagSimulationFrame = other.tagSimulationFrame;
+                this.tag = other.tag;
             }
 
             otherMask >>= 1;
@@ -169,7 +169,7 @@ namespace Coherence.Generated
             {
 
                 val.tag = bitStream.ReadShortString();
-                val.FieldsMask |= tagMask;
+                val.FieldsMask |= TagQuery.tagMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -181,7 +181,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"TagQuery(" +
-                $" tag: { tag }" +
+                $" tag: { this.tag }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

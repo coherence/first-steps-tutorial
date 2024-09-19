@@ -34,7 +34,7 @@ namespace Coherence.Generated
 
             var orig = new _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7();
             var comp = (Interop*)data;
-            orig.name = comp->name.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->name.Data, comp->name.Length) : null;
+            orig.name = comp->name.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->name.Data, (int)comp->name.Length) : null;
             return orig;
         }
 

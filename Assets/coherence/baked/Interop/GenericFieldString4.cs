@@ -45,7 +45,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.name = comp->name.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->name.Data, comp->name.Length) : null;
+            orig.name = comp->name.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->name.Data, (int)comp->name.Length) : null;
             orig.nameSimulationFrame = simFrames[0].Into();
 
             return orig;
@@ -111,9 +111,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & nameMask) != 0 && (min == null || nameSimulationFrame < min))
+            if ((FieldsMask & GenericFieldString4.nameMask) != 0 && (min == null || this.nameSimulationFrame < min))
             {
-                min = nameSimulationFrame;
+                min = this.nameSimulationFrame;
             }
 
             return min;
@@ -129,8 +129,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                nameSimulationFrame = other.nameSimulationFrame;
-                name = other.name;
+                this.nameSimulationFrame = other.nameSimulationFrame;
+                this.name = other.name;
             }
 
             otherMask >>= 1;
@@ -193,7 +193,7 @@ namespace Coherence.Generated
                 val.nameSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.name = bitStream.ReadShortString();
-                val.FieldsMask |= nameMask;
+                val.FieldsMask |= GenericFieldString4.nameMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -205,8 +205,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"GenericFieldString4(" +
-                $" name: { name }" +
-                $", nameSimFrame: { nameSimulationFrame }" +
+                $" name: { this.name }" +
+                $", nameSimFrame: { this.nameSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

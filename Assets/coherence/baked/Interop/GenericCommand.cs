@@ -44,8 +44,8 @@ namespace Coherence.Generated
 
             var orig = new GenericCommand();
             var comp = (Interop*)data;
-            orig.name = comp->name.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->name.Data, comp->name.Length) : null;
-            orig.commandData = new byte[comp->commandData.Length]; Marshal.Copy((System.IntPtr)comp->commandData.Data, orig.commandData, 0, comp->commandData.Length);
+            orig.name = comp->name.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->name.Data, (int)comp->name.Length) : null;
+            orig.commandData = new byte[comp->commandData.Length]; Marshal.Copy((System.IntPtr)comp->commandData.Data, orig.commandData, 0, (int)comp->commandData.Length);
             orig.entityParam1 = comp->entityParam1;
             orig.entityParam2 = comp->entityParam2;
             orig.entityParam3 = comp->entityParam3;
@@ -85,28 +85,28 @@ namespace Coherence.Generated
             {
                 return err;
             }
-            entityParam1 = absoluteEntity;
+            this.entityParam1 = absoluteEntity;
             
             err = mapper.MapToAbsoluteEntity(entityParam2, false, out absoluteEntity);
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
-            entityParam2 = absoluteEntity;
+            this.entityParam2 = absoluteEntity;
             
             err = mapper.MapToAbsoluteEntity(entityParam3, false, out absoluteEntity);
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
-            entityParam3 = absoluteEntity;
+            this.entityParam3 = absoluteEntity;
             
             err = mapper.MapToAbsoluteEntity(entityParam4, false, out absoluteEntity);
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
-            entityParam4 = absoluteEntity;
+            this.entityParam4 = absoluteEntity;
             
             return IEntityMapper.Error.None;
         }
@@ -124,53 +124,53 @@ namespace Coherence.Generated
             {
                 return err;
             }
-            entityParam1 = relativeEntity;
+            this.entityParam1 = relativeEntity;
             
             err = mapper.MapToRelativeEntity(entityParam2, false, out relativeEntity);
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
-            entityParam2 = relativeEntity;
+            this.entityParam2 = relativeEntity;
             
             err = mapper.MapToRelativeEntity(entityParam3, false, out relativeEntity);
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
-            entityParam3 = relativeEntity;
+            this.entityParam3 = relativeEntity;
             
             err = mapper.MapToRelativeEntity(entityParam4, false, out relativeEntity);
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
-            entityParam4 = relativeEntity;
+            this.entityParam4 = relativeEntity;
             
             return IEntityMapper.Error.None;
         }
 
         public HashSet<Entity> GetEntityRefs() {
             return new HashSet<Entity> {
-                entityParam1,
-                entityParam2,
-                entityParam3,
-                entityParam4,
+                this.entityParam1,
+                this.entityParam2,
+                this.entityParam3,
+                this.entityParam4,
             };
         }
 
         public void NullEntityRefs(Entity entity) {
-            if (entityParam1 == entity) {
-                entityParam1 = Entity.InvalidRelative;
+            if (this.entityParam1 == entity) {
+                this.entityParam1 = Entity.InvalidRelative;
             }
-            if (entityParam2 == entity) {
-                entityParam2 = Entity.InvalidRelative;
+            if (this.entityParam2 == entity) {
+                this.entityParam2 = Entity.InvalidRelative;
             }
-            if (entityParam3 == entity) {
-                entityParam3 = Entity.InvalidRelative;
+            if (this.entityParam3 == entity) {
+                this.entityParam3 = Entity.InvalidRelative;
             }
-            if (entityParam4 == entity) {
-                entityParam4 = Entity.InvalidRelative;
+            if (this.entityParam4 == entity) {
+                this.entityParam4 = Entity.InvalidRelative;
             }
         }
         

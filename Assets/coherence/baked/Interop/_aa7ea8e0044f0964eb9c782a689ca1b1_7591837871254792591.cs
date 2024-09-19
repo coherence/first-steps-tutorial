@@ -145,13 +145,13 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & positionMask) != 0 && (min == null || positionSimulationFrame < min))
+            if ((FieldsMask & _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.positionMask) != 0 && (min == null || this.positionSimulationFrame < min))
             {
-                min = positionSimulationFrame;
+                min = this.positionSimulationFrame;
             }
-            if ((FieldsMask & rotationMask) != 0 && (min == null || rotationSimulationFrame < min))
+            if ((FieldsMask & _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.rotationMask) != 0 && (min == null || this.rotationSimulationFrame < min))
             {
-                min = rotationSimulationFrame;
+                min = this.rotationSimulationFrame;
             }
 
             return min;
@@ -167,15 +167,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                positionSimulationFrame = other.positionSimulationFrame;
-                position = other.position;
+                this.positionSimulationFrame = other.positionSimulationFrame;
+                this.position = other.position;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                rotationSimulationFrame = other.rotationSimulationFrame;
-                rotation = other.rotation;
+                this.rotationSimulationFrame = other.rotationSimulationFrame;
+                this.rotation = other.rotation;
             }
 
             otherMask >>= 1;
@@ -264,14 +264,14 @@ namespace Coherence.Generated
                 val.positionSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.position = bitStream.ReadVector3(FloatMeta.ForFixedPoint(-100, 600, 0.01d)).ToUnityVector3();
-                val.FieldsMask |= positionMask;
+                val.FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.positionMask;
             }
             if (bitStream.ReadMask())
             {
                 val.rotationSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.rotation = bitStream.ReadQuaternion(12).ToUnityQuaternion();
-                val.FieldsMask |= rotationMask;
+                val.FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.rotationMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -311,10 +311,10 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591(" +
-                $" position: { position }" +
-                $", positionSimFrame: { positionSimulationFrame }" +
-                $" rotation: { rotation }" +
-                $", rotationSimFrame: { rotationSimulationFrame }" +
+                $" position: { this.position }" +
+                $", positionSimFrame: { this.positionSimulationFrame }" +
+                $" rotation: { this.rotation }" +
+                $", rotationSimFrame: { this.rotationSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

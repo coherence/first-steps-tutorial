@@ -122,15 +122,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                positionSimulationFrame = other.positionSimulationFrame;
-                position = other.position;
+                this.positionSimulationFrame = other.positionSimulationFrame;
+                this.position = other.position;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                radiusSimulationFrame = other.radiusSimulationFrame;
-                radius = other.radius;
+                this.radiusSimulationFrame = other.radiusSimulationFrame;
+                this.radius = other.radius;
             }
 
             otherMask >>= 1;
@@ -194,13 +194,13 @@ namespace Coherence.Generated
             {
 
                 val.position = bitStream.ReadVector3(FloatMeta.NoCompression()).ToUnityVector3();
-                val.FieldsMask |= positionMask;
+                val.FieldsMask |= WorldPositionQuery.positionMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.radius = bitStream.ReadFloat(FloatMeta.NoCompression());
-                val.FieldsMask |= radiusMask;
+                val.FieldsMask |= WorldPositionQuery.radiusMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -212,8 +212,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"WorldPositionQuery(" +
-                $" position: { position }" +
-                $" radius: { radius }" +
+                $" position: { this.position }" +
+                $" radius: { this.radius }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

@@ -118,8 +118,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                localIndexSimulationFrame = other.localIndexSimulationFrame;
-                localIndex = other.localIndex;
+                this.localIndexSimulationFrame = other.localIndexSimulationFrame;
+                this.localIndex = other.localIndex;
             }
 
             otherMask >>= 1;
@@ -174,7 +174,7 @@ namespace Coherence.Generated
             {
 
                 val.localIndex = bitStream.ReadIntegerRange(32, -2147483648);
-                val.FieldsMask |= localIndexMask;
+                val.FieldsMask |= LocalUserComponent.localIndexMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -186,7 +186,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"LocalUserComponent(" +
-                $" localIndex: { localIndex }" +
+                $" localIndex: { this.localIndex }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

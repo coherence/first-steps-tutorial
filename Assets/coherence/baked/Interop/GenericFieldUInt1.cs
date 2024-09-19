@@ -113,9 +113,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & numberMask) != 0 && (min == null || numberSimulationFrame < min))
+            if ((FieldsMask & GenericFieldUInt1.numberMask) != 0 && (min == null || this.numberSimulationFrame < min))
             {
-                min = numberSimulationFrame;
+                min = this.numberSimulationFrame;
             }
 
             return min;
@@ -131,8 +131,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                numberSimulationFrame = other.numberSimulationFrame;
-                number = other.number;
+                this.numberSimulationFrame = other.numberSimulationFrame;
+                this.number = other.number;
             }
 
             otherMask >>= 1;
@@ -198,7 +198,7 @@ namespace Coherence.Generated
                 val.numberSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.number = bitStream.ReadUIntegerRange(32, 0);
-                val.FieldsMask |= numberMask;
+                val.FieldsMask |= GenericFieldUInt1.numberMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -210,8 +210,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"GenericFieldUInt1(" +
-                $" number: { number }" +
-                $", numberSimFrame: { numberSimulationFrame }" +
+                $" number: { this.number }" +
+                $", numberSimFrame: { this.numberSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

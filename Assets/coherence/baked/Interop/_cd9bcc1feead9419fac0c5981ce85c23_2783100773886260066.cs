@@ -45,7 +45,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.text = comp->text.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->text.Data, comp->text.Length) : null;
+            orig.text = comp->text.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->text.Data, (int)comp->text.Length) : null;
 
             return orig;
         }
@@ -67,7 +67,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.text = comp->text.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->text.Data, comp->text.Length) : null;
+            orig.text = comp->text.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->text.Data, (int)comp->text.Length) : null;
 
             return orig;
         }
@@ -137,8 +137,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                textSimulationFrame = other.textSimulationFrame;
-                text = other.text;
+                this.textSimulationFrame = other.textSimulationFrame;
+                this.text = other.text;
             }
 
             otherMask >>= 1;
@@ -190,7 +190,7 @@ namespace Coherence.Generated
             {
 
                 val.text = bitStream.ReadShortString();
-                val.FieldsMask |= textMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066.textMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -222,7 +222,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066(" +
-                $" text: { text }" +
+                $" text: { this.text }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }
