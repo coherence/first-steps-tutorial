@@ -56,7 +56,7 @@ namespace Coherence.Generated
 
             comps.Add(new AssetId() 
             { 
-                value = self.CoherenceSyncConfig.ID, 
+                value = self.CoherenceSyncConfig.ID.GetHashCode(), 
                 isFromGroup = isFromGroup, 
                 valueSimulationFrame = simFrame,
                 isFromGroupSimulationFrame = simFrame,

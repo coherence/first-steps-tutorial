@@ -135,9 +135,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & positionMask) != 0 && (min == null || positionSimulationFrame < min))
+            if ((FieldsMask & _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.positionMask) != 0 && (min == null || this.positionSimulationFrame < min))
             {
-                min = positionSimulationFrame;
+                min = this.positionSimulationFrame;
             }
 
             return min;
@@ -153,8 +153,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                positionSimulationFrame = other.positionSimulationFrame;
-                position = other.position;
+                this.positionSimulationFrame = other.positionSimulationFrame;
+                this.position = other.position;
             }
 
             otherMask >>= 1;
@@ -221,7 +221,7 @@ namespace Coherence.Generated
                 val.positionSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.position = bitStream.ReadVector3(FloatMeta.ForFixedPoint(-100, 600, 0.01d)).ToUnityVector3();
-                val.FieldsMask |= positionMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.positionMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -254,8 +254,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033(" +
-                $" position: { position }" +
-                $", positionSimFrame: { positionSimulationFrame }" +
+                $" position: { this.position }" +
+                $", positionSimFrame: { this.positionSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

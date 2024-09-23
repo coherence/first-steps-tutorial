@@ -45,7 +45,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.bytes = new byte[comp->bytes.Length]; Marshal.Copy((System.IntPtr)comp->bytes.Data, orig.bytes, 0, comp->bytes.Length);
+            orig.bytes = new byte[comp->bytes.Length]; Marshal.Copy((System.IntPtr)comp->bytes.Data, orig.bytes, 0, (int)comp->bytes.Length);
             orig.bytesSimulationFrame = simFrames[0].Into();
 
             return orig;
@@ -111,9 +111,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & bytesMask) != 0 && (min == null || bytesSimulationFrame < min))
+            if ((FieldsMask & GenericFieldBytes0.bytesMask) != 0 && (min == null || this.bytesSimulationFrame < min))
             {
-                min = bytesSimulationFrame;
+                min = this.bytesSimulationFrame;
             }
 
             return min;
@@ -129,8 +129,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                bytesSimulationFrame = other.bytesSimulationFrame;
-                bytes = other.bytes;
+                this.bytesSimulationFrame = other.bytesSimulationFrame;
+                this.bytes = other.bytes;
             }
 
             otherMask >>= 1;
@@ -193,7 +193,7 @@ namespace Coherence.Generated
                 val.bytesSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.bytes = bitStream.ReadBytesList();
-                val.FieldsMask |= bytesMask;
+                val.FieldsMask |= GenericFieldBytes0.bytesMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -205,8 +205,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"GenericFieldBytes0(" +
-                $" bytes: { bytes }" +
-                $", bytesSimFrame: { bytesSimulationFrame }" +
+                $" bytes: { this.bytes }" +
+                $", bytesSimFrame: { this.bytesSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

@@ -133,9 +133,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & rotationMask) != 0 && (min == null || rotationSimulationFrame < min))
+            if ((FieldsMask & _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177.rotationMask) != 0 && (min == null || this.rotationSimulationFrame < min))
             {
-                min = rotationSimulationFrame;
+                min = this.rotationSimulationFrame;
             }
 
             return min;
@@ -151,8 +151,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                rotationSimulationFrame = other.rotationSimulationFrame;
-                rotation = other.rotation;
+                this.rotationSimulationFrame = other.rotationSimulationFrame;
+                this.rotation = other.rotation;
             }
 
             otherMask >>= 1;
@@ -215,7 +215,7 @@ namespace Coherence.Generated
                 val.rotationSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.rotation = bitStream.ReadQuaternion(12).ToUnityQuaternion();
-                val.FieldsMask |= rotationMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177.rotationMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -248,8 +248,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177(" +
-                $" rotation: { rotation }" +
-                $", rotationSimFrame: { rotationSimulationFrame }" +
+                $" rotation: { this.rotation }" +
+                $", rotationSimFrame: { this.rotationSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

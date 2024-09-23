@@ -126,15 +126,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                idSimulationFrame = other.idSimulationFrame;
-                id = other.id;
+                this.idSimulationFrame = other.idSimulationFrame;
+                this.id = other.id;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                typeSimulationFrame = other.typeSimulationFrame;
-                type = other.type;
+                this.typeSimulationFrame = other.typeSimulationFrame;
+                this.type = other.type;
             }
 
             otherMask >>= 1;
@@ -204,13 +204,13 @@ namespace Coherence.Generated
             {
 
                 val.id = bitStream.ReadUIntegerRange(31, 0);
-                val.FieldsMask |= idMask;
+                val.FieldsMask |= Connection.idMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.type = bitStream.ReadIntegerRange(3, 0);
-                val.FieldsMask |= typeMask;
+                val.FieldsMask |= Connection.typeMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -222,8 +222,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"Connection(" +
-                $" id: { id }" +
-                $" type: { type }" +
+                $" id: { this.id }" +
+                $" type: { this.type }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

@@ -15472,9 +15472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   networkPrefix: '[network] '
   adjustSimulationFrameByPing: 0
-  globalQueryOn: 0
-  ClientConnectionPrefab: {fileID: 0}
-  SimulatorConnectionPrefab: {fileID: 0}
+  enableClientConnections: 0
   ClientConnectionEntry: {fileID: 0}
   SimulatorConnectionEntry: {fileID: 0}
   mainBridge: 0

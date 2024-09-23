@@ -26,15 +26,15 @@ namespace Coherence.Generated
         public struct Interop
         {
             [FieldOffset(0)]
-            public ByteArray value;
-            [FieldOffset(16)]
+            public System.Int32 value;
+            [FieldOffset(4)]
             public System.Byte isFromGroup;
         }
 
         public static unsafe AssetId FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
-            if (dataSize != 17) {
-                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 17) " +
+            if (dataSize != 5) {
+                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 5) " +
                     "for component with ID 16");
             }
 
@@ -47,7 +47,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.value = comp->value.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->value.Data, comp->value.Length) : null;
+            orig.value = comp->value;
             orig.isFromGroup = comp->isFromGroup != 0;
 
             return orig;
@@ -56,7 +56,7 @@ namespace Coherence.Generated
 
         public static uint valueMask => 0b00000000000000000000000000000001;
         public AbsoluteSimulationFrame valueSimulationFrame;
-        public System.String value;
+        public System.Int32 value;
         public static uint isFromGroupMask => 0b00000000000000000000000000000010;
         public AbsoluteSimulationFrame isFromGroupSimulationFrame;
         public System.Boolean isFromGroup;
@@ -122,15 +122,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                valueSimulationFrame = other.valueSimulationFrame;
-                value = other.value;
+                this.valueSimulationFrame = other.valueSimulationFrame;
+                this.value = other.value;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                isFromGroupSimulationFrame = other.isFromGroupSimulationFrame;
-                isFromGroup = other.isFromGroup;
+                this.isFromGroupSimulationFrame = other.isFromGroupSimulationFrame;
+                this.isFromGroup = other.isFromGroup;
             }
 
             otherMask >>= 1;
@@ -161,7 +161,7 @@ namespace Coherence.Generated
 
 
 
-                bitStream.WriteShortString(fieldValue);
+                bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
 
             mask >>= 1;
@@ -193,14 +193,14 @@ namespace Coherence.Generated
             if (bitStream.ReadMask())
             {
 
-                val.value = bitStream.ReadShortString();
-                val.FieldsMask |= valueMask;
+                val.value = bitStream.ReadIntegerRange(32, -2147483648);
+                val.FieldsMask |= AssetId.valueMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.isFromGroup = bitStream.ReadBool();
-                val.FieldsMask |= isFromGroupMask;
+                val.FieldsMask |= AssetId.isFromGroupMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -212,8 +212,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"AssetId(" +
-                $" value: { value }" +
-                $" isFromGroup: { isFromGroup }" +
+                $" value: { this.value }" +
+                $" isFromGroup: { this.isFromGroup }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

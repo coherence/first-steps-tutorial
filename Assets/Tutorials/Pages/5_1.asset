@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff771ccdf4150419d9ff4d342b069aae, type: 3}
   m_Name: 5_1
   m_EditorClassIdentifier: 
+  Title:
+    m_Untranslated: Complex hierarchies
   m_Paragraphs:
     m_Items:
     - m_Type: 6
@@ -46,7 +48,7 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Complex hierarchies
+        m_Untranslated: 
       Text:
         m_Untranslated: 'Game characters and other networked entities are often made
           of very deep hierarchies of nested GameObjects, needing to sync specific
@@ -70,7 +72,7 @@ MonoBehaviour:
 
 
           To learn more
-          about how this scene is setup, go to the <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/5-complex-hierarchies">documentation</a>.'
+          about how this scene is setup, go to the <a href="https://docs.coherence.io/getting-started/samples-and-tutorials/first-steps-tutorial/5-complex-hierarchies">documentation</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}

@@ -95,7 +95,7 @@ namespace Coherence.Generated
         {
             return new HashSet<Entity>()
             {
-                value,
+                this.value,
             };
         }
 
@@ -103,9 +103,9 @@ namespace Coherence.Generated
         {
             uint refsMask = 0;
 
-            if (value == fromEntity)
+            if (this.value == fromEntity)
             {
-                value = toEntity;
+                this.value = toEntity;
                 refsMask |= 1 << 0;
             }
 
@@ -118,14 +118,14 @@ namespace Coherence.Generated
         {
             Entity absoluteEntity;
             IEntityMapper.Error err;
-            err = mapper.MapToAbsoluteEntity(value, false, out absoluteEntity);
+            err = mapper.MapToAbsoluteEntity(this.value, false, out absoluteEntity);
 
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
 
-            value = absoluteEntity;
+            this.value = absoluteEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -138,7 +138,7 @@ namespace Coherence.Generated
             // meaning there's no mapping for the parent yet. This wouldn't be necessary if mapping creation would happen
             // in the clientWorld via create/destroy requests while here we would only check whether mapping exists or not.
             var createParentMapping_value = true;
-            err = mapper.MapToRelativeEntity(value, createParentMapping_value,
+            err = mapper.MapToRelativeEntity(this.value, createParentMapping_value,
              out relativeEntity);
 
             if (err != IEntityMapper.Error.None)
@@ -146,7 +146,7 @@ namespace Coherence.Generated
                 return err;
             }
 
-            value = relativeEntity;
+            this.value = relativeEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -173,29 +173,29 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                valueSimulationFrame = other.valueSimulationFrame;
-                value = other.value;
+                this.valueSimulationFrame = other.valueSimulationFrame;
+                this.value = other.value;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                posSimulationFrame = other.posSimulationFrame;
-                pos = other.pos;
+                this.posSimulationFrame = other.posSimulationFrame;
+                this.pos = other.pos;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                rotSimulationFrame = other.rotSimulationFrame;
-                rot = other.rot;
+                this.rotSimulationFrame = other.rotSimulationFrame;
+                this.rot = other.rot;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                scaleSimulationFrame = other.scaleSimulationFrame;
-                scale = other.scale;
+                this.scaleSimulationFrame = other.scaleSimulationFrame;
+                this.scale = other.scale;
             }
 
             otherMask >>= 1;
@@ -283,25 +283,25 @@ namespace Coherence.Generated
             {
 
                 val.value = bitStream.ReadEntity();
-                val.FieldsMask |= valueMask;
+                val.FieldsMask |= ConnectedEntity.valueMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.pos = bitStream.ReadVector3(FloatMeta.NoCompression()).ToUnityVector3();
-                val.FieldsMask |= posMask;
+                val.FieldsMask |= ConnectedEntity.posMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.rot = bitStream.ReadQuaternion(32).ToUnityQuaternion();
-                val.FieldsMask |= rotMask;
+                val.FieldsMask |= ConnectedEntity.rotMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.scale = bitStream.ReadVector3(FloatMeta.NoCompression()).ToUnityVector3();
-                val.FieldsMask |= scaleMask;
+                val.FieldsMask |= ConnectedEntity.scaleMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -313,10 +313,10 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"ConnectedEntity(" +
-                $" value: { value }" +
-                $" pos: { pos }" +
-                $" rot: { rot }" +
-                $" scale: { scale }" +
+                $" value: { this.value }" +
+                $" pos: { this.pos }" +
+                $" rot: { this.rot }" +
+                $" scale: { this.scale }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(4, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(4, '0') })";
         }

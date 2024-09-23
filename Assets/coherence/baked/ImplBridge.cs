@@ -24,7 +24,7 @@ namespace Coherence.Generated
             Impl.GetSpawnInfo = GetSpawnInfo;
             Impl.GetRootDefinition = GetRootDefinition;
             Impl.CreateConnectionSceneUpdateInternal = CreateConnectionSceneUpdateInternal;
-            Impl.GetComponentInteropHandler = GetComponentInteropHandler;
+            Impl.GetDataInteropHandler = GetDataInteropHandler;
         }
 
         private static uint AssetId()
@@ -50,9 +50,9 @@ namespace Coherence.Generated
                         info.rotation = rot.value;
                         break;
                     case AssetId assetId:
-                        if (CoherenceSyncConfigRegistry.Instance.TryGetFromAssetId(assetId.value, out _))
+                        if (CoherenceSyncConfigRegistry.Instance.GetFromNetworkId(assetId.value, out var config))
                         {
-                            info.assetId = assetId.value;
+                            info.assetId = config.ID; // actual asset ID
                             info.isFromGroup = assetId.isFromGroup;
                             gotUnityAsset = true;
                         }
@@ -92,9 +92,9 @@ namespace Coherence.Generated
             return update;
         }
 
-        private static IComponentInteropHandler GetComponentInteropHandler()
+        private static IDataInteropHandler GetDataInteropHandler()
         {
-            return new ComponentInteropHandler();
+            return new DataInteropHandler();
         }
     }
 

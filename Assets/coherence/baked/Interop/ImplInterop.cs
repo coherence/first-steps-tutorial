@@ -18,7 +18,7 @@ namespace Coherence.Generated
     using Coherence.SimulationFrame;
     using Coherence.Core;
 
-    public class ComponentInteropHandler : IComponentInteropHandler
+    public class DataInteropHandler : IDataInteropHandler
     {
         public unsafe ICoherenceComponentData GetComponent(UInt32 type, IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
@@ -234,7 +234,7 @@ namespace Coherence.Generated
             throw new ArgumentException($"Unkown component type {type}", nameof(type));
         }
 
-        public unsafe void UpdateComponent(CoherenceCore core, InteropEntity entity, ICoherenceComponentData component)
+        public unsafe void UpdateComponent(INativeCoreComponentUpdater updater, InteropEntity entity, ICoherenceComponentData component)
         {
             var componentType = component.GetComponentType();
             var frames = component.GetSimulationFrames();
@@ -248,7 +248,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -259,7 +259,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -270,7 +270,7 @@ namespace Coherence.Generated
 
                     val.localIndex = orig.localIndex;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -282,7 +282,7 @@ namespace Coherence.Generated
                     val.position = orig.position;
                     val.radius = orig.radius;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -293,7 +293,7 @@ namespace Coherence.Generated
 
                     val.index = orig.index;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -303,7 +303,7 @@ namespace Coherence.Generated
                     var val = new Persistence.Interop();
 
 
-                    core.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -317,7 +317,7 @@ namespace Coherence.Generated
                     val.rot = orig.rot;
                     val.scale = orig.scale;
 
-                    core.UpdateComponent(entity, componentType, val, 44, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 44, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -328,7 +328,7 @@ namespace Coherence.Generated
 
                     var pinneduuid = orig.uuid != null ? Encoding.UTF8.GetBytes(orig.uuid) : null; fixed (void* pinnedPtruuid = pinneduuid) { val.uuid = new ByteArray { Data = pinnedPtruuid, Length =  pinneduuid?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -340,7 +340,7 @@ namespace Coherence.Generated
                     val.id = orig.id;
                     val.type = orig.type;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -351,7 +351,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -361,7 +361,7 @@ namespace Coherence.Generated
                     var val = new Global.Interop();
 
 
-                    core.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -371,7 +371,7 @@ namespace Coherence.Generated
                     var val = new GlobalQuery.Interop();
 
 
-                    core.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -382,7 +382,7 @@ namespace Coherence.Generated
 
                     var pinnedtag = orig.tag != null ? Encoding.UTF8.GetBytes(orig.tag) : null; fixed (void* pinnedPtrtag = pinnedtag) { val.tag = new ByteArray { Data = pinnedPtrtag, Length =  pinnedtag?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -393,7 +393,7 @@ namespace Coherence.Generated
 
                     var pinnedtag = orig.tag != null ? Encoding.UTF8.GetBytes(orig.tag) : null; fixed (void* pinnedPtrtag = pinnedtag) { val.tag = new ByteArray { Data = pinnedPtrtag, Length =  pinnedtag?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -403,7 +403,7 @@ namespace Coherence.Generated
                     var val = new PreserveChildren.Interop();
 
 
-                    core.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 0, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -414,7 +414,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -423,12 +423,12 @@ namespace Coherence.Generated
                     var orig = (AssetId)component;
                     var val = new AssetId.Interop();
 
-                    var pinnedvalue = orig.value != null ? Encoding.UTF8.GetBytes(orig.value) : null; fixed (void* pinnedPtrvalue = pinnedvalue) { val.value = new ByteArray { Data = pinnedPtrvalue, Length =  pinnedvalue?.Length ?? 0 };
+                    val.value = orig.value;
                     val.isFromGroup = orig.isFromGroup ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 17, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 5, component.FieldsMask, component.StoppedMask, frames);
 
-}                    return;
+                    return;
                 }
                 case 17:
                 {
@@ -437,7 +437,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -448,7 +448,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -459,7 +459,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -470,7 +470,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -481,7 +481,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -492,7 +492,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -503,7 +503,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -514,7 +514,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -525,7 +525,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -536,7 +536,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -547,7 +547,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -558,7 +558,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -569,7 +569,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -580,7 +580,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -591,7 +591,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -602,7 +602,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -613,7 +613,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -624,7 +624,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -635,7 +635,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -646,7 +646,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -657,7 +657,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -668,7 +668,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -679,7 +679,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -690,7 +690,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -701,7 +701,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -712,7 +712,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -723,7 +723,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -734,7 +734,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -745,7 +745,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -756,7 +756,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -767,7 +767,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -778,7 +778,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -789,7 +789,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -800,7 +800,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -811,7 +811,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -822,7 +822,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -833,7 +833,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -844,7 +844,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -855,7 +855,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -866,7 +866,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -877,7 +877,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -888,7 +888,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -899,7 +899,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -910,7 +910,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -921,7 +921,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -932,7 +932,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -943,7 +943,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -954,7 +954,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -965,7 +965,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -976,7 +976,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -987,7 +987,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -998,7 +998,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1009,7 +1009,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1020,7 +1020,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1031,7 +1031,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1042,7 +1042,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1053,7 +1053,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1064,7 +1064,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1075,7 +1075,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1086,7 +1086,7 @@ namespace Coherence.Generated
 
                     var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1097,7 +1097,7 @@ namespace Coherence.Generated
 
                     var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1108,7 +1108,7 @@ namespace Coherence.Generated
 
                     var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1119,7 +1119,7 @@ namespace Coherence.Generated
 
                     var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1130,7 +1130,7 @@ namespace Coherence.Generated
 
                     var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1141,7 +1141,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1152,7 +1152,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1163,7 +1163,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1174,7 +1174,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1185,7 +1185,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1196,7 +1196,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1207,7 +1207,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1218,7 +1218,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1229,7 +1229,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1240,7 +1240,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1251,7 +1251,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1262,7 +1262,7 @@ namespace Coherence.Generated
 
                     fixed (void* pinnedPtrbytes = orig.bytes) { val.bytes = new ByteArray { Data = pinnedPtrbytes, Length =  orig.bytes?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1273,7 +1273,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1284,7 +1284,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1295,7 +1295,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1306,7 +1306,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1317,7 +1317,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1328,7 +1328,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1339,7 +1339,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1350,7 +1350,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1361,7 +1361,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1372,7 +1372,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1383,7 +1383,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1394,7 +1394,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1405,7 +1405,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1416,7 +1416,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1427,7 +1427,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1438,7 +1438,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1449,7 +1449,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1460,7 +1460,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1471,7 +1471,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1482,7 +1482,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1493,7 +1493,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1504,7 +1504,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1515,7 +1515,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1526,7 +1526,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1537,7 +1537,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1548,7 +1548,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1559,7 +1559,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1570,7 +1570,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1581,7 +1581,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1592,7 +1592,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1603,7 +1603,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1614,7 +1614,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1625,7 +1625,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1636,7 +1636,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1647,7 +1647,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1658,7 +1658,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1669,7 +1669,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1680,7 +1680,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1691,7 +1691,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1702,7 +1702,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1713,7 +1713,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1724,7 +1724,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1735,7 +1735,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1746,7 +1746,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1757,7 +1757,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1768,7 +1768,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1779,7 +1779,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1790,7 +1790,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1801,7 +1801,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1812,7 +1812,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1823,7 +1823,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1834,7 +1834,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1845,7 +1845,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1856,7 +1856,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1867,7 +1867,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1878,7 +1878,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1889,7 +1889,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1900,7 +1900,7 @@ namespace Coherence.Generated
 
                     val.number = orig.number;
 
-                    core.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1911,7 +1911,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1922,7 +1922,7 @@ namespace Coherence.Generated
 
                     val.value = orig.value;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1933,7 +1933,7 @@ namespace Coherence.Generated
 
                     val.count = orig.count;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1945,7 +1945,7 @@ namespace Coherence.Generated
                     var pinnedpath = orig.path != null ? Encoding.UTF8.GetBytes(orig.path) : null; fixed (void* pinnedPtrpath = pinnedpath) { val.path = new ByteArray { Data = pinnedPtrpath, Length =  pinnedpath?.Length ?? 0 };
                     val.pathDirtyCounter = orig.pathDirtyCounter;
 
-                    core.UpdateComponent(entity, componentType, val, 20, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 20, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1956,7 +1956,7 @@ namespace Coherence.Generated
 
                     val.isBeingCarried = orig.isBeingCarried ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1967,7 +1967,7 @@ namespace Coherence.Generated
 
                     val.timer = orig.timer;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -1979,7 +1979,7 @@ namespace Coherence.Generated
                     var pinnedpath = orig.path != null ? Encoding.UTF8.GetBytes(orig.path) : null; fixed (void* pinnedPtrpath = pinnedpath) { val.path = new ByteArray { Data = pinnedPtrpath, Length =  pinnedpath?.Length ?? 0 };
                     val.pathDirtyCounter = orig.pathDirtyCounter;
 
-                    core.UpdateComponent(entity, componentType, val, 20, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 20, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -1990,7 +1990,7 @@ namespace Coherence.Generated
 
                     val.timePlanted = orig.timePlanted;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2001,7 +2001,7 @@ namespace Coherence.Generated
 
                     val.rotation = orig.rotation;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2013,7 +2013,7 @@ namespace Coherence.Generated
                     val.isCarryingObject = orig.isCarryingObject ? (System.Byte)1 : (System.Byte)0;
                     val.grabbableObject = orig.grabbableObject;
 
-                    core.UpdateComponent(entity, componentType, val, 5, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 5, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2024,7 +2024,7 @@ namespace Coherence.Generated
 
                     val.rotation = orig.rotation;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2035,7 +2035,7 @@ namespace Coherence.Generated
 
                     val.position = orig.position;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2046,7 +2046,7 @@ namespace Coherence.Generated
 
                     val.position = orig.position;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2058,7 +2058,7 @@ namespace Coherence.Generated
                     val.position = orig.position;
                     val.rotation = orig.rotation;
 
-                    core.UpdateComponent(entity, componentType, val, 28, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 28, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2069,7 +2069,7 @@ namespace Coherence.Generated
 
                     val.ClawsOpen = orig.ClawsOpen ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2080,7 +2080,7 @@ namespace Coherence.Generated
 
                     val.timer = orig.timer;
 
-                    core.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2091,7 +2091,7 @@ namespace Coherence.Generated
 
                     var pinnedtext = orig.text != null ? Encoding.UTF8.GetBytes(orig.text) : null; fixed (void* pinnedPtrtext = pinnedtext) { val.text = new ByteArray { Data = pinnedPtrtext, Length =  pinnedtext?.Length ?? 0 };
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
 }                    return;
                 }
@@ -2102,7 +2102,7 @@ namespace Coherence.Generated
 
                     val.rotation = orig.rotation;
 
-                    core.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2117,7 +2117,7 @@ namespace Coherence.Generated
                     val.currentBackpack = orig.currentBackpack;
                     val.currentSkinTone = orig.currentSkinTone;
 
-                    core.UpdateComponent(entity, componentType, val, 20, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 20, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2128,7 +2128,7 @@ namespace Coherence.Generated
 
                     val.position = orig.position;
 
-                    core.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2142,7 +2142,7 @@ namespace Coherence.Generated
                     val.CarryingBig = orig.CarryingBig ? (System.Byte)1 : (System.Byte)0;
                     val.CarryingSmall = orig.CarryingSmall ? (System.Byte)1 : (System.Byte)0;
 
-                    core.UpdateComponent(entity, componentType, val, 7, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 7, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }
@@ -2176,7 +2176,7 @@ namespace Coherence.Generated
             throw new ArgumentException($"Unknown input type {type}", nameof(type));
         }
 
-        public unsafe bool SendCommand(CoherenceCore core, InteropEntity entity, MessageTarget target, IEntityCommand command)
+        public unsafe bool SendCommand(INativeCoreCommandSender sender, InteropEntity entity, MessageTarget target, IEntityCommand command)
         {
             var type = command.GetComponentType();
             switch (type)
@@ -2189,7 +2189,7 @@ namespace Coherence.Generated
                     val.requester = orig.requester;
                     val.authorityType = orig.authorityType;
 
-                    return core.SendCommand(entity, target, type, val, 8);
+                    return sender.SendCommand(entity, target, type, val, 8);
 
                 }
 
@@ -2202,7 +2202,7 @@ namespace Coherence.Generated
                     val.accepted = orig.accepted ? (System.Byte)1 : (System.Byte)0;
                     val.authorityType = orig.authorityType;
 
-                    return core.SendCommand(entity, target, type, val, 9);
+                    return sender.SendCommand(entity, target, type, val, 9);
 
                 }
 
@@ -2214,7 +2214,7 @@ namespace Coherence.Generated
                     val.liveQuerySynced = orig.liveQuerySynced ? (System.Byte)1 : (System.Byte)0;
                     val.globalQuerySynced = orig.globalQuerySynced ? (System.Byte)1 : (System.Byte)0;
 
-                    return core.SendCommand(entity, target, type, val, 2);
+                    return sender.SendCommand(entity, target, type, val, 2);
 
                 }
 
@@ -2224,7 +2224,7 @@ namespace Coherence.Generated
                     var val = new AdoptOrphan.Interop();
 
 
-                    return core.SendCommand(entity, target, type, val, 0);
+                    return sender.SendCommand(entity, target, type, val, 0);
 
                 }
 
@@ -2234,7 +2234,7 @@ namespace Coherence.Generated
                     var val = new PersistenceReady.Interop();
 
 
-                    return core.SendCommand(entity, target, type, val, 0);
+                    return sender.SendCommand(entity, target, type, val, 0);
 
                 }
 
@@ -2245,7 +2245,7 @@ namespace Coherence.Generated
 
                     val.sceneIndex = orig.sceneIndex;
 
-                    return core.SendCommand(entity, target, type, val, 4);
+                    return sender.SendCommand(entity, target, type, val, 4);
 
                 }
 
@@ -2261,7 +2261,7 @@ namespace Coherence.Generated
                     val.entityParam3 = orig.entityParam3;
                     val.entityParam4 = orig.entityParam4;
 
-                    return core.SendCommand(entity, target, type, val, 48);
+                    return sender.SendCommand(entity, target, type, val, 48);
 
 }}                }
 
@@ -2271,7 +2271,7 @@ namespace Coherence.Generated
                     var val = new _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8.Interop();
 
 
-                    return core.SendCommand(entity, target, type, val, 0);
+                    return sender.SendCommand(entity, target, type, val, 0);
 
                 }
 
@@ -2281,7 +2281,7 @@ namespace Coherence.Generated
                     var val = new _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b.Interop();
 
 
-                    return core.SendCommand(entity, target, type, val, 0);
+                    return sender.SendCommand(entity, target, type, val, 0);
 
                 }
 
@@ -2292,7 +2292,7 @@ namespace Coherence.Generated
 
                     var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
 
-                    return core.SendCommand(entity, target, type, val, 16);
+                    return sender.SendCommand(entity, target, type, val, 16);
 
 }                }
 
@@ -2303,7 +2303,7 @@ namespace Coherence.Generated
 
                     var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
 
-                    return core.SendCommand(entity, target, type, val, 16);
+                    return sender.SendCommand(entity, target, type, val, 16);
 
 }                }
 
@@ -2312,7 +2312,7 @@ namespace Coherence.Generated
             throw new NotImplementedException($"Failed to send a command with type {type}.");
         }
 
-        public unsafe void SendInput(CoherenceCore core, InteropEntity entity, long frame, IEntityInput input)
+        public unsafe void SendInput(INativeCoreInputSender sender, InteropEntity entity, long frame, IEntityInput input)
         {
             var type = input.GetComponentType();
 

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b91f942a5214496b0e11eaedb54c36, type: 3}
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
+  schemaID: 16f17d93f72e20432216268bba7efeead40cc5fe
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: f2618e8d1484459db317d1c207413c5b
-  schemaID: e2b47b0e2c64ebea24010c0938914e84c7472710
   simulatorSlug: 
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
@@ -31,6 +31,12 @@ MonoBehaviour:
   organizationID: c1ho23prn6r43hh5tc40
   projectID: cetumgdbo1hk1jjq3j00
   projectName: First Steps tutorial
-  defaultTransportMode: 0
+  transportType: 0
+  transportConfiguration: 0
   replicationServerToken: 
   playApiEndpoint: https://api.prod.coherence.io/v1/play
+  schemas:
+  - {fileID: -1758743643018166929, guid: 266a112c2c9e941a58a87a48e7a4f8cb, type: 3}
+  - {fileID: -1758743643018166929, guid: 3aeb27b07acaa41819b7ed83883baf84, type: 3}
+  defaultTransportMode: 0
+  defaultTransportModeMigrated: 1

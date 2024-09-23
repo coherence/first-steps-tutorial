@@ -86,7 +86,7 @@ namespace Coherence.Generated
         {
             return new HashSet<Entity>()
             {
-                value,
+                this.value,
             };
         }
 
@@ -94,9 +94,9 @@ namespace Coherence.Generated
         {
             uint refsMask = 0;
 
-            if (value == fromEntity)
+            if (this.value == fromEntity)
             {
-                value = toEntity;
+                this.value = toEntity;
                 refsMask |= 1 << 0;
             }
 
@@ -109,14 +109,14 @@ namespace Coherence.Generated
         {
             Entity absoluteEntity;
             IEntityMapper.Error err;
-            err = mapper.MapToAbsoluteEntity(value, false, out absoluteEntity);
+            err = mapper.MapToAbsoluteEntity(this.value, false, out absoluteEntity);
 
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
 
-            value = absoluteEntity;
+            this.value = absoluteEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -129,7 +129,7 @@ namespace Coherence.Generated
             // meaning there's no mapping for the parent yet. This wouldn't be necessary if mapping creation would happen
             // in the clientWorld via create/destroy requests while here we would only check whether mapping exists or not.
             var createParentMapping_value = true;
-            err = mapper.MapToRelativeEntity(value, createParentMapping_value,
+            err = mapper.MapToRelativeEntity(this.value, createParentMapping_value,
              out relativeEntity);
 
             if (err != IEntityMapper.Error.None)
@@ -137,7 +137,7 @@ namespace Coherence.Generated
                 return err;
             }
 
-            value = relativeEntity;
+            this.value = relativeEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -150,9 +150,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & valueMask) != 0 && (min == null || valueSimulationFrame < min))
+            if ((FieldsMask & GenericFieldEntity4.valueMask) != 0 && (min == null || this.valueSimulationFrame < min))
             {
-                min = valueSimulationFrame;
+                min = this.valueSimulationFrame;
             }
 
             return min;
@@ -168,8 +168,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                valueSimulationFrame = other.valueSimulationFrame;
-                value = other.value;
+                this.valueSimulationFrame = other.valueSimulationFrame;
+                this.value = other.value;
             }
 
             otherMask >>= 1;
@@ -232,7 +232,7 @@ namespace Coherence.Generated
                 val.valueSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.value = bitStream.ReadEntity();
-                val.FieldsMask |= valueMask;
+                val.FieldsMask |= GenericFieldEntity4.valueMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -244,8 +244,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"GenericFieldEntity4(" +
-                $" value: { value }" +
-                $", valueSimFrame: { valueSimulationFrame }" +
+                $" value: { this.value }" +
+                $", valueSimFrame: { this.valueSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

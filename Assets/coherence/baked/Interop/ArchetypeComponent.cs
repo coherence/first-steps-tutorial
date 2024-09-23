@@ -118,8 +118,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                indexSimulationFrame = other.indexSimulationFrame;
-                index = other.index;
+                this.indexSimulationFrame = other.indexSimulationFrame;
+                this.index = other.index;
             }
 
             otherMask >>= 1;
@@ -174,7 +174,7 @@ namespace Coherence.Generated
             {
 
                 val.index = bitStream.ReadIntegerRange(32, -2147483648);
-                val.FieldsMask |= indexMask;
+                val.FieldsMask |= ArchetypeComponent.indexMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -186,7 +186,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"ArchetypeComponent(" +
-                $" index: { index }" +
+                $" index: { this.index }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }
