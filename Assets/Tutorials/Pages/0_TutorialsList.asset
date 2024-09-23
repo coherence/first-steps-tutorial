@@ -32,7 +32,7 @@ MonoBehaviour:
     Text:
       m_Untranslated: All the topics presented in each lesson scene explained in-depth
     Metadata: 
-    Url: https://docs.coherence.io/learning-coherence/first-steps-tutorial
+    Url: https://docs.coherence.io/getting-started/samples-and-tutorials/first-steps-tutorial
     Image: {fileID: 2800000, guid: e8e8a25fd1b2f46e0aa0591e05d96f00, type: 3}
     Tutorial: {fileID: 0}
   - OrderInView: 1

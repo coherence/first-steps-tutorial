@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff771ccdf4150419d9ff4d342b069aae, type: 3}
   m_Name: 6_1
   m_EditorClassIdentifier: 
+  Title:
+    m_Untranslated: Objects that live on
   m_Paragraphs:
     m_Items:
     - m_Type: 6
@@ -46,7 +48,7 @@ MonoBehaviour:
       m_TutorialButtonText: 
     - m_Type: 0
       Title:
-        m_Untranslated: Objects that live on
+        m_Untranslated: 
       Text:
         m_Untranslated: 'We have seen a lot of examples with objects belonging to
           a Client, and when that Client disconnects, they disappear with them. We
@@ -73,7 +75,7 @@ MonoBehaviour:
 
 
           To
-          learn more about how this scene is setup, go to the <a href="https://docs.coherence.io/learning-coherence/first-steps-tutorial/6-persistence">documentation</a>.'
+          learn more about how this scene is setup, go to the <a href="https://docs.coherence.io/getting-started/samples-and-tutorials/first-steps-tutorial/6-persistence">documentation</a>.'
       m_Tutorial: {fileID: 0}
       m_Image: {fileID: 0}
       m_Video: {fileID: 0}
