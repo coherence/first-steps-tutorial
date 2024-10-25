@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Int32 localIndex;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= LocalUserComponent.localIndexMask;
+            localIndexSimulationFrame = frame;
+        }
+
         public static unsafe LocalUserComponent FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

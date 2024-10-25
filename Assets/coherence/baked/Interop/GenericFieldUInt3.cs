@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.UInt32 number;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= GenericFieldUInt3.numberMask;
+            numberSimulationFrame = frame;
+        }
+
         public static unsafe GenericFieldUInt3 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

@@ -35,6 +35,18 @@ namespace Coherence.Generated
             public System.Byte CarryingSmall;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.MoveSpeedMask;
+            MoveSpeedSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.GroundedMask;
+            GroundedSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.CarryingBigMask;
+            CarryingBigSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.CarryingSmallMask;
+            CarryingSmallSimulationFrame = frame;
+        }
+
         public static unsafe _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 7) {
@@ -67,13 +79,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 7) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 7) " +
-                    "for component with ID 203");
+                    "for component with ID 206");
             }
 
                 
             if (simFramesCount != 4) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 4) " +
-                    "for component with ID 203");
+                    "for component with ID 206");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941();

@@ -31,6 +31,14 @@ namespace Coherence.Generated
             public System.Byte isFromGroup;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= AssetId.valueMask;
+            valueSimulationFrame = frame;
+            FieldsMask |= AssetId.isFromGroupMask;
+            isFromGroupSimulationFrame = frame;
+        }
+
         public static unsafe AssetId FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 5) {

@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Vector2 value;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= GenericField2dVector3.valueMask;
+            valueSimulationFrame = frame;
+        }
+
         public static unsafe GenericField2dVector3 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 8) {

@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Int32 index;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= ArchetypeComponent.indexMask;
+            indexSimulationFrame = frame;
+        }
+
         public static unsafe ArchetypeComponent FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

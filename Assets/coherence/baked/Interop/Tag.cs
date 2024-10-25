@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public ByteArray tag;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= Tag.tagMask;
+            tagSimulationFrame = frame;
+        }
+
         public static unsafe Tag FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 16) {

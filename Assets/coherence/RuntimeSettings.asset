@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b91f942a5214496b0e11eaedb54c36, type: 3}
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
-  schemaID: 16f17d93f72e20432216268bba7efeead40cc5fe
+  schemaID: 9bddde4cb71ff41cb32fd22da79eb428c0bb9bad
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: f2618e8d1484459db317d1c207413c5b
   simulatorSlug: 
@@ -38,5 +38,6 @@ MonoBehaviour:
   schemas:
   - {fileID: -1758743643018166929, guid: 266a112c2c9e941a58a87a48e7a4f8cb, type: 3}
   - {fileID: -1758743643018166929, guid: 3aeb27b07acaa41819b7ed83883baf84, type: 3}
+  extraSchemas: []
   defaultTransportMode: 0
   defaultTransportModeMigrated: 1

@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Quaternion value;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= WorldOrientation.valueMask;
+            valueSimulationFrame = frame;
+        }
+
         public static unsafe WorldOrientation FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 16) {
@@ -121,13 +127,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for component with ID 186");
+                    "for component with ID 187");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 186");
+                    "for component with ID 187");
             }
 
             var orig = new WorldOrientation();
@@ -143,13 +149,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for component with ID 199");
+                    "for component with ID 201");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 199");
+                    "for component with ID 201");
             }
 
             var orig = new WorldOrientation();

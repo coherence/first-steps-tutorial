@@ -5593,6 +5593,7 @@ MonoBehaviour:
   - rid: 9164619121020895242
   - rid: 9164619131893317722
   - rid: 2919437089004585011
+  - rid: 8889060605055205376
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -5653,9 +5654,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124502
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 11b3179c33744fbaa48c8c52ce7a5719
         archetypeData:
           type: 1
@@ -5677,9 +5678,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124503
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 08c9688a6c1b43f0a86856f171ae2df2
         archetypeData:
           type: 1
@@ -5701,9 +5702,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124504
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: e388fa5105b34f7a836fca12ec0a7030
         archetypeData:
           type: 1
@@ -5725,9 +5726,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124505
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 35fe21b9614149b48553511c0683c2f9
         archetypeData:
           type: 1
@@ -5749,9 +5750,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124506
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 9730620f6eb44d01b04e80e5fc5e4856
         archetypeData:
           type: 1
@@ -5774,9 +5775,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124507
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 4d9a62442a074534bca027258cca3b8c
         archetypeData:
           type: 7
@@ -5806,6 +5807,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: CosmeticsChanger, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -5826,6 +5828,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: CosmeticsChanger, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -5846,6 +5849,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: CosmeticsChanger, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -5866,6 +5870,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: CosmeticsChanger, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -5886,6 +5891,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: CosmeticsChanger, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -5906,6 +5912,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -5924,9 +5931,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368830072080302091
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 2ffecec9e60b43ea89f0a6e4bd8598b3
         archetypeData:
           type: 5
@@ -5955,6 +5962,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: TMPro.TextMeshProUGUI, Unity.TextMeshPro, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -5969,9 +5977,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368830094440660995
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 60b57dc105e34765bb249dbf96b35ed4
         archetypeData:
           type: 8
@@ -6001,6 +6009,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -6015,9 +6024,9 @@ MonoBehaviour:
         descriptor:
           rid: 2919437089004585012
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 792d6900fc744c2f9fb47b533b2dadd6
         archetypeData:
           type: 8
@@ -6047,6 +6056,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -6059,8 +6069,55 @@ MonoBehaviour:
         asm: Coherence.Toolkit}
       data:
         component: {fileID: 6792922203483132636}
-        setOnRemote: 1
-        resetOnAuthority: 0
+        enableOnRemote: 1
+        disableOnAuthority: 0
+    - rid: 8889060605055205376
+      type: {class: ScaleBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
+        asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 8889060605055205377
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 657a7178b5644432a17f5d3f7cebe00e
+        archetypeData:
+          type: 7
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 7
+            bits: 32
+            precision: 0.001
+            floatCompression: 0
+        unityComponent: {fileID: 4666490834533792130}
+        coherenceSync: {fileID: 3179031643815677135}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+          type: 2}
+    - rid: 8889060605055205377
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: localScale
+        monoAssemblyType: UnityEngine.Vector3, UnityEngine
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 64
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.ScaleBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
     - rid: 9164619121020895232
       type: {class: FloatAnimatorParameterBinding, ns: Coherence.Toolkit.Bindings,
         asm: Coherence.Toolkit}
@@ -6068,9 +6125,9 @@ MonoBehaviour:
         descriptor:
           rid: 9164619121020895233
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 2280fcb395a942a1b93a293e112d8673
         archetypeData:
           type: 4
@@ -6100,6 +6157,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -6115,9 +6173,9 @@ MonoBehaviour:
         descriptor:
           rid: 9164619121020895237
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: ac5c023b1b544b7ba9b7ce8c808091cc
         archetypeData:
           type: 3
@@ -6147,6 +6205,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -6162,9 +6221,9 @@ MonoBehaviour:
         descriptor:
           rid: 9164619121020895239
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 9be70ffe5c844080bcc6320f8619ca6d
         archetypeData:
           type: 3
@@ -6194,6 +6253,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -6209,9 +6269,9 @@ MonoBehaviour:
         descriptor:
           rid: 9164619121020895241
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 4ee471e890da4553ac8552fed6078db5
         archetypeData:
           type: 3
@@ -6241,6 +6301,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -6255,9 +6316,9 @@ MonoBehaviour:
         descriptor:
           rid: 9164619121020895243
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: d210a4b9ddf7480f974318bf1cd06aa8
         archetypeData:
           type: 0
@@ -6284,6 +6345,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -6298,9 +6360,9 @@ MonoBehaviour:
         descriptor:
           rid: 9164619131893317723
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: e1e87976a62a499c9c88381bbdde8ec3
         archetypeData:
           type: 7
@@ -6330,6 +6392,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:

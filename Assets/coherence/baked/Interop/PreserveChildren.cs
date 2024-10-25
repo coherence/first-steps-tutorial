@@ -27,6 +27,10 @@ namespace Coherence.Generated
         {
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+        }
+
         public static unsafe PreserveChildren FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 0) {

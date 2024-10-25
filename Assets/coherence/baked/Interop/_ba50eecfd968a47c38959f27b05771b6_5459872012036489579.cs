@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Single timer;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.timerMask;
+            timerSimulationFrame = frame;
+        }
+
         public static unsafe _ba50eecfd968a47c38959f27b05771b6_5459872012036489579 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {
@@ -55,13 +61,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 4) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 4) " +
-                    "for component with ID 197");
+                    "for component with ID 199");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 197");
+                    "for component with ID 199");
             }
 
             var orig = new _ba50eecfd968a47c38959f27b05771b6_5459872012036489579();

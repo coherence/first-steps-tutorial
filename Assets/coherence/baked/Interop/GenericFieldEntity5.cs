@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Entity value;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= GenericFieldEntity5.valueMask;
+            valueSimulationFrame = frame;
+        }
+
         public static unsafe GenericFieldEntity5 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

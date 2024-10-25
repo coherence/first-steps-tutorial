@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Char number;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= GenericFieldChar3.numberMask;
+            numberSimulationFrame = frame;
+        }
+
         public static unsafe GenericFieldChar3 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

@@ -31,6 +31,14 @@ namespace Coherence.Generated
             public System.Int32 type;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= Connection.idMask;
+            idSimulationFrame = frame;
+            FieldsMask |= Connection.typeMask;
+            typeSimulationFrame = frame;
+        }
+
         public static unsafe Connection FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 8) {

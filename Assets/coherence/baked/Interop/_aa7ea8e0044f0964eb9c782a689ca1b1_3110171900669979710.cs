@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Quaternion rotation;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710.rotationMask;
+            rotationSimulationFrame = frame;
+        }
+
         public static unsafe _aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 16) {
@@ -55,13 +61,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for component with ID 191");
+                    "for component with ID 193");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 191");
+                    "for component with ID 193");
             }
 
             var orig = new _aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710();
