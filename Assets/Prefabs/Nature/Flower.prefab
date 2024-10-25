@@ -10257,6 +10257,7 @@ MonoBehaviour:
   - rid: 2368829912872124516
   - rid: 2368829912872124517
   - rid: 2368829912872124518
+  - rid: 8889060605055205380
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -10285,9 +10286,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124519
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 880aae33d8da49c2b9d4e0c68eb7a369
         archetypeData:
           type: 12
@@ -10310,9 +10311,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124520
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: ccfa2ea5f634431fbc3362f7da4de3ac
         archetypeData:
           type: 7
@@ -10336,9 +10337,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124521
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: fad1d0ce48674d6ca75d33d243736b45
         archetypeData:
           type: 8
@@ -10368,6 +10369,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Flower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -10388,6 +10390,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -10408,10 +10411,58 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
           assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.RotationBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 8889060605055205380
+      type: {class: ScaleBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
+        asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 8889060605055205381
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: a5ce67c00e9d4d2ab4c61578b00c3b00
+        archetypeData:
+          type: 7
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 7
+            bits: 32
+            precision: 0.001
+            floatCompression: 0
+        unityComponent: {fileID: 7769937714867182896}
+        coherenceSync: {fileID: 5346888412588970518}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+          type: 2}
+    - rid: 8889060605055205381
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: localScale
+        monoAssemblyType: UnityEngine.Vector3, UnityEngine
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 64
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.ScaleBinding,
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []

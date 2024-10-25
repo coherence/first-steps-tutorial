@@ -149,13 +149,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 185");
+                    "for component with ID 186");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 185");
+                    "for component with ID 186");
             }
 
             var orig = new WorldPosition();
@@ -171,13 +171,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 188");
+                    "for component with ID 190");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 188");
+                    "for component with ID 190");
             }
 
             var orig = new WorldPosition();
@@ -193,13 +193,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 196");
+                    "for component with ID 198");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 196");
+                    "for component with ID 198");
             }
 
             var orig = new WorldPosition();
@@ -215,13 +215,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 198");
+                    "for component with ID 200");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 198");
+                    "for component with ID 200");
             }
 
             var orig = new WorldPosition();

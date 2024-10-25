@@ -95,6 +95,7 @@ namespace Coherence.Generated
                         {
                             { 0, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0 },
+                            { 17, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0 },
                             { 157, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
@@ -115,6 +116,7 @@ namespace Coherence.Generated
                         {
                             { 0, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 },
+                            { 17, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0 },
                             { 158, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
@@ -179,6 +181,7 @@ namespace Coherence.Generated
                         {
                             { 0, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 },
+                            { 17, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0 },
                             { 168, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0 },
                             { 169, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0 },
                             { 167, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0 },
