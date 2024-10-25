@@ -37,6 +37,20 @@ namespace Coherence.Generated
             public System.Int32 currentSkinTone;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHatMask;
+            currentHatSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHairStyleMask;
+            currentHairStyleSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentFacialHairMask;
+            currentFacialHairSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentBackpackMask;
+            currentBackpackSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinToneMask;
+            currentSkinToneSimulationFrame = frame;
+        }
+
         public static unsafe _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 20) {

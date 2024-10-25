@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public ByteArray name;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= GenericFieldString0.nameMask;
+            nameSimulationFrame = frame;
+        }
+
         public static unsafe GenericFieldString0 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 16) {

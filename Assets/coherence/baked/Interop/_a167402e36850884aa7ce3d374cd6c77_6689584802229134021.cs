@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.UInt32 timePlanted;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _a167402e36850884aa7ce3d374cd6c77_6689584802229134021.timePlantedMask;
+            timePlantedSimulationFrame = frame;
+        }
+
         public static unsafe _a167402e36850884aa7ce3d374cd6c77_6689584802229134021 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

@@ -38,5 +38,6 @@ MonoBehaviour:
   schemas:
   - {fileID: -1758743643018166929, guid: 266a112c2c9e941a58a87a48e7a4f8cb, type: 3}
   - {fileID: -1758743643018166929, guid: 3aeb27b07acaa41819b7ed83883baf84, type: 3}
+  extraSchemas: []
   defaultTransportMode: 0
   defaultTransportModeMigrated: 1

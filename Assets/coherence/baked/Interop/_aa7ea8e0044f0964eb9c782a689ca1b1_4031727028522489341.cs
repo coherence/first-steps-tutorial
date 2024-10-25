@@ -31,6 +31,14 @@ namespace Coherence.Generated
             public Entity grabbableObject;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341.isCarryingObjectMask;
+            isCarryingObjectSimulationFrame = frame;
+            FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341.grabbableObjectMask;
+            grabbableObjectSimulationFrame = frame;
+        }
+
         public static unsafe _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 5) {

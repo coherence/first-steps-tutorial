@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Vector3 value;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= WorldPosition.valueMask;
+            valueSimulationFrame = frame;
+        }
+
         public static unsafe WorldPosition FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 12) {

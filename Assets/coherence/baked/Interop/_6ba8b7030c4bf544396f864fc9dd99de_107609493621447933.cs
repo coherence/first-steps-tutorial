@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Single timer;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.timerMask;
+            timerSimulationFrame = frame;
+        }
+
         public static unsafe _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

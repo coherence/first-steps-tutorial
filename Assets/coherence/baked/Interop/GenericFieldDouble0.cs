@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Double number;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= GenericFieldDouble0.numberMask;
+            numberSimulationFrame = frame;
+        }
+
         public static unsafe GenericFieldDouble0 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 8) {

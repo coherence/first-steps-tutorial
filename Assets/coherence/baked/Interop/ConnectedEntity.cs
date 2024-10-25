@@ -35,6 +35,18 @@ namespace Coherence.Generated
             public Vector3 scale;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= ConnectedEntity.valueMask;
+            valueSimulationFrame = frame;
+            FieldsMask |= ConnectedEntity.posMask;
+            posSimulationFrame = frame;
+            FieldsMask |= ConnectedEntity.rotMask;
+            rotSimulationFrame = frame;
+            FieldsMask |= ConnectedEntity.scaleMask;
+            scaleSimulationFrame = frame;
+        }
+
         public static unsafe ConnectedEntity FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 44) {

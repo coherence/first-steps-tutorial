@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Byte number;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= GenericFieldByte6.numberMask;
+            numberSimulationFrame = frame;
+        }
+
         public static unsafe GenericFieldByte6 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 1) {

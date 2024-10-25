@@ -31,6 +31,14 @@ namespace Coherence.Generated
             public Quaternion rotation;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.positionMask;
+            positionSimulationFrame = frame;
+            FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.rotationMask;
+            rotationSimulationFrame = frame;
+        }
+
         public static unsafe _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 28) {

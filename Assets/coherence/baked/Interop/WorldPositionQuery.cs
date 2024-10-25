@@ -31,6 +31,14 @@ namespace Coherence.Generated
             public System.Single radius;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= WorldPositionQuery.positionMask;
+            positionSimulationFrame = frame;
+            FieldsMask |= WorldPositionQuery.radiusMask;
+            radiusSimulationFrame = frame;
+        }
+
         public static unsafe WorldPositionQuery FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 16) {

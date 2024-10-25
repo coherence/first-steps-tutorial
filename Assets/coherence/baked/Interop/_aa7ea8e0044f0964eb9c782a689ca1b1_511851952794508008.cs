@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Vector3 position;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008.positionMask;
+            positionSimulationFrame = frame;
+        }
+
         public static unsafe _aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 12) {

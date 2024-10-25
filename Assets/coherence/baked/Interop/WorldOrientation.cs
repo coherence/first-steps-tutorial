@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Quaternion value;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= WorldOrientation.valueMask;
+            valueSimulationFrame = frame;
+        }
+
         public static unsafe WorldOrientation FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 16) {
