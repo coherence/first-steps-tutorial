@@ -2167,8 +2167,9 @@ namespace Coherence.Generated
                   case 6: return GenericCommand.FromInterop(data, dataSize);
                   case 7: return _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8.FromInterop(data, dataSize);
                   case 8: return _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b.FromInterop(data, dataSize);
-                  case 9: return _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.FromInterop(data, dataSize);
-                  case 10: return _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8.FromInterop(data, dataSize);
+                  case 9: return _911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79.FromInterop(data, dataSize);
+                  case 10: return _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.FromInterop(data, dataSize);
+                  case 11: return _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8.FromInterop(data, dataSize);
             }
 
             throw new ArgumentException($"Unkown command type {type}", nameof(type));
@@ -2176,6 +2177,11 @@ namespace Coherence.Generated
 
         public unsafe IEntityInput GetInput(UInt32 type, IntPtr data, Int32 dataSize)
         {
+            switch (type)
+            {
+                  case 0: return _8c7692f3e8b1b43b29b6c99cbeebfcb4.FromInterop(data, dataSize);
+                  case 1: return _f2c23d5d1de1d41789be8ea03996e9b6.FromInterop(data, dataSize);
+            }
             throw new ArgumentException($"Unknown input type {type}", nameof(type));
         }
 
@@ -2290,6 +2296,18 @@ namespace Coherence.Generated
 
                 case 9:
                 {
+                    var orig = (_911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79)command;
+                    var val = new _911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79.Interop();
+
+                    val.clientId = orig.clientId;
+                    val.worldPosition = orig.worldPosition;
+
+                    return sender.SendCommand(entity, target, type, val, 16);
+
+                }
+
+                case 10:
+                {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7)command;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.Interop();
 
@@ -2299,7 +2317,7 @@ namespace Coherence.Generated
 
 }                }
 
-                case 10:
+                case 11:
                 {
                     var orig = (_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8)command;
                     var val = new _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8.Interop();
@@ -2318,6 +2336,32 @@ namespace Coherence.Generated
         public unsafe void SendInput(INativeCoreInputSender sender, InteropEntity entity, long frame, IEntityInput input)
         {
             var type = input.GetComponentType();
+            var inputData = (InputData)input;
+            switch (type)
+            {
+                case 0:
+                {
+                    var orig = (_8c7692f3e8b1b43b29b6c99cbeebfcb4)inputData.Input;
+                    var val = new _8c7692f3e8b1b43b29b6c99cbeebfcb4.Interop();
+
+                    val.Movement = orig.Movement;
+
+                    sender.SendInput(entity, frame, type, val, 8);
+
+                    return;
+                }
+                case 1:
+                {
+                    var orig = (_f2c23d5d1de1d41789be8ea03996e9b6)inputData.Input;
+                    var val = new _f2c23d5d1de1d41789be8ea03996e9b6.Interop();
+
+                    val.Movement = orig.Movement;
+
+                    sender.SendInput(entity, frame, type, val, 8);
+
+                    return;
+                }
+            }
 
             throw new NotImplementedException($"Failed to send an input with type {type}.");
         }

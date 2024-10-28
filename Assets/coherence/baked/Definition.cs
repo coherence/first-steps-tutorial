@@ -20,7 +20,7 @@ namespace Coherence.Generated
 
     public class Definition : IDefinition
     {
-        public const string schemaId = "9bddde4cb71ff41cb32fd22da79eb428c0bb9bad";
+        public const string schemaId = "533560ecc6d2505495a7f0579fac66962717931c";
         public const uint InternalWorldPosition = 0;
         public const uint InternalWorldOrientation = 1;
         public const uint InternalLocalUserComponent = 2;
@@ -238,8 +238,11 @@ namespace Coherence.Generated
         public const uint InternalGenericCommand = 6;
         public const uint Internal_20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8 = 7;
         public const uint Internal_20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b = 8;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 = 9;
-        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8 = 10;
+        public const uint Internal_911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79 = 9;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 = 10;
+        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8 = 11;
+        public const uint Internal_8c7692f3e8b1b43b29b6c99cbeebfcb4 = 0;
+        public const uint Internal_f2c23d5d1de1d41789be8ea03996e9b6 = 1;
 
         private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>()
         {
@@ -476,6 +479,7 @@ namespace Coherence.Generated
             { Definition.InternalGenericCommand , MessageTarget.All },
             { Definition.Internal_20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8 , MessageTarget.All },
             { Definition.Internal_20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b , MessageTarget.All },
+            { Definition.Internal_911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79 , MessageTarget.All },
             { Definition.Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 , MessageTarget.All },
             { Definition.Internal_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8 , MessageTarget.All },
         };
@@ -1286,6 +1290,8 @@ namespace Coherence.Generated
                     return _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8.Deserialize(bitStream, entity, target);
                 case Definition.Internal_20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b:
                     return _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b.Deserialize(bitStream, entity, target);
+                case Definition.Internal_911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79:
+                    return _911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79.Deserialize(bitStream, entity, target);
                 case Definition.Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7:
                     return _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.Deserialize(bitStream, entity, target);
                 case Definition.Internal_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8:
@@ -1300,6 +1306,10 @@ namespace Coherence.Generated
         {
             switch (inputType)
             {
+                case Definition.Internal_8c7692f3e8b1b43b29b6c99cbeebfcb4:
+                    return _8c7692f3e8b1b43b29b6c99cbeebfcb4.Deserialize(bitStream, entity, frame);
+                case Definition.Internal_f2c23d5d1de1d41789be8ea03996e9b6:
+                    return _f2c23d5d1de1d41789be8ea03996e9b6.Deserialize(bitStream, entity, frame);
                 default:
                     throw new System.ArgumentOutOfRangeException(nameof(inputType),
                         $"Missing serialization implementation for an input: {inputType}");
@@ -1386,6 +1396,9 @@ namespace Coherence.Generated
                 case Definition.Internal_20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b:
                     _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b.Serialize((_20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b)data, bitStream);
                     break;
+                case Definition.Internal_911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79:
+                    _911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79.Serialize((_911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79)data, bitStream);
+                    break;
                 case Definition.Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7:
                     _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.Serialize((_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7)data, bitStream);
                     break;
@@ -1405,6 +1418,12 @@ namespace Coherence.Generated
 
             switch (inputType)
             {
+                case Definition.Internal_8c7692f3e8b1b43b29b6c99cbeebfcb4:
+                    _8c7692f3e8b1b43b29b6c99cbeebfcb4.Serialize((_8c7692f3e8b1b43b29b6c99cbeebfcb4)inputData.Input, bitStream);
+                    break;
+                case Definition.Internal_f2c23d5d1de1d41789be8ea03996e9b6:
+                    _f2c23d5d1de1d41789be8ea03996e9b6.Serialize((_f2c23d5d1de1d41789be8ea03996e9b6)inputData.Input, bitStream);
+                    break;
                 default:
                     logger.Error("Missing serialization implementation for an input.", ("input", inputType));
                     break;

@@ -63,7 +63,7 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 velocity = _rigidbody.velocity;
+        Vector3 velocity = _rigidbody.linearVelocity;
 
         VerticalMovement(velocity);
 
@@ -96,8 +96,8 @@ public class Move : MonoBehaviour
             _verticalVelocity = _verticalVelocity.normalized * maxFallSpeed;
 
         // Apply both components to find final frame velocity
-        _rigidbody.velocity = _horizontalVelocity + _verticalVelocity;
-        if (!_isGrounded) _verticalVelocity = Vector3.Project(_rigidbody.velocity, Vector3.up);
+        _rigidbody.linearVelocity = _horizontalVelocity + _verticalVelocity;
+        if (!_isGrounded) _verticalVelocity = Vector3.Project(_rigidbody.linearVelocity, Vector3.up);
 
         if (inputMagnitude > 0f)
         {
@@ -195,7 +195,7 @@ public class Move : MonoBehaviour
             if (_jumpTimer < 0f) InterruptJump();
         }
 
-        _isFalling = !_isGrounded && Vector3.Dot(_rigidbody.velocity, Vector3.up) < 0;
+        _isFalling = !_isGrounded && Vector3.Dot(_rigidbody.linearVelocity, Vector3.up) < 0;
     }
 
     /// <summary>
@@ -213,10 +213,10 @@ public class Move : MonoBehaviour
         LeaveGround();
 
         _verticalVelocity = Vector3.up * jumpForce;
-        Vector3 d = _rigidbody.velocity;
+        Vector3 d = _rigidbody.linearVelocity;
         d -= Vector3.Project(d, Vector3.up);
         d += _verticalVelocity;
-        _rigidbody.velocity = d;
+        _rigidbody.linearVelocity = d;
     }
 
     private void GetOntoPlatform()

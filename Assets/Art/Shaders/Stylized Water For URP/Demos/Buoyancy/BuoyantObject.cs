@@ -83,7 +83,7 @@ public class BuoyantObject : MonoBehaviour
                 rb.AddForceAtPosition(Vector3.up * buoyancy, effectorPosition, ForceMode.Acceleration);
 
                 // drag
-                rb.AddForce(-rb.velocity * velocityDrag * Time.fixedDeltaTime, ForceMode.VelocityChange);
+                rb.AddForce(-rb.linearVelocity * velocityDrag * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
                 // torque
                 rb.AddTorque(-rb.angularVelocity * angularDrag * Time.fixedDeltaTime, ForceMode.Impulse);

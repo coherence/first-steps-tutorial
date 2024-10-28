@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: PersistentCube
+  m_EditorClassIdentifier: 
+  id: 550faae1caaad4c47993c90b73a5e45f
+  selfId: 49d293030edc94726b4270b09a557b67
+  editorTarget: {fileID: 6584736894010694734, guid: 550faae1caaad4c47993c90b73a5e45f,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 8889060676802970344
+  objectInstantiator:
+    rid: 8889060675639050318
+  references:
+    version: 2
+    RefIds:
+    - rid: 8889060675639050318
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 
+    - rid: 8889060676802970344
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 6584736894010694734, guid: 550faae1caaad4c47993c90b73a5e45f,
+          type: 3}

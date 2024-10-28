@@ -70,10 +70,14 @@ command _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8 [id "
 
 command _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b [id "8", routing "All"]
 
-command _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 [id "9", routing "All"]
+command _911e6564da2362b43abf8a4fc001d8f5_c4d1bb29347d4d0d9bcf3284d827ea79 [id "9", routing "All"]
+  clientId UInt 
+  worldPosition Vector3 [compression "None"]
+
+command _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 [id "10", routing "All"]
   name String 
 
-command _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8 [id "10", routing "All"]
+command _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8 [id "11", routing "All"]
   name String 
 
 archetype _20d53524fceab40d5a9ab892525615cb [id "0"]
@@ -182,4 +186,10 @@ archetype _cd9bcc1feead9419fac0c5981ce85c23 [id "7"]
       archetype_field CarryingSmall [bits "1", sim-frames "true"]
     _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033 [id "207", base-id "170"]
       archetype_field position [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01", sim-frames "true"]
+
+input _8c7692f3e8b1b43b29b6c99cbeebfcb4 [id "0"]
+  Movement Vector2 [compression "None"]
+
+input _f2c23d5d1de1d41789be8ea03996e9b6 [id "1"]
+  Movement Vector2 [compression "None"]
 

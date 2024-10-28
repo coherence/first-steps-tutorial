@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: PhysicsSphere
+  m_EditorClassIdentifier: 
+  id: 0ad1a2a127f83c14885e13cddb0ff433
+  selfId: eded3829e5c52435f93a700e6a0e10da
+  editorTarget: {fileID: 4043756831328011012, guid: 0ad1a2a127f83c14885e13cddb0ff433,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 8889060676802970346
+  objectInstantiator:
+    rid: 8889060675639050316
+  references:
+    version: 2
+    RefIds:
+    - rid: 8889060675639050316
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 
+    - rid: 8889060676802970346
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 4043756831328011012, guid: 0ad1a2a127f83c14885e13cddb0ff433,
+          type: 3}
