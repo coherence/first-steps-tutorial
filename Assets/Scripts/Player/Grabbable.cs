@@ -96,6 +96,7 @@ public class Grabbable : MonoBehaviour
         {
             // Authority change happened as a result of a pick up action
             _pickupRequested = false;
+            _rigidbody.isKinematic = true;
             ConfirmPickup();
         }
         else
