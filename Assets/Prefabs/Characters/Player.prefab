@@ -5009,7 +5009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843b27596abb042948292eba0ebad414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomiseCosmeticsAction: {fileID: 5318255346374980034, guid: 97210cd740af04df697b1fa71c9c9623,
+  randomiseCosmeticsAction: {fileID: 5318255346374980034, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
 --- !u!114 &5911091967807195199
 MonoBehaviour:
@@ -5176,11 +5176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00be43e9dab41fb8602de84115f1035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAction: {fileID: -3191349354230456957, guid: 97210cd740af04df697b1fa71c9c9623,
+  moveAction: {fileID: -3191349354230456957, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
-  jumpAction: {fileID: -1716598805974648882, guid: 97210cd740af04df697b1fa71c9c9623,
+  jumpAction: {fileID: -1716598805974648882, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
-  sprintAction: {fileID: -5518264110772991118, guid: 97210cd740af04df697b1fa71c9c9623,
+  sprintAction: {fileID: -5518264110772991118, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
 --- !u!114 &7925058322742570344
 MonoBehaviour:
@@ -6446,7 +6446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e891a53134a4f6d8e209b180b0f7e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabAction: {fileID: -3259049255946443421, guid: 97210cd740af04df697b1fa71c9c9623,
+  grabAction: {fileID: -3259049255946443421, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
   moveScript: {fileID: 7925058322742570344}
 --- !u!114 &3252893623776146192
@@ -6654,7 +6654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bb487035a514b92b7a99ff1c0c6a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantAction: {fileID: 5406493085426262918, guid: 97210cd740af04df697b1fa71c9c9623,
+  plantAction: {fileID: 5406493085426262918, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
   animator: {fileID: 8498588009909292941}
   sync: {fileID: 3179031643815677135}
@@ -6745,7 +6745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325667438b0e14876a1b69f4fca4714b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveAction: {fileID: 2636794350212429863, guid: 97210cd740af04df697b1fa71c9c9623,
+  waveAction: {fileID: 2636794350212429863, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
   animator: {fileID: 8498588009909292941}
   sync: {fileID: 3179031643815677135}

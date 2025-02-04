@@ -51,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09725f67f4c764e3ea5663200cb0c028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateBaseAction: {fileID: 4228525603374323217, guid: 97210cd740af04df697b1fa71c9c9623,
+  rotateBaseAction: {fileID: 4228525603374323217, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
-  climbAction: {fileID: -7913272793160383216, guid: 97210cd740af04df697b1fa71c9c9623,
+  climbAction: {fileID: -7913272793160383216, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
-  protrudeAction: {fileID: 5543805241981586488, guid: 97210cd740af04df697b1fa71c9c9623,
+  protrudeAction: {fileID: 5543805241981586488, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
   armBase: {fileID: 4231088705669423063}
   handIKtarget: {fileID: 7591837871254792591}
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e5db62aa4cb4c3aa4365a6b37d6d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupAction: {fileID: 5254306145021396746, guid: 97210cd740af04df697b1fa71c9c9623,
+  pickupAction: {fileID: 5254306145021396746, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
     type: 3}
   animatorComponent: {fileID: 9849676}
   sync: {fileID: 5196498480957352307}
