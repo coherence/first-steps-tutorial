@@ -26,19 +26,21 @@ namespace Coherence.Generated
         public struct Interop
         {
             [FieldOffset(0)]
-            public System.Int32 currentHat;
-            [FieldOffset(4)]
-            public System.Int32 currentHairStyle;
-            [FieldOffset(8)]
-            public System.Int32 currentFacialHair;
-            [FieldOffset(12)]
-            public System.Int32 currentBackpack;
-            [FieldOffset(16)]
             public System.Int32 currentSkinTone;
+            [FieldOffset(4)]
+            public System.Int32 currentHat;
+            [FieldOffset(8)]
+            public System.Int32 currentHairStyle;
+            [FieldOffset(12)]
+            public System.Int32 currentFacialHair;
+            [FieldOffset(16)]
+            public System.Int32 currentBackpack;
         }
 
         public void ResetFrame(AbsoluteSimulationFrame frame)
         {
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinToneMask;
+            currentSkinToneSimulationFrame = frame;
             FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHatMask;
             currentHatSimulationFrame = frame;
             FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHairStyleMask;
@@ -47,31 +49,29 @@ namespace Coherence.Generated
             currentFacialHairSimulationFrame = frame;
             FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentBackpackMask;
             currentBackpackSimulationFrame = frame;
-            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinToneMask;
-            currentSkinToneSimulationFrame = frame;
         }
 
         public static unsafe _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 20) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 20) " +
-                    "for component with ID 169");
+                    "for component with ID 166");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 169");
+                    "for component with ID 166");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199();
 
             var comp = (Interop*)data;
 
+            orig.currentSkinTone = comp->currentSkinTone;
             orig.currentHat = comp->currentHat;
             orig.currentHairStyle = comp->currentHairStyle;
             orig.currentFacialHair = comp->currentFacialHair;
             orig.currentBackpack = comp->currentBackpack;
-            orig.currentSkinTone = comp->currentSkinTone;
 
             return orig;
         }
@@ -80,47 +80,47 @@ namespace Coherence.Generated
         {
             if (dataSize != 20) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 20) " +
-                    "for component with ID 204");
+                    "for component with ID 187");
             }
 
                 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 204");
+                    "for component with ID 187");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199();
 
             var comp = (Interop*)data;
 
+            orig.currentSkinTone = comp->currentSkinTone;
             orig.currentHat = comp->currentHat;
             orig.currentHairStyle = comp->currentHairStyle;
             orig.currentFacialHair = comp->currentFacialHair;
             orig.currentBackpack = comp->currentBackpack;
-            orig.currentSkinTone = comp->currentSkinTone;
 
             return orig;
         }
 
-        public static uint currentHatMask => 0b00000000000000000000000000000001;
-        public AbsoluteSimulationFrame currentHatSimulationFrame;
-        public System.Int32 currentHat;
-        public static uint currentHairStyleMask => 0b00000000000000000000000000000010;
-        public AbsoluteSimulationFrame currentHairStyleSimulationFrame;
-        public System.Int32 currentHairStyle;
-        public static uint currentFacialHairMask => 0b00000000000000000000000000000100;
-        public AbsoluteSimulationFrame currentFacialHairSimulationFrame;
-        public System.Int32 currentFacialHair;
-        public static uint currentBackpackMask => 0b00000000000000000000000000001000;
-        public AbsoluteSimulationFrame currentBackpackSimulationFrame;
-        public System.Int32 currentBackpack;
-        public static uint currentSkinToneMask => 0b00000000000000000000000000010000;
+        public static uint currentSkinToneMask => 0b00000000000000000000000000000001;
         public AbsoluteSimulationFrame currentSkinToneSimulationFrame;
         public System.Int32 currentSkinTone;
+        public static uint currentHatMask => 0b00000000000000000000000000000010;
+        public AbsoluteSimulationFrame currentHatSimulationFrame;
+        public System.Int32 currentHat;
+        public static uint currentHairStyleMask => 0b00000000000000000000000000000100;
+        public AbsoluteSimulationFrame currentHairStyleSimulationFrame;
+        public System.Int32 currentHairStyle;
+        public static uint currentFacialHairMask => 0b00000000000000000000000000001000;
+        public AbsoluteSimulationFrame currentFacialHairSimulationFrame;
+        public System.Int32 currentFacialHair;
+        public static uint currentBackpackMask => 0b00000000000000000000000000010000;
+        public AbsoluteSimulationFrame currentBackpackSimulationFrame;
+        public System.Int32 currentBackpack;
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 169;
+        public uint GetComponentType() => 166;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000011111;
@@ -160,16 +160,16 @@ namespace Coherence.Generated
         public int GetComponentOrder() => order;
         public bool IsSendOrdered() => false;
 
-        private static readonly System.Int32 _currentHat_Min = -2;
-        private static readonly System.Int32 _currentHat_Max = 3;
-        private static readonly System.Int32 _currentHairStyle_Min = -2;
-        private static readonly System.Int32 _currentHairStyle_Max = 3;
-        private static readonly System.Int32 _currentFacialHair_Min = -2;
-        private static readonly System.Int32 _currentFacialHair_Max = 3;
-        private static readonly System.Int32 _currentBackpack_Min = -2;
-        private static readonly System.Int32 _currentBackpack_Max = 3;
-        private static readonly System.Int32 _currentSkinTone_Min = -2;
-        private static readonly System.Int32 _currentSkinTone_Max = 20;
+        private static readonly System.Int32 _currentSkinTone_Min = -2147483648;
+        private static readonly System.Int32 _currentSkinTone_Max = 2147483647;
+        private static readonly System.Int32 _currentHat_Min = -2147483648;
+        private static readonly System.Int32 _currentHat_Max = 2147483647;
+        private static readonly System.Int32 _currentHairStyle_Min = -2147483648;
+        private static readonly System.Int32 _currentHairStyle_Max = 2147483647;
+        private static readonly System.Int32 _currentFacialHair_Min = -2147483648;
+        private static readonly System.Int32 _currentFacialHair_Max = 2147483647;
+        private static readonly System.Int32 _currentBackpack_Min = -2147483648;
+        private static readonly System.Int32 _currentBackpack_Max = 2147483647;
 
         public AbsoluteSimulationFrame? GetMinSimulationFrame()
         {
@@ -187,6 +187,13 @@ namespace Coherence.Generated
             FieldsMask |= otherMask;
             StoppedMask &= ~(otherMask);
 
+            if ((otherMask & 0x01) != 0)
+            {
+                this.currentSkinToneSimulationFrame = other.currentSkinToneSimulationFrame;
+                this.currentSkinTone = other.currentSkinTone;
+            }
+
+            otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
                 this.currentHatSimulationFrame = other.currentHatSimulationFrame;
@@ -215,13 +222,6 @@ namespace Coherence.Generated
             }
 
             otherMask >>= 1;
-            if ((otherMask & 0x01) != 0)
-            {
-                this.currentSkinToneSimulationFrame = other.currentSkinToneSimulationFrame;
-                this.currentSkinTone = other.currentSkinTone;
-            }
-
-            otherMask >>= 1;
             StoppedMask |= other.StoppedMask;
 
             return this;
@@ -244,6 +244,21 @@ namespace Coherence.Generated
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
 
+                Coherence.Utils.Bounds.Check(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinTone", logger);
+
+                data.currentSkinTone = Coherence.Utils.Bounds.Clamp(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max);
+
+                var fieldValue = data.currentSkinTone;
+
+
+
+                bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
+            }
+
+            mask >>= 1;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+
                 Coherence.Utils.Bounds.Check(data.currentHat, _currentHat_Min, _currentHat_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHat", logger);
 
                 data.currentHat = Coherence.Utils.Bounds.Clamp(data.currentHat, _currentHat_Min, _currentHat_Max);
@@ -252,7 +267,7 @@ namespace Coherence.Generated
 
 
 
-                bitStream.WriteIntegerRange(fieldValue, 3, -2);
+                bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
 
             mask >>= 1;
@@ -267,7 +282,7 @@ namespace Coherence.Generated
 
 
 
-                bitStream.WriteIntegerRange(fieldValue, 3, -2);
+                bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
 
             mask >>= 1;
@@ -282,7 +297,7 @@ namespace Coherence.Generated
 
 
 
-                bitStream.WriteIntegerRange(fieldValue, 3, -2);
+                bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
 
             mask >>= 1;
@@ -297,22 +312,7 @@ namespace Coherence.Generated
 
 
 
-                bitStream.WriteIntegerRange(fieldValue, 3, -2);
-            }
-
-            mask >>= 1;
-            if (bitStream.WriteMask((mask & 0x01) != 0))
-            {
-
-                Coherence.Utils.Bounds.Check(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinTone", logger);
-
-                data.currentSkinTone = Coherence.Utils.Bounds.Clamp(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max);
-
-                var fieldValue = data.currentSkinTone;
-
-
-
-                bitStream.WriteIntegerRange(fieldValue, 5, -2);
+                bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
 
             mask >>= 1;
@@ -332,32 +332,32 @@ namespace Coherence.Generated
             if (bitStream.ReadMask())
             {
 
-                val.currentHat = bitStream.ReadIntegerRange(3, -2);
+                val.currentSkinTone = bitStream.ReadIntegerRange(32, -2147483648);
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinToneMask;
+            }
+            if (bitStream.ReadMask())
+            {
+
+                val.currentHat = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHatMask;
             }
             if (bitStream.ReadMask())
             {
 
-                val.currentHairStyle = bitStream.ReadIntegerRange(3, -2);
+                val.currentHairStyle = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHairStyleMask;
             }
             if (bitStream.ReadMask())
             {
 
-                val.currentFacialHair = bitStream.ReadIntegerRange(3, -2);
+                val.currentFacialHair = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentFacialHairMask;
             }
             if (bitStream.ReadMask())
             {
 
-                val.currentBackpack = bitStream.ReadIntegerRange(3, -2);
+                val.currentBackpack = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentBackpackMask;
-            }
-            if (bitStream.ReadMask())
-            {
-
-                val.currentSkinTone = bitStream.ReadIntegerRange(5, -2);
-                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinToneMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -377,32 +377,32 @@ namespace Coherence.Generated
             if (bitStream.ReadMask())
             {
 
-                val.currentHat = bitStream.ReadIntegerRange(3, -2);
+                val.currentSkinTone = bitStream.ReadIntegerRange(32, -2147483648);
+                val.FieldsMask |= currentSkinToneMask;
+            }
+            if (bitStream.ReadMask())
+            {
+
+                val.currentHat = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= currentHatMask;
             }
             if (bitStream.ReadMask())
             {
 
-                val.currentHairStyle = bitStream.ReadIntegerRange(3, -2);
+                val.currentHairStyle = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= currentHairStyleMask;
             }
             if (bitStream.ReadMask())
             {
 
-                val.currentFacialHair = bitStream.ReadIntegerRange(3, -2);
+                val.currentFacialHair = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= currentFacialHairMask;
             }
             if (bitStream.ReadMask())
             {
 
-                val.currentBackpack = bitStream.ReadIntegerRange(3, -2);
+                val.currentBackpack = bitStream.ReadIntegerRange(32, -2147483648);
                 val.FieldsMask |= currentBackpackMask;
-            }
-            if (bitStream.ReadMask())
-            {
-
-                val.currentSkinTone = bitStream.ReadIntegerRange(5, -2);
-                val.FieldsMask |= currentSkinToneMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -413,11 +413,11 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199(" +
+                $" currentSkinTone: { this.currentSkinTone }" +
                 $" currentHat: { this.currentHat }" +
                 $" currentHairStyle: { this.currentHairStyle }" +
                 $" currentFacialHair: { this.currentFacialHair }" +
                 $" currentBackpack: { this.currentBackpack }" +
-                $" currentSkinTone: { this.currentSkinTone }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(5, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(5, '0') })";
         }

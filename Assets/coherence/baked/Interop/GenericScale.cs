@@ -61,13 +61,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 176");
+                    "for component with ID 171");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 176");
+                    "for component with ID 171");
             }
 
             var orig = new GenericScale();
@@ -83,35 +83,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 184");
+                    "for component with ID 179");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 184");
-            }
-
-            var orig = new GenericScale();
-
-            var comp = (Interop*)data;
-
-            orig.value = comp->value;
-            orig.valueSimulationFrame = simFrames[0].Into();
-
-            return orig;
-        }
-        public static unsafe GenericScale FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
-        {
-            if (dataSize != 12) {
-                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 188");
-            }
-
-                
-            if (simFramesCount != 1) {
-                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 188");
+                    "for component with ID 179");
             }
 
             var orig = new GenericScale();
@@ -127,13 +105,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 202");
+                    "for component with ID 185");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 202");
+                    "for component with ID 185");
             }
 
             var orig = new GenericScale();
@@ -317,27 +295,6 @@ namespace Coherence.Generated
             return val;
         }
         public static GenericScale DeserializeArchetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0(AbsoluteSimulationFrame referenceSimulationFrame, InProtocolBitStream bitStream)
-        {
-            var stoppedMask = (uint)0;
-            if (bitStream.ReadMask())
-            {
-                stoppedMask = bitStream.ReadMaskBits(1);
-            }
-
-            var val = new GenericScale();
-            if (bitStream.ReadMask())
-            {
-                val.valueSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
-
-                val.value = bitStream.ReadVector3(FloatMeta.NoCompression()).ToUnityVector3();
-                val.FieldsMask |= valueMask;
-            }
-
-            val.StoppedMask = stoppedMask;
-
-            return val;
-        }
-        public static GenericScale DeserializeArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0(AbsoluteSimulationFrame referenceSimulationFrame, InProtocolBitStream bitStream)
         {
             var stoppedMask = (uint)0;
             if (bitStream.ReadMask())

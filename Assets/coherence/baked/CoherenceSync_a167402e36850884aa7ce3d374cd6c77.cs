@@ -25,58 +25,6 @@ namespace Coherence.Generated
     using UnityEngine.Scripting;
     
     [UnityEngine.Scripting.Preserve]
-    public class Binding_a167402e36850884aa7ce3d374cd6c77_880aae33d8da49c2b9d4e0c68eb7a369 : UIntBinding
-    {   
-        private global::Flower CastedUnityComponent;
-
-        protected override void OnBindingCloned()
-        {
-    	    CastedUnityComponent = (global::Flower)UnityComponent;
-        }
-
-        public override global::System.Type CoherenceComponentType => typeof(_a167402e36850884aa7ce3d374cd6c77_6689584802229134021);
-        public override string CoherenceComponentName => "_a167402e36850884aa7ce3d374cd6c77_6689584802229134021";
-        public override uint FieldMask => 0b00000000000000000000000000000001;
-
-        public override System.UInt32 Value
-        {
-            get { return (System.UInt32)(CastedUnityComponent.timePlanted); }
-            set { CastedUnityComponent.timePlanted = (System.UInt32)(value); }
-        }
-
-        protected override (System.UInt32 value, AbsoluteSimulationFrame simFrame) ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
-        {
-            var value = ((_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)coherenceComponent).timePlanted;
-
-            var simFrame = ((_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)coherenceComponent).timePlantedSimulationFrame;
-            
-            return (value, simFrame);
-        }
-
-        public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
-        {
-            var update = (_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
-            {
-                update.timePlanted = Value;
-            }
-            else
-            {
-                update.timePlanted = GetInterpolatedAt(simFrame / InterpolationSettings.SimulationFramesPerSecond);
-            }
-
-            update.timePlantedSimulationFrame = simFrame;
-            
-            return update;
-        }
-
-        public override ICoherenceComponentData CreateComponentData()
-        {
-            return new _a167402e36850884aa7ce3d374cd6c77_6689584802229134021();
-        }    
-    }
-    
-    [UnityEngine.Scripting.Preserve]
     public class Binding_a167402e36850884aa7ce3d374cd6c77_ccfa2ea5f634431fbc3362f7da4de3ac : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -246,7 +194,6 @@ namespace Coherence.Generated
         
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
-            ["880aae33d8da49c2b9d4e0c68eb7a369"] = new Binding_a167402e36850884aa7ce3d374cd6c77_880aae33d8da49c2b9d4e0c68eb7a369(),
             ["ccfa2ea5f634431fbc3362f7da4de3ac"] = new Binding_a167402e36850884aa7ce3d374cd6c77_ccfa2ea5f634431fbc3362f7da4de3ac(),
             ["fad1d0ce48674d6ca75d33d243736b45"] = new Binding_a167402e36850884aa7ce3d374cd6c77_fad1d0ce48674d6ca75d33d243736b45(),
             ["a5ce67c00e9d4d2ab4c61578b00c3b00"] = new Binding_a167402e36850884aa7ce3d374cd6c77_a5ce67c00e9d4d2ab4c61578b00c3b00(),

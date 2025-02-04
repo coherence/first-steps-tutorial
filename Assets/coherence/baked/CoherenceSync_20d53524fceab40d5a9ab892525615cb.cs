@@ -25,58 +25,6 @@ namespace Coherence.Generated
     using UnityEngine.Scripting;
     
     [UnityEngine.Scripting.Preserve]
-    public class Binding_20d53524fceab40d5a9ab892525615cb_7711bc2e3be74b03a7060692d306fce7 : IntBinding
-    {   
-        private global::Counter CastedUnityComponent;
-
-        protected override void OnBindingCloned()
-        {
-    	    CastedUnityComponent = (global::Counter)UnityComponent;
-        }
-
-        public override global::System.Type CoherenceComponentType => typeof(_20d53524fceab40d5a9ab892525615cb_5847726189716557621);
-        public override string CoherenceComponentName => "_20d53524fceab40d5a9ab892525615cb_5847726189716557621";
-        public override uint FieldMask => 0b00000000000000000000000000000001;
-
-        public override System.Int32 Value
-        {
-            get { return (System.Int32)(CastedUnityComponent.count); }
-            set { CastedUnityComponent.count = (System.Int32)(value); }
-        }
-
-        protected override (System.Int32 value, AbsoluteSimulationFrame simFrame) ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
-        {
-            var value = ((_20d53524fceab40d5a9ab892525615cb_5847726189716557621)coherenceComponent).count;
-
-            var simFrame = ((_20d53524fceab40d5a9ab892525615cb_5847726189716557621)coherenceComponent).countSimulationFrame;
-            
-            return (value, simFrame);
-        }
-
-        public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
-        {
-            var update = (_20d53524fceab40d5a9ab892525615cb_5847726189716557621)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
-            {
-                update.count = Value;
-            }
-            else
-            {
-                update.count = GetInterpolatedAt(simFrame / InterpolationSettings.SimulationFramesPerSecond);
-            }
-
-            update.countSimulationFrame = simFrame;
-            
-            return update;
-        }
-
-        public override ICoherenceComponentData CreateComponentData()
-        {
-            return new _20d53524fceab40d5a9ab892525615cb_5847726189716557621();
-        }    
-    }
-    
-    [UnityEngine.Scripting.Preserve]
     public class Binding_20d53524fceab40d5a9ab892525615cb_d34657af8900466f81ebcda7b52c281f : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -135,8 +83,6 @@ namespace Coherence.Generated
         private Entity entityId;
         private Logger logger = Coherence.Log.Log.GetLogger<CoherenceSync_20d53524fceab40d5a9ab892525615cb>();
         
-        private global::Counter _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8_CommandTarget;
-        private global::Counter _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b_CommandTarget;
         
         
         private IClient client;
@@ -144,7 +90,6 @@ namespace Coherence.Generated
         
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
-            ["7711bc2e3be74b03a7060692d306fce7"] = new Binding_20d53524fceab40d5a9ab892525615cb_7711bc2e3be74b03a7060692d306fce7(),
             ["d34657af8900466f81ebcda7b52c281f"] = new Binding_20d53524fceab40d5a9ab892525615cb_d34657af8900466f81ebcda7b52c281f(),
         };
         
@@ -152,8 +97,6 @@ namespace Coherence.Generated
         
         public CoherenceSync_20d53524fceab40d5a9ab892525615cb()
         {
-            bakedCommandBindings.Add("2f75e99488a84da2aebe765c3648d9d8", BakeCommandBinding__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8);
-            bakedCommandBindings.Add("7ce8b858d0074d868da45a67d2d9a68b", BakeCommandBinding__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b);
         }
         
         public override Binding BakeValueBinding(Binding valueBinding)
@@ -174,75 +117,11 @@ namespace Coherence.Generated
                 commandBindingBaker.Invoke(commandBinding, commandsHandler);
             }
         }
-    
-        private void BakeCommandBinding__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8(CommandBinding commandBinding, CommandsHandler commandsHandler)
-        {
-            _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8_CommandTarget = (global::Counter)commandBinding.UnityComponent;
-            commandsHandler.AddBakedCommand("Counter.ResetToZero", "()", SendCommand__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8, ReceiveLocalCommand__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8, MessageTarget.All, _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8_CommandTarget, false);
-        }
-        
-        private void SendCommand__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8(MessageTarget target, object[] args)
-        {
-            var command = new _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8();
-            
-        
-            client.SendCommand(command, target, entityId);
-        }
-        
-        private void ReceiveLocalCommand__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8(MessageTarget target, object[] args)
-        {
-            var command = new _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8();
-            
-            
-            ReceiveCommand__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8(command);
-        }
-
-        private void ReceiveCommand__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8(_20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8 command)
-        {
-            var target = _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8_CommandTarget;
-            
-            target.ResetToZero();
-        }
-    
-        private void BakeCommandBinding__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b(CommandBinding commandBinding, CommandsHandler commandsHandler)
-        {
-            _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b_CommandTarget = (global::Counter)commandBinding.UnityComponent;
-            commandsHandler.AddBakedCommand("Counter.AddOne", "()", SendCommand__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b, ReceiveLocalCommand__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b, MessageTarget.All, _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b_CommandTarget, false);
-        }
-        
-        private void SendCommand__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b(MessageTarget target, object[] args)
-        {
-            var command = new _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b();
-            
-        
-            client.SendCommand(command, target, entityId);
-        }
-        
-        private void ReceiveLocalCommand__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b(MessageTarget target, object[] args)
-        {
-            var command = new _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b();
-            
-            
-            ReceiveCommand__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b(command);
-        }
-
-        private void ReceiveCommand__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b(_20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b command)
-        {
-            var target = _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b_CommandTarget;
-            
-            target.AddOne();
-        }
         
         public override void ReceiveCommand(IEntityCommand command)
         {
             switch (command)
             {
-                case _20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8 castedCommand:
-                    ReceiveCommand__20d53524fceab40d5a9ab892525615cb_2f75e99488a84da2aebe765c3648d9d8(castedCommand);
-                    break;
-                case _20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b castedCommand:
-                    ReceiveCommand__20d53524fceab40d5a9ab892525615cb_7ce8b858d0074d868da45a67d2d9a68b(castedCommand);
-                    break;
                 default:
                     logger.Warning($"CoherenceSync_20d53524fceab40d5a9ab892525615cb Unhandled command: {command.GetType()}.");
                     break;

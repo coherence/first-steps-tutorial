@@ -43,12 +43,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 28) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 28) " +
-                    "for component with ID 164");
+                    "for component with ID 161");
             }
 
             if (simFramesCount != 2) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 2) " +
-                    "for component with ID 164");
+                    "for component with ID 161");
             }
 
             var orig = new _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591();
@@ -63,30 +63,6 @@ namespace Coherence.Generated
             return orig;
         }
 
-        public static unsafe _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591 FromInteropArchetype_aa7ea8e0044f0964eb9c782a689ca1b1__aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591_LOD0(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
-        {
-            if (dataSize != 28) {
-                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 28) " +
-                    "for component with ID 196");
-            }
-
-                
-            if (simFramesCount != 2) {
-                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 2) " +
-                    "for component with ID 196");
-            }
-
-            var orig = new _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591();
-
-            var comp = (Interop*)data;
-
-            orig.position = comp->position;
-            orig.positionSimulationFrame = simFrames[0].Into();
-            orig.rotation = comp->rotation;
-            orig.rotationSimulationFrame = simFrames[1].Into();
-
-            return orig;
-        }
 
         public static uint positionMask => 0b00000000000000000000000000000001;
         public AbsoluteSimulationFrame positionSimulationFrame;
@@ -97,7 +73,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 164;
+        public uint GetComponentType() => 161;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000011;
@@ -287,34 +263,6 @@ namespace Coherence.Generated
             return val;
         }
 
-        public static _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591 DeserializeArchetype_aa7ea8e0044f0964eb9c782a689ca1b1__aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591_LOD0(AbsoluteSimulationFrame referenceSimulationFrame, InProtocolBitStream bitStream)
-        {
-            var stoppedMask = (uint)0;
-            if (bitStream.ReadMask())
-            {
-                stoppedMask = bitStream.ReadMaskBits(2);
-            }
-
-            var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591();
-            if (bitStream.ReadMask())
-            {
-                val.positionSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
-
-                val.position = bitStream.ReadVector3(FloatMeta.ForFixedPoint(-100, 600, 0.01d)).ToUnityVector3();
-                val.FieldsMask |= positionMask;
-            }
-            if (bitStream.ReadMask())
-            {
-                val.rotationSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
-
-                val.rotation = bitStream.ReadQuaternion(12).ToUnityQuaternion();
-                val.FieldsMask |= rotationMask;
-            }
-
-            val.StoppedMask = stoppedMask;
-
-            return val;
-        }
 
         public override string ToString()
         {

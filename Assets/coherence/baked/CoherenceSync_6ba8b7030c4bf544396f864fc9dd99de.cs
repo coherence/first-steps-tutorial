@@ -130,13 +130,13 @@ namespace Coherence.Generated
     }
     
     [UnityEngine.Scripting.Preserve]
-    public class Binding_6ba8b7030c4bf544396f864fc9dd99de_3be2dd42ae864876a5edaf23c384feee : FloatBinding
+    public class Binding_6ba8b7030c4bf544396f864fc9dd99de_6f4d8c1f0d1c4c5ab5d4329ce6bd4c86 : FloatBinding
     {   
-        private global::FloatingPlatform CastedUnityComponent;
+        private global::Coherence.FirstSteps.FloatingPlatform CastedUnityComponent;
 
         protected override void OnBindingCloned()
         {
-    	    CastedUnityComponent = (global::FloatingPlatform)UnityComponent;
+    	    CastedUnityComponent = (global::Coherence.FirstSteps.FloatingPlatform)UnityComponent;
         }
 
         public override global::System.Type CoherenceComponentType => typeof(_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933);
@@ -196,7 +196,7 @@ namespace Coherence.Generated
         {
             ["0df60e652de84833bdba9ee29938ab19"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_0df60e652de84833bdba9ee29938ab19(),
             ["39f75b765b9c4976a5a8f469fcfd1985"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_39f75b765b9c4976a5a8f469fcfd1985(),
-            ["3be2dd42ae864876a5edaf23c384feee"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_3be2dd42ae864876a5edaf23c384feee(),
+            ["6f4d8c1f0d1c4c5ab5d4329ce6bd4c86"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_6f4d8c1f0d1c4c5ab5d4329ce6bd4c86(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();

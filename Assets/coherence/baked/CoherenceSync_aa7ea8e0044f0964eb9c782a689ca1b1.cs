@@ -440,110 +440,6 @@ namespace Coherence.Generated
             return new _aa7ea8e0044f0964eb9c782a689ca1b1_9849676();
         }    
     }
-    
-    [UnityEngine.Scripting.Preserve]
-    public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_f0b6f7a4f60f42618fcd91306e2a080c : BoolBinding
-    {   
-        private global::RobotArmHand CastedUnityComponent;
-
-        protected override void OnBindingCloned()
-        {
-    	    CastedUnityComponent = (global::RobotArmHand)UnityComponent;
-        }
-
-        public override global::System.Type CoherenceComponentType => typeof(_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341);
-        public override string CoherenceComponentName => "_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341";
-        public override uint FieldMask => 0b00000000000000000000000000000001;
-
-        public override System.Boolean Value
-        {
-            get { return (System.Boolean)(CastedUnityComponent.isCarryingObject); }
-            set { CastedUnityComponent.isCarryingObject = (System.Boolean)(value); }
-        }
-
-        protected override (System.Boolean value, AbsoluteSimulationFrame simFrame) ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
-        {
-            var value = ((_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341)coherenceComponent).isCarryingObject;
-
-            var simFrame = ((_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341)coherenceComponent).isCarryingObjectSimulationFrame;
-            
-            return (value, simFrame);
-        }
-
-        public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
-        {
-            var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
-            {
-                update.isCarryingObject = Value;
-            }
-            else
-            {
-                update.isCarryingObject = GetInterpolatedAt(simFrame / InterpolationSettings.SimulationFramesPerSecond);
-            }
-
-            update.isCarryingObjectSimulationFrame = simFrame;
-            
-            return update;
-        }
-
-        public override ICoherenceComponentData CreateComponentData()
-        {
-            return new _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341();
-        }    
-    }
-    
-    [UnityEngine.Scripting.Preserve]
-    public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_e1f85bdb19f94e5bb4abe734f041458e : ReferenceBinding
-    {   
-        private global::RobotArmHand CastedUnityComponent;
-
-        protected override void OnBindingCloned()
-        {
-    	    CastedUnityComponent = (global::RobotArmHand)UnityComponent;
-        }
-
-        public override global::System.Type CoherenceComponentType => typeof(_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341);
-        public override string CoherenceComponentName => "_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341";
-        public override uint FieldMask => 0b00000000000000000000000000000010;
-
-        public override Entity Value
-        {
-            get { return coherenceSync.CoherenceBridge.UnityObjectToEntityId(CastedUnityComponent.grabbableObject); }
-            set { CastedUnityComponent.grabbableObject = coherenceSync.CoherenceBridge.EntityIdToTransform(value); }
-        }
-
-        protected override (Entity value, AbsoluteSimulationFrame simFrame) ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
-        {
-            var value = ((_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341)coherenceComponent).grabbableObject;
-
-            var simFrame = ((_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341)coherenceComponent).grabbableObjectSimulationFrame;
-            
-            return (value, simFrame);
-        }
-
-        public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
-        {
-            var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
-            {
-                update.grabbableObject = Value;
-            }
-            else
-            {
-                update.grabbableObject = GetInterpolatedAt(simFrame / InterpolationSettings.SimulationFramesPerSecond);
-            }
-
-            update.grabbableObjectSimulationFrame = simFrame;
-            
-            return update;
-        }
-
-        public override ICoherenceComponentData CreateComponentData()
-        {
-            return new _aa7ea8e0044f0964eb9c782a689ca1b1_4031727028522489341();
-        }    
-    }
 
     [UnityEngine.Scripting.Preserve]
     public class CoherenceSync_aa7ea8e0044f0964eb9c782a689ca1b1 : CoherenceSyncBaked
@@ -567,8 +463,6 @@ namespace Coherence.Generated
             ["18a95da2aa0541dfbca23d72c86e037a"] = new Binding_aa7ea8e0044f0964eb9c782a689ca1b1_18a95da2aa0541dfbca23d72c86e037a(),
             ["436cd823fcf04e0bbb1806a6fcf85de1"] = new Binding_aa7ea8e0044f0964eb9c782a689ca1b1_436cd823fcf04e0bbb1806a6fcf85de1(),
             ["426f5b2eaeaa4fc98611e6235ad861a0"] = new Binding_aa7ea8e0044f0964eb9c782a689ca1b1_426f5b2eaeaa4fc98611e6235ad861a0(),
-            ["f0b6f7a4f60f42618fcd91306e2a080c"] = new Binding_aa7ea8e0044f0964eb9c782a689ca1b1_f0b6f7a4f60f42618fcd91306e2a080c(),
-            ["e1f85bdb19f94e5bb4abe734f041458e"] = new Binding_aa7ea8e0044f0964eb9c782a689ca1b1_e1f85bdb19f94e5bb4abe734f041458e(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
