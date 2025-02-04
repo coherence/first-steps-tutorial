@@ -39,12 +39,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 4) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 4) " +
-                    "for component with ID 156");
+                    "for component with ID 155");
             }
 
-            if (simFramesCount != 1) {
-                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 156");
+            if (simFramesCount != 0) {
+                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
+                    "for component with ID 155");
             }
 
             var orig = new _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933();
@@ -52,7 +52,6 @@ namespace Coherence.Generated
             var comp = (Interop*)data;
 
             orig.timer = comp->timer;
-            orig.timerSimulationFrame = simFrames[0].Into();
 
             return orig;
         }
@@ -61,13 +60,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 4) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 4) " +
-                    "for component with ID 181");
+                    "for component with ID 176");
             }
 
                 
-            if (simFramesCount != 1) {
-                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 181");
+            if (simFramesCount != 0) {
+                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
+                    "for component with ID 176");
             }
 
             var orig = new _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933();
@@ -75,7 +74,6 @@ namespace Coherence.Generated
             var comp = (Interop*)data;
 
             orig.timer = comp->timer;
-            orig.timerSimulationFrame = simFrames[0].Into();
 
             return orig;
         }
@@ -86,24 +84,16 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 156;
+        public uint GetComponentType() => 155;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
         public bool HasFields() => true;
         public bool HasRefFields() => false;
 
-        private long[] simulationFrames;
 
         public long[] GetSimulationFrames() {
-            if (simulationFrames == null)
-            {
-                simulationFrames = new long[1];
-            }
-
-            simulationFrames[0] = timerSimulationFrame;
-
-            return simulationFrames;
+            return null;
         }
 
         public int GetFieldCount() => 1;
@@ -134,15 +124,13 @@ namespace Coherence.Generated
         public int GetComponentOrder() => order;
         public bool IsSendOrdered() => false;
 
+        private static readonly float _timer_Min = -9223372036854775808f;
+        private static readonly float _timer_Max = 9223372036854775807f;
 
         public AbsoluteSimulationFrame? GetMinSimulationFrame()
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.timerMask) != 0 && (min == null || this.timerSimulationFrame < min))
-            {
-                min = this.timerSimulationFrame;
-            }
 
             return min;
         }
@@ -183,16 +171,8 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-                if (isRefSimFrameValid) {
-                    var simFrameDelta = data.timerSimulationFrame - referenceSimulationFrame;
-                    if (simFrameDelta > byte.MaxValue) {
-                        simFrameDelta = byte.MaxValue;
-                    }
 
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, (byte)simFrameDelta);
-                } else {
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
-                }
+                Coherence.Utils.Bounds.Check(data.timer, _timer_Min, _timer_Max, "_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.timer", logger);
 
 
                 var fieldValue = data.timer;
@@ -218,7 +198,6 @@ namespace Coherence.Generated
             var val = new _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933();
             if (bitStream.ReadMask())
             {
-                val.timerSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.timer = bitStream.ReadFloat(FloatMeta.NoCompression());
                 val.FieldsMask |= _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.timerMask;
@@ -240,7 +219,6 @@ namespace Coherence.Generated
             var val = new _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933();
             if (bitStream.ReadMask())
             {
-                val.timerSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.timer = bitStream.ReadFloat(FloatMeta.NoCompression());
                 val.FieldsMask |= timerMask;
@@ -255,7 +233,6 @@ namespace Coherence.Generated
         {
             return $"_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933(" +
                 $" timer: { this.timer }" +
-                $", timerSimFrame: { this.timerSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

@@ -39,12 +39,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 1) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 1) " +
-                    "for component with ID 155");
+                    "for component with ID 154");
             }
 
-            if (simFramesCount != 1) {
-                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 155");
+            if (simFramesCount != 0) {
+                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
+                    "for component with ID 154");
             }
 
             var orig = new _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121();
@@ -52,7 +52,6 @@ namespace Coherence.Generated
             var comp = (Interop*)data;
 
             orig.isBeingCarried = comp->isBeingCarried != 0;
-            orig.isBeingCarriedSimulationFrame = simFrames[0].Into();
 
             return orig;
         }
@@ -61,13 +60,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 1) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 1) " +
-                    "for component with ID 177");
+                    "for component with ID 172");
             }
 
                 
-            if (simFramesCount != 1) {
-                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 177");
+            if (simFramesCount != 0) {
+                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
+                    "for component with ID 172");
             }
 
             var orig = new _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121();
@@ -75,7 +74,6 @@ namespace Coherence.Generated
             var comp = (Interop*)data;
 
             orig.isBeingCarried = comp->isBeingCarried != 0;
-            orig.isBeingCarriedSimulationFrame = simFrames[0].Into();
 
             return orig;
         }
@@ -86,24 +84,16 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 155;
+        public uint GetComponentType() => 154;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
         public bool HasFields() => true;
         public bool HasRefFields() => false;
 
-        private long[] simulationFrames;
 
         public long[] GetSimulationFrames() {
-            if (simulationFrames == null)
-            {
-                simulationFrames = new long[1];
-            }
-
-            simulationFrames[0] = isBeingCarriedSimulationFrame;
-
-            return simulationFrames;
+            return null;
         }
 
         public int GetFieldCount() => 1;
@@ -139,10 +129,6 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.isBeingCarriedMask) != 0 && (min == null || this.isBeingCarriedSimulationFrame < min))
-            {
-                min = this.isBeingCarriedSimulationFrame;
-            }
 
             return min;
         }
@@ -183,16 +169,6 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-                if (isRefSimFrameValid) {
-                    var simFrameDelta = data.isBeingCarriedSimulationFrame - referenceSimulationFrame;
-                    if (simFrameDelta > byte.MaxValue) {
-                        simFrameDelta = byte.MaxValue;
-                    }
-
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, (byte)simFrameDelta);
-                } else {
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
-                }
 
 
                 var fieldValue = data.isBeingCarried;
@@ -218,7 +194,6 @@ namespace Coherence.Generated
             var val = new _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121();
             if (bitStream.ReadMask())
             {
-                val.isBeingCarriedSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.isBeingCarried = bitStream.ReadBool();
                 val.FieldsMask |= _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.isBeingCarriedMask;
@@ -240,7 +215,6 @@ namespace Coherence.Generated
             var val = new _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121();
             if (bitStream.ReadMask())
             {
-                val.isBeingCarriedSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.isBeingCarried = bitStream.ReadBool();
                 val.FieldsMask |= isBeingCarriedMask;
@@ -255,7 +229,6 @@ namespace Coherence.Generated
         {
             return $"_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121(" +
                 $" isBeingCarried: { this.isBeingCarried }" +
-                $", isBeingCarriedSimFrame: { this.isBeingCarriedSimulationFrame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

@@ -138,9 +138,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124472
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 2f75e99488a84da2aebe765c3648d9d8
         archetypeData:
           type: 0
@@ -162,9 +162,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124473
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 7ce8b858d0074d868da45a67d2d9a68b
         archetypeData:
           type: 0
@@ -186,9 +186,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124474
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 7711bc2e3be74b03a7060692d306fce7
         archetypeData:
           type: 1
@@ -211,9 +211,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124475
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: d34657af8900466f81ebcda7b52c281f
         archetypeData:
           type: 7
@@ -243,6 +243,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Counter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -263,6 +264,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Counter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -283,6 +285,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Counter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -303,6 +306,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
