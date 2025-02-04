@@ -31,11 +31,6 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
-      propertyPath: bindings.Array.data[4]
-      value: 8889060605055205378
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
       propertyPath: archetype.archetypeName
       value: RobotArm_Crate_a0e6252c4d09f4fb28257804194356b6
       objectReference: {fileID: 0}
@@ -51,46 +46,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
-      propertyPath: managedReferences[8889060605055205378]
-      value: Coherence.Toolkit Coherence.Toolkit.Bindings.TransformBindings.ScaleBinding
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379]
-      value: Coherence.Toolkit Coherence.Toolkit.Bindings.Descriptor
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].guid
-      value: 0675d43c80e54d9e9e07fd195a2e5ff3
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].name
-      value: localScale
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].routing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].oldName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].syncMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].required
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
       propertyPath: archetype.boundComponents.Array.data[6].component
       value: 
       objectReference: {fileID: 8169318893550734971}
@@ -99,139 +54,6 @@ PrefabInstance:
       propertyPath: archetype.boundComponents.Array.data[7].component
       value: 
       objectReference: {fileID: 5156161361901559470}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].descriptor
-      value: 8889060605055205379
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].CustomData
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].memberType
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].isPredicted
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].coherenceSync
-      value: 
-      objectReference: {fileID: 510202705817254803}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].predictionMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].unityComponent
-      value: 
-      objectReference: {fileID: 1595224895488591654}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].defaultSyncMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].monoAssemblyType
-      value: UnityEngine.Vector3, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.type
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].interpolationSettings
-      value: 
-      objectReference: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
-        type: 2}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].valueSyncCallbackName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.maxRange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.minRange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.sampleRate
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.floatCompression
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.fields.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].ownerType.assemblyQualifiedName
-      value: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].bindingType.assemblyQualifiedName
-      value: Coherence.Toolkit.Bindings.TransformBindings.ScaleBinding, Coherence.Toolkit,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].enforcesLODingWhenFieldsOverriden
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].parameterAssemblyTypes.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205379].oldParameterAssemblyTypes.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.fields.Array.data[0].bits
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.fields.Array.data[0].type
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.fields.Array.data[0].precision
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-        type: 3}
-      propertyPath: managedReferences[8889060605055205378].archetypeData.fields.Array.data[0].floatCompression
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
         type: 3}
       propertyPath: m_RootOrder
@@ -300,24 +122,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6525610836190113121, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 27f1ac5097d4ee4409fbb87ad14f76c2, type: 3}
---- !u!114 &510202705817254803 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 294465140271106047, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 216943351981046892}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff62c046a053f416a8dc48ad6483a25e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1595224895488591654 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1522740331349769034, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 216943351981046892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5156161361901559470 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4939570989761225410, guid: 27f1ac5097d4ee4409fbb87ad14f76c2,

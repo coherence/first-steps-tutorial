@@ -130,7 +130,7 @@ namespace Coherence.Generated
     }
     
     [UnityEngine.Scripting.Preserve]
-    public class Binding_27f1ac5097d4ee4409fbb87ad14f76c2_30faf71a3eca4390a9b05111a455ec05 : ScaleBinding
+    public class Binding_27f1ac5097d4ee4409fbb87ad14f76c2_0675d43c80e54d9e9e07fd195a2e5ff3 : ScaleBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
 
@@ -352,7 +352,7 @@ namespace Coherence.Generated
         {
             ["c898195464f346dfa4262f1c647fa024"] = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_c898195464f346dfa4262f1c647fa024(),
             ["b0541bd4db944c98aae3912bfbdb0f6d"] = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_b0541bd4db944c98aae3912bfbdb0f6d(),
-            ["30faf71a3eca4390a9b05111a455ec05"] = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_30faf71a3eca4390a9b05111a455ec05(),
+            ["0675d43c80e54d9e9e07fd195a2e5ff3"] = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_0675d43c80e54d9e9e07fd195a2e5ff3(),
             ["8761ffc7494f4fada36741f5669ef1b9"] = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_8761ffc7494f4fada36741f5669ef1b9(),
             ["8fb659bfe821436e963e8810ade5244e"] = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_8fb659bfe821436e963e8810ade5244e(),
             ["ccbac1d4f31d4cea96ad45265c6a5613"] = new Binding_27f1ac5097d4ee4409fbb87ad14f76c2_ccbac1d4f31d4cea96ad45265c6a5613(),
