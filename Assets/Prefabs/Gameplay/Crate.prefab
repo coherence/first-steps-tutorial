@@ -130,6 +130,7 @@ MonoBehaviour:
   - rid: 2919437089004584961
   - rid: 134368298502455379
   - rid: 8933473075191349274
+  - rid: 265633315173171200
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -190,6 +191,51 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Grabbable, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.BoolBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 265633315173171200
+      type: {class: BoolBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 265633315173171201
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: ccbac1d4f31d4cea96ad45265c6a5613
+        archetypeData:
+          type: 3
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 3
+            bits: 1
+            precision: 0
+            floatCompression: 0
+        unityComponent: {fileID: 6525610836190113121}
+        coherenceSync: {fileID: 294465140271106047}
+        interpolationSettings: {fileID: 0}
+    - rid: 265633315173171201
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: isBeingCarried
+        monoAssemblyType: System.Boolean, mscorlib
+        required: 1
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.FirstSteps.Grabbable, Assembly-CSharp,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         defaultSyncMode: 0
         CustomData:
           rid: -2
