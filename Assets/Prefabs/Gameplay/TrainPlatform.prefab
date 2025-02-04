@@ -269,7 +269,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5908653995384491889}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -460,9 +460,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368830094440661034
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 0df60e652de84833bdba9ee29938ab19
         archetypeData:
           type: 7
@@ -492,6 +492,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -506,9 +507,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368830094440661036
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 39f75b765b9c4976a5a8f469fcfd1985
         archetypeData:
           type: 8
@@ -538,6 +539,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -556,9 +558,9 @@ MonoBehaviour:
         descriptor:
           rid: 2919437111453024312
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 3be2dd42ae864876a5edaf23c384feee
         archetypeData:
           type: 4
@@ -588,6 +590,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: FloatingPlatform, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:

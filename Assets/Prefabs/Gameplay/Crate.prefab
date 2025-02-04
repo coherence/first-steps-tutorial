@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2212572905728603600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.470953, y: 1.21, z: 1.7617188}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -158,9 +158,9 @@ MonoBehaviour:
         descriptor:
           rid: 134368298502455380
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 7adfb1f9df9d4d9280912a9e293b28d5
         archetypeData:
           type: 3
@@ -190,6 +190,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Grabbable, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -204,9 +205,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124486
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: c898195464f346dfa4262f1c647fa024
         archetypeData:
           type: 7
@@ -230,9 +231,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368829912872124487
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: b0541bd4db944c98aae3912bfbdb0f6d
         archetypeData:
           type: 8
@@ -262,6 +263,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -282,6 +284,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -295,9 +298,9 @@ MonoBehaviour:
         descriptor:
           rid: 2919437089004584962
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 8761ffc7494f4fada36741f5669ef1b9
         archetypeData:
           type: 5
@@ -319,9 +322,9 @@ MonoBehaviour:
         descriptor:
           rid: 2919437089004584963
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 8fb659bfe821436e963e8810ade5244e
         archetypeData:
           type: 1
@@ -350,6 +353,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Coherence.Toolkit.CoherenceNode, Coherence.Toolkit,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -370,6 +374,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Coherence.Toolkit.CoherenceNode, Coherence.Toolkit,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -384,9 +389,9 @@ MonoBehaviour:
         descriptor:
           rid: 8933473075191349275
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 30faf71a3eca4390a9b05111a455ec05
         archetypeData:
           type: 7
@@ -416,6 +421,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:

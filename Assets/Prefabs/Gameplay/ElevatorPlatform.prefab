@@ -94,7 +94,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6146188821451997128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.0014, y: 0.50010014, z: 1.26}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -418,9 +418,9 @@ MonoBehaviour:
         descriptor:
           rid: 2368830094440660997
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 782a248a50a4410696ed90467b4a4913
         archetypeData:
           type: 7
@@ -450,6 +450,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -468,9 +469,9 @@ MonoBehaviour:
         descriptor:
           rid: 2919437111453024314
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 4dbdefe969ef421fb0d0490d9bbb8bc0
         archetypeData:
           type: 4
@@ -500,6 +501,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: FloatingPlatform, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
