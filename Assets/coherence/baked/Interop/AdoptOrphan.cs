@@ -37,6 +37,7 @@ namespace Coherence.Generated
 
         
         public Entity Entity { get; set; }
+        public Coherence.ChannelID ChannelID { get; set; }
         public MessageTarget Routing { get; set; }
         public uint Sender { get; set; }
         public uint GetComponentType() => 3;

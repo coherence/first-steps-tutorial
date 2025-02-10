@@ -10254,10 +10254,10 @@ MonoBehaviour:
   unsyncedNetworkEntityPriority: 0
   preserveChildren: 0
   bindings:
-  - rid: 2368829912872124516
   - rid: 2368829912872124517
   - rid: 2368829912872124518
   - rid: 8889060605055205380
+  - rid: 6129763270525976587
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -10280,30 +10280,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 2368829912872124516
-      type: {class: UIntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 2368829912872124519
-        routing: 1
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: 880aae33d8da49c2b9d4e0c68eb7a369
-        archetypeData:
-          type: 12
-          minRange: 0
-          maxRange: 4294967295
-          sampleRate: 10
-          floatCompression: 0
-          fields:
-          - type: 12
-            bits: 32
-            precision: 0
-            floatCompression: 0
-        unityComponent: {fileID: 6689584802229134021}
-        coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
     - rid: 2368829912872124517
       type: {class: PositionBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -10356,27 +10332,6 @@ MonoBehaviour:
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
           type: 2}
-    - rid: 2368829912872124519
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: timePlanted
-        monoAssemblyType: System.UInt32, mscorlib
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 1
-        valueSyncCallbackName: SetInitialState
-        memberType: 4
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Flower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.UIntBinding,
-            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
     - rid: 2368829912872124520
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -10416,6 +10371,51 @@ MonoBehaviour:
           rid: -2
         bindingType:
           assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.RotationBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 6129763270525976587
+      type: {class: UIntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6129763270525976588
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 0425840f9cb7425197a777ce07e33845
+        archetypeData:
+          type: 12
+          minRange: 0
+          maxRange: 4294967295
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 12
+            bits: 32
+            precision: 0
+            floatCompression: 0
+        unityComponent: {fileID: 6689584802229134021}
+        coherenceSync: {fileID: 5346888412588970518}
+        interpolationSettings: {fileID: 0}
+    - rid: 6129763270525976588
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: timePlanted
+        monoAssemblyType: System.UInt32, mscorlib
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: SetInitialState
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.FirstSteps.Flower, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.UIntBinding,
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []

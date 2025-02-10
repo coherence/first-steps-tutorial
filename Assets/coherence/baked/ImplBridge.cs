@@ -15,6 +15,8 @@ namespace Coherence.Generated
     using Coherence.Entities;
     using Coherence.SimulationFrame;
     using Coherence.Core;
+    using Logger = Log.Logger;
+
     public class CoherenceBridgeImpl
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -32,7 +34,7 @@ namespace Coherence.Generated
             return Definition.InternalAssetId;
         }
 
-        static (bool, SpawnInfo) GetSpawnInfo(IClient client, IncomingEntityUpdate entityUpdate)
+        static (bool, SpawnInfo) GetSpawnInfo(IClient client, IncomingEntityUpdate entityUpdate, Logger logger)
         {
             var info = new SpawnInfo();
             var gotPosition = false;
@@ -55,6 +57,11 @@ namespace Coherence.Generated
                             info.assetId = config.ID; // actual asset ID
                             info.isFromGroup = assetId.isFromGroup;
                             gotUnityAsset = true;
+                        }
+                        else
+                        {
+                            logger.Error(Coherence.Log.Error.ToolkitSpawnInfoMissingConfigSync,
+                                $"Can't find sync config from asset ID: {assetId.value}.");
                         }
                         break;
                     case ConnectedEntity connectedEntity:
@@ -97,6 +104,5 @@ namespace Coherence.Generated
             return new DataInteropHandler();
         }
     }
-
 
 }

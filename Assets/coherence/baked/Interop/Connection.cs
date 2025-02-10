@@ -237,5 +237,4 @@ namespace Coherence.Generated
         }
     }
 
-
 }

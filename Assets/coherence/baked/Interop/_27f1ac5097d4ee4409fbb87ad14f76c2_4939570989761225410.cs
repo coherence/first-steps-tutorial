@@ -43,12 +43,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 20) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 20) " +
-                    "for component with ID 153");
+                    "for component with ID 154");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 153");
+                    "for component with ID 154");
             }
 
             var orig = new _27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410();
@@ -65,13 +65,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 20) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 20) " +
-                    "for component with ID 173");
+                    "for component with ID 177");
             }
 
                 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 173");
+                    "for component with ID 177");
             }
 
             var orig = new _27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410();
@@ -93,7 +93,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 153;
+        public uint GetComponentType() => 154;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000011;
@@ -279,6 +279,5 @@ namespace Coherence.Generated
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }
     }
-
 
 }

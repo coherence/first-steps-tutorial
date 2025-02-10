@@ -57,17 +57,39 @@ namespace Coherence.Generated
             return orig;
         }
 
-        public static unsafe WorldPosition FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
+        public static unsafe WorldPosition FromInteropArchetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 169");
+                    "for component with ID 171");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 169");
+                    "for component with ID 171");
+            }
+
+            var orig = new WorldPosition();
+
+            var comp = (Interop*)data;
+
+            orig.value = comp->value;
+            orig.valueSimulationFrame = simFrames[0].Into();
+
+            return orig;
+        }
+        public static unsafe WorldPosition FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
+        {
+            if (dataSize != 12) {
+                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
+                    "for component with ID 173");
+            }
+
+                
+            if (simFramesCount != 1) {
+                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
+                    "for component with ID 173");
             }
 
             var orig = new WorldPosition();
@@ -83,13 +105,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 174");
+                    "for component with ID 178");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 174");
+                    "for component with ID 178");
             }
 
             var orig = new WorldPosition();
@@ -105,13 +127,35 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 177");
+                    "for component with ID 181");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 177");
+                    "for component with ID 181");
+            }
+
+            var orig = new WorldPosition();
+
+            var comp = (Interop*)data;
+
+            orig.value = comp->value;
+            orig.valueSimulationFrame = simFrames[0].Into();
+
+            return orig;
+        }
+        public static unsafe WorldPosition FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
+        {
+            if (dataSize != 12) {
+                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
+                    "for component with ID 185");
+            }
+
+                
+            if (simFramesCount != 1) {
+                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
+                    "for component with ID 185");
             }
 
             var orig = new WorldPosition();
@@ -127,13 +171,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 181");
+                    "for component with ID 189");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 181");
+                    "for component with ID 189");
             }
 
             var orig = new WorldPosition();
@@ -149,13 +193,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 183");
+                    "for component with ID 191");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 183");
+                    "for component with ID 191");
             }
 
             var orig = new WorldPosition();
@@ -317,6 +361,27 @@ namespace Coherence.Generated
             return val;
         }
 
+        public static WorldPosition DeserializeArchetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(AbsoluteSimulationFrame referenceSimulationFrame, InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
+
+            var val = new WorldPosition();
+            if (bitStream.ReadMask())
+            {
+                val.valueSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
+
+                val.value = bitStream.ReadVector3(FloatMeta.ForFixedPoint(-100, 600, 0.01d)).ToUnityVector3();
+                val.FieldsMask |= valueMask;
+            }
+
+            val.StoppedMask = stoppedMask;
+
+            return val;
+        }
         public static WorldPosition DeserializeArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(AbsoluteSimulationFrame referenceSimulationFrame, InProtocolBitStream bitStream)
         {
             var stoppedMask = (uint)0;
@@ -360,6 +425,27 @@ namespace Coherence.Generated
             return val;
         }
         public static WorldPosition DeserializeArchetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0(AbsoluteSimulationFrame referenceSimulationFrame, InProtocolBitStream bitStream)
+        {
+            var stoppedMask = (uint)0;
+            if (bitStream.ReadMask())
+            {
+                stoppedMask = bitStream.ReadMaskBits(1);
+            }
+
+            var val = new WorldPosition();
+            if (bitStream.ReadMask())
+            {
+                val.valueSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
+
+                val.value = bitStream.ReadVector3(FloatMeta.ForFixedPoint(-100, 600, 0.01d)).ToUnityVector3();
+                val.FieldsMask |= valueMask;
+            }
+
+            val.StoppedMask = stoppedMask;
+
+            return val;
+        }
+        public static WorldPosition DeserializeArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(AbsoluteSimulationFrame referenceSimulationFrame, InProtocolBitStream bitStream)
         {
             var stoppedMask = (uint)0;
             if (bitStream.ReadMask())
@@ -432,6 +518,5 @@ namespace Coherence.Generated
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }
     }
-
 
 }
