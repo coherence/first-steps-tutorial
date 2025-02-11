@@ -2807,7 +2807,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784c870e57f1c4b499b118f4e7cdfa81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
+  extent: 50
+  extentUpdateThreshold: 0.01
+  distanceUpdateThreshold: 0.01
 --- !u!4 &503013440
 Transform:
   m_ObjectHideFlags: 0
@@ -30992,6 +30994,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1812707281308532839, guid: 20d53524fceab40d5a9ab892525615cb,
+        type: 3}
+      propertyPath: scenePrefabInstanceUUID
+      value: -3140
+      objectReference: {fileID: 0}
     - target: {fileID: 6193622242930807434, guid: 20d53524fceab40d5a9ab892525615cb,
         type: 3}
       propertyPath: m_RootOrder

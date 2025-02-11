@@ -388,7 +388,8 @@ namespace Coherence.Generated
             switch (command)
             {
                 default:
-                    logger.Warning($"CoherenceSync_27f1ac5097d4ee4409fbb87ad14f76c2 Unhandled command: {command.GetType()}.");
+                    logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncReceiveCommandUnhandled,
+                        $"CoherenceSync_27f1ac5097d4ee4409fbb87ad14f76c2 Unhandled command: {command.GetType()}.");
                     break;
             }
         }
@@ -415,7 +416,8 @@ namespace Coherence.Generated
                 return components;
             }
     
-            logger.Warning($"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
+            logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
+                $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
             
             return null;
         }
@@ -432,5 +434,4 @@ namespace Coherence.Generated
             this.client = client;        
         }
     }
-
 }

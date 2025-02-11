@@ -40,5 +40,4 @@ namespace Coherence.Generated
             client.RemoveComponents(liveQuery, new []{Definition.InternalTagQuery});
         }
     }
-
 }

@@ -180,6 +180,58 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
+    
+    [UnityEngine.Scripting.Preserve]
+    public class Binding_a167402e36850884aa7ce3d374cd6c77_0425840f9cb7425197a777ce07e33845 : UIntBinding
+    {   
+        private global::Coherence.FirstSteps.Flower CastedUnityComponent;
+
+        protected override void OnBindingCloned()
+        {
+    	    CastedUnityComponent = (global::Coherence.FirstSteps.Flower)UnityComponent;
+        }
+
+        public override global::System.Type CoherenceComponentType => typeof(_a167402e36850884aa7ce3d374cd6c77_6689584802229134021);
+        public override string CoherenceComponentName => "_a167402e36850884aa7ce3d374cd6c77_6689584802229134021";
+        public override uint FieldMask => 0b00000000000000000000000000000001;
+
+        public override System.UInt32 Value
+        {
+            get { return (System.UInt32)(CastedUnityComponent.timePlanted); }
+            set { CastedUnityComponent.timePlanted = (System.UInt32)(value); }
+        }
+
+        protected override (System.UInt32 value, AbsoluteSimulationFrame simFrame) ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
+        {
+            var value = ((_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)coherenceComponent).timePlanted;
+
+            var simFrame = ((_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)coherenceComponent).timePlantedSimulationFrame;
+            
+            return (value, simFrame);
+        }
+
+        public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
+        {
+            var update = (_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)coherenceComponent;
+            if (Interpolator.IsInterpolationNone)
+            {
+                update.timePlanted = Value;
+            }
+            else
+            {
+                update.timePlanted = GetInterpolatedAt(simFrame / InterpolationSettings.SimulationFramesPerSecond);
+            }
+
+            update.timePlantedSimulationFrame = simFrame;
+            
+            return update;
+        }
+
+        public override ICoherenceComponentData CreateComponentData()
+        {
+            return new _a167402e36850884aa7ce3d374cd6c77_6689584802229134021();
+        }    
+    }
 
     [UnityEngine.Scripting.Preserve]
     public class CoherenceSync_a167402e36850884aa7ce3d374cd6c77 : CoherenceSyncBaked
@@ -197,6 +249,7 @@ namespace Coherence.Generated
             ["ccfa2ea5f634431fbc3362f7da4de3ac"] = new Binding_a167402e36850884aa7ce3d374cd6c77_ccfa2ea5f634431fbc3362f7da4de3ac(),
             ["fad1d0ce48674d6ca75d33d243736b45"] = new Binding_a167402e36850884aa7ce3d374cd6c77_fad1d0ce48674d6ca75d33d243736b45(),
             ["a5ce67c00e9d4d2ab4c61578b00c3b00"] = new Binding_a167402e36850884aa7ce3d374cd6c77_a5ce67c00e9d4d2ab4c61578b00c3b00(),
+            ["0425840f9cb7425197a777ce07e33845"] = new Binding_a167402e36850884aa7ce3d374cd6c77_0425840f9cb7425197a777ce07e33845(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
@@ -229,7 +282,8 @@ namespace Coherence.Generated
             switch (command)
             {
                 default:
-                    logger.Warning($"CoherenceSync_a167402e36850884aa7ce3d374cd6c77 Unhandled command: {command.GetType()}.");
+                    logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncReceiveCommandUnhandled,
+                        $"CoherenceSync_a167402e36850884aa7ce3d374cd6c77 Unhandled command: {command.GetType()}.");
                     break;
             }
         }
@@ -256,7 +310,8 @@ namespace Coherence.Generated
                 return components;
             }
     
-            logger.Warning($"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
+            logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
+                $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
             
             return null;
         }
@@ -273,5 +328,4 @@ namespace Coherence.Generated
             this.client = client;        
         }
     }
-
 }

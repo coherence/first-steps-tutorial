@@ -106,10 +106,10 @@ MonoBehaviour:
   unsyncedNetworkEntityPriority: 0
   preserveChildren: 0
   bindings:
-  - rid: 2368829912872124468
-  - rid: 2368829912872124469
-  - rid: 2368829912872124470
   - rid: 2368829912872124471
+  - rid: 6129763270525976576
+  - rid: 6129763270525976578
+  - rid: 6129763270525976580
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -132,78 +132,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 2368829912872124468
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 2368829912872124472
-        routing: 1
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: 2f75e99488a84da2aebe765c3648d9d8
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 20
-          floatCompression: 0
-          fields:
-          - type: 0
-            bits: 0
-            precision: 0
-            floatCompression: 0
-        unityComponent: {fileID: 5847726189716557621}
-        coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
-    - rid: 2368829912872124469
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 2368829912872124473
-        routing: 1
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: 7ce8b858d0074d868da45a67d2d9a68b
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 20
-          floatCompression: 0
-          fields:
-          - type: 0
-            bits: 0
-            precision: 0
-            floatCompression: 0
-        unityComponent: {fileID: 5847726189716557621}
-        coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
-    - rid: 2368829912872124470
-      type: {class: IntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 2368829912872124474
-        routing: 1
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: 7711bc2e3be74b03a7060692d306fce7
-        archetypeData:
-          type: 1
-          minRange: 0
-          maxRange: 40
-          sampleRate: 10
-          floatCompression: 0
-          fields:
-          - type: 1
-            bits: 6
-            precision: 0
-            floatCompression: 0
-        unityComponent: {fileID: 5847726189716557621}
-        coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
     - rid: 2368829912872124471
       type: {class: PositionBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -230,69 +158,6 @@ MonoBehaviour:
         coherenceSync: {fileID: 0}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
           type: 2}
-    - rid: 2368829912872124472
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: ResetToZero
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Counter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
-    - rid: 2368829912872124473
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: AddOne
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Counter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
-    - rid: 2368829912872124474
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: count
-        monoAssemblyType: System.Int32, mscorlib
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 1
-        valueSyncCallbackName: OnValueSyncedRemotely
-        memberType: 4
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Counter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.IntBinding,
-            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
     - rid: 2368829912872124475
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -311,6 +176,133 @@ MonoBehaviour:
           rid: -2
         bindingType:
           assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.PositionBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 6129763270525976576
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6129763270525976577
+        routing: 1
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 51bbdff1d75844e38e05ad8d40305814
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 0
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 5847726189716557621}
+        coherenceSync: {fileID: 1812707281308532839}
+        interpolationSettings: {fileID: 0}
+    - rid: 6129763270525976577
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: AddOne
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.FirstSteps.Counter, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 6129763270525976578
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6129763270525976579
+        routing: 1
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: cec10b75335d48519f4b958f85ca6685
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 0
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 5847726189716557621}
+        coherenceSync: {fileID: 1812707281308532839}
+        interpolationSettings: {fileID: 0}
+    - rid: 6129763270525976579
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: ResetToZero
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.FirstSteps.Counter, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 6129763270525976580
+      type: {class: IntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6129763270525976581
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 64c2e2c02f7f4ed9a1c5d5ce2b9ca101
+        archetypeData:
+          type: 1
+          minRange: -2147483648
+          maxRange: 2147483647
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 1
+            bits: 32
+            precision: 0
+            floatCompression: 0
+        unityComponent: {fileID: 5847726189716557621}
+        coherenceSync: {fileID: 1812707281308532839}
+        interpolationSettings: {fileID: 0}
+    - rid: 6129763270525976581
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: count
+        monoAssemblyType: System.Int32, mscorlib
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: OnValueSyncedRemotely
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.FirstSteps.Counter, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.IntBinding,
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []

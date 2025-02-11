@@ -193,5 +193,4 @@ namespace Coherence.Generated
         }
     }
 
-
 }
