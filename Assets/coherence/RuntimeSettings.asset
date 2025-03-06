@@ -28,8 +28,8 @@ MonoBehaviour:
   localHttpServerPort: 42006
   localDevelopmentMode: 1
   useDebugStreams: 0
-  organizationID:
-  projectID:
+  organizationID: 
+  projectID: 
   projectName: First Steps tutorial
   transportType: 0
   transportConfiguration: 0
