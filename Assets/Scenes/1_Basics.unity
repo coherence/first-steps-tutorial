@@ -2112,7 +2112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784c870e57f1c4b499b118f4e7cdfa81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
+  extent: 50
+  extentUpdateThreshold: 0.01
+  distanceUpdateThreshold: 0.01
 --- !u!4 &503013440
 Transform:
   m_ObjectHideFlags: 0
