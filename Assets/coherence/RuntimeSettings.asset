@@ -28,11 +28,17 @@ MonoBehaviour:
   localHttpServerPort: 42006
   localDevelopmentMode: 1
   useDebugStreams: 0
-  organizationID: 
-  projectID: 
+  organizationID: c1ho23prn6r43hh5tc40
+  projectID: cetumgdbo1hk1jjq3j00
   projectName: First Steps tutorial
   transportType: 0
   transportConfiguration: 0
+  advancedSettings:
+    ThreadResumer:
+      Enabled: 0
+      SearchIntervalMs: 50
+      LongSearchWarnThresholdMs: 50
+      WarnOnSuspension: 1
   replicationServerToken: 
   playApiEndpoint: https://api.prod.coherence.io/v1/play
   schemas:
