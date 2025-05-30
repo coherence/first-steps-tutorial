@@ -23,7 +23,6 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_20d53524fceab40d5a9ab892525615cb_d34657af8900466f81ebcda7b52c281f : PositionBinding
     {   
@@ -76,7 +75,6 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_20d53524fceab40d5a9ab892525615cb_64c2e2c02f7f4ed9a1c5d5ce2b9ca101 : IntBinding
     {   
@@ -144,8 +142,8 @@ namespace Coherence.Generated
         
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
-            ["d34657af8900466f81ebcda7b52c281f"] = new Binding_20d53524fceab40d5a9ab892525615cb_d34657af8900466f81ebcda7b52c281f(),
-            ["64c2e2c02f7f4ed9a1c5d5ce2b9ca101"] = new Binding_20d53524fceab40d5a9ab892525615cb_64c2e2c02f7f4ed9a1c5d5ce2b9ca101(),
+			["d34657af8900466f81ebcda7b52c281f"] = new Binding_20d53524fceab40d5a9ab892525615cb_d34657af8900466f81ebcda7b52c281f(),
+			["64c2e2c02f7f4ed9a1c5d5ce2b9ca101"] = new Binding_20d53524fceab40d5a9ab892525615cb_64c2e2c02f7f4ed9a1c5d5ce2b9ca101(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
@@ -174,7 +172,6 @@ namespace Coherence.Generated
                 commandBindingBaker.Invoke(commandBinding, commandsHandler);
             }
         }
-    
         private void BakeCommandBinding__20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814_CommandTarget = (global::Coherence.FirstSteps.Counter)commandBinding.UnityComponent;
@@ -203,7 +200,6 @@ namespace Coherence.Generated
             
             target.AddOne();
         }
-    
         private void BakeCommandBinding__20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685_CommandTarget = (global::Coherence.FirstSteps.Counter)commandBinding.UnityComponent;
@@ -250,32 +246,29 @@ namespace Coherence.Generated
             }
         }
         
-        public override List<ICoherenceComponentData> CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame)
+        public override void CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame, List<ICoherenceComponentData> components)
         {
+
             if (!usesLodsAtRuntime)
             {
-                return null;
+                return;
             }
             
             if (Archetypes.IndexForName.TryGetValue(archetypeName, out int archetypeIndex))
             {
-                var components = new List<ICoherenceComponentData>()
-                {
-                    new ArchetypeComponent
+                components.Add(new ArchetypeComponent
                     {
                         index = archetypeIndex,
                         indexSimulationFrame = simFrame,
                         FieldsMask = 0b1
                     }
-                };
+                );
 
-                return components;
+                return;                
             }
     
             logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
                 $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
-            
-            return null;
         }
         
         public override void Dispose()

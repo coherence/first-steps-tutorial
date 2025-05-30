@@ -16,29 +16,8 @@ namespace Coherence.Generated
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void OnRuntimeMethodLoad()
         {
-            Impl.CreateLiveQuery = CreateLiveQuery;
             Impl.UpdateLiveQuery = UpdateLiveQuery;
-        }
-
-        private static Entity CreateLiveQuery(IClient client, float radius, Vector3 pos, AbsoluteSimulationFrame simFrame) {
-            var components = new ICoherenceComponentData[] {
-                new WorldPosition
-                {
-                    value = pos,
-                    valueSimulationFrame = simFrame,
-                    FieldsMask = 0b1,
-                },
-                new WorldPositionQuery
-                {
-                    position = pos,
-                    radius = radius,
-                    positionSimulationFrame = simFrame,
-                    radiusSimulationFrame = simFrame,
-                    FieldsMask = 0b11,
-                }
-            };
-
-            return client.CreateEntity(components, false);
+            Impl.RemoveLiveQuery = RemoveLiveQuery;
         }
 
         private static void UpdateLiveQuery(IClient client, Entity liveQuery, float radius, Vector3 pos, AbsoluteSimulationFrame simFrame)
@@ -58,6 +37,11 @@ namespace Coherence.Generated
             };
 
             client.UpdateComponents(liveQuery, components);
+        }
+
+        private static void RemoveLiveQuery(IClient client, Entity liveQuery)
+        {
+            client.RemoveComponents(liveQuery, new []{Definition.InternalWorldPositionQuery});
         }
     }
 }

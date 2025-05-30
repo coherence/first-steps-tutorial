@@ -23,9 +23,7 @@ namespace Coherence.Generated
         {
             Impl.ComponentNameFromTypeId = ComponentNameFromTypeId;
             Impl.CreateInitialComponents = CreateInitialComponents;
-            Impl.ReceiveGenericCommand = ReceiveGenericCommand;
             Impl.ReceiveInternalCommand = ReceiveInternalCommand;
-            Impl.SendGenericCommand = SendGenericCommand;
             Impl.CreateConnectedEntityUpdateInternal = CreateConnectedEntityUpdateInternal;
             Impl.GetConnectedEntityComponentIdInternal = GetConnectedEntityComponentIdInternal;
             Impl.UpdateTag = UpdateTag;
@@ -84,74 +82,6 @@ namespace Coherence.Generated
             }
 
             return comps.ToArray();
-        }
-
-        private static void SendGenericCommand(ICoherenceSync self, IClient client, string commandName, MessageTarget messageTarget, ChannelID channelID, byte[] data, Entity[] entityIDs, Logger logger)
-        {
-            Entity targetEntity = self.EntityState.EntityID;
-
-            if (messageTarget == MessageTarget.AuthorityOnly && client.HasAuthorityOverEntity(targetEntity, AuthorityType.State))
-            {
-                logger.Warning(Coherence.Log.Warning.ToolkitGenericCommandSendToOwned,
-                    $"Can't send {MessageTarget.AuthorityOnly} command to entity that is owned. Command={commandName} EntityId={targetEntity}");
-                return;
-            }
-
-            if (!client.EntityExists(targetEntity))
-            {
-                logger.Warning(Coherence.Log.Warning.ToolkitGenericCommandSendNotExist,
-                    $"Can't send command to entity that doesn't exist. Command={commandName} EntityId={targetEntity}");
-                return;
-            }
-
-            if (entityIDs.Length > GenericNetworkCommandArgs.MAX_ENTITY_REFS)
-            {
-                logger.Warning(Coherence.Log.Warning.ToolkitGenericCommandSendMaxRefs,
-                    $"Can't send command that has more than {GenericNetworkCommandArgs.MAX_ENTITY_REFS} entityID parameters. Command={commandName} EntityId={targetEntity}");
-                return;
-            }
-
-            var sIDs = new Entity[GenericNetworkCommandArgs.MAX_ENTITY_REFS];
-            if (entityIDs != null)
-            {
-                for (int i = 0; i < entityIDs.Length; i++)
-                {
-                    sIDs[i] = entityIDs[i];
-                }
-            }
-
-            var command = new GenericCommand
-            {
-                name = String.IsNullOrEmpty(commandName) ? "" : commandName,
-                commandData = data,
-                entityParam1 = sIDs[0],
-                entityParam2 = sIDs[1],
-                entityParam3 = sIDs[2],
-                entityParam4 = sIDs[3],
-            };
-
-            client.SendCommand(command, messageTarget, targetEntity, channelID);
-        }
-
-        private static void ReceiveGenericCommand(ICoherenceSync self, IEntityCommand command, MessageTarget target, Logger logger)
-        {
-            if (!(command is GenericCommand))
-            {
-                logger.Warning(Coherence.Log.Warning.ToolkitGenericMessageReceiveUnknown,
-                    $"[coherenceSync] Received unknown type of command in reflected mode: {command.GetType()}. {self}");
-                return;
-            }
-
-            var genericCommand = (GenericCommand)command;
-            var commandName = genericCommand.name;
-            var commandData = genericCommand.commandData;
-            var entityIDs = new Entity[GenericNetworkCommandArgs.MAX_ENTITY_REFS];
-            entityIDs[0] = genericCommand.entityParam1;
-            entityIDs[1] = genericCommand.entityParam2;
-            entityIDs[2] = genericCommand.entityParam3;
-            entityIDs[3] = genericCommand.entityParam4;
-
-            self.ProcessGenericNetworkCommand(commandName, target, commandData, entityIDs);
         }
 
         /// <summary>Handles internal commands.</summary>

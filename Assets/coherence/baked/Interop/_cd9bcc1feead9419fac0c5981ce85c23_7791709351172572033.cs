@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033 : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -39,12 +38,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 169");
+                    "for component with ID 34");
             }
 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 169");
+                    "for component with ID 34");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033();
@@ -61,13 +60,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 198");
+                    "for component with ID 63");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 198");
+                    "for component with ID 63");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033();
@@ -86,7 +85,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 169;
+        public uint GetComponentType() => 34;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;

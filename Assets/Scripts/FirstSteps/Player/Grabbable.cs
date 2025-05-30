@@ -1,5 +1,4 @@
 using System;
-using Coherence.Connection;
 using Coherence.Toolkit;
 using UnityEngine;
 
@@ -35,7 +34,7 @@ namespace Coherence.FirstSteps
         
         private void OnEnable()
         {
-            _sync.OnAuthorityRequested += OnAuthorityRequested;
+            _sync.OnAuthorityRequest.AddListener(OnAuthorityRequested);
             _sync.OnStateAuthority.AddListener(OnStateAuthority);
             _sync.OnStateRemote.AddListener(OnStateRemote);
             _sync.OnAuthorityRequestRejected.AddListener(OnRequestRejected);
@@ -43,7 +42,7 @@ namespace Coherence.FirstSteps
 
         private void OnDisable()
         {
-            _sync.OnAuthorityRequested -= OnAuthorityRequested;
+            _sync.OnAuthorityRequest.RemoveListener(OnAuthorityRequested);
             _sync.OnStateAuthority.RemoveListener(OnStateAuthority);
             _sync.OnStateRemote.RemoveListener(OnStateRemote);
             _sync.OnAuthorityRequestRejected.RemoveListener(OnRequestRejected);
@@ -53,11 +52,12 @@ namespace Coherence.FirstSteps
         /// This method is called when another client requests authority. It will reject it if the grabbable
         /// has just been picked up by the local player. This avoids many race conditions,
         /// where another player would request authority in the same frame that the local player is picking
-        /// the grabbable up, leading to a the object being in a broken state.
+        /// the grabbable up, leading to the object being in a broken state.
         /// </summary>
-        private bool OnAuthorityRequested(ClientID requesterid, AuthorityType authoritytype, CoherenceSync sync)
+        private void OnAuthorityRequested(AuthorityRequest request, CoherenceSync sync)
         {
-            return !isBeingCarried;
+            var accept = !isBeingCarried;
+            request.Respond(accept);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Coherence.FirstSteps
             _lastAuthorityChangeTime = Time.time;
             if(_pickupRequested)
             {
-                // Authority change happened as a result of a pick up action
+                // Authority change happened as a result of a pickup action
                 _pickupRequested = false;
                 _rigidbody.isKinematic = true;
                 ConfirmPickup();

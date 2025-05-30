@@ -32,7 +32,7 @@ namespace Coherence.Generated
                         ComponentReplacement = new Dictionary<uint, uint>
                         {
                             { 0, Definition.InternalArchetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0 },
-                            { 153, Definition.InternalArchetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0 },
+                            { 18, Definition.InternalArchetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -53,8 +53,8 @@ namespace Coherence.Generated
                             { 0, Definition.InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0 },
                             { 17, Definition.InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_GenericScale_LOD0 },
-                            { 155, Definition.InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0 },
-                            { 154, Definition.InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0 },
+                            { 20, Definition.InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0 },
+                            { 19, Definition.InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -74,7 +74,7 @@ namespace Coherence.Generated
                         {
                             { 0, Definition.InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0 },
-                            { 156, Definition.InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0 },
+                            { 21, Definition.InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -95,7 +95,7 @@ namespace Coherence.Generated
                             { 0, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0 },
                             { 17, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0 },
-                            { 157, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0 },
+                            { 22, Definition.InternalArchetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -116,7 +116,7 @@ namespace Coherence.Generated
                             { 0, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 },
                             { 17, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0 },
-                            { 158, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0 },
+                            { 23, Definition.InternalArchetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -135,7 +135,7 @@ namespace Coherence.Generated
                         ComponentReplacement = new Dictionary<uint, uint>
                         {
                             { 0, Definition.InternalArchetype_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0 },
-                            { 165, Definition.InternalArchetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0 },
+                            { 30, Definition.InternalArchetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -156,11 +156,11 @@ namespace Coherence.Generated
                             { 0, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 },
                             { 17, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0 },
-                            { 167, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0 },
-                            { 168, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0 },
-                            { 166, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0 },
-                            { 170, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0 },
-                            { 169, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0 },
+                            { 32, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0 },
+                            { 33, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0 },
+                            { 31, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0 },
+                            { 35, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0 },
+                            { 34, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
