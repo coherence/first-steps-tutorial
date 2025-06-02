@@ -14,7 +14,7 @@ After downloading this Unity project, we suggest to open up the [documentation](
 - Using persistent world data
 
 ### Unity version
-Currently the project is on Unity `2021.3.27f1`. You can open it with newer `2021.3` LTS patches or with `2022.3` LTS.  
+The project is on Unity `2021.3.45f1`. You can open it with newer `2021.3` LTS patches or with `2022.3` LTS.  
 Opening the project with Unity `2022.1` or `2022.2` is discouraged, due to a Unity bug. The bug was fixed in `2022.3` LTS.
 
 ## Additional resources
@@ -38,4 +38,4 @@ Check out the game on the [coherence Cloud](https://coherence.io/games/coherence
 - [Forum](https://community.coherence.io)
 
 ## Bug reporting
-Feel free to open an issue right here on Github if you find anything that is not working in the First Steps project. Please include also any suggestion you might have on how to improve it. We appreciate all contributions!
+Feel free to open an issue right here on GitHub if you find anything that is not working in the First Steps project. Please include also any suggestion you might have on how to improve it. We appreciate all contributions!

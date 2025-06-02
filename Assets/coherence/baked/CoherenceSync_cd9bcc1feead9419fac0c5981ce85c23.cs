@@ -23,7 +23,6 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_4d9a62442a074534bca027258cca3b8c : PositionBinding
     {   
@@ -76,7 +75,6 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_60b57dc105e34765bb249dbf96b35ed4 : RotationBinding
     {   
@@ -128,7 +126,6 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_657a7178b5644432a17f5d3f7cebe00e : ScaleBinding
     {   
@@ -180,7 +177,6 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_2ffecec9e60b43ea89f0a6e4bd8598b3 : StringBinding
     {   
@@ -232,7 +228,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_2280fcb395a942a1b93a293e112d8673 : FloatAnimatorParameterBinding
     {   
@@ -284,7 +279,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_ac5c023b1b544b7ba9b7ce8c808091cc : BoolAnimatorParameterBinding
     {   
@@ -336,7 +330,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_9be70ffe5c844080bcc6320f8619ca6d : BoolAnimatorParameterBinding
     {   
@@ -388,7 +381,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_4ee471e890da4553ac8552fed6078db5 : BoolAnimatorParameterBinding
     {   
@@ -440,7 +432,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_e1e87976a62a499c9c88381bbdde8ec3 : DeepPositionBinding
     {   
@@ -492,7 +483,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_792d6900fc744c2f9fb47b533b2dadd6 : DeepRotationBinding
     {   
@@ -544,7 +534,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_1f957f13e6614d8cb60e9dd21aac1f0e : IntBinding
     {   
@@ -596,7 +585,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_53f5cbf1e41e4a09b431ecff28a28210 : IntBinding
     {   
@@ -648,7 +636,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_517eec95959b42eab5ded9b1719c2863 : IntBinding
     {   
@@ -700,7 +687,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_d9dfb8307ef1489f9b046a953ebe6136 : IntBinding
     {   
@@ -752,7 +738,6 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_575daa01b6414f90938cca4c9616a9a3 : IntBinding
     {   
@@ -819,21 +804,21 @@ namespace Coherence.Generated
         
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
-            ["4d9a62442a074534bca027258cca3b8c"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_4d9a62442a074534bca027258cca3b8c(),
-            ["60b57dc105e34765bb249dbf96b35ed4"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_60b57dc105e34765bb249dbf96b35ed4(),
-            ["657a7178b5644432a17f5d3f7cebe00e"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_657a7178b5644432a17f5d3f7cebe00e(),
-            ["2ffecec9e60b43ea89f0a6e4bd8598b3"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_2ffecec9e60b43ea89f0a6e4bd8598b3(),
-            ["2280fcb395a942a1b93a293e112d8673"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_2280fcb395a942a1b93a293e112d8673(),
-            ["ac5c023b1b544b7ba9b7ce8c808091cc"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_ac5c023b1b544b7ba9b7ce8c808091cc(),
-            ["9be70ffe5c844080bcc6320f8619ca6d"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_9be70ffe5c844080bcc6320f8619ca6d(),
-            ["4ee471e890da4553ac8552fed6078db5"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_4ee471e890da4553ac8552fed6078db5(),
-            ["e1e87976a62a499c9c88381bbdde8ec3"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_e1e87976a62a499c9c88381bbdde8ec3(),
-            ["792d6900fc744c2f9fb47b533b2dadd6"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_792d6900fc744c2f9fb47b533b2dadd6(),
-            ["1f957f13e6614d8cb60e9dd21aac1f0e"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_1f957f13e6614d8cb60e9dd21aac1f0e(),
-            ["53f5cbf1e41e4a09b431ecff28a28210"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_53f5cbf1e41e4a09b431ecff28a28210(),
-            ["517eec95959b42eab5ded9b1719c2863"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_517eec95959b42eab5ded9b1719c2863(),
-            ["d9dfb8307ef1489f9b046a953ebe6136"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_d9dfb8307ef1489f9b046a953ebe6136(),
-            ["575daa01b6414f90938cca4c9616a9a3"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_575daa01b6414f90938cca4c9616a9a3(),
+			["4d9a62442a074534bca027258cca3b8c"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_4d9a62442a074534bca027258cca3b8c(),
+			["60b57dc105e34765bb249dbf96b35ed4"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_60b57dc105e34765bb249dbf96b35ed4(),
+			["657a7178b5644432a17f5d3f7cebe00e"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_657a7178b5644432a17f5d3f7cebe00e(),
+			["2ffecec9e60b43ea89f0a6e4bd8598b3"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_2ffecec9e60b43ea89f0a6e4bd8598b3(),
+			["2280fcb395a942a1b93a293e112d8673"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_2280fcb395a942a1b93a293e112d8673(),
+			["ac5c023b1b544b7ba9b7ce8c808091cc"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_ac5c023b1b544b7ba9b7ce8c808091cc(),
+			["9be70ffe5c844080bcc6320f8619ca6d"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_9be70ffe5c844080bcc6320f8619ca6d(),
+			["4ee471e890da4553ac8552fed6078db5"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_4ee471e890da4553ac8552fed6078db5(),
+			["e1e87976a62a499c9c88381bbdde8ec3"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_e1e87976a62a499c9c88381bbdde8ec3(),
+			["792d6900fc744c2f9fb47b533b2dadd6"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_792d6900fc744c2f9fb47b533b2dadd6(),
+			["1f957f13e6614d8cb60e9dd21aac1f0e"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_1f957f13e6614d8cb60e9dd21aac1f0e(),
+			["53f5cbf1e41e4a09b431ecff28a28210"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_53f5cbf1e41e4a09b431ecff28a28210(),
+			["517eec95959b42eab5ded9b1719c2863"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_517eec95959b42eab5ded9b1719c2863(),
+			["d9dfb8307ef1489f9b046a953ebe6136"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_d9dfb8307ef1489f9b046a953ebe6136(),
+			["575daa01b6414f90938cca4c9616a9a3"] = new Binding_cd9bcc1feead9419fac0c5981ce85c23_575daa01b6414f90938cca4c9616a9a3(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
@@ -861,7 +846,6 @@ namespace Coherence.Generated
                 commandBindingBaker.Invoke(commandBinding, commandsHandler);
             }
         }
-    
         private void BakeCommandBinding__cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8_CommandTarget = (global::UnityEngine.Animator)commandBinding.UnityComponent;
@@ -909,32 +893,29 @@ namespace Coherence.Generated
             }
         }
         
-        public override List<ICoherenceComponentData> CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame)
+        public override void CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame, List<ICoherenceComponentData> components)
         {
+
             if (!usesLodsAtRuntime)
             {
-                return null;
+                return;
             }
             
             if (Archetypes.IndexForName.TryGetValue(archetypeName, out int archetypeIndex))
             {
-                var components = new List<ICoherenceComponentData>()
-                {
-                    new ArchetypeComponent
+                components.Add(new ArchetypeComponent
                     {
                         index = archetypeIndex,
                         indexSimulationFrame = simFrame,
                         FieldsMask = 0b1
                     }
-                };
+                );
 
-                return components;
+                return;                
             }
     
             logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
                 $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
-            
-            return null;
         }
         
         public override void Dispose()

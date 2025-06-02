@@ -23,7 +23,6 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_6ba8b7030c4bf544396f864fc9dd99de_0df60e652de84833bdba9ee29938ab19 : PositionBinding
     {   
@@ -76,7 +75,6 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_6ba8b7030c4bf544396f864fc9dd99de_39f75b765b9c4976a5a8f469fcfd1985 : RotationBinding
     {   
@@ -128,7 +126,6 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_6ba8b7030c4bf544396f864fc9dd99de_6f4d8c1f0d1c4c5ab5d4329ce6bd4c86 : FloatBinding
     {   
@@ -194,9 +191,9 @@ namespace Coherence.Generated
         
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
-            ["0df60e652de84833bdba9ee29938ab19"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_0df60e652de84833bdba9ee29938ab19(),
-            ["39f75b765b9c4976a5a8f469fcfd1985"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_39f75b765b9c4976a5a8f469fcfd1985(),
-            ["6f4d8c1f0d1c4c5ab5d4329ce6bd4c86"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_6f4d8c1f0d1c4c5ab5d4329ce6bd4c86(),
+			["0df60e652de84833bdba9ee29938ab19"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_0df60e652de84833bdba9ee29938ab19(),
+			["39f75b765b9c4976a5a8f469fcfd1985"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_39f75b765b9c4976a5a8f469fcfd1985(),
+			["6f4d8c1f0d1c4c5ab5d4329ce6bd4c86"] = new Binding_6ba8b7030c4bf544396f864fc9dd99de_6f4d8c1f0d1c4c5ab5d4329ce6bd4c86(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
@@ -235,32 +232,29 @@ namespace Coherence.Generated
             }
         }
         
-        public override List<ICoherenceComponentData> CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame)
+        public override void CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame, List<ICoherenceComponentData> components)
         {
+
             if (!usesLodsAtRuntime)
             {
-                return null;
+                return;
             }
             
             if (Archetypes.IndexForName.TryGetValue(archetypeName, out int archetypeIndex))
             {
-                var components = new List<ICoherenceComponentData>()
-                {
-                    new ArchetypeComponent
+                components.Add(new ArchetypeComponent
                     {
                         index = archetypeIndex,
                         indexSimulationFrame = simFrame,
                         FieldsMask = 0b1
                     }
-                };
+                );
 
-                return components;
+                return;                
             }
     
             logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
                 $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
-            
-            return null;
         }
         
         public override void Dispose()

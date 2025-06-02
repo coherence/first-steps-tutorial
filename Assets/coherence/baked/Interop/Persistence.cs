@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct Persistence : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]

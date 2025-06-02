@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941 : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -51,12 +50,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 7) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 7) " +
-                    "for component with ID 170");
+                    "for component with ID 35");
             }
 
             if (simFramesCount != 4) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 4) " +
-                    "for component with ID 170");
+                    "for component with ID 35");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941();
@@ -79,13 +78,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 7) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 7) " +
-                    "for component with ID 197");
+                    "for component with ID 62");
             }
 
                 
             if (simFramesCount != 4) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 4) " +
-                    "for component with ID 197");
+                    "for component with ID 62");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941();
@@ -119,7 +118,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 170;
+        public uint GetComponentType() => 35;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000001111;

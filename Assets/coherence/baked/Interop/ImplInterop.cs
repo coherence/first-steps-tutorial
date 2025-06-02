@@ -42,187 +42,52 @@ namespace Coherence.Generated
                 case 15: return Scene.FromInterop(data, dataSize, simFrames, simFramesCount);
                 case 16: return AssetId.FromInterop(data, dataSize, simFrames, simFramesCount);
                 case 17: return GenericScale.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 18: return GenericFieldInt0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 19: return GenericFieldInt1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 20: return GenericFieldInt2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 21: return GenericFieldInt3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 22: return GenericFieldInt4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 23: return GenericFieldInt5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 24: return GenericFieldInt6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 25: return GenericFieldInt7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 26: return GenericFieldInt8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 27: return GenericFieldInt9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 28: return GenericFieldUInt0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 29: return GenericFieldUInt1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 30: return GenericFieldUInt2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 31: return GenericFieldUInt3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 32: return GenericFieldUInt4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 33: return GenericFieldUInt5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 34: return GenericFieldUInt6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 35: return GenericFieldUInt7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 36: return GenericFieldUInt8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 37: return GenericFieldUInt9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 38: return GenericFieldBool0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 39: return GenericFieldBool1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 40: return GenericFieldBool2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 41: return GenericFieldBool3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 42: return GenericFieldBool4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 43: return GenericFieldBool5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 44: return GenericFieldBool6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 45: return GenericFieldBool7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 46: return GenericFieldBool8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 47: return GenericFieldBool9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 48: return GenericFieldFloat0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 49: return GenericFieldFloat1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 50: return GenericFieldFloat2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 51: return GenericFieldFloat3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 52: return GenericFieldFloat4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 53: return GenericFieldFloat5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 54: return GenericFieldFloat6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 55: return GenericFieldFloat7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 56: return GenericFieldFloat8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 57: return GenericFieldFloat9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 58: return GenericFieldDouble0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 59: return GenericFieldDouble1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 60: return GenericFieldDouble2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 61: return GenericFieldDouble3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 62: return GenericFieldDouble4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 63: return GenericFieldDouble5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 64: return GenericFieldDouble6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 65: return GenericFieldDouble7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 66: return GenericFieldDouble8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 67: return GenericFieldDouble9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 68: return GenericFieldVector0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 69: return GenericFieldVector1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 70: return GenericFieldVector2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 71: return GenericFieldVector3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 72: return GenericField2dVector0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 73: return GenericField2dVector1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 74: return GenericField2dVector2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 75: return GenericField2dVector3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 76: return GenericFieldString0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 77: return GenericFieldString1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 78: return GenericFieldString2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 79: return GenericFieldString3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 80: return GenericFieldString4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 81: return GenericFieldQuaternion0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 82: return GenericFieldEntity0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 83: return GenericFieldEntity1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 84: return GenericFieldEntity2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 85: return GenericFieldEntity3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 86: return GenericFieldEntity4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 87: return GenericFieldEntity5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 88: return GenericFieldEntity6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 89: return GenericFieldEntity7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 90: return GenericFieldEntity8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 91: return GenericFieldEntity9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 92: return GenericFieldBytes0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 93: return GenericFieldByte0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 94: return GenericFieldByte1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 95: return GenericFieldByte2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 96: return GenericFieldByte3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 97: return GenericFieldByte4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 98: return GenericFieldByte5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 99: return GenericFieldByte6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 100: return GenericFieldByte7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 101: return GenericFieldByte8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 102: return GenericFieldByte9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 103: return GenericFieldSByte0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 104: return GenericFieldSByte1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 105: return GenericFieldSByte2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 106: return GenericFieldSByte3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 107: return GenericFieldSByte4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 108: return GenericFieldSByte5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 109: return GenericFieldSByte6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 110: return GenericFieldSByte7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 111: return GenericFieldSByte8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 112: return GenericFieldSByte9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 113: return GenericFieldShort0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 114: return GenericFieldShort1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 115: return GenericFieldShort2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 116: return GenericFieldShort3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 117: return GenericFieldShort4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 118: return GenericFieldShort5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 119: return GenericFieldShort6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 120: return GenericFieldShort7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 121: return GenericFieldShort8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 122: return GenericFieldShort9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 123: return GenericFieldUShort0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 124: return GenericFieldUShort1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 125: return GenericFieldUShort2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 126: return GenericFieldUShort3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 127: return GenericFieldUShort4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 128: return GenericFieldUShort5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 129: return GenericFieldUShort6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 130: return GenericFieldUShort7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 131: return GenericFieldUShort8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 132: return GenericFieldUShort9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 133: return GenericFieldChar0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 134: return GenericFieldChar1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 135: return GenericFieldChar2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 136: return GenericFieldChar3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 137: return GenericFieldChar4.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 138: return GenericFieldChar5.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 139: return GenericFieldChar6.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 140: return GenericFieldChar7.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 141: return GenericFieldChar8.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 142: return GenericFieldChar9.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 143: return GenericFieldLong0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 144: return GenericFieldLong1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 145: return GenericFieldLong2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 146: return GenericFieldLong3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 147: return GenericFieldULong0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 148: return GenericFieldULong1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 149: return GenericFieldULong2.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 150: return GenericFieldULong3.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 151: return GenericFieldColor0.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 152: return GenericFieldColor1.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 153: return _20d53524fceab40d5a9ab892525615cb_5847726189716557621.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 154: return _27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 155: return _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 156: return _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 157: return _a0e6252c4d09f4fb28257804194356b6_5156161361901559470.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 158: return _a167402e36850884aa7ce3d374cd6c77_6689584802229134021.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 159: return _aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 160: return _aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 161: return _aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 162: return _aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 163: return _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 164: return _aa7ea8e0044f0964eb9c782a689ca1b1_9849676.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 165: return _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 166: return _cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 167: return _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 168: return _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 169: return _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 170: return _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 171: return WorldPosition.FromInteropArchetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 172: return _20d53524fceab40d5a9ab892525615cb_5847726189716557621.FromInteropArchetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 173: return WorldPosition.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 174: return WorldOrientation.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 175: return GenericScale.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 176: return _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 177: return _27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 178: return WorldPosition.FromInteropArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 179: return WorldOrientation.FromInteropArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 180: return _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.FromInteropArchetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 181: return WorldPosition.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 182: return WorldOrientation.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 183: return GenericScale.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 184: return _a0e6252c4d09f4fb28257804194356b6_5156161361901559470.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 185: return WorldPosition.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 186: return WorldOrientation.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 187: return GenericScale.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 188: return _a167402e36850884aa7ce3d374cd6c77_6689584802229134021.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 189: return WorldPosition.FromInteropArchetype_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 190: return _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.FromInteropArchetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 191: return WorldPosition.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 192: return WorldOrientation.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 193: return GenericScale.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 194: return _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 195: return _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 196: return _cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 197: return _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0(data, dataSize, simFrames, simFramesCount);
-                case 198: return _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 18: return _20d53524fceab40d5a9ab892525615cb_5847726189716557621.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 19: return _27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 20: return _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 21: return _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 22: return _a0e6252c4d09f4fb28257804194356b6_5156161361901559470.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 23: return _a167402e36850884aa7ce3d374cd6c77_6689584802229134021.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 24: return _aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 25: return _aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 26: return _aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 27: return _aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 28: return _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 29: return _aa7ea8e0044f0964eb9c782a689ca1b1_9849676.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 30: return _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 31: return _cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 32: return _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 33: return _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 34: return _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 35: return _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 36: return WorldPosition.FromInteropArchetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 37: return _20d53524fceab40d5a9ab892525615cb_5847726189716557621.FromInteropArchetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 38: return WorldPosition.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 39: return WorldOrientation.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 40: return GenericScale.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 41: return _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 42: return _27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410.FromInteropArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 43: return WorldPosition.FromInteropArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 44: return WorldOrientation.FromInteropArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 45: return _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.FromInteropArchetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 46: return WorldPosition.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 47: return WorldOrientation.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 48: return GenericScale.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 49: return _a0e6252c4d09f4fb28257804194356b6_5156161361901559470.FromInteropArchetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 50: return WorldPosition.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 51: return WorldOrientation.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 52: return GenericScale.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 53: return _a167402e36850884aa7ce3d374cd6c77_6689584802229134021.FromInteropArchetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 54: return WorldPosition.FromInteropArchetype_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 55: return _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.FromInteropArchetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 56: return WorldPosition.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 57: return WorldOrientation.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 58: return GenericScale.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 59: return _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 60: return _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 61: return _cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 62: return _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0(data, dataSize, simFrames, simFramesCount);
+                case 63: return _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.FromInteropArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0(data, dataSize, simFrames, simFramesCount);
             }
 
             throw new ArgumentException($"Unkown component type {type}", nameof(type));
@@ -437,1491 +302,6 @@ namespace Coherence.Generated
                 }
                 case 18:
                 {
-                    var orig = (GenericFieldInt0)component;
-                    var val = new GenericFieldInt0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 19:
-                {
-                    var orig = (GenericFieldInt1)component;
-                    var val = new GenericFieldInt1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 20:
-                {
-                    var orig = (GenericFieldInt2)component;
-                    var val = new GenericFieldInt2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 21:
-                {
-                    var orig = (GenericFieldInt3)component;
-                    var val = new GenericFieldInt3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 22:
-                {
-                    var orig = (GenericFieldInt4)component;
-                    var val = new GenericFieldInt4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 23:
-                {
-                    var orig = (GenericFieldInt5)component;
-                    var val = new GenericFieldInt5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 24:
-                {
-                    var orig = (GenericFieldInt6)component;
-                    var val = new GenericFieldInt6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 25:
-                {
-                    var orig = (GenericFieldInt7)component;
-                    var val = new GenericFieldInt7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 26:
-                {
-                    var orig = (GenericFieldInt8)component;
-                    var val = new GenericFieldInt8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 27:
-                {
-                    var orig = (GenericFieldInt9)component;
-                    var val = new GenericFieldInt9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 28:
-                {
-                    var orig = (GenericFieldUInt0)component;
-                    var val = new GenericFieldUInt0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 29:
-                {
-                    var orig = (GenericFieldUInt1)component;
-                    var val = new GenericFieldUInt1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 30:
-                {
-                    var orig = (GenericFieldUInt2)component;
-                    var val = new GenericFieldUInt2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 31:
-                {
-                    var orig = (GenericFieldUInt3)component;
-                    var val = new GenericFieldUInt3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 32:
-                {
-                    var orig = (GenericFieldUInt4)component;
-                    var val = new GenericFieldUInt4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 33:
-                {
-                    var orig = (GenericFieldUInt5)component;
-                    var val = new GenericFieldUInt5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 34:
-                {
-                    var orig = (GenericFieldUInt6)component;
-                    var val = new GenericFieldUInt6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 35:
-                {
-                    var orig = (GenericFieldUInt7)component;
-                    var val = new GenericFieldUInt7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 36:
-                {
-                    var orig = (GenericFieldUInt8)component;
-                    var val = new GenericFieldUInt8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 37:
-                {
-                    var orig = (GenericFieldUInt9)component;
-                    var val = new GenericFieldUInt9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 38:
-                {
-                    var orig = (GenericFieldBool0)component;
-                    var val = new GenericFieldBool0.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 39:
-                {
-                    var orig = (GenericFieldBool1)component;
-                    var val = new GenericFieldBool1.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 40:
-                {
-                    var orig = (GenericFieldBool2)component;
-                    var val = new GenericFieldBool2.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 41:
-                {
-                    var orig = (GenericFieldBool3)component;
-                    var val = new GenericFieldBool3.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 42:
-                {
-                    var orig = (GenericFieldBool4)component;
-                    var val = new GenericFieldBool4.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 43:
-                {
-                    var orig = (GenericFieldBool5)component;
-                    var val = new GenericFieldBool5.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 44:
-                {
-                    var orig = (GenericFieldBool6)component;
-                    var val = new GenericFieldBool6.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 45:
-                {
-                    var orig = (GenericFieldBool7)component;
-                    var val = new GenericFieldBool7.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 46:
-                {
-                    var orig = (GenericFieldBool8)component;
-                    var val = new GenericFieldBool8.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 47:
-                {
-                    var orig = (GenericFieldBool9)component;
-                    var val = new GenericFieldBool9.Interop();
-
-                    val.number = orig.number ? (System.Byte)1 : (System.Byte)0;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 48:
-                {
-                    var orig = (GenericFieldFloat0)component;
-                    var val = new GenericFieldFloat0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 49:
-                {
-                    var orig = (GenericFieldFloat1)component;
-                    var val = new GenericFieldFloat1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 50:
-                {
-                    var orig = (GenericFieldFloat2)component;
-                    var val = new GenericFieldFloat2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 51:
-                {
-                    var orig = (GenericFieldFloat3)component;
-                    var val = new GenericFieldFloat3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 52:
-                {
-                    var orig = (GenericFieldFloat4)component;
-                    var val = new GenericFieldFloat4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 53:
-                {
-                    var orig = (GenericFieldFloat5)component;
-                    var val = new GenericFieldFloat5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 54:
-                {
-                    var orig = (GenericFieldFloat6)component;
-                    var val = new GenericFieldFloat6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 55:
-                {
-                    var orig = (GenericFieldFloat7)component;
-                    var val = new GenericFieldFloat7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 56:
-                {
-                    var orig = (GenericFieldFloat8)component;
-                    var val = new GenericFieldFloat8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 57:
-                {
-                    var orig = (GenericFieldFloat9)component;
-                    var val = new GenericFieldFloat9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 58:
-                {
-                    var orig = (GenericFieldDouble0)component;
-                    var val = new GenericFieldDouble0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 59:
-                {
-                    var orig = (GenericFieldDouble1)component;
-                    var val = new GenericFieldDouble1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 60:
-                {
-                    var orig = (GenericFieldDouble2)component;
-                    var val = new GenericFieldDouble2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 61:
-                {
-                    var orig = (GenericFieldDouble3)component;
-                    var val = new GenericFieldDouble3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 62:
-                {
-                    var orig = (GenericFieldDouble4)component;
-                    var val = new GenericFieldDouble4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 63:
-                {
-                    var orig = (GenericFieldDouble5)component;
-                    var val = new GenericFieldDouble5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 64:
-                {
-                    var orig = (GenericFieldDouble6)component;
-                    var val = new GenericFieldDouble6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 65:
-                {
-                    var orig = (GenericFieldDouble7)component;
-                    var val = new GenericFieldDouble7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 66:
-                {
-                    var orig = (GenericFieldDouble8)component;
-                    var val = new GenericFieldDouble8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 67:
-                {
-                    var orig = (GenericFieldDouble9)component;
-                    var val = new GenericFieldDouble9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 68:
-                {
-                    var orig = (GenericFieldVector0)component;
-                    var val = new GenericFieldVector0.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 69:
-                {
-                    var orig = (GenericFieldVector1)component;
-                    var val = new GenericFieldVector1.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 70:
-                {
-                    var orig = (GenericFieldVector2)component;
-                    var val = new GenericFieldVector2.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 71:
-                {
-                    var orig = (GenericFieldVector3)component;
-                    var val = new GenericFieldVector3.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 12, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 72:
-                {
-                    var orig = (GenericField2dVector0)component;
-                    var val = new GenericField2dVector0.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 73:
-                {
-                    var orig = (GenericField2dVector1)component;
-                    var val = new GenericField2dVector1.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 74:
-                {
-                    var orig = (GenericField2dVector2)component;
-                    var val = new GenericField2dVector2.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 75:
-                {
-                    var orig = (GenericField2dVector3)component;
-                    var val = new GenericField2dVector3.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 76:
-                {
-                    var orig = (GenericFieldString0)component;
-                    var val = new GenericFieldString0.Interop();
-
-                    var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-}                    return;
-                }
-                case 77:
-                {
-                    var orig = (GenericFieldString1)component;
-                    var val = new GenericFieldString1.Interop();
-
-                    var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-}                    return;
-                }
-                case 78:
-                {
-                    var orig = (GenericFieldString2)component;
-                    var val = new GenericFieldString2.Interop();
-
-                    var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-}                    return;
-                }
-                case 79:
-                {
-                    var orig = (GenericFieldString3)component;
-                    var val = new GenericFieldString3.Interop();
-
-                    var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-}                    return;
-                }
-                case 80:
-                {
-                    var orig = (GenericFieldString4)component;
-                    var val = new GenericFieldString4.Interop();
-
-                    var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-}                    return;
-                }
-                case 81:
-                {
-                    var orig = (GenericFieldQuaternion0)component;
-                    var val = new GenericFieldQuaternion0.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 82:
-                {
-                    var orig = (GenericFieldEntity0)component;
-                    var val = new GenericFieldEntity0.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 83:
-                {
-                    var orig = (GenericFieldEntity1)component;
-                    var val = new GenericFieldEntity1.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 84:
-                {
-                    var orig = (GenericFieldEntity2)component;
-                    var val = new GenericFieldEntity2.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 85:
-                {
-                    var orig = (GenericFieldEntity3)component;
-                    var val = new GenericFieldEntity3.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 86:
-                {
-                    var orig = (GenericFieldEntity4)component;
-                    var val = new GenericFieldEntity4.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 87:
-                {
-                    var orig = (GenericFieldEntity5)component;
-                    var val = new GenericFieldEntity5.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 88:
-                {
-                    var orig = (GenericFieldEntity6)component;
-                    var val = new GenericFieldEntity6.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 89:
-                {
-                    var orig = (GenericFieldEntity7)component;
-                    var val = new GenericFieldEntity7.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 90:
-                {
-                    var orig = (GenericFieldEntity8)component;
-                    var val = new GenericFieldEntity8.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 91:
-                {
-                    var orig = (GenericFieldEntity9)component;
-                    var val = new GenericFieldEntity9.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 92:
-                {
-                    var orig = (GenericFieldBytes0)component;
-                    var val = new GenericFieldBytes0.Interop();
-
-                    fixed (void* pinnedPtrbytes = orig.bytes) { val.bytes = new ByteArray { Data = pinnedPtrbytes, Length =  orig.bytes?.Length ?? 0 };
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-}                    return;
-                }
-                case 93:
-                {
-                    var orig = (GenericFieldByte0)component;
-                    var val = new GenericFieldByte0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 94:
-                {
-                    var orig = (GenericFieldByte1)component;
-                    var val = new GenericFieldByte1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 95:
-                {
-                    var orig = (GenericFieldByte2)component;
-                    var val = new GenericFieldByte2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 96:
-                {
-                    var orig = (GenericFieldByte3)component;
-                    var val = new GenericFieldByte3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 97:
-                {
-                    var orig = (GenericFieldByte4)component;
-                    var val = new GenericFieldByte4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 98:
-                {
-                    var orig = (GenericFieldByte5)component;
-                    var val = new GenericFieldByte5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 99:
-                {
-                    var orig = (GenericFieldByte6)component;
-                    var val = new GenericFieldByte6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 100:
-                {
-                    var orig = (GenericFieldByte7)component;
-                    var val = new GenericFieldByte7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 101:
-                {
-                    var orig = (GenericFieldByte8)component;
-                    var val = new GenericFieldByte8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 102:
-                {
-                    var orig = (GenericFieldByte9)component;
-                    var val = new GenericFieldByte9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 103:
-                {
-                    var orig = (GenericFieldSByte0)component;
-                    var val = new GenericFieldSByte0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 104:
-                {
-                    var orig = (GenericFieldSByte1)component;
-                    var val = new GenericFieldSByte1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 105:
-                {
-                    var orig = (GenericFieldSByte2)component;
-                    var val = new GenericFieldSByte2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 106:
-                {
-                    var orig = (GenericFieldSByte3)component;
-                    var val = new GenericFieldSByte3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 107:
-                {
-                    var orig = (GenericFieldSByte4)component;
-                    var val = new GenericFieldSByte4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 108:
-                {
-                    var orig = (GenericFieldSByte5)component;
-                    var val = new GenericFieldSByte5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 109:
-                {
-                    var orig = (GenericFieldSByte6)component;
-                    var val = new GenericFieldSByte6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 110:
-                {
-                    var orig = (GenericFieldSByte7)component;
-                    var val = new GenericFieldSByte7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 111:
-                {
-                    var orig = (GenericFieldSByte8)component;
-                    var val = new GenericFieldSByte8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 112:
-                {
-                    var orig = (GenericFieldSByte9)component;
-                    var val = new GenericFieldSByte9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 1, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 113:
-                {
-                    var orig = (GenericFieldShort0)component;
-                    var val = new GenericFieldShort0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 114:
-                {
-                    var orig = (GenericFieldShort1)component;
-                    var val = new GenericFieldShort1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 115:
-                {
-                    var orig = (GenericFieldShort2)component;
-                    var val = new GenericFieldShort2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 116:
-                {
-                    var orig = (GenericFieldShort3)component;
-                    var val = new GenericFieldShort3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 117:
-                {
-                    var orig = (GenericFieldShort4)component;
-                    var val = new GenericFieldShort4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 118:
-                {
-                    var orig = (GenericFieldShort5)component;
-                    var val = new GenericFieldShort5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 119:
-                {
-                    var orig = (GenericFieldShort6)component;
-                    var val = new GenericFieldShort6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 120:
-                {
-                    var orig = (GenericFieldShort7)component;
-                    var val = new GenericFieldShort7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 121:
-                {
-                    var orig = (GenericFieldShort8)component;
-                    var val = new GenericFieldShort8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 122:
-                {
-                    var orig = (GenericFieldShort9)component;
-                    var val = new GenericFieldShort9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 123:
-                {
-                    var orig = (GenericFieldUShort0)component;
-                    var val = new GenericFieldUShort0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 124:
-                {
-                    var orig = (GenericFieldUShort1)component;
-                    var val = new GenericFieldUShort1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 125:
-                {
-                    var orig = (GenericFieldUShort2)component;
-                    var val = new GenericFieldUShort2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 126:
-                {
-                    var orig = (GenericFieldUShort3)component;
-                    var val = new GenericFieldUShort3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 127:
-                {
-                    var orig = (GenericFieldUShort4)component;
-                    var val = new GenericFieldUShort4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 128:
-                {
-                    var orig = (GenericFieldUShort5)component;
-                    var val = new GenericFieldUShort5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 129:
-                {
-                    var orig = (GenericFieldUShort6)component;
-                    var val = new GenericFieldUShort6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 130:
-                {
-                    var orig = (GenericFieldUShort7)component;
-                    var val = new GenericFieldUShort7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 131:
-                {
-                    var orig = (GenericFieldUShort8)component;
-                    var val = new GenericFieldUShort8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 132:
-                {
-                    var orig = (GenericFieldUShort9)component;
-                    var val = new GenericFieldUShort9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 2, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 133:
-                {
-                    var orig = (GenericFieldChar0)component;
-                    var val = new GenericFieldChar0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 134:
-                {
-                    var orig = (GenericFieldChar1)component;
-                    var val = new GenericFieldChar1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 135:
-                {
-                    var orig = (GenericFieldChar2)component;
-                    var val = new GenericFieldChar2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 136:
-                {
-                    var orig = (GenericFieldChar3)component;
-                    var val = new GenericFieldChar3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 137:
-                {
-                    var orig = (GenericFieldChar4)component;
-                    var val = new GenericFieldChar4.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 138:
-                {
-                    var orig = (GenericFieldChar5)component;
-                    var val = new GenericFieldChar5.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 139:
-                {
-                    var orig = (GenericFieldChar6)component;
-                    var val = new GenericFieldChar6.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 140:
-                {
-                    var orig = (GenericFieldChar7)component;
-                    var val = new GenericFieldChar7.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 141:
-                {
-                    var orig = (GenericFieldChar8)component;
-                    var val = new GenericFieldChar8.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 142:
-                {
-                    var orig = (GenericFieldChar9)component;
-                    var val = new GenericFieldChar9.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 4, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 143:
-                {
-                    var orig = (GenericFieldLong0)component;
-                    var val = new GenericFieldLong0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 144:
-                {
-                    var orig = (GenericFieldLong1)component;
-                    var val = new GenericFieldLong1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 145:
-                {
-                    var orig = (GenericFieldLong2)component;
-                    var val = new GenericFieldLong2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 146:
-                {
-                    var orig = (GenericFieldLong3)component;
-                    var val = new GenericFieldLong3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 147:
-                {
-                    var orig = (GenericFieldULong0)component;
-                    var val = new GenericFieldULong0.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 148:
-                {
-                    var orig = (GenericFieldULong1)component;
-                    var val = new GenericFieldULong1.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 149:
-                {
-                    var orig = (GenericFieldULong2)component;
-                    var val = new GenericFieldULong2.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 150:
-                {
-                    var orig = (GenericFieldULong3)component;
-                    var val = new GenericFieldULong3.Interop();
-
-                    val.number = orig.number;
-
-                    updater.UpdateComponent(entity, componentType, val, 8, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 151:
-                {
-                    var orig = (GenericFieldColor0)component;
-                    var val = new GenericFieldColor0.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 152:
-                {
-                    var orig = (GenericFieldColor1)component;
-                    var val = new GenericFieldColor1.Interop();
-
-                    val.value = orig.value;
-
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
-
-                    return;
-                }
-                case 153:
-                {
                     var orig = (_20d53524fceab40d5a9ab892525615cb_5847726189716557621)component;
                     var val = new _20d53524fceab40d5a9ab892525615cb_5847726189716557621.Interop();
 
@@ -1931,7 +311,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 154:
+                case 19:
                 {
                     var orig = (_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410)component;
                     var val = new _27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410.Interop();
@@ -1943,7 +323,7 @@ namespace Coherence.Generated
 
 }                    return;
                 }
-                case 155:
+                case 20:
                 {
                     var orig = (_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121)component;
                     var val = new _27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121.Interop();
@@ -1954,7 +334,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 156:
+                case 21:
                 {
                     var orig = (_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933)component;
                     var val = new _6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.Interop();
@@ -1965,7 +345,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 157:
+                case 22:
                 {
                     var orig = (_a0e6252c4d09f4fb28257804194356b6_5156161361901559470)component;
                     var val = new _a0e6252c4d09f4fb28257804194356b6_5156161361901559470.Interop();
@@ -1977,7 +357,7 @@ namespace Coherence.Generated
 
 }                    return;
                 }
-                case 158:
+                case 23:
                 {
                     var orig = (_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)component;
                     var val = new _a167402e36850884aa7ce3d374cd6c77_6689584802229134021.Interop();
@@ -1988,7 +368,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 159:
+                case 24:
                 {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710)component;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710.Interop();
@@ -1999,7 +379,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 160:
+                case 25:
                 {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063)component;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063.Interop();
@@ -2010,7 +390,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 161:
+                case 26:
                 {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008)component;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008.Interop();
@@ -2021,7 +401,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 162:
+                case 27:
                 {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436)component;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436.Interop();
@@ -2032,7 +412,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 163:
+                case 28:
                 {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591)component;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.Interop();
@@ -2044,7 +424,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 164:
+                case 29:
                 {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_9849676)component;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_9849676.Interop();
@@ -2055,7 +435,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 165:
+                case 30:
                 {
                     var orig = (_ba50eecfd968a47c38959f27b05771b6_5459872012036489579)component;
                     var val = new _ba50eecfd968a47c38959f27b05771b6_5459872012036489579.Interop();
@@ -2066,7 +446,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 166:
+                case 31:
                 {
                     var orig = (_cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066)component;
                     var val = new _cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066.Interop();
@@ -2077,7 +457,7 @@ namespace Coherence.Generated
 
 }                    return;
                 }
-                case 167:
+                case 32:
                 {
                     var orig = (_cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177)component;
                     var val = new _cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177.Interop();
@@ -2088,7 +468,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 168:
+                case 33:
                 {
                     var orig = (_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199)component;
                     var val = new _cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.Interop();
@@ -2103,7 +483,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 169:
+                case 34:
                 {
                     var orig = (_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033)component;
                     var val = new _cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.Interop();
@@ -2114,7 +494,7 @@ namespace Coherence.Generated
 
                     return;
                 }
-                case 170:
+                case 35:
                 {
                     var orig = (_cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941)component;
                     var val = new _cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.Interop();
@@ -2143,11 +523,10 @@ namespace Coherence.Generated
                   case 3: return AdoptOrphan.FromInterop(data, dataSize);
                   case 4: return PersistenceReady.FromInterop(data, dataSize);
                   case 5: return SceneIndexChanged.FromInterop(data, dataSize);
-                  case 6: return GenericCommand.FromInterop(data, dataSize);
-                  case 7: return _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814.FromInterop(data, dataSize);
-                  case 8: return _20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685.FromInterop(data, dataSize);
-                  case 9: return _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.FromInterop(data, dataSize);
-                  case 10: return _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8.FromInterop(data, dataSize);
+                  case 6: return _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814.FromInterop(data, dataSize);
+                  case 7: return _20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685.FromInterop(data, dataSize);
+                  case 8: return _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.FromInterop(data, dataSize);
+                  case 9: return _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8.FromInterop(data, dataSize);
             }
 
             throw new ArgumentException($"Unkown command type {type}", nameof(type));
@@ -2174,7 +553,6 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 8);
 
                 }
-
                 case 1:
                 {
                     var orig = (AuthorityTransfer)command;
@@ -2187,7 +565,6 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 9);
 
                 }
-
                 case 2:
                 {
                     var orig = (QuerySynced)command;
@@ -2199,7 +576,6 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 2);
 
                 }
-
                 case 3:
                 {
                     var orig = (AdoptOrphan)command;
@@ -2209,7 +585,6 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 0);
 
                 }
-
                 case 4:
                 {
                     var orig = (PersistenceReady)command;
@@ -2219,7 +594,6 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 0);
 
                 }
-
                 case 5:
                 {
                     var orig = (SceneIndexChanged)command;
@@ -2230,24 +604,7 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 4);
 
                 }
-
                 case 6:
-                {
-                    var orig = (GenericCommand)command;
-                    var val = new GenericCommand.Interop();
-
-                    var pinnedname = orig.name != null ? Encoding.UTF8.GetBytes(orig.name) : null; fixed (void* pinnedPtrname = pinnedname) { val.name = new ByteArray { Data = pinnedPtrname, Length =  pinnedname?.Length ?? 0 };
-                    fixed (void* pinnedPtrcommandData = orig.commandData) { val.commandData = new ByteArray { Data = pinnedPtrcommandData, Length =  orig.commandData?.Length ?? 0 };
-                    val.entityParam1 = orig.entityParam1;
-                    val.entityParam2 = orig.entityParam2;
-                    val.entityParam3 = orig.entityParam3;
-                    val.entityParam4 = orig.entityParam4;
-
-                    return sender.SendCommand(entity, target, type, val, 48);
-
-}}                }
-
-                case 7:
                 {
                     var orig = (_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814)command;
                     var val = new _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814.Interop();
@@ -2256,8 +613,7 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 0);
 
                 }
-
-                case 8:
+                case 7:
                 {
                     var orig = (_20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685)command;
                     var val = new _20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685.Interop();
@@ -2266,8 +622,7 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 0);
 
                 }
-
-                case 9:
+                case 8:
                 {
                     var orig = (_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7)command;
                     var val = new _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7.Interop();
@@ -2277,8 +632,7 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 16);
 
 }                }
-
-                case 10:
+                case 9:
                 {
                     var orig = (_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8)command;
                     var val = new _cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8.Interop();
@@ -2288,7 +642,6 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 16);
 
 }                }
-
             }
 
             throw new NotImplementedException($"Failed to send a command with type {type}.");

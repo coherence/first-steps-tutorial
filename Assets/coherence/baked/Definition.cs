@@ -20,7 +20,7 @@ namespace Coherence.Generated
 
     public class Definition : IDefinition
     {
-        public const string schemaId = "35140b9d1c4d719222209b6d55f297822d05e71a";
+        public const string schemaId = "e1db5f09aec2a463f8179e7076b68999158a07f2";
         public const uint InternalWorldPosition = 0;
         public const uint InternalWorldOrientation = 1;
         public const uint InternalLocalUserComponent = 2;
@@ -39,198 +39,62 @@ namespace Coherence.Generated
         public const uint InternalScene = 15;
         public const uint InternalAssetId = 16;
         public const uint InternalGenericScale = 17;
-        public const uint InternalGenericFieldInt0 = 18;
-        public const uint InternalGenericFieldInt1 = 19;
-        public const uint InternalGenericFieldInt2 = 20;
-        public const uint InternalGenericFieldInt3 = 21;
-        public const uint InternalGenericFieldInt4 = 22;
-        public const uint InternalGenericFieldInt5 = 23;
-        public const uint InternalGenericFieldInt6 = 24;
-        public const uint InternalGenericFieldInt7 = 25;
-        public const uint InternalGenericFieldInt8 = 26;
-        public const uint InternalGenericFieldInt9 = 27;
-        public const uint InternalGenericFieldUInt0 = 28;
-        public const uint InternalGenericFieldUInt1 = 29;
-        public const uint InternalGenericFieldUInt2 = 30;
-        public const uint InternalGenericFieldUInt3 = 31;
-        public const uint InternalGenericFieldUInt4 = 32;
-        public const uint InternalGenericFieldUInt5 = 33;
-        public const uint InternalGenericFieldUInt6 = 34;
-        public const uint InternalGenericFieldUInt7 = 35;
-        public const uint InternalGenericFieldUInt8 = 36;
-        public const uint InternalGenericFieldUInt9 = 37;
-        public const uint InternalGenericFieldBool0 = 38;
-        public const uint InternalGenericFieldBool1 = 39;
-        public const uint InternalGenericFieldBool2 = 40;
-        public const uint InternalGenericFieldBool3 = 41;
-        public const uint InternalGenericFieldBool4 = 42;
-        public const uint InternalGenericFieldBool5 = 43;
-        public const uint InternalGenericFieldBool6 = 44;
-        public const uint InternalGenericFieldBool7 = 45;
-        public const uint InternalGenericFieldBool8 = 46;
-        public const uint InternalGenericFieldBool9 = 47;
-        public const uint InternalGenericFieldFloat0 = 48;
-        public const uint InternalGenericFieldFloat1 = 49;
-        public const uint InternalGenericFieldFloat2 = 50;
-        public const uint InternalGenericFieldFloat3 = 51;
-        public const uint InternalGenericFieldFloat4 = 52;
-        public const uint InternalGenericFieldFloat5 = 53;
-        public const uint InternalGenericFieldFloat6 = 54;
-        public const uint InternalGenericFieldFloat7 = 55;
-        public const uint InternalGenericFieldFloat8 = 56;
-        public const uint InternalGenericFieldFloat9 = 57;
-        public const uint InternalGenericFieldDouble0 = 58;
-        public const uint InternalGenericFieldDouble1 = 59;
-        public const uint InternalGenericFieldDouble2 = 60;
-        public const uint InternalGenericFieldDouble3 = 61;
-        public const uint InternalGenericFieldDouble4 = 62;
-        public const uint InternalGenericFieldDouble5 = 63;
-        public const uint InternalGenericFieldDouble6 = 64;
-        public const uint InternalGenericFieldDouble7 = 65;
-        public const uint InternalGenericFieldDouble8 = 66;
-        public const uint InternalGenericFieldDouble9 = 67;
-        public const uint InternalGenericFieldVector0 = 68;
-        public const uint InternalGenericFieldVector1 = 69;
-        public const uint InternalGenericFieldVector2 = 70;
-        public const uint InternalGenericFieldVector3 = 71;
-        public const uint InternalGenericField2dVector0 = 72;
-        public const uint InternalGenericField2dVector1 = 73;
-        public const uint InternalGenericField2dVector2 = 74;
-        public const uint InternalGenericField2dVector3 = 75;
-        public const uint InternalGenericFieldString0 = 76;
-        public const uint InternalGenericFieldString1 = 77;
-        public const uint InternalGenericFieldString2 = 78;
-        public const uint InternalGenericFieldString3 = 79;
-        public const uint InternalGenericFieldString4 = 80;
-        public const uint InternalGenericFieldQuaternion0 = 81;
-        public const uint InternalGenericFieldEntity0 = 82;
-        public const uint InternalGenericFieldEntity1 = 83;
-        public const uint InternalGenericFieldEntity2 = 84;
-        public const uint InternalGenericFieldEntity3 = 85;
-        public const uint InternalGenericFieldEntity4 = 86;
-        public const uint InternalGenericFieldEntity5 = 87;
-        public const uint InternalGenericFieldEntity6 = 88;
-        public const uint InternalGenericFieldEntity7 = 89;
-        public const uint InternalGenericFieldEntity8 = 90;
-        public const uint InternalGenericFieldEntity9 = 91;
-        public const uint InternalGenericFieldBytes0 = 92;
-        public const uint InternalGenericFieldByte0 = 93;
-        public const uint InternalGenericFieldByte1 = 94;
-        public const uint InternalGenericFieldByte2 = 95;
-        public const uint InternalGenericFieldByte3 = 96;
-        public const uint InternalGenericFieldByte4 = 97;
-        public const uint InternalGenericFieldByte5 = 98;
-        public const uint InternalGenericFieldByte6 = 99;
-        public const uint InternalGenericFieldByte7 = 100;
-        public const uint InternalGenericFieldByte8 = 101;
-        public const uint InternalGenericFieldByte9 = 102;
-        public const uint InternalGenericFieldSByte0 = 103;
-        public const uint InternalGenericFieldSByte1 = 104;
-        public const uint InternalGenericFieldSByte2 = 105;
-        public const uint InternalGenericFieldSByte3 = 106;
-        public const uint InternalGenericFieldSByte4 = 107;
-        public const uint InternalGenericFieldSByte5 = 108;
-        public const uint InternalGenericFieldSByte6 = 109;
-        public const uint InternalGenericFieldSByte7 = 110;
-        public const uint InternalGenericFieldSByte8 = 111;
-        public const uint InternalGenericFieldSByte9 = 112;
-        public const uint InternalGenericFieldShort0 = 113;
-        public const uint InternalGenericFieldShort1 = 114;
-        public const uint InternalGenericFieldShort2 = 115;
-        public const uint InternalGenericFieldShort3 = 116;
-        public const uint InternalGenericFieldShort4 = 117;
-        public const uint InternalGenericFieldShort5 = 118;
-        public const uint InternalGenericFieldShort6 = 119;
-        public const uint InternalGenericFieldShort7 = 120;
-        public const uint InternalGenericFieldShort8 = 121;
-        public const uint InternalGenericFieldShort9 = 122;
-        public const uint InternalGenericFieldUShort0 = 123;
-        public const uint InternalGenericFieldUShort1 = 124;
-        public const uint InternalGenericFieldUShort2 = 125;
-        public const uint InternalGenericFieldUShort3 = 126;
-        public const uint InternalGenericFieldUShort4 = 127;
-        public const uint InternalGenericFieldUShort5 = 128;
-        public const uint InternalGenericFieldUShort6 = 129;
-        public const uint InternalGenericFieldUShort7 = 130;
-        public const uint InternalGenericFieldUShort8 = 131;
-        public const uint InternalGenericFieldUShort9 = 132;
-        public const uint InternalGenericFieldChar0 = 133;
-        public const uint InternalGenericFieldChar1 = 134;
-        public const uint InternalGenericFieldChar2 = 135;
-        public const uint InternalGenericFieldChar3 = 136;
-        public const uint InternalGenericFieldChar4 = 137;
-        public const uint InternalGenericFieldChar5 = 138;
-        public const uint InternalGenericFieldChar6 = 139;
-        public const uint InternalGenericFieldChar7 = 140;
-        public const uint InternalGenericFieldChar8 = 141;
-        public const uint InternalGenericFieldChar9 = 142;
-        public const uint InternalGenericFieldLong0 = 143;
-        public const uint InternalGenericFieldLong1 = 144;
-        public const uint InternalGenericFieldLong2 = 145;
-        public const uint InternalGenericFieldLong3 = 146;
-        public const uint InternalGenericFieldULong0 = 147;
-        public const uint InternalGenericFieldULong1 = 148;
-        public const uint InternalGenericFieldULong2 = 149;
-        public const uint InternalGenericFieldULong3 = 150;
-        public const uint InternalGenericFieldColor0 = 151;
-        public const uint InternalGenericFieldColor1 = 152;
-        public const uint Internal_20d53524fceab40d5a9ab892525615cb_5847726189716557621 = 153;
-        public const uint Internal_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410 = 154;
-        public const uint Internal_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121 = 155;
-        public const uint Internal_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933 = 156;
-        public const uint Internal_a0e6252c4d09f4fb28257804194356b6_5156161361901559470 = 157;
-        public const uint Internal_a167402e36850884aa7ce3d374cd6c77_6689584802229134021 = 158;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710 = 159;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063 = 160;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008 = 161;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436 = 162;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591 = 163;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_9849676 = 164;
-        public const uint Internal_ba50eecfd968a47c38959f27b05771b6_5459872012036489579 = 165;
-        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066 = 166;
-        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177 = 167;
-        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199 = 168;
-        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033 = 169;
-        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941 = 170;
-        public const uint InternalArchetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0 = 171;
-        public const uint InternalArchetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0 = 172;
-        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0 = 173;
-        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0 = 174;
-        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_GenericScale_LOD0 = 175;
-        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0 = 176;
-        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0 = 177;
-        public const uint InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0 = 178;
-        public const uint InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0 = 179;
-        public const uint InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0 = 180;
-        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0 = 181;
-        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0 = 182;
-        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0 = 183;
-        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0 = 184;
-        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 = 185;
-        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 = 186;
-        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0 = 187;
-        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0 = 188;
-        public const uint InternalArchetype_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0 = 189;
-        public const uint InternalArchetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0 = 190;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 = 191;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 = 192;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0 = 193;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0 = 194;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0 = 195;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0 = 196;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0 = 197;
-        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0 = 198;
+        public const uint Internal_20d53524fceab40d5a9ab892525615cb_5847726189716557621 = 18;
+        public const uint Internal_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410 = 19;
+        public const uint Internal_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121 = 20;
+        public const uint Internal_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933 = 21;
+        public const uint Internal_a0e6252c4d09f4fb28257804194356b6_5156161361901559470 = 22;
+        public const uint Internal_a167402e36850884aa7ce3d374cd6c77_6689584802229134021 = 23;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710 = 24;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063 = 25;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008 = 26;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436 = 27;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591 = 28;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_9849676 = 29;
+        public const uint Internal_ba50eecfd968a47c38959f27b05771b6_5459872012036489579 = 30;
+        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066 = 31;
+        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177 = 32;
+        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199 = 33;
+        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033 = 34;
+        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941 = 35;
+        public const uint InternalArchetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0 = 36;
+        public const uint InternalArchetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0 = 37;
+        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0 = 38;
+        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0 = 39;
+        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2_GenericScale_LOD0 = 40;
+        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0 = 41;
+        public const uint InternalArchetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0 = 42;
+        public const uint InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0 = 43;
+        public const uint InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0 = 44;
+        public const uint InternalArchetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0 = 45;
+        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0 = 46;
+        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0 = 47;
+        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0 = 48;
+        public const uint InternalArchetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0 = 49;
+        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0 = 50;
+        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0 = 51;
+        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0 = 52;
+        public const uint InternalArchetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0 = 53;
+        public const uint InternalArchetype_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0 = 54;
+        public const uint InternalArchetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0 = 55;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 = 56;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 = 57;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0 = 58;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0 = 59;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0 = 60;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0 = 61;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0 = 62;
+        public const uint InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0 = 63;
         public const uint InternalAuthorityRequest = 0;
         public const uint InternalAuthorityTransfer = 1;
         public const uint InternalQuerySynced = 2;
         public const uint InternalAdoptOrphan = 3;
         public const uint InternalPersistenceReady = 4;
         public const uint InternalSceneIndexChanged = 5;
-        public const uint InternalGenericCommand = 6;
-        public const uint Internal_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814 = 7;
-        public const uint Internal_20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685 = 8;
-        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 = 9;
-        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8 = 10;
+        public const uint Internal_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814 = 6;
+        public const uint Internal_20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685 = 7;
+        public const uint Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 = 8;
+        public const uint Internal_cd9bcc1feead9419fac0c5981ce85c23_d210a4b9ddf7480f974318bf1cd06aa8 = 9;
 
         private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>()
         {
@@ -252,187 +116,52 @@ namespace Coherence.Generated
             { 15, "Scene" },
             { 16, "AssetId" },
             { 17, "GenericScale" },
-            { 18, "GenericFieldInt0" },
-            { 19, "GenericFieldInt1" },
-            { 20, "GenericFieldInt2" },
-            { 21, "GenericFieldInt3" },
-            { 22, "GenericFieldInt4" },
-            { 23, "GenericFieldInt5" },
-            { 24, "GenericFieldInt6" },
-            { 25, "GenericFieldInt7" },
-            { 26, "GenericFieldInt8" },
-            { 27, "GenericFieldInt9" },
-            { 28, "GenericFieldUInt0" },
-            { 29, "GenericFieldUInt1" },
-            { 30, "GenericFieldUInt2" },
-            { 31, "GenericFieldUInt3" },
-            { 32, "GenericFieldUInt4" },
-            { 33, "GenericFieldUInt5" },
-            { 34, "GenericFieldUInt6" },
-            { 35, "GenericFieldUInt7" },
-            { 36, "GenericFieldUInt8" },
-            { 37, "GenericFieldUInt9" },
-            { 38, "GenericFieldBool0" },
-            { 39, "GenericFieldBool1" },
-            { 40, "GenericFieldBool2" },
-            { 41, "GenericFieldBool3" },
-            { 42, "GenericFieldBool4" },
-            { 43, "GenericFieldBool5" },
-            { 44, "GenericFieldBool6" },
-            { 45, "GenericFieldBool7" },
-            { 46, "GenericFieldBool8" },
-            { 47, "GenericFieldBool9" },
-            { 48, "GenericFieldFloat0" },
-            { 49, "GenericFieldFloat1" },
-            { 50, "GenericFieldFloat2" },
-            { 51, "GenericFieldFloat3" },
-            { 52, "GenericFieldFloat4" },
-            { 53, "GenericFieldFloat5" },
-            { 54, "GenericFieldFloat6" },
-            { 55, "GenericFieldFloat7" },
-            { 56, "GenericFieldFloat8" },
-            { 57, "GenericFieldFloat9" },
-            { 58, "GenericFieldDouble0" },
-            { 59, "GenericFieldDouble1" },
-            { 60, "GenericFieldDouble2" },
-            { 61, "GenericFieldDouble3" },
-            { 62, "GenericFieldDouble4" },
-            { 63, "GenericFieldDouble5" },
-            { 64, "GenericFieldDouble6" },
-            { 65, "GenericFieldDouble7" },
-            { 66, "GenericFieldDouble8" },
-            { 67, "GenericFieldDouble9" },
-            { 68, "GenericFieldVector0" },
-            { 69, "GenericFieldVector1" },
-            { 70, "GenericFieldVector2" },
-            { 71, "GenericFieldVector3" },
-            { 72, "GenericField2dVector0" },
-            { 73, "GenericField2dVector1" },
-            { 74, "GenericField2dVector2" },
-            { 75, "GenericField2dVector3" },
-            { 76, "GenericFieldString0" },
-            { 77, "GenericFieldString1" },
-            { 78, "GenericFieldString2" },
-            { 79, "GenericFieldString3" },
-            { 80, "GenericFieldString4" },
-            { 81, "GenericFieldQuaternion0" },
-            { 82, "GenericFieldEntity0" },
-            { 83, "GenericFieldEntity1" },
-            { 84, "GenericFieldEntity2" },
-            { 85, "GenericFieldEntity3" },
-            { 86, "GenericFieldEntity4" },
-            { 87, "GenericFieldEntity5" },
-            { 88, "GenericFieldEntity6" },
-            { 89, "GenericFieldEntity7" },
-            { 90, "GenericFieldEntity8" },
-            { 91, "GenericFieldEntity9" },
-            { 92, "GenericFieldBytes0" },
-            { 93, "GenericFieldByte0" },
-            { 94, "GenericFieldByte1" },
-            { 95, "GenericFieldByte2" },
-            { 96, "GenericFieldByte3" },
-            { 97, "GenericFieldByte4" },
-            { 98, "GenericFieldByte5" },
-            { 99, "GenericFieldByte6" },
-            { 100, "GenericFieldByte7" },
-            { 101, "GenericFieldByte8" },
-            { 102, "GenericFieldByte9" },
-            { 103, "GenericFieldSByte0" },
-            { 104, "GenericFieldSByte1" },
-            { 105, "GenericFieldSByte2" },
-            { 106, "GenericFieldSByte3" },
-            { 107, "GenericFieldSByte4" },
-            { 108, "GenericFieldSByte5" },
-            { 109, "GenericFieldSByte6" },
-            { 110, "GenericFieldSByte7" },
-            { 111, "GenericFieldSByte8" },
-            { 112, "GenericFieldSByte9" },
-            { 113, "GenericFieldShort0" },
-            { 114, "GenericFieldShort1" },
-            { 115, "GenericFieldShort2" },
-            { 116, "GenericFieldShort3" },
-            { 117, "GenericFieldShort4" },
-            { 118, "GenericFieldShort5" },
-            { 119, "GenericFieldShort6" },
-            { 120, "GenericFieldShort7" },
-            { 121, "GenericFieldShort8" },
-            { 122, "GenericFieldShort9" },
-            { 123, "GenericFieldUShort0" },
-            { 124, "GenericFieldUShort1" },
-            { 125, "GenericFieldUShort2" },
-            { 126, "GenericFieldUShort3" },
-            { 127, "GenericFieldUShort4" },
-            { 128, "GenericFieldUShort5" },
-            { 129, "GenericFieldUShort6" },
-            { 130, "GenericFieldUShort7" },
-            { 131, "GenericFieldUShort8" },
-            { 132, "GenericFieldUShort9" },
-            { 133, "GenericFieldChar0" },
-            { 134, "GenericFieldChar1" },
-            { 135, "GenericFieldChar2" },
-            { 136, "GenericFieldChar3" },
-            { 137, "GenericFieldChar4" },
-            { 138, "GenericFieldChar5" },
-            { 139, "GenericFieldChar6" },
-            { 140, "GenericFieldChar7" },
-            { 141, "GenericFieldChar8" },
-            { 142, "GenericFieldChar9" },
-            { 143, "GenericFieldLong0" },
-            { 144, "GenericFieldLong1" },
-            { 145, "GenericFieldLong2" },
-            { 146, "GenericFieldLong3" },
-            { 147, "GenericFieldULong0" },
-            { 148, "GenericFieldULong1" },
-            { 149, "GenericFieldULong2" },
-            { 150, "GenericFieldULong3" },
-            { 151, "GenericFieldColor0" },
-            { 152, "GenericFieldColor1" },
-            { 153, "_20d53524fceab40d5a9ab892525615cb_5847726189716557621" },
-            { 154, "_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410" },
-            { 155, "_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121" },
-            { 156, "_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933" },
-            { 157, "_a0e6252c4d09f4fb28257804194356b6_5156161361901559470" },
-            { 158, "_a167402e36850884aa7ce3d374cd6c77_6689584802229134021" },
-            { 159, "_aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710" },
-            { 160, "_aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063" },
-            { 161, "_aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008" },
-            { 162, "_aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436" },
-            { 163, "_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591" },
-            { 164, "_aa7ea8e0044f0964eb9c782a689ca1b1_9849676" },
-            { 165, "_ba50eecfd968a47c38959f27b05771b6_5459872012036489579" },
-            { 166, "_cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066" },
-            { 167, "_cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177" },
-            { 168, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199" },
-            { 169, "_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033" },
-            { 170, "_cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941" },
-            { 171, "Archetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0" },
-            { 172, "Archetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0" },
-            { 173, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0" },
-            { 174, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0" },
-            { 175, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2_GenericScale_LOD0" },
-            { 176, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0" },
-            { 177, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0" },
-            { 178, "Archetype_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0" },
-            { 179, "Archetype_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0" },
-            { 180, "Archetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0" },
-            { 181, "Archetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0" },
-            { 182, "Archetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0" },
-            { 183, "Archetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0" },
-            { 184, "Archetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0" },
-            { 185, "Archetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0" },
-            { 186, "Archetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0" },
-            { 187, "Archetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0" },
-            { 188, "Archetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0" },
-            { 189, "Archetype_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0" },
-            { 190, "Archetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0" },
-            { 191, "Archetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0" },
-            { 192, "Archetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0" },
-            { 193, "Archetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0" },
-            { 194, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0" },
-            { 195, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0" },
-            { 196, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0" },
-            { 197, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0" },
-            { 198, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0" },
+            { 18, "_20d53524fceab40d5a9ab892525615cb_5847726189716557621" },
+            { 19, "_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410" },
+            { 20, "_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121" },
+            { 21, "_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933" },
+            { 22, "_a0e6252c4d09f4fb28257804194356b6_5156161361901559470" },
+            { 23, "_a167402e36850884aa7ce3d374cd6c77_6689584802229134021" },
+            { 24, "_aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710" },
+            { 25, "_aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063" },
+            { 26, "_aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008" },
+            { 27, "_aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436" },
+            { 28, "_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591" },
+            { 29, "_aa7ea8e0044f0964eb9c782a689ca1b1_9849676" },
+            { 30, "_ba50eecfd968a47c38959f27b05771b6_5459872012036489579" },
+            { 31, "_cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066" },
+            { 32, "_cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177" },
+            { 33, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199" },
+            { 34, "_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033" },
+            { 35, "_cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941" },
+            { 36, "Archetype_20d53524fceab40d5a9ab892525615cb_WorldPosition_LOD0" },
+            { 37, "Archetype_20d53524fceab40d5a9ab892525615cb__20d53524fceab40d5a9ab892525615cb_5847726189716557621_LOD0" },
+            { 38, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldPosition_LOD0" },
+            { 39, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2_WorldOrientation_LOD0" },
+            { 40, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2_GenericScale_LOD0" },
+            { 41, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121_LOD0" },
+            { 42, "Archetype_27f1ac5097d4ee4409fbb87ad14f76c2__27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410_LOD0" },
+            { 43, "Archetype_6ba8b7030c4bf544396f864fc9dd99de_WorldPosition_LOD0" },
+            { 44, "Archetype_6ba8b7030c4bf544396f864fc9dd99de_WorldOrientation_LOD0" },
+            { 45, "Archetype_6ba8b7030c4bf544396f864fc9dd99de__6ba8b7030c4bf544396f864fc9dd99de_107609493621447933_LOD0" },
+            { 46, "Archetype_a0e6252c4d09f4fb28257804194356b6_WorldPosition_LOD0" },
+            { 47, "Archetype_a0e6252c4d09f4fb28257804194356b6_WorldOrientation_LOD0" },
+            { 48, "Archetype_a0e6252c4d09f4fb28257804194356b6_GenericScale_LOD0" },
+            { 49, "Archetype_a0e6252c4d09f4fb28257804194356b6__a0e6252c4d09f4fb28257804194356b6_5156161361901559470_LOD0" },
+            { 50, "Archetype_a167402e36850884aa7ce3d374cd6c77_WorldPosition_LOD0" },
+            { 51, "Archetype_a167402e36850884aa7ce3d374cd6c77_WorldOrientation_LOD0" },
+            { 52, "Archetype_a167402e36850884aa7ce3d374cd6c77_GenericScale_LOD0" },
+            { 53, "Archetype_a167402e36850884aa7ce3d374cd6c77__a167402e36850884aa7ce3d374cd6c77_6689584802229134021_LOD0" },
+            { 54, "Archetype_ba50eecfd968a47c38959f27b05771b6_WorldPosition_LOD0" },
+            { 55, "Archetype_ba50eecfd968a47c38959f27b05771b6__ba50eecfd968a47c38959f27b05771b6_5459872012036489579_LOD0" },
+            { 56, "Archetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0" },
+            { 57, "Archetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0" },
+            { 58, "Archetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0" },
+            { 59, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4582869309862079177_LOD0" },
+            { 60, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199_LOD0" },
+            { 61, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_2783100773886260066_LOD0" },
+            { 62, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941_LOD0" },
+            { 63, "Archetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033_LOD0" },
         };
 
         public static string ComponentNameForTypeId(uint typeId)
@@ -455,7 +184,6 @@ namespace Coherence.Generated
             { Definition.InternalAdoptOrphan , MessageTarget.All },
             { Definition.InternalPersistenceReady , MessageTarget.All },
             { Definition.InternalSceneIndexChanged , MessageTarget.All },
-            { Definition.InternalGenericCommand , MessageTarget.All },
             { Definition.Internal_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814 , MessageTarget.All },
             { Definition.Internal_20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685 , MessageTarget.All },
             { Definition.Internal_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 , MessageTarget.All },
@@ -505,276 +233,6 @@ namespace Coherence.Generated
                     return AssetId.Deserialize(referenceSimulationFrame, inProtocolStream);
                 case InternalGenericScale:
                     return GenericScale.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt0:
-                    return GenericFieldInt0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt1:
-                    return GenericFieldInt1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt2:
-                    return GenericFieldInt2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt3:
-                    return GenericFieldInt3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt4:
-                    return GenericFieldInt4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt5:
-                    return GenericFieldInt5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt6:
-                    return GenericFieldInt6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt7:
-                    return GenericFieldInt7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt8:
-                    return GenericFieldInt8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldInt9:
-                    return GenericFieldInt9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt0:
-                    return GenericFieldUInt0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt1:
-                    return GenericFieldUInt1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt2:
-                    return GenericFieldUInt2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt3:
-                    return GenericFieldUInt3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt4:
-                    return GenericFieldUInt4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt5:
-                    return GenericFieldUInt5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt6:
-                    return GenericFieldUInt6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt7:
-                    return GenericFieldUInt7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt8:
-                    return GenericFieldUInt8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUInt9:
-                    return GenericFieldUInt9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool0:
-                    return GenericFieldBool0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool1:
-                    return GenericFieldBool1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool2:
-                    return GenericFieldBool2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool3:
-                    return GenericFieldBool3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool4:
-                    return GenericFieldBool4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool5:
-                    return GenericFieldBool5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool6:
-                    return GenericFieldBool6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool7:
-                    return GenericFieldBool7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool8:
-                    return GenericFieldBool8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBool9:
-                    return GenericFieldBool9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat0:
-                    return GenericFieldFloat0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat1:
-                    return GenericFieldFloat1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat2:
-                    return GenericFieldFloat2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat3:
-                    return GenericFieldFloat3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat4:
-                    return GenericFieldFloat4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat5:
-                    return GenericFieldFloat5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat6:
-                    return GenericFieldFloat6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat7:
-                    return GenericFieldFloat7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat8:
-                    return GenericFieldFloat8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldFloat9:
-                    return GenericFieldFloat9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble0:
-                    return GenericFieldDouble0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble1:
-                    return GenericFieldDouble1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble2:
-                    return GenericFieldDouble2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble3:
-                    return GenericFieldDouble3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble4:
-                    return GenericFieldDouble4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble5:
-                    return GenericFieldDouble5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble6:
-                    return GenericFieldDouble6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble7:
-                    return GenericFieldDouble7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble8:
-                    return GenericFieldDouble8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldDouble9:
-                    return GenericFieldDouble9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldVector0:
-                    return GenericFieldVector0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldVector1:
-                    return GenericFieldVector1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldVector2:
-                    return GenericFieldVector2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldVector3:
-                    return GenericFieldVector3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericField2dVector0:
-                    return GenericField2dVector0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericField2dVector1:
-                    return GenericField2dVector1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericField2dVector2:
-                    return GenericField2dVector2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericField2dVector3:
-                    return GenericField2dVector3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldString0:
-                    return GenericFieldString0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldString1:
-                    return GenericFieldString1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldString2:
-                    return GenericFieldString2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldString3:
-                    return GenericFieldString3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldString4:
-                    return GenericFieldString4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldQuaternion0:
-                    return GenericFieldQuaternion0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity0:
-                    return GenericFieldEntity0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity1:
-                    return GenericFieldEntity1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity2:
-                    return GenericFieldEntity2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity3:
-                    return GenericFieldEntity3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity4:
-                    return GenericFieldEntity4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity5:
-                    return GenericFieldEntity5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity6:
-                    return GenericFieldEntity6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity7:
-                    return GenericFieldEntity7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity8:
-                    return GenericFieldEntity8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldEntity9:
-                    return GenericFieldEntity9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldBytes0:
-                    return GenericFieldBytes0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte0:
-                    return GenericFieldByte0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte1:
-                    return GenericFieldByte1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte2:
-                    return GenericFieldByte2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte3:
-                    return GenericFieldByte3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte4:
-                    return GenericFieldByte4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte5:
-                    return GenericFieldByte5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte6:
-                    return GenericFieldByte6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte7:
-                    return GenericFieldByte7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte8:
-                    return GenericFieldByte8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldByte9:
-                    return GenericFieldByte9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte0:
-                    return GenericFieldSByte0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte1:
-                    return GenericFieldSByte1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte2:
-                    return GenericFieldSByte2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte3:
-                    return GenericFieldSByte3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte4:
-                    return GenericFieldSByte4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte5:
-                    return GenericFieldSByte5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte6:
-                    return GenericFieldSByte6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte7:
-                    return GenericFieldSByte7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte8:
-                    return GenericFieldSByte8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldSByte9:
-                    return GenericFieldSByte9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort0:
-                    return GenericFieldShort0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort1:
-                    return GenericFieldShort1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort2:
-                    return GenericFieldShort2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort3:
-                    return GenericFieldShort3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort4:
-                    return GenericFieldShort4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort5:
-                    return GenericFieldShort5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort6:
-                    return GenericFieldShort6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort7:
-                    return GenericFieldShort7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort8:
-                    return GenericFieldShort8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldShort9:
-                    return GenericFieldShort9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort0:
-                    return GenericFieldUShort0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort1:
-                    return GenericFieldUShort1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort2:
-                    return GenericFieldUShort2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort3:
-                    return GenericFieldUShort3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort4:
-                    return GenericFieldUShort4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort5:
-                    return GenericFieldUShort5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort6:
-                    return GenericFieldUShort6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort7:
-                    return GenericFieldUShort7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort8:
-                    return GenericFieldUShort8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldUShort9:
-                    return GenericFieldUShort9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar0:
-                    return GenericFieldChar0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar1:
-                    return GenericFieldChar1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar2:
-                    return GenericFieldChar2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar3:
-                    return GenericFieldChar3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar4:
-                    return GenericFieldChar4.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar5:
-                    return GenericFieldChar5.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar6:
-                    return GenericFieldChar6.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar7:
-                    return GenericFieldChar7.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar8:
-                    return GenericFieldChar8.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldChar9:
-                    return GenericFieldChar9.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldLong0:
-                    return GenericFieldLong0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldLong1:
-                    return GenericFieldLong1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldLong2:
-                    return GenericFieldLong2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldLong3:
-                    return GenericFieldLong3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldULong0:
-                    return GenericFieldULong0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldULong1:
-                    return GenericFieldULong1.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldULong2:
-                    return GenericFieldULong2.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldULong3:
-                    return GenericFieldULong3.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldColor0:
-                    return GenericFieldColor0.Deserialize(referenceSimulationFrame, inProtocolStream);
-                case InternalGenericFieldColor1:
-                    return GenericFieldColor1.Deserialize(referenceSimulationFrame, inProtocolStream);
                 case Internal_20d53524fceab40d5a9ab892525615cb_5847726189716557621:
                     return _20d53524fceab40d5a9ab892525615cb_5847726189716557621.Deserialize(referenceSimulationFrame, inProtocolStream);
                 case Internal_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410:
@@ -914,276 +372,6 @@ namespace Coherence.Generated
                     return AssetId.Serialize((AssetId)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
                 case InternalGenericScale:
                     return GenericScale.Serialize((GenericScale)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt0:
-                    return GenericFieldInt0.Serialize((GenericFieldInt0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt1:
-                    return GenericFieldInt1.Serialize((GenericFieldInt1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt2:
-                    return GenericFieldInt2.Serialize((GenericFieldInt2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt3:
-                    return GenericFieldInt3.Serialize((GenericFieldInt3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt4:
-                    return GenericFieldInt4.Serialize((GenericFieldInt4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt5:
-                    return GenericFieldInt5.Serialize((GenericFieldInt5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt6:
-                    return GenericFieldInt6.Serialize((GenericFieldInt6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt7:
-                    return GenericFieldInt7.Serialize((GenericFieldInt7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt8:
-                    return GenericFieldInt8.Serialize((GenericFieldInt8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldInt9:
-                    return GenericFieldInt9.Serialize((GenericFieldInt9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt0:
-                    return GenericFieldUInt0.Serialize((GenericFieldUInt0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt1:
-                    return GenericFieldUInt1.Serialize((GenericFieldUInt1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt2:
-                    return GenericFieldUInt2.Serialize((GenericFieldUInt2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt3:
-                    return GenericFieldUInt3.Serialize((GenericFieldUInt3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt4:
-                    return GenericFieldUInt4.Serialize((GenericFieldUInt4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt5:
-                    return GenericFieldUInt5.Serialize((GenericFieldUInt5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt6:
-                    return GenericFieldUInt6.Serialize((GenericFieldUInt6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt7:
-                    return GenericFieldUInt7.Serialize((GenericFieldUInt7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt8:
-                    return GenericFieldUInt8.Serialize((GenericFieldUInt8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUInt9:
-                    return GenericFieldUInt9.Serialize((GenericFieldUInt9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool0:
-                    return GenericFieldBool0.Serialize((GenericFieldBool0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool1:
-                    return GenericFieldBool1.Serialize((GenericFieldBool1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool2:
-                    return GenericFieldBool2.Serialize((GenericFieldBool2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool3:
-                    return GenericFieldBool3.Serialize((GenericFieldBool3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool4:
-                    return GenericFieldBool4.Serialize((GenericFieldBool4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool5:
-                    return GenericFieldBool5.Serialize((GenericFieldBool5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool6:
-                    return GenericFieldBool6.Serialize((GenericFieldBool6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool7:
-                    return GenericFieldBool7.Serialize((GenericFieldBool7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool8:
-                    return GenericFieldBool8.Serialize((GenericFieldBool8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBool9:
-                    return GenericFieldBool9.Serialize((GenericFieldBool9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat0:
-                    return GenericFieldFloat0.Serialize((GenericFieldFloat0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat1:
-                    return GenericFieldFloat1.Serialize((GenericFieldFloat1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat2:
-                    return GenericFieldFloat2.Serialize((GenericFieldFloat2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat3:
-                    return GenericFieldFloat3.Serialize((GenericFieldFloat3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat4:
-                    return GenericFieldFloat4.Serialize((GenericFieldFloat4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat5:
-                    return GenericFieldFloat5.Serialize((GenericFieldFloat5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat6:
-                    return GenericFieldFloat6.Serialize((GenericFieldFloat6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat7:
-                    return GenericFieldFloat7.Serialize((GenericFieldFloat7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat8:
-                    return GenericFieldFloat8.Serialize((GenericFieldFloat8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldFloat9:
-                    return GenericFieldFloat9.Serialize((GenericFieldFloat9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble0:
-                    return GenericFieldDouble0.Serialize((GenericFieldDouble0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble1:
-                    return GenericFieldDouble1.Serialize((GenericFieldDouble1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble2:
-                    return GenericFieldDouble2.Serialize((GenericFieldDouble2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble3:
-                    return GenericFieldDouble3.Serialize((GenericFieldDouble3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble4:
-                    return GenericFieldDouble4.Serialize((GenericFieldDouble4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble5:
-                    return GenericFieldDouble5.Serialize((GenericFieldDouble5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble6:
-                    return GenericFieldDouble6.Serialize((GenericFieldDouble6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble7:
-                    return GenericFieldDouble7.Serialize((GenericFieldDouble7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble8:
-                    return GenericFieldDouble8.Serialize((GenericFieldDouble8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldDouble9:
-                    return GenericFieldDouble9.Serialize((GenericFieldDouble9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldVector0:
-                    return GenericFieldVector0.Serialize((GenericFieldVector0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldVector1:
-                    return GenericFieldVector1.Serialize((GenericFieldVector1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldVector2:
-                    return GenericFieldVector2.Serialize((GenericFieldVector2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldVector3:
-                    return GenericFieldVector3.Serialize((GenericFieldVector3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericField2dVector0:
-                    return GenericField2dVector0.Serialize((GenericField2dVector0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericField2dVector1:
-                    return GenericField2dVector1.Serialize((GenericField2dVector1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericField2dVector2:
-                    return GenericField2dVector2.Serialize((GenericField2dVector2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericField2dVector3:
-                    return GenericField2dVector3.Serialize((GenericField2dVector3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldString0:
-                    return GenericFieldString0.Serialize((GenericFieldString0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldString1:
-                    return GenericFieldString1.Serialize((GenericFieldString1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldString2:
-                    return GenericFieldString2.Serialize((GenericFieldString2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldString3:
-                    return GenericFieldString3.Serialize((GenericFieldString3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldString4:
-                    return GenericFieldString4.Serialize((GenericFieldString4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldQuaternion0:
-                    return GenericFieldQuaternion0.Serialize((GenericFieldQuaternion0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity0:
-                    return GenericFieldEntity0.Serialize((GenericFieldEntity0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity1:
-                    return GenericFieldEntity1.Serialize((GenericFieldEntity1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity2:
-                    return GenericFieldEntity2.Serialize((GenericFieldEntity2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity3:
-                    return GenericFieldEntity3.Serialize((GenericFieldEntity3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity4:
-                    return GenericFieldEntity4.Serialize((GenericFieldEntity4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity5:
-                    return GenericFieldEntity5.Serialize((GenericFieldEntity5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity6:
-                    return GenericFieldEntity6.Serialize((GenericFieldEntity6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity7:
-                    return GenericFieldEntity7.Serialize((GenericFieldEntity7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity8:
-                    return GenericFieldEntity8.Serialize((GenericFieldEntity8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldEntity9:
-                    return GenericFieldEntity9.Serialize((GenericFieldEntity9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldBytes0:
-                    return GenericFieldBytes0.Serialize((GenericFieldBytes0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte0:
-                    return GenericFieldByte0.Serialize((GenericFieldByte0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte1:
-                    return GenericFieldByte1.Serialize((GenericFieldByte1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte2:
-                    return GenericFieldByte2.Serialize((GenericFieldByte2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte3:
-                    return GenericFieldByte3.Serialize((GenericFieldByte3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte4:
-                    return GenericFieldByte4.Serialize((GenericFieldByte4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte5:
-                    return GenericFieldByte5.Serialize((GenericFieldByte5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte6:
-                    return GenericFieldByte6.Serialize((GenericFieldByte6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte7:
-                    return GenericFieldByte7.Serialize((GenericFieldByte7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte8:
-                    return GenericFieldByte8.Serialize((GenericFieldByte8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldByte9:
-                    return GenericFieldByte9.Serialize((GenericFieldByte9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte0:
-                    return GenericFieldSByte0.Serialize((GenericFieldSByte0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte1:
-                    return GenericFieldSByte1.Serialize((GenericFieldSByte1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte2:
-                    return GenericFieldSByte2.Serialize((GenericFieldSByte2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte3:
-                    return GenericFieldSByte3.Serialize((GenericFieldSByte3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte4:
-                    return GenericFieldSByte4.Serialize((GenericFieldSByte4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte5:
-                    return GenericFieldSByte5.Serialize((GenericFieldSByte5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte6:
-                    return GenericFieldSByte6.Serialize((GenericFieldSByte6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte7:
-                    return GenericFieldSByte7.Serialize((GenericFieldSByte7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte8:
-                    return GenericFieldSByte8.Serialize((GenericFieldSByte8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldSByte9:
-                    return GenericFieldSByte9.Serialize((GenericFieldSByte9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort0:
-                    return GenericFieldShort0.Serialize((GenericFieldShort0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort1:
-                    return GenericFieldShort1.Serialize((GenericFieldShort1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort2:
-                    return GenericFieldShort2.Serialize((GenericFieldShort2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort3:
-                    return GenericFieldShort3.Serialize((GenericFieldShort3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort4:
-                    return GenericFieldShort4.Serialize((GenericFieldShort4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort5:
-                    return GenericFieldShort5.Serialize((GenericFieldShort5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort6:
-                    return GenericFieldShort6.Serialize((GenericFieldShort6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort7:
-                    return GenericFieldShort7.Serialize((GenericFieldShort7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort8:
-                    return GenericFieldShort8.Serialize((GenericFieldShort8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldShort9:
-                    return GenericFieldShort9.Serialize((GenericFieldShort9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort0:
-                    return GenericFieldUShort0.Serialize((GenericFieldUShort0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort1:
-                    return GenericFieldUShort1.Serialize((GenericFieldUShort1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort2:
-                    return GenericFieldUShort2.Serialize((GenericFieldUShort2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort3:
-                    return GenericFieldUShort3.Serialize((GenericFieldUShort3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort4:
-                    return GenericFieldUShort4.Serialize((GenericFieldUShort4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort5:
-                    return GenericFieldUShort5.Serialize((GenericFieldUShort5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort6:
-                    return GenericFieldUShort6.Serialize((GenericFieldUShort6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort7:
-                    return GenericFieldUShort7.Serialize((GenericFieldUShort7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort8:
-                    return GenericFieldUShort8.Serialize((GenericFieldUShort8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldUShort9:
-                    return GenericFieldUShort9.Serialize((GenericFieldUShort9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar0:
-                    return GenericFieldChar0.Serialize((GenericFieldChar0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar1:
-                    return GenericFieldChar1.Serialize((GenericFieldChar1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar2:
-                    return GenericFieldChar2.Serialize((GenericFieldChar2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar3:
-                    return GenericFieldChar3.Serialize((GenericFieldChar3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar4:
-                    return GenericFieldChar4.Serialize((GenericFieldChar4)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar5:
-                    return GenericFieldChar5.Serialize((GenericFieldChar5)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar6:
-                    return GenericFieldChar6.Serialize((GenericFieldChar6)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar7:
-                    return GenericFieldChar7.Serialize((GenericFieldChar7)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar8:
-                    return GenericFieldChar8.Serialize((GenericFieldChar8)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldChar9:
-                    return GenericFieldChar9.Serialize((GenericFieldChar9)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldLong0:
-                    return GenericFieldLong0.Serialize((GenericFieldLong0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldLong1:
-                    return GenericFieldLong1.Serialize((GenericFieldLong1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldLong2:
-                    return GenericFieldLong2.Serialize((GenericFieldLong2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldLong3:
-                    return GenericFieldLong3.Serialize((GenericFieldLong3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldULong0:
-                    return GenericFieldULong0.Serialize((GenericFieldULong0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldULong1:
-                    return GenericFieldULong1.Serialize((GenericFieldULong1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldULong2:
-                    return GenericFieldULong2.Serialize((GenericFieldULong2)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldULong3:
-                    return GenericFieldULong3.Serialize((GenericFieldULong3)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldColor0:
-                    return GenericFieldColor0.Serialize((GenericFieldColor0)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
-                case InternalGenericFieldColor1:
-                    return GenericFieldColor1.Serialize((GenericFieldColor1)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
                 case Internal_20d53524fceab40d5a9ab892525615cb_5847726189716557621:
                     return _20d53524fceab40d5a9ab892525615cb_5847726189716557621.Serialize((_20d53524fceab40d5a9ab892525615cb_5847726189716557621)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
                 case Internal_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410:
@@ -1242,8 +430,6 @@ namespace Coherence.Generated
                     return PersistenceReady.Deserialize(bitStream, entity, target);
                 case Definition.InternalSceneIndexChanged:
                     return SceneIndexChanged.Deserialize(bitStream, entity, target);
-                case Definition.InternalGenericCommand:
-                    return GenericCommand.Deserialize(bitStream, entity, target);
                 case Definition.Internal_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814:
                     return _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814.Deserialize(bitStream, entity, target);
                 case Definition.Internal_20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685:
@@ -1338,9 +524,6 @@ namespace Coherence.Generated
                     break;
                 case Definition.InternalSceneIndexChanged:
                     SceneIndexChanged.Serialize((SceneIndexChanged)data, bitStream);
-                    break;
-                case Definition.InternalGenericCommand:
-                    GenericCommand.Serialize((GenericCommand)data, bitStream);
                     break;
                 case Definition.Internal_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814:
                     _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814.Serialize((_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814)data, bitStream);
@@ -1439,6 +622,11 @@ namespace Coherence.Generated
             uniqueID.FieldsMask = 0b1;
 
             return uniqueID;
+        }
+
+        public ICoherenceComponentData CreateGlobalComponent()
+        {
+            return new Global();
         }
 
         public ICoherenceComponentData GenerateGlobalQueryComponent()
