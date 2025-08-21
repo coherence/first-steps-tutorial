@@ -13,6 +13,7 @@ namespace Coherence.FirstSteps
     {
         public CoherenceSync referenceSync;
         public GameObject[] targetRenderers;
+        private CoherenceBridge bridge;
 
         public string stateAuthorityLayer = "StateAuthority";
         public string stateRemoteLayer = "StateRemote";
@@ -21,7 +22,8 @@ namespace Coherence.FirstSteps
         private void Awake()
         {
             CheckAuthority();
-            referenceSync.CoherenceBridge.onLiveQuerySynced.AddListener(OnLiveQuerySynced);
+            bridge = referenceSync.CoherenceBridge;
+            bridge.onLiveQuerySynced.AddListener(OnLiveQuerySynced);
             referenceSync.OnStateAuthority.AddListener(OnStateAuthority);
             referenceSync.OnStateRemote.AddListener(OnStateRemote);
         }
@@ -41,7 +43,7 @@ namespace Coherence.FirstSteps
 
         private void OnStateRemote()
         {
-            if(referenceSync.EntityState.IsOrphaned)
+            if(referenceSync.EntityState is { IsOrphaned: true })
                 SetObjectsToLayer(LayerMask.NameToLayer(orphanedLayerName));
             else
                 SetObjectsToLayer(LayerMask.NameToLayer(stateRemoteLayer));
@@ -55,7 +57,7 @@ namespace Coherence.FirstSteps
 
         private void OnDestroy()
         {
-            if(referenceSync.CoherenceBridge != null) referenceSync.CoherenceBridge.onLiveQuerySynced.RemoveListener(OnLiveQuerySynced);
+            bridge.onLiveQuerySynced.RemoveListener(OnLiveQuerySynced);
             referenceSync.OnStateAuthority.RemoveListener(OnStateAuthority);
             referenceSync.OnStateRemote.RemoveListener(OnStateRemote);
         }
