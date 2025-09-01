@@ -170,18 +170,11 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.timePlanted, _timePlanted_Min, _timePlanted_Max, "_a167402e36850884aa7ce3d374cd6c77_6689584802229134021.timePlanted", logger);
-
                 data.timePlanted = Coherence.Utils.Bounds.Clamp(data.timePlanted, _timePlanted_Min, _timePlanted_Max);
-
                 var fieldValue = data.timePlanted;
-
-
-
                 bitStream.WriteUIntegerRange(fieldValue, 32, 0);
             }
-
             mask >>= 1;
 
             return mask;

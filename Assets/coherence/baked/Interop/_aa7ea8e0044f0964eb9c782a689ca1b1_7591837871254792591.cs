@@ -193,19 +193,12 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
                 Coherence.Utils.Bounds.Check(data.position.x, _position_Min, _position_Max, "_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.position.x", logger);
                 Coherence.Utils.Bounds.Check(data.position.y, _position_Min, _position_Max, "_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.position.y", logger);
                 Coherence.Utils.Bounds.Check(data.position.z, _position_Min, _position_Max, "_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591.position.z", logger);
-
-
                 var fieldValue = (data.position.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.ForFixedPoint(-100, 600, 0.01d));
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
@@ -219,15 +212,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = (data.rotation.ToCoreQuaternion());
-
-
-
                 bitStream.WriteQuaternion(fieldValue, 12);
             }
-
             mask >>= 1;
 
             return mask;

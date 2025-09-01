@@ -242,78 +242,43 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentSkinTone", logger);
-
                 data.currentSkinTone = Coherence.Utils.Bounds.Clamp(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max);
-
                 var fieldValue = data.currentSkinTone;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentHat, _currentHat_Min, _currentHat_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHat", logger);
-
                 data.currentHat = Coherence.Utils.Bounds.Clamp(data.currentHat, _currentHat_Min, _currentHat_Max);
-
                 var fieldValue = data.currentHat;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentHairStyle, _currentHairStyle_Min, _currentHairStyle_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentHairStyle", logger);
-
                 data.currentHairStyle = Coherence.Utils.Bounds.Clamp(data.currentHairStyle, _currentHairStyle_Min, _currentHairStyle_Max);
-
                 var fieldValue = data.currentHairStyle;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentFacialHair, _currentFacialHair_Min, _currentFacialHair_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentFacialHair", logger);
-
                 data.currentFacialHair = Coherence.Utils.Bounds.Clamp(data.currentFacialHair, _currentFacialHair_Min, _currentFacialHair_Max);
-
                 var fieldValue = data.currentFacialHair;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentBackpack, _currentBackpack_Min, _currentBackpack_Max, "_cd9bcc1feead9419fac0c5981ce85c23_5911091967807195199.currentBackpack", logger);
-
                 data.currentBackpack = Coherence.Utils.Bounds.Clamp(data.currentBackpack, _currentBackpack_Min, _currentBackpack_Max);
-
                 var fieldValue = data.currentBackpack;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
 
             return mask;

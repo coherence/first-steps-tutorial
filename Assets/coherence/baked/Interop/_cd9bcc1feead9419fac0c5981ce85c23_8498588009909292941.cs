@@ -263,17 +263,10 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
                 Coherence.Utils.Bounds.Check(data.MoveSpeed, _MoveSpeed_Min, _MoveSpeed_Max, "_cd9bcc1feead9419fac0c5981ce85c23_8498588009909292941.MoveSpeed", logger);
-
-
                 var fieldValue = data.MoveSpeed;
-
-
-
                 bitStream.WriteFloat(fieldValue, FloatMeta.ForFixedPoint(0, 10, 0.001d));
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
@@ -287,15 +280,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = data.Grounded;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
@@ -309,15 +296,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = data.CarryingBig;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
@@ -331,15 +312,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = data.CarryingSmall;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

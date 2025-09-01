@@ -49,3 +49,5 @@ MonoBehaviour:
   defaultTransportMode: 0
   defaultTransportModeMigrated: 1
   defaultAuthorityTransferType: 2
+  simulatorLockTargetFramerate: 1
+  simulatorTargetFramerate: 30

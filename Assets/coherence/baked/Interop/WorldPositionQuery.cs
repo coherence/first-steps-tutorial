@@ -28,6 +28,8 @@ namespace Coherence.Generated
             public Vector3 position;
             [FieldOffset(12)]
             public System.Single radius;
+            [FieldOffset(16)]
+            public System.Single buffer;
         }
 
         public void ResetFrame(AbsoluteSimulationFrame frame)
@@ -36,12 +38,14 @@ namespace Coherence.Generated
             positionSimulationFrame = frame;
             FieldsMask |= WorldPositionQuery.radiusMask;
             radiusSimulationFrame = frame;
+            FieldsMask |= WorldPositionQuery.bufferMask;
+            bufferSimulationFrame = frame;
         }
 
         public static unsafe WorldPositionQuery FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
-            if (dataSize != 16) {
-                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
+            if (dataSize != 20) {
+                throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 20) " +
                     "for component with ID 3");
             }
 
@@ -56,6 +60,7 @@ namespace Coherence.Generated
 
             orig.position = comp->position;
             orig.radius = comp->radius;
+            orig.buffer = comp->buffer;
 
             return orig;
         }
@@ -67,13 +72,16 @@ namespace Coherence.Generated
         public static uint radiusMask => 0b00000000000000000000000000000010;
         public AbsoluteSimulationFrame radiusSimulationFrame;
         public System.Single radius;
+        public static uint bufferMask => 0b00000000000000000000000000000100;
+        public AbsoluteSimulationFrame bufferSimulationFrame;
+        public System.Single buffer;
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
         public uint GetComponentType() => 3;
         public int PriorityLevel() => 100;
         public const int order = 0;
-        public uint InitialFieldsMask() => 0b00000000000000000000000000000011;
+        public uint InitialFieldsMask() => 0b00000000000000000000000000000111;
         public bool HasFields() => true;
         public bool HasRefFields() => false;
 
@@ -82,7 +90,7 @@ namespace Coherence.Generated
             return null;
         }
 
-        public int GetFieldCount() => 2;
+        public int GetFieldCount() => 3;
 
 
         
@@ -141,6 +149,13 @@ namespace Coherence.Generated
             }
 
             otherMask >>= 1;
+            if ((otherMask & 0x01) != 0)
+            {
+                this.bufferSimulationFrame = other.bufferSimulationFrame;
+                this.buffer = other.buffer;
+            }
+
+            otherMask >>= 1;
             StoppedMask |= other.StoppedMask;
 
             return this;
@@ -155,34 +170,28 @@ namespace Coherence.Generated
         {
             if (bitStream.WriteMask(data.StoppedMask != 0))
             {
-                bitStream.WriteMaskBits(data.StoppedMask, 2);
+                bitStream.WriteMaskBits(data.StoppedMask, 3);
             }
 
             var mask = data.FieldsMask;
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = (data.position.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.radius;
-
-
-
                 bitStream.WriteFloat(fieldValue, FloatMeta.NoCompression());
             }
-
+            mask >>= 1;
+            if (bitStream.WriteMask((mask & 0x01) != 0))
+            {
+                var fieldValue = data.buffer;
+                bitStream.WriteFloat(fieldValue, FloatMeta.NoCompression());
+            }
             mask >>= 1;
 
             return mask;
@@ -193,7 +202,7 @@ namespace Coherence.Generated
             var stoppedMask = (uint)0;
             if (bitStream.ReadMask())
             {
-                stoppedMask = bitStream.ReadMaskBits(2);
+                stoppedMask = bitStream.ReadMaskBits(3);
             }
 
             var val = new WorldPositionQuery();
@@ -209,6 +218,12 @@ namespace Coherence.Generated
                 val.radius = bitStream.ReadFloat(FloatMeta.NoCompression());
                 val.FieldsMask |= WorldPositionQuery.radiusMask;
             }
+            if (bitStream.ReadMask())
+            {
+
+                val.buffer = bitStream.ReadFloat(FloatMeta.NoCompression());
+                val.FieldsMask |= WorldPositionQuery.bufferMask;
+            }
 
             val.StoppedMask = stoppedMask;
 
@@ -221,8 +236,9 @@ namespace Coherence.Generated
             return $"WorldPositionQuery(" +
                 $" position: { this.position }" +
                 $" radius: { this.radius }" +
-                $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
-                $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
+                $" buffer: { this.buffer }" +
+                $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(3, '0') }, " +
+                $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(3, '0') })";
         }
     }
 

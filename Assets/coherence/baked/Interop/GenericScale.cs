@@ -258,15 +258,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = (data.value.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
             }
-
             mask >>= 1;
 
             return mask;

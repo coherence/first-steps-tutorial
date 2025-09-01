@@ -170,17 +170,10 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.timer, _timer_Min, _timer_Max, "_6ba8b7030c4bf544396f864fc9dd99de_107609493621447933.timer", logger);
-
-
                 var fieldValue = data.timer;
-
-
-
                 bitStream.WriteFloat(fieldValue, FloatMeta.NoCompression());
             }
-
             mask >>= 1;
 
             return mask;
