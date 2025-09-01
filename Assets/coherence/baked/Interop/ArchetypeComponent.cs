@@ -149,18 +149,11 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.index, _index_Min, _index_Max, "ArchetypeComponent.index", logger);
-
                 data.index = Coherence.Utils.Bounds.Clamp(data.index, _index_Min, _index_Max);
-
                 var fieldValue = data.index;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
 
             return mask;

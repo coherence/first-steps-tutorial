@@ -485,34 +485,45 @@ namespace Coherence.Generated
         private void BakeCommandBinding__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7_CommandTarget = (global::UnityEngine.Animator)commandBinding.UnityComponent;
-            commandsHandler.AddBakedCommand("UnityEngine.Animator.SetTrigger", "(System.String)", SendCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7, ReceiveLocalCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7, MessageTarget.All, _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7_CommandTarget, false);
+            commandsHandler.AddBakedCommand(
+            	"UnityEngine.Animator.SetTrigger",
+            	"(System.String)",
+            	SendCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7,
+            	ReceiveLocalCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7,
+            	MessageTarget.All,
+            	_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7_CommandTarget,
+            	commandBinding.UsesMeta());
         }
         
-        private void SendCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(MessageTarget target, ChannelID channelID, object[] args)
+        private void SendCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(GenericCommandRequestArgs requestArgs)
         {
             var command = new _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7();
-            
-            int i = 0;
-            command.name = (System.String)args[i++];
-        
-            client.SendCommand(command, target, entityId, channelID);
+            command.Frame = requestArgs.Frame;
+            command.SenderClientID = requestArgs.Sender;
+            command.UsesMeta = requestArgs.UsesMeta;
+            command.Target = requestArgs.Target;
+            command.Entity = entityId;
+
+            command.name = (System.String)requestArgs.Args[0];
+
+            client.SendCommand(command, requestArgs.ChannelID);
         }
         
-        private void ReceiveLocalCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(MessageTarget target, ChannelID _, object[] args)
+        private void ReceiveLocalCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(GenericCommandRequestArgs requestArgs)
         {
             var command = new _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7();
-            
-            int i = 0;
-            command.name = (System.String)args[i++];
-            
+            command.Frame = requestArgs.Frame;
+            command.SenderClientID = requestArgs.Sender;
+
+            command.name = (System.String)requestArgs.Args[0];
+
             ReceiveCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(command);
         }
 
         private void ReceiveCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 command)
         {
             var target = _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7_CommandTarget;
-            
-            target.SetTrigger((System.String)(command.name));
+			target.SetTrigger((System.String)(command.name));
         }
         
         public override void ReceiveCommand(IEntityCommand command)

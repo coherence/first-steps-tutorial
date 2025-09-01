@@ -170,18 +170,11 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.count, _count_Min, _count_Max, "_20d53524fceab40d5a9ab892525615cb_5847726189716557621.count", logger);
-
                 data.count = Coherence.Utils.Bounds.Clamp(data.count, _count_Min, _count_Max);
-
                 var fieldValue = data.count;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
 
             return mask;

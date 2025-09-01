@@ -61,7 +61,9 @@ namespace Coherence.Generated
                         else
                         {
                             logger.Error(Coherence.Log.Error.ToolkitSpawnInfoMissingConfigSync,
-                                $"Can't find sync config from asset ID: {assetId.value}.");
+                                $"Can't find Sync Config for Network Asset ID: {CoherenceSyncConfig.NetworkAssetIdToString(assetId.value)}. " +
+                                "Using the Network Prefabs window please verify that prefab with this ID is registered. " +
+                                "This might indicate outdated client.");
                         }
                         break;
                     case ConnectedEntity connectedEntity:

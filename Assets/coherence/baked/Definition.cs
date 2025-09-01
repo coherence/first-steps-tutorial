@@ -462,11 +462,7 @@ namespace Coherence.Generated
 
             for (var i = 0; i < numMessages; i++)
             {
-                var entityID = DeserializerTools.DeserializeEntity(bitStream);
-                var messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
-                var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
-                var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
-                commandData[i] = ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+            	commandData[i] = ReadCommand(bitStream, logger);
             }
 
             return commandData;
@@ -498,9 +494,18 @@ namespace Coherence.Generated
             var entityID = DeserializerTools.DeserializeEntity(bitStream);
             var messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
             var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
+            var meta = DeserializerTools.DeserializeCommandMeta(bitStream);
             var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
 
-            return ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+			var command = ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+			if (meta.HasValue)
+			{
+				command.UsesMeta = true;
+				command.SenderClientID = new ClientID(meta.Value.SenderID);
+				command.Frame = meta.Value.Frame;
+			}
+
+            return command;
         }
 
         public void WriteCommand(IEntityCommand data, uint commandType, IOutProtocolBitStream bitStream, Logger logger)
@@ -546,7 +551,6 @@ namespace Coherence.Generated
         public void WriteInput(IEntityInput data, uint inputType, IOutProtocolBitStream bitStream, Logger logger)
         {
             var inputData = (InputData)data;
-            bitStream.WriteLong(inputData.Frame);
 
             switch (inputType)
             {
@@ -558,12 +562,19 @@ namespace Coherence.Generated
 
         public IEntityCommand CreateAuthorityRequest(Entity entity, ClientID requester, AuthorityType authType)
         {
-            return new AuthorityRequest(entity, (uint)requester, (int)authType);
+            return new AuthorityRequest(entity, (uint)requester, (int)authType)
+			{
+				Target = MessageTarget.StateAuthorityOnly,
+			};
         }
 
-        public IEntityCommand CreateAdoptOrphanCommand()
+        public IEntityCommand CreateAdoptOrphanCommand(Entity entity)
         {
-            return new AdoptOrphan();
+            return new AdoptOrphan
+            {
+                Entity = entity,
+                Target = MessageTarget.StateAuthorityOnly,
+            };
         }
 
         public bool TryGetAuthorityRequestCommand(IEntityCommand entityCommand,
@@ -585,7 +596,10 @@ namespace Coherence.Generated
 
         public IEntityCommand CreateAuthorityTransfer(Entity entity, ClientID newAuthority, bool accepted, AuthorityType authType)
         {
-            return new AuthorityTransfer(entity, (uint)newAuthority, accepted, (int)authType);
+            return new AuthorityTransfer(entity, (uint)newAuthority, accepted, (int)authType)
+			{
+				Target = MessageTarget.Other,
+			};
         }
 
         public bool TryGetAuthorityTransferCommand(IEntityCommand entityCommand, out ClientID newAuthority,
@@ -674,7 +688,10 @@ namespace Coherence.Generated
 
         public IEntityCommand CreateSceneIndexChangedCommand(Entity entity, int sceneIndex)
         {
-            return new SceneIndexChanged(entity, sceneIndex);
+            return new SceneIndexChanged(entity, sceneIndex)
+			{
+				Target = MessageTarget.StateAuthorityOnly,
+			};
         }
 
         public bool IsSendOrderedComponent(uint componentID)

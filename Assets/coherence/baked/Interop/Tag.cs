@@ -147,15 +147,9 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.tag;
-
-
-
                 bitStream.WriteShortString(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

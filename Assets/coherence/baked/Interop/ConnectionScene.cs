@@ -149,18 +149,11 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.value, _value_Min, _value_Max, "ConnectionScene.value", logger);
-
                 data.value = Coherence.Utils.Bounds.Clamp(data.value, _value_Min, _value_Max);
-
                 var fieldValue = data.value;
-
-
-
                 bitStream.WriteUIntegerRange(fieldValue, 32, 0);
             }
-
             mask >>= 1;
 
             return mask;

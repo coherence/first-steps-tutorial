@@ -186,30 +186,17 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.path;
-
-
-
                 bitStream.WriteShortString(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.pathDirtyCounter, _pathDirtyCounter_Min, _pathDirtyCounter_Max, "_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410.pathDirtyCounter", logger);
-
                 data.pathDirtyCounter = Coherence.Utils.Bounds.Clamp(data.pathDirtyCounter, _pathDirtyCounter_Min, _pathDirtyCounter_Max);
-
                 var fieldValue = data.pathDirtyCounter;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 11, -1);
             }
-
             mask >>= 1;
 
             return mask;

@@ -192,15 +192,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = (data.rotation.ToCoreQuaternion());
-
-
-
                 bitStream.WriteQuaternion(fieldValue, 12);
             }
-
             mask >>= 1;
 
             return mask;

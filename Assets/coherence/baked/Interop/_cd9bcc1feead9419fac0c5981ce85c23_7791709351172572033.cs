@@ -194,19 +194,12 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
                 Coherence.Utils.Bounds.Check(data.position.x, _position_Min, _position_Max, "_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.position.x", logger);
                 Coherence.Utils.Bounds.Check(data.position.y, _position_Min, _position_Max, "_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.position.y", logger);
                 Coherence.Utils.Bounds.Check(data.position.z, _position_Min, _position_Max, "_cd9bcc1feead9419fac0c5981ce85c23_7791709351172572033.position.z", logger);
-
-
                 var fieldValue = (data.position.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.ForFixedPoint(-100, 600, 0.01d));
             }
-
             mask >>= 1;
 
             return mask;

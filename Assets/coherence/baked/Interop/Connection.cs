@@ -166,33 +166,19 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.id, _id_Min, _id_Max, "Connection.id", logger);
-
                 data.id = Coherence.Utils.Bounds.Clamp(data.id, _id_Min, _id_Max);
-
                 var fieldValue = data.id;
-
-
-
                 bitStream.WriteUIntegerRange(fieldValue, 31, 0);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.type, _type_Min, _type_Max, "Connection.type", logger);
-
                 data.type = Coherence.Utils.Bounds.Clamp(data.type, _type_Min, _type_Max);
-
                 var fieldValue = data.type;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 3, 0);
             }
-
             mask >>= 1;
 
             return mask;

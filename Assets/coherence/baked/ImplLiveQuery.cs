@@ -20,15 +20,16 @@ namespace Coherence.Generated
             Impl.RemoveLiveQuery = RemoveLiveQuery;
         }
 
-        private static void UpdateLiveQuery(IClient client, Entity liveQuery, float radius, Vector3 pos, AbsoluteSimulationFrame simFrame)
+        private static void UpdateLiveQuery(IClient client, Entity liveQuery, float radius, float buffer, Vector3 pos, AbsoluteSimulationFrame simFrame)
         {
             var newWorldPositionQuery = new WorldPositionQuery
             {
                 position = pos,
                 radius = radius,
+                buffer = buffer,
                 positionSimulationFrame = simFrame,
                 radiusSimulationFrame = simFrame,
-                FieldsMask = 0b11,
+                FieldsMask = 0b111,
             };
 
             var components = new ICoherenceComponentData[]
