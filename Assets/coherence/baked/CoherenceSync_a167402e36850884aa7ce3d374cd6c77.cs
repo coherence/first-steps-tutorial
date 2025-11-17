@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a167402e36850884aa7ce3d374cd6c77_ccfa2ea5f634431fbc3362f7da4de3ac : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a167402e36850884aa7ce3d374cd6c77_fad1d0ce48674d6ca75d33d243736b45 : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a167402e36850884aa7ce3d374cd6c77_a5ce67c00e9d4d2ab4c61578b00c3b00 : ScaleBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -177,7 +177,7 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a167402e36850884aa7ce3d374cd6c77_0425840f9cb7425197a777ce07e33845 : UIntBinding
     {   
         private global::Coherence.FirstSteps.Flower CastedUnityComponent;

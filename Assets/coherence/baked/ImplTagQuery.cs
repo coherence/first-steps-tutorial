@@ -22,11 +22,13 @@ namespace Coherence.Generated
 
         private static void UpdateTagQuery(IClient client, Entity liveQuery, string tag, AbsoluteSimulationFrame simFrame)
         {
+            var cleanTag = tag.Replace(",", "|");
+
             var components = new ICoherenceComponentData[]
             {
-                new TagQuery 
-                { 
-                    tag = tag,
+                new TagQuery
+                {
+                    tag = cleanTag,
                     tagSimulationFrame = simFrame,
                     FieldsMask = 0b1
                 }

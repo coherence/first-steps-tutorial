@@ -127,11 +127,13 @@ namespace Coherence.Generated
 
         private static void UpdateTag(IClient client, Entity liveQuery, string tag, AbsoluteSimulationFrame simFrame)
         {
+            var cleanTag = tag.Replace(",", "|");
+
             var components = new ICoherenceComponentData[]
             {
-                new Tag 
-                { 
-                    tag = tag,
+                new Tag
+                {
+                    tag = cleanTag,
                     tagSimulationFrame = simFrame,
                     FieldsMask = 0b1
                 }

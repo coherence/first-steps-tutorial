@@ -18,6 +18,7 @@ namespace Coherence.Generated
 
     [UnityEngine.Scripting.Preserve]
 
+    [System.Serializable]
     public class Definition : IDefinition
     {
         public const string schemaId = "e1db5f09aec2a463f8179e7076b68999158a07f2";
@@ -414,7 +415,7 @@ namespace Coherence.Generated
             }
         }
 
-        private IEntityCommand ReadCommand(uint commandType, Entity entity, MessageTarget target, IInProtocolBitStream bitStream, Logger logger)
+        public IEntityCommand ReadCommand(uint commandType, Entity entity, MessageTarget target, IInProtocolBitStream bitStream, Logger logger)
         {
             switch (commandType)
             {
@@ -444,7 +445,7 @@ namespace Coherence.Generated
             }
         }
 
-        private IEntityInput ReadInput(uint inputType, Entity entity, long frame, IInProtocolBitStream bitStream, Logger logger)
+        public IEntityInput ReadInput(uint inputType, Entity entity, long frame, IInProtocolBitStream bitStream, Logger logger)
         {
             switch (inputType)
             {
@@ -452,60 +453,6 @@ namespace Coherence.Generated
                     throw new System.ArgumentOutOfRangeException(nameof(inputType),
                         $"Missing serialization implementation for an input: {inputType}");
             }
-        }
-
-        public IEntityCommand[]	ReadCommands(IInBitStream bitStream, Logger logger)
-        {
-            var numMessages = bitStream.ReadUint8();
-
-            var commandData = new IEntityCommand[numMessages];
-
-            for (var i = 0; i < numMessages; i++)
-            {
-            	commandData[i] = ReadCommand(bitStream, logger);
-            }
-
-            return commandData;
-        }
-
-        public IEntityInput[] ReadInputs(IInBitStream bitStream, Logger logger)
-        {
-            var numMessages = bitStream.ReadUint8();
-
-            var inputData = new IEntityInput[numMessages];
-
-            for (var i = 0; i < numMessages; i++)
-            {
-                var entityID = DeserializerTools.DeserializeEntity(bitStream);
-                var routing = DeserializerTools.DeserializeMessageTarget(bitStream);
-                var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
-                var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
-                var frame = (long)bitStream.ReadUint64();
-                var input = ReadInput(componentType, entityID, frame, inBitStream, logger);
-                input.Routing = routing;
-                inputData[i] = input;
-            }
-
-            return inputData;
-        }
-
-        public IEntityCommand ReadCommand(IInBitStream bitStream, Logger logger)
-        {
-            var entityID = DeserializerTools.DeserializeEntity(bitStream);
-            var messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
-            var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
-            var meta = DeserializerTools.DeserializeCommandMeta(bitStream);
-            var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
-
-			var command = ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
-			if (meta.HasValue)
-			{
-				command.UsesMeta = true;
-				command.SenderClientID = new ClientID(meta.Value.SenderID);
-				command.Frame = meta.Value.Frame;
-			}
-
-            return command;
         }
 
         public void WriteCommand(IEntityCommand data, uint commandType, IOutProtocolBitStream bitStream, Logger logger)

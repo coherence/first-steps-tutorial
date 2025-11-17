@@ -26,7 +26,6 @@ namespace Coherence.Generated
             Impl.GetSpawnInfo = GetSpawnInfo;
             Impl.GetRootDefinition = GetRootDefinition;
             Impl.CreateConnectionSceneUpdateInternal = CreateConnectionSceneUpdateInternal;
-            Impl.GetDataInteropHandler = GetDataInteropHandler;
         }
 
         private static uint AssetId()
@@ -99,11 +98,6 @@ namespace Coherence.Generated
             };
 
             return update;
-        }
-
-        private static IDataInteropHandler GetDataInteropHandler()
-        {
-            return new DataInteropHandler();
         }
     }
 
