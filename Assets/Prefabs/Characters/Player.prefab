@@ -5227,6 +5227,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff62c046a053f416a8dc48ad6483a25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnAuthorityRequest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNetworkedInstantiation:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeforeNetworkedInstantiation:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNetworkedDestruction:
+    m_PersistentCalls:
+      m_Calls: []
   OnStateRemote:
     m_PersistentCalls:
       m_Calls: []
@@ -5245,10 +5257,22 @@ MonoBehaviour:
   OnAuthTransferComplete:
     m_PersistentCalls:
       m_Calls: []
-  OnConnectedEntityChanged:
+  OnNetworkedParentChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DRotationUpdate:
     m_PersistentCalls:
       m_Calls: []
   coherenceSyncConfig: {fileID: 11400000, guid: 2102c450ebbb84ed6b27d06dfcf6659f,
@@ -5554,23 +5578,12 @@ MonoBehaviour:
     GeneratesArchetypeDefinition: 1
   interpolationLocation: 4
   RigidbodyUpdateMode: 0
-  OnRigidbody2DPositionUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRigidbody3DPositionUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRigidbody2DRotationUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRigidbody3DRotationUpdate:
-    m_PersistentCalls:
-      m_Calls: []
   bakedScriptType: Coherence.Generated.CoherenceSync_cd9bcc1feead9419fac0c5981ce85c23,
     Assembly-CSharp
+  isGlobal: 0
   approveAuthorityTransferRequests: 1
   simulationType: 0
-  authorityTransferType: 0
+  authorityTransferConfig: 0
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 0
@@ -5594,19 +5607,9 @@ MonoBehaviour:
   - rid: 265633315173171207
   - rid: 265633315173171208
   - rid: 265633315173171209
-  onNetworkedInstantiation:
-    m_PersistentCalls:
-      m_Calls: []
-  onBeforeNetworkedInstantiation:
-    m_PersistentCalls:
-      m_Calls: []
-  onNetworkedDestruction:
-    m_PersistentCalls:
-      m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: 
-  assetVersion: 
-  usingReflection: 0
+  assetVersion: 20
   coherenceTag: 
   componentActions:
   - rid: 5551134440486600705
@@ -5618,6 +5621,7 @@ MonoBehaviour:
   - rid: 2368829914428211328
   floatingOriginMode: 0
   floatingOriginParentedMode: 1
+  synchronizationChannel: Default
   references:
     version: 2
     RefIds:
@@ -6324,7 +6328,7 @@ MonoBehaviour:
           type: 0
           minRange: 0
           maxRange: 0
-          sampleRate: 0
+          sampleRate: 20
           floatCompression: 0
           fields: []
         unityComponent: {fileID: 8498588009909292941}

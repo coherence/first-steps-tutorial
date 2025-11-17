@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a0e6252c4d09f4fb28257804194356b6_c898195464f346dfa4262f1c647fa024 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a0e6252c4d09f4fb28257804194356b6_b0541bd4db944c98aae3912bfbdb0f6d : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a0e6252c4d09f4fb28257804194356b6_0675d43c80e54d9e9e07fd195a2e5ff3 : ScaleBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -177,7 +177,7 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a0e6252c4d09f4fb28257804194356b6_8761ffc7494f4fada36741f5669ef1b9 : StringBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
@@ -228,7 +228,7 @@ namespace Coherence.Generated
             return new _a0e6252c4d09f4fb28257804194356b6_5156161361901559470();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a0e6252c4d09f4fb28257804194356b6_8fb659bfe821436e963e8810ade5244e : IntBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;

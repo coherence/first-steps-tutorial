@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_20d53524fceab40d5a9ab892525615cb_d34657af8900466f81ebcda7b52c281f : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_20d53524fceab40d5a9ab892525615cb_64c2e2c02f7f4ed9a1c5d5ce2b9ca101 : IntBinding
     {   
         private global::Coherence.FirstSteps.Counter CastedUnityComponent;

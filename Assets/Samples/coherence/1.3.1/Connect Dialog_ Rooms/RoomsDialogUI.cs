@@ -205,7 +205,7 @@ namespace Coherence.Samples.RoomsDialog
         private void RefreshRegions()
         {
             ShowLoadingState();
-            cloudRooms.RefreshRegions(OnRegionsChanged);
+            bridge.CloudService.Regions.FetchRegions(OnRegionsChanged);
         }
         #endregion
 
@@ -269,7 +269,7 @@ namespace Coherence.Samples.RoomsDialog
             }
         }
 
-        private void OnRegionsChanged(RequestResponse<IReadOnlyList<string>> requestResponse)
+        private void OnRegionsChanged(RequestResponse<Region[]> requestResponse)
         {
             HideLoadingState();
 
@@ -287,7 +287,7 @@ namespace Coherence.Samples.RoomsDialog
 
             regionDropdown.options = options;
 
-            if (regions.Count > 0 && !lanOnlineToggle.isOn)
+            if (regions.Length > 0 && !lanOnlineToggle.isOn)
             {
                 regionDropdown.captionText.text = regions[0];
                 selectedRoomService = cloudRooms.GetRoomServiceForRegion(regions[0]);
@@ -351,7 +351,7 @@ namespace Coherence.Samples.RoomsDialog
             return false;
         }
 
-        private void OnConnectionError(CoherenceBridge bridge, ConnectionException exception)
+        private void OnConnectionError(CoherenceBridge _, ConnectionException exception)
         {
             HideLoadingState();
             RefreshRooms();

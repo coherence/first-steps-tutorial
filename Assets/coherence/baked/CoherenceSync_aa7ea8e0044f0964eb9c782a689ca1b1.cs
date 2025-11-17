@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_f4bf557638d74d17a53079005e962dd7 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_86c46aa194cd456f9435accfc3ee162c : DeepRotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new _aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_cbae6206d8ac419692ba095a4f325af1 : DeepRotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -177,7 +177,7 @@ namespace Coherence.Generated
             return new _aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_8db61da3fdb542de86d092dcf4f2a02c : DeepPositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -228,7 +228,7 @@ namespace Coherence.Generated
             return new _aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_c72045cb3d2b4ab9a318a1fd2ddd90e1 : DeepPositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -279,7 +279,7 @@ namespace Coherence.Generated
             return new _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_18a95da2aa0541dfbca23d72c86e037a : DeepRotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -330,7 +330,7 @@ namespace Coherence.Generated
             return new _aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_436cd823fcf04e0bbb1806a6fcf85de1 : DeepPositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -381,7 +381,7 @@ namespace Coherence.Generated
             return new _aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_aa7ea8e0044f0964eb9c782a689ca1b1_426f5b2eaeaa4fc98611e6235ad861a0 : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;

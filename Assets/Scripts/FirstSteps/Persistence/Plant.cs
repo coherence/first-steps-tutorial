@@ -123,7 +123,7 @@ namespace Coherence.FirstSteps
                 Vector3 facingDirection = Random.insideUnitSphere;
                 facingDirection.y = 0f;
             
-                _newPlant = Instantiate<Flower>(plantPrefab, flowerPreview.position, Quaternion.LookRotation(facingDirection, Vector3.up));
+                _newPlant = Instantiate(plantPrefab, flowerPreview.position, Quaternion.LookRotation(facingDirection, Vector3.up));
                 _newPlant.gameObject.name = "Flower";
                 _newPlant.Plant();
             }
