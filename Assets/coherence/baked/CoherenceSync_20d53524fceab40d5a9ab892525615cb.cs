@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_20d53524fceab40d5a9ab892525615cb_5847726189716557621)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.count = Value;
             }
@@ -176,7 +176,7 @@ namespace Coherence.Generated
         {
             _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814_CommandTarget = (global::Coherence.FirstSteps.Counter)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Coherence.FirstSteps.Counter.AddOne",
+				"Coherence.FirstSteps.Counter.AddOne",
             	"()",
             	SendCommand__20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814,
             	ReceiveLocalCommand__20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814,
@@ -210,14 +210,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814(_20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814 command)
         {
-            var target = _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814_CommandTarget;
+			var target = _20d53524fceab40d5a9ab892525615cb_51bbdff1d75844e38e05ad8d40305814_CommandTarget;
 			target.AddOne();
         }
         private void BakeCommandBinding__20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685_CommandTarget = (global::Coherence.FirstSteps.Counter)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Coherence.FirstSteps.Counter.ResetToZero",
+				"Coherence.FirstSteps.Counter.ResetToZero",
             	"()",
             	SendCommand__20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685,
             	ReceiveLocalCommand__20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685,
@@ -251,7 +251,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685(_20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685 command)
         {
-            var target = _20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685_CommandTarget;
+			var target = _20d53524fceab40d5a9ab892525615cb_cec10b75335d48519f4b958f85ca6685_CommandTarget;
 			target.ResetToZero();
         }
         
