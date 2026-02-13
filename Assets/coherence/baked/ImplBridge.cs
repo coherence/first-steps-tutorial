@@ -26,6 +26,7 @@ namespace Coherence.Generated
             Impl.GetSpawnInfo = GetSpawnInfo;
             Impl.GetRootDefinition = GetRootDefinition;
             Impl.CreateConnectionSceneUpdateInternal = CreateConnectionSceneUpdateInternal;
+            Impl.GetConnectionScene = GetConnectionScene;
         }
 
         private static uint AssetId()
@@ -75,6 +76,9 @@ namespace Coherence.Generated
                     case UniqueID uid:
                         info.uniqueId = uid.uuid;
                         break;
+                    case ConnectionScene scene:
+                        info.scene = scene.value;
+                        break;
                 }
             }
 
@@ -98,6 +102,19 @@ namespace Coherence.Generated
             };
 
             return update;
+        }
+
+        private static uint? GetConnectionScene(IncomingEntityUpdate entityUpdate)
+        {
+            foreach (var comp in entityUpdate.Components.Updates.Store)
+            {
+                if (comp.Value.Data is ConnectionScene scene)
+                {
+                    return scene.value;
+                }
+            }
+
+            return null;
         }
     }
 

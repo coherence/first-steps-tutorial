@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldOrientation)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (GenericScale)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -209,7 +209,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.path = Value;
             }
@@ -260,7 +260,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_27f1ac5097d4ee4409fbb87ad14f76c2_4939570989761225410)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.pathDirtyCounter = Value;
             }
@@ -311,7 +311,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_27f1ac5097d4ee4409fbb87ad14f76c2_6525610836190113121)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.isBeingCarried = Value;
             }

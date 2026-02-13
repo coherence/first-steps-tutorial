@@ -38,13 +38,14 @@ MonoBehaviour:
   apiPort: 64001
   worldsAPIPort: 64002
   pingPort: 0
+  sendFrequency: 20
+  recvFrequency: 60
   useDebugStreams: 0
   organizationID: c1ho23prn6r43hh5tc40
   projectID: cetumgdbo1hk1jjq3j00
   projectName: First Steps tutorial
   organizationName: 
   transportType: 0
-  transportConfiguration: 0
   advancedSettings:
     ThreadResumer:
       Enabled: 0
@@ -58,8 +59,6 @@ MonoBehaviour:
   - {fileID: -1758743643018166929, guid: 266a112c2c9e941a58a87a48e7a4f8cb, type: 3}
   - {fileID: -1758743643018166929, guid: 3aeb27b07acaa41819b7ed83883baf84, type: 3}
   extraSchemas: []
-  defaultTransportMode: 0
-  defaultTransportModeMigrated: 1
   defaultAuthorityTransferType: 2
   simulatorLockTargetFramerate: 1
   simulatorTargetFramerate: 30

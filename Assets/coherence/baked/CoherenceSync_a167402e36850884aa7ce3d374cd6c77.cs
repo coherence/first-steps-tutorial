@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldOrientation)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (GenericScale)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -209,7 +209,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_a167402e36850884aa7ce3d374cd6c77_6689584802229134021)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.timePlanted = Value;
             }

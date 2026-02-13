@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_ba50eecfd968a47c38959f27b05771b6_5459872012036489579)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.timer = Value;
             }

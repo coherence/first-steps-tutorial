@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_4231088705669423063)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.rotation = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_3110171900669979710)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.rotation = Value;
             }
@@ -209,7 +209,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_6045207018197627436)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.position = Value;
             }
@@ -260,7 +260,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.position = Value;
             }
@@ -311,7 +311,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_7591837871254792591)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.rotation = Value;
             }
@@ -362,7 +362,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_511851952794508008)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.position = Value;
             }
@@ -413,7 +413,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_aa7ea8e0044f0964eb9c782a689ca1b1_9849676)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.ClawsOpen = Value;
             }
@@ -486,7 +486,7 @@ namespace Coherence.Generated
         {
             _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7_CommandTarget = (global::UnityEngine.Animator)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"UnityEngine.Animator.SetTrigger",
+				"UnityEngine.Animator.SetTrigger",
             	"(System.String)",
             	SendCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7,
             	ReceiveLocalCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7,
@@ -522,7 +522,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7(_aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7 command)
         {
-            var target = _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7_CommandTarget;
+			var target = _aa7ea8e0044f0964eb9c782a689ca1b1_d935ef02354c46c2bdb5dc4086cefeb7_CommandTarget;
 			target.SetTrigger((System.String)(command.name));
         }
         
