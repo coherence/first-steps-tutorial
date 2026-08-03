@@ -49,6 +49,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff62c046a053f416a8dc48ad6483a25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnAuthorityRequest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNetworkedInstantiation:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeforeNetworkedInstantiation:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNetworkedDestruction:
+    m_PersistentCalls:
+      m_Calls: []
   OnStateRemote:
     m_PersistentCalls:
       m_Calls: []
@@ -67,10 +79,22 @@ MonoBehaviour:
   OnAuthTransferComplete:
     m_PersistentCalls:
       m_Calls: []
-  OnConnectedEntityChanged:
+  OnNetworkedParentChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DPositionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody2DRotationUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRigidbody3DRotationUpdate:
     m_PersistentCalls:
       m_Calls: []
   coherenceSyncConfig: {fileID: 11400000, guid: 3b855c160d84340acb2156ea9e60c7b1,
@@ -100,23 +124,13 @@ MonoBehaviour:
     GeneratesArchetypeDefinition: 1
   interpolationLocation: 4
   RigidbodyUpdateMode: 0
-  OnRigidbody2DPositionUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRigidbody3DPositionUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRigidbody2DRotationUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRigidbody3DRotationUpdate:
-    m_PersistentCalls:
-      m_Calls: []
   bakedScriptType: Coherence.Generated.CoherenceSync_27f1ac5097d4ee4409fbb87ad14f76c2,
     Assembly-CSharp
+  isGlobal: 0
+  synchronizeParent: 1
   approveAuthorityTransferRequests: 1
   simulationType: 0
-  authorityTransferType: 1
+  authorityTransferConfig: 1
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 1
@@ -130,23 +144,14 @@ MonoBehaviour:
   - rid: 2919437089004584961
   - rid: 265633315173171221
   - rid: 265633315173171200
-  onNetworkedInstantiation:
-    m_PersistentCalls:
-      m_Calls: []
-  onBeforeNetworkedInstantiation:
-    m_PersistentCalls:
-      m_Calls: []
-  onNetworkedDestruction:
-    m_PersistentCalls:
-      m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: crate
   assetVersion: 
-  usingReflection: 0
   coherenceTag: 
   componentActions: []
   floatingOriginMode: 0
   floatingOriginParentedMode: 1
+  synchronizationChannel: Default
   references:
     version: 2
     RefIds:
@@ -175,7 +180,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 6525610836190113121}
         coherenceSync: {fileID: 294465140271106047}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 265633315173171201
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -197,6 +202,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 265633315173171221
       type: {class: ScaleBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -221,7 +228,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1522740331349769034}
         coherenceSync: {fileID: 294465140271106047}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+        _interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
           type: 2}
     - rid: 265633315173171222
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
@@ -244,6 +251,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 2368829912872124484
       type: {class: PositionBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -268,7 +277,7 @@ MonoBehaviour:
             floatCompression: 2
         unityComponent: {fileID: 1522740331349769034}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+        _interpolationSettings: {fileID: 11400000, guid: d31e0e76c5734f04bbfa90259705e193,
           type: 2}
     - rid: 2368829912872124485
       type: {class: RotationBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
@@ -294,7 +303,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1522740331349769034}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+        _interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
           type: 2}
     - rid: 2368829912872124486
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
@@ -317,6 +326,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 2368829912872124487
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -338,6 +349,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 2919437089004584960
       type: {class: StringBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
       data:
@@ -361,7 +374,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 4939570989761225410}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 2919437089004584961
       type: {class: IntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
       data:
@@ -385,7 +398,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 4939570989761225410}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 2919437089004584962
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -407,6 +420,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 2919437089004584963
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -428,6 +443,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
 --- !u!65 &6916203742030657429
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5de7df1b084447b9a6555e1089e52aa, type: 3}
+  m_Name: New InterpolationSettings 5
+  m_EditorClassIdentifier: 
+  interpolator:
+    rid: 2214995134750654469
+  smoothing:
+    smoothTime: 0.016
+    maxSpeed: 0
+  latencySettings:
+    networkLatencyFactor: 1
+    additionalLatency: 0
+  maxDistance: 0
+  maxOvershootAllowed: 5
+  references:
+    version: 2
+    RefIds:
+    - rid: 2214995134750654469
+      type: {class: LinearInterpolator, ns: Coherence.Interpolation, asm: Coherence.Interpolation}
+      data: 

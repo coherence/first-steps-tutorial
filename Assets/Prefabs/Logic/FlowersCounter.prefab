@@ -109,6 +109,7 @@ MonoBehaviour:
   bakedScriptType: Coherence.Generated.CoherenceSync_20d53524fceab40d5a9ab892525615cb,
     Assembly-CSharp
   isGlobal: 0
+  synchronizeParent: 1
   approveAuthorityTransferRequests: 1
   simulationType: 0
   authorityTransferConfig: 2
@@ -120,9 +121,9 @@ MonoBehaviour:
   preserveChildren: 0
   bindings:
   - rid: 2368829912872124471
-  - rid: 6129763270525976576
-  - rid: 6129763270525976578
   - rid: 6129763270525976580
+  - rid: 6559010615281582084
+  - rid: 6559010615281582085
   scenePrefabInstanceUUID: 
   coherenceUUID: FlowersCounter
   assetVersion: 20
@@ -160,7 +161,7 @@ MonoBehaviour:
             floatCompression: 2
         unityComponent: {fileID: 6193622242930807434}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+        _interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
           type: 2}
     - rid: 2368829912872124475
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
@@ -183,88 +184,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
-    - rid: 6129763270525976576
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 6129763270525976577
-        routing: 1
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: 51bbdff1d75844e38e05ad8d40305814
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 20
-          floatCompression: 0
-          fields: []
-        unityComponent: {fileID: 5847726189716557621}
-        coherenceSync: {fileID: 1812707281308532839}
-        interpolationSettings: {fileID: 0}
-    - rid: 6129763270525976577
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: AddOne
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Coherence.FirstSteps.Counter, Assembly-CSharp, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
-    - rid: 6129763270525976578
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 6129763270525976579
-        routing: 1
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: cec10b75335d48519f4b958f85ca6685
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 20
-          floatCompression: 0
-          fields: []
-        unityComponent: {fileID: 5847726189716557621}
-        coherenceSync: {fileID: 1812707281308532839}
-        interpolationSettings: {fileID: 0}
-    - rid: 6129763270525976579
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: ResetToZero
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Coherence.FirstSteps.Counter, Assembly-CSharp, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 6129763270525976580
       type: {class: IntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
       data:
@@ -288,7 +209,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 5847726189716557621}
         coherenceSync: {fileID: 1812707281308532839}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 6129763270525976581
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -310,6 +231,94 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
+    - rid: 6559010615281582084
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6559010615281582086
+        routing: 1
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 962216c5a5864efa8283fe5e3fd45516
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 5847726189716557621}
+        coherenceSync: {fileID: 1812707281308532839}
+        _interpolationSettings: {fileID: 0}
+    - rid: 6559010615281582085
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6559010615281582087
+        routing: 1
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: c40a4c55da31475f82beea7c43d06dc4
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 5847726189716557621}
+        coherenceSync: {fileID: 1812707281308532839}
+        _interpolationSettings: {fileID: 0}
+    - rid: 6559010615281582086
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: ResetToZero
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.FirstSteps.Counter, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+        methodCompatible: 1
+        defaultRouting: 1
+    - rid: 6559010615281582087
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: AddOne
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Coherence.FirstSteps.Counter, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+        methodCompatible: 1
+        defaultRouting: 1
 --- !u!114 &5847726189716557621
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ MonoBehaviour:
     LogFilePath: Logs/player_logs.txt
     MigratedToSerializedObject: 1
     FileLogLevel: 1
-  schemaID: e1db5f09aec2a463f8179e7076b68999158a07f2
+  schemaID: 61d540f2f1702355eb7269d05a31a4e09e430ab0
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: f2618e8d1484459db317d1c207413c5b
   simulatorSlug: 
@@ -41,7 +41,7 @@ MonoBehaviour:
   sendFrequency: 20
   recvFrequency: 60
   useDebugStreams: 0
-  organizationID: c1ho23prn6r43hh5tc40
+  organizationID: 
   projectID: cetumgdbo1hk1jjq3j00
   projectName: First Steps tutorial
   organizationName: 
