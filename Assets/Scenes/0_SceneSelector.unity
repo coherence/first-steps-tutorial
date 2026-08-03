@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -260,6 +259,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588052}
   m_CullTransparentMesh: 1
+--- !u!1 &184678829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184678831}
+  - component: {fileID: 184678830}
+  m_Layer: 0
+  m_Name: login
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &184678830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184678829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1204023f91ac64f930df8b0ee0dde5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  login: 1
+  usernameCloudUniqueIdOrIdentity:
+    rid: 6559010705516527616
+  passwordTokenTicketOrCode:
+    rid: 6559010705516527617
+  autoSignup: 1
+  logInOnLoad: 1
+  logInSimulators: 1
+  onLoggedIn:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoginFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6559010705516527616
+      type: {class: StringTextInput, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        text: 
+    - rid: 6559010705516527617
+      type: {class: StringTextInput, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        text: 
+--- !u!4 &184678831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184678829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &528732222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1556,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 3
@@ -1571,6 +1640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581242379168943756}
   - component: {fileID: 581242379168943758}
+  - component: {fileID: 581242379168943759}
   m_Layer: 5
   m_Name: UI_SceneSwitcher
   m_TagString: Untagged
@@ -1605,6 +1675,43 @@ MonoBehaviour:
   - {fileID: 2076235402}
   - {fileID: 1903268159}
   raycaster: {fileID: 581242378863235436}
+--- !u!114 &581242379168943759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581242379168943757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1204023f91ac64f930df8b0ee0dde5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  login: 1
+  usernameCloudUniqueIdOrIdentity:
+    rid: 6559010615281582089
+  passwordTokenTicketOrCode:
+    rid: 6559010615281582090
+  autoSignup: 1
+  logInOnLoad: 1
+  logInSimulators: 1
+  onLoggedIn:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoginFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6559010615281582089
+      type: {class: StringTextInput, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        text: 
+    - rid: 6559010615281582090
+      type: {class: StringTextInput, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        text: 
 --- !u!1001 &8772339314442207135
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c622e15937249e0a5a19bcd35a12c9c, type: 3}
+  m_Name: SimulatorSlugs
+  m_EditorClassIdentifier: 
+  projectSlugs:
+  - ProjectId: cetumgdbo1hk1jjq3j00
+    UseSimulator: 0
+    SimulatorSlug: 
+  - ProjectId: com1jdi2t1ch2t9ao1c0
+    UseSimulator: 1
+    SimulatorSlug: simulator-development
+  - ProjectId: c66nlm1vpaj4fd318qj0
+    UseSimulator: 0
+    SimulatorSlug: 
+  - ProjectId: chqb8dvssp04r4oumamg
+    UseSimulator: 0
+    SimulatorSlug: simulator-development
