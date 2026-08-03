@@ -270,7 +270,7 @@
       }
     },
     "io.coherence.sdk": {
-      "version": "file:C:/Users/Leonardo/Downloads/io.coherence.sdk-2.2.0.tgz",
+      "version": "file:C:\\Users\\Leonardo\\Downloads\\io.coherence.sdk-2.2.0.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
