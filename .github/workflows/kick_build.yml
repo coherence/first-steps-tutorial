@@ -1,0 +1,44 @@
+name: "Build Game"
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build'
+        default: 'main'
+        required: false
+        type: string
+
+
+permissions:
+  pull-requests: read
+
+jobs:
+
+  kick-game-build:
+    name: Kick Game Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: start-build
+        name: Start TeamCity Build
+        run: |
+          response=$(curl --header "Authorization: Bearer ${{ secrets.TEAMCITY_TOKEN }}" \
+          --header "Content-Type: application/json" \
+          --header "Accept: application/json" \
+          --request POST --data "{\"branchName\": \"${{ github.event_name == 'workflow_dispatch' && inputs.branch || github.head_ref }}\", \"buildType\": { \"id\": \"Sdk_GameProjects_FirstSteps\"} }" \
+          https://coherence.teamcity.com/app/rest/buildQueue)
+
+          url=$( jq -r '.webUrl' <<< "${response}" 2>/dev/null ) || url=""
+
+          if [ -z "${url}" ] || [ "${url}" = "null" ]; then
+            echo "Failed to start TeamCity build. Response: ${response}" >&2
+            exit 1
+          fi
+
+          echo "Build started: ${url}"
