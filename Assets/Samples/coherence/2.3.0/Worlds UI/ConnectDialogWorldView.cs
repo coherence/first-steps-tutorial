@@ -49,7 +49,7 @@ namespace Coherence.UI
         }
 
         [SerializeField, HideInInspector] private bool isSelected;
-        public WorldData worldData;
+        [NonSerialized] public WorldData worldData;
 
         private static string TruncateName(string name, int maxLength = 30)
         {
