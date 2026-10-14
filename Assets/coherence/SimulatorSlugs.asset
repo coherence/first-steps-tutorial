@@ -16,12 +16,3 @@ MonoBehaviour:
   - ProjectId: cetumgdbo1hk1jjq3j00
     UseSimulator: 0
     SimulatorSlug: 
-  - ProjectId: com1jdi2t1ch2t9ao1c0
-    UseSimulator: 1
-    SimulatorSlug: simulator-development
-  - ProjectId: c66nlm1vpaj4fd318qj0
-    UseSimulator: 0
-    SimulatorSlug: 
-  - ProjectId: chqb8dvssp04r4oumamg
-    UseSimulator: 0
-    SimulatorSlug: simulator-development

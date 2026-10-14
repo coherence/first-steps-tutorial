@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11552,6 +11551,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5541739930697435493, guid: 568064b2e9d1249309d77d4cab692b93,
+        type: 3}
+      propertyPath: authorityAction
+      value: 
+      objectReference: {fileID: 3491893278569409148, guid: 2ac2a8af623b64aeaa646fea90f74fe4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 568064b2e9d1249309d77d4cab692b93, type: 3}
 --- !u!1001 &1031725158
@@ -15473,6 +15478,7 @@ MonoBehaviour:
   networkPrefix: '[network] '
   adjustSimulationFrameByPing: 0
   enableClientConnections: 0
+  createGlobalQuery: 1
   ClientConnectionEntry: {fileID: 0}
   SimulatorConnectionEntry: {fileID: 0}
   mainBridge: 0
@@ -15497,8 +15503,15 @@ MonoBehaviour:
   onLiveQuerySynced:
     m_PersistentCalls:
       m_Calls: []
+  onValidateConnectionRequest:
+    m_PersistentCalls:
+      m_Calls: []
+  onShutdownNotice:
+    m_PersistentCalls:
+      m_Calls: []
   uniqueId: 
   autoLoginAsGuest: 1
+  playerAccount: 0
 --- !u!4 &1423719545
 Transform:
   m_ObjectHideFlags: 0
@@ -17916,6 +17929,26 @@ PrefabInstance:
       propertyPath: field of view
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1208972371388522884, guid: f465bc05dec70414bb39ce7a9a30439b,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208972371388522884, guid: f465bc05dec70414bb39ce7a9a30439b,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208972371388522884, guid: f465bc05dec70414bb39ce7a9a30439b,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208972371388522884, guid: f465bc05dec70414bb39ce7a9a30439b,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1208972371388522891, guid: f465bc05dec70414bb39ce7a9a30439b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18955,6 +18988,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3617310505010431893, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617310505010431893, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409284665451131326, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409284665451131326, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409284665451131326, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409284665451131326, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409284665451131326, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4531014671489834847, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -19023,6 +19091,11 @@ PrefabInstance:
     - target: {fileID: 5830251975805101326, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645930015830736324, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6911511399030379301, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,

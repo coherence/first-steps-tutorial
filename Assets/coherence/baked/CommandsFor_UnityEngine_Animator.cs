@@ -12,20 +12,20 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_UnityEngine_Animator
 {
-    public static bool SetTrigger(this UnityEngine.Animator self, MessageTarget target, System.String name)
+    public static bool SetTrigger(this UnityEngine.Animator _self, MessageTarget coherenceMessageTarget, System.String name)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(SetTrigger), target, (typeof(System.String), (object)name));
+        return __sync.SendCommand(_self, nameof(SetTrigger), coherenceMessageTarget, (typeof(System.String), (object)name));
     }
 }
 #endif

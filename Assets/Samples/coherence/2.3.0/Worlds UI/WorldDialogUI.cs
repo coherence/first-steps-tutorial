@@ -61,7 +61,13 @@ namespace Coherence.Samples.WorldDialog
             if (!eventSystem)
             {
                 eventSystem = new GameObject("EventSystem").AddComponent<EventSystem>();
+#if ENABLE_INPUT_SYSTEM
+                // If this fails to compile, check that the Input System package is installed
+                eventSystem.gameObject.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+#endif
+#if ENABLE_LEGACY_INPUT_MANAGER
                 eventSystem.gameObject.AddComponent<StandaloneInputModule>();
+#endif
                 Debug.LogWarning("EventSystem not found on the scene. Adding one now.\nConsider creating an EventSystem yourself to forward UI input.", eventSystem);
             }
 

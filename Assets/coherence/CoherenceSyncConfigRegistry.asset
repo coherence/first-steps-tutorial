@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe206545a28be2142b8fa937387721e8, type: 3}
   m_Name: CoherenceSyncConfigRegistry
   m_EditorClassIdentifier: 
-  storedConfigs: []
+  storedConfigs:
+  - {fileID: 11400000, guid: 3b855c160d84340acb2156ea9e60c7b1, type: 2}
+  - {fileID: 11400000, guid: 080f1c7eae9da45528ae50e04eb221c1, type: 2}
+  - {fileID: 11400000, guid: f78a1fb45649743a18185f40f532f34d, type: 2}
+  - {fileID: 11400000, guid: 776d16ef0265241d88f5dfee7416d27a, type: 2}
+  - {fileID: 11400000, guid: 2102c450ebbb84ed6b27d06dfcf6659f, type: 2}
+  - {fileID: 11400000, guid: fc4e57916a9a64176a0df04c97f0d9af, type: 2}
+  - {fileID: 11400000, guid: 290dc4cf7830a428c82cfbe0b963742e, type: 2}
+  - {fileID: 11400000, guid: 83d08e1b0efd745cb81b0e4677f2ddda, type: 2}
